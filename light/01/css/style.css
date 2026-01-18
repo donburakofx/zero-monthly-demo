@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. Google Fonts
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+/* ==========================================================================
+   2. Color Variations (5 Patterns)
+   ========================================================================== */
+:root {
+    /* --- [Pattern A: Mono Black] (Default) --- */
+    --bg-body: #F0F2F5;
+    --bg-card: #FFFFFF;
+    --text-main: #333333;
+    --text-sub: #777777;
+    --accent: #111111;       /* ボタン背景など */
+    --accent-text: #FFFFFF;  /* ボタン文字色 */
+    --primary: #E63946;      /* 強調ボタン用 */
+    --border: #E5E5E5;
+
+    /* --- [Pattern B: Sakura Pink] --- */
+    /*
+    --bg-body: #FFF0F5;
+    --bg-card: #FFFFFF;
+    --text-main: #5D4037;
+    --text-sub: #8D6E63;
+    --accent: #FF8BA7;
+    --accent-text: #FFFFFF;
+    --primary: #D81B60;
+    --border: #FFCDD2;
+    */
+
+    /* --- [Pattern C: Sky Blue] --- */
+    /*
+    --bg-body: #E0F7FA;
+    --bg-card: #FFFFFF;
+    --text-main: #0277BD;
+    --text-sub: #4FC3F7;
+    --accent: #0288D1;
+    --accent-text: #FFFFFF;
+    --primary: #FF9800;
+    --border: #B3E5FC;
+    */
+
+    /* --- [Pattern D: Mint Green] --- */
+    /*
+    --bg-body: #E8F5E9;
+    --bg-card: #FFFFFF;
+    --text-main: #1B5E20;
+    --text-sub: #66BB6A;
+    --accent: #4CAF50;
+    --accent-text: #FFFFFF;
+    --primary: #FF5722;
+    --border: #C8E6C9;
+    */
+
+    /* --- [Pattern E: Night Purple] --- */
+    /*
+    --bg-body: #121212;
+    --bg-card: #1E1E1E;
+    --text-main: #E0E0E0;
+    --text-sub: #AAAAAA;
+    --accent: #BB86FC;
+    --accent-text: #000000;
+    --primary: #03DAC6;
+    --border: #333333;
+    */
+}
+
+/* ==========================================================================
+   3. Base Styles
+   ========================================================================== */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; transition: 0.3s; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+/* ==========================================================================
+   4. Card Layout
+   ========================================================================== */
+.wrap {
+    width: 100%;
+    max-width: 480px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border-radius: 24px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* ==========================================================================
+   5. Profile Header
+   ========================================================================== */
+.avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--bg-body); /* 背景色と同じ色で縁取り */
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.role {
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.bio {
+    font-size: 14px;
+    color: var(--text-sub);
+    margin: 0 0 30px;
+}
+
+/* --- Stats Area --- */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+}
+
+.stats li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 10px;
+    color: var(--text-sub);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   6. Links (Buttons) - FontAwesome対応版
+   ========================================================================== */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;  <-- 削除 (flex構成変更のため) */
+    background-color: var(--bg-card);
+    border: 2px solid var(--border);
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: var(--text-main);
+    text-align: left;
+    gap: 15px; /* アイコンとテキストの間隔 */
+}
+
+.btn:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* 左側のアイコンエリア */
+.btn-icon-left {
+    font-size: 24px;
+    width: 30px; /* 幅固定で縦並びを揃える */
+    text-align: center;
+    color: var(--text-sub); /* 少し薄く */
+}
+.btn:hover .btn-icon-left {
+    color: var(--accent); /* ホバーで色付き */
+}
+
+/* 中央のテキストエリア */
+.btn-text {
+    flex: 1; /* 余ったスペースを埋める */
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.btn-sub {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-sub);
+    margin-top: 2px;
+}
+
+/* 右側の矢印エリア */
+.btn-arrow {
+    font-size: 14px;
+    color: var(--border);
+    transition: 0.3s;
+}
+
+.btn:hover .btn-arrow {
+    color: var(--accent);
+    transform: translateX(5px);
+}
+
+/* --- Primary Button (Contact) --- */
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-text);
+}
+
+.btn-primary .btn-icon-left {
+    color: var(--accent-text);
+    opacity: 0.9;
+}
+
+.btn-primary .btn-sub {
+    color: rgba(255,255,255, 0.8);
+}
+
+.btn-primary .btn-arrow {
+    color: var(--accent-text);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover .btn-icon-left,
+.btn-primary:hover .btn-arrow {
+    color: var(--accent-text);
+}
+
+/* ==========================================================================
+   7. Footer
+   ========================================================================== */
+.card-footer {
+    margin-top: 30px;
+    font-size: 11px;
+    color: var(--text-sub);
+}

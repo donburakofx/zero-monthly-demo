@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Social Link Profile</title>
+  <meta name="description" content="SNSリンク集プロフィール" />
+
+  <meta property="og:url" content="https://donburakofx.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Social Link Profile" />
+  <meta property="og:description" content="SNSリンク集プロフィール" />
+  <meta property="og:image" content="assets/image/ogp.jpg" />
+
+  <link rel="icon" href="assets/icon/favicon.ico">
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <div id="demo-theme-switcher"
+    style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.15); z-index: 9999; font-family: sans-serif; width: 200px;">
+    <p style="margin: 0 0 10px; font-size: 12px; font-weight: bold; color: #555;">🎨 カラーパターン確認</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <button onclick="setTheme('mono')"
+        style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #333; cursor: pointer;"
+        title="Mono Black"></button>
+      <button onclick="setTheme('sakura')"
+        style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #FF8BA7; cursor: pointer;"
+        title="Sakura Pink"></button>
+      <button onclick="setTheme('sky')"
+        style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #0288D1; cursor: pointer;"
+        title="Sky Blue"></button>
+      <button onclick="setTheme('mint')"
+        style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #4CAF50; cursor: pointer;"
+        title="Mint Green"></button>
+      <button onclick="setTheme('purple')"
+        style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #BB86FC; cursor: pointer;"
+        title="Night Purple"></button>
+    </div>
+  </div>
+
+  <script>
+    // カラーパレット定義（CSSのコメントアウトにある値をJSで適用します）
+    const themes = {
+      mono: {
+        '--bg-body': '#F0F2F5', '--bg-card': '#FFFFFF',
+        '--text-main': '#333333', '--text-sub': '#777777',
+        '--accent': '#111111', '--accent-text': '#FFFFFF',
+        '--primary': '#E63946', '--border': '#E5E5E5'
+      },
+      sakura: {
+        '--bg-body': '#FFF0F5', '--bg-card': '#FFFFFF',
+        '--text-main': '#5D4037', '--text-sub': '#8D6E63',
+        '--accent': '#FF8BA7', '--accent-text': '#FFFFFF',
+        '--primary': '#D81B60', '--border': '#FFCDD2'
+      },
+      sky: {
+        '--bg-body': '#E0F7FA', '--bg-card': '#FFFFFF',
+        '--text-main': '#0277BD', '--text-sub': '#4FC3F7',
+        '--accent': '#0288D1', '--accent-text': '#FFFFFF',
+        '--primary': '#FF9800', '--border': '#B3E5FC'
+      },
+      mint: {
+        '--bg-body': '#E8F5E9', '--bg-card': '#FFFFFF',
+        '--text-main': '#1B5E20', '--text-sub': '#66BB6A',
+        '--accent': '#4CAF50', '--accent-text': '#FFFFFF',
+        '--primary': '#FF5722', '--border': '#C8E6C9'
+      },
+      purple: {
+        '--bg-body': '#121212', '--bg-card': '#1E1E1E',
+        '--text-main': '#E0E0E0', '--text-sub': '#AAAAAA',
+        '--accent': '#BB86FC', '--accent-text': '#000000',
+        '--primary': '#03DAC6', '--border': '#333333'
+      }
+    };
+
+    function setTheme(name) {
+      const root = document.documentElement;
+      const theme = themes[name];
+      for (const key in theme) {
+        root.style.setProperty(key, theme[key]);
+      }
+    }
+  </script>
+  <main class="wrap">
+
+    <article class="card">
+
+      <header class="profile-head">
+        <div class="avatar">
+          <img src="assets/image/profile.jpg" alt="Profile Image">
+        </div>
+
+        <h1 class="name">Your Name</h1>
+        <p class="role">Designer / Creator</p>
+
+        <p class="bio">
+          日々の活動リンクまとめ。<br>
+          お仕事のご相談はフォームよりお願いします。
+        </p>
+
+        <ul class="stats">
+          <li>
+            <span class="stat-label">Location</span>
+            <span class="stat-value">Tokyo</span>
+          </li>
+          <li>
+            <span class="stat-label">Works</span>
+            <span class="stat-value">100+</span>
+          </li>
+          <li>
+            <span class="stat-label">Reply</span>
+            <span class="stat-value">24h</span>
+          </li>
+        </ul>
+      </header>
+
+      <div class="links">
+
+        <a href="#" target="_blank" class="btn">
+          <div class="btn-icon-left">
+            <i class="fa-regular fa-folder-open"></i>
+          </div>
+          <div class="btn-text">
+            Portfolio / Works
+            <span class="btn-sub">制作実績まとめ</span>
+          </div>
+          <span class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>
+
+        <a href="#" target="_blank" class="btn">
+          <div class="btn-icon-left">
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+          <div class="btn-text">
+            X (Twitter)
+            <span class="btn-sub">@yourname</span>
+          </div>
+          <span class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>
+
+        <a href="#" target="_blank" class="btn">
+          <div class="btn-icon-left">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="btn-text">
+            Instagram
+            <span class="btn-sub">ライフスタイル・写真</span>
+          </div>
+          <span class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>
+
+        <a href="#" target="_blank" class="btn">
+          <div class="btn-icon-left">
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+          <div class="btn-text">
+            YouTube Channel
+            <span class="btn-sub">解説動画・Vlog</span>
+          </div>
+          <span class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>
+
+        <a href="mailto:you@example.com" class="btn btn-primary">
+          <div class="btn-icon-left">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="btn-text">
+            Contact Me
+            <span class="btn-sub">お仕事のご依頼はこちら</span>
+          </div>
+          <span class="btn-arrow"><i class="fa-solid fa-paper-plane"></i></span>
+        </a>
+
+      </div>
+
+      <footer class="card-footer">
+        <small>&copy; 2026 Your Name</small>
+      </footer>
+
+    </article>
+  </main>
+</body>
+
+</html>
