@@ -1,0 +1,384 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. Google Fonts
+   ========================================================================== */
+/* Cormorant Garamond (見出し・上品), Inter (本文・可読性) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
+/* ==========================================================================
+   2. Color Variations (5 Patterns)
+   ========================================================================== */
+:root {
+    /* --- [Pattern A: Mono Black] (Classic Photo) --- */
+    --bg-body: #FFFFFF;
+    --text-main: #111111;
+    --text-muted: #888888;
+    --bg-light: #F9F9F9;
+    --accent: #111111;
+    --btn-text: #FFFFFF;
+
+    /* --- [Pattern B: Pure White] (Clean Gallery) --- */
+    /*
+    --bg-body: #FFFFFF;
+    --text-main: #333333;
+    --text-muted: #AAAAAA;
+    --bg-light: #FFFFFF;
+    --accent: #999999;
+    --btn-text: #FFFFFF;
+    */
+
+    /* --- [Pattern C: Film Navy] (Cinematic) --- */
+    /*
+    --bg-body: #0F172A;
+    --text-main: #F1F5F9;
+    --text-muted: #94A3B8;
+    --bg-light: #1E293B;
+    --accent: #38BDF8;
+    --btn-text: #0F172A;
+    */
+
+    /* --- [Pattern D: Sepia Beige] (Warm & Organic) --- */
+    /*
+    --bg-body: #FDFCF8;
+    --text-main: #4A403A;
+    --text-muted: #9C8C84;
+    --bg-light: #F5F2EC;
+    --accent: #8D7B68;
+    --btn-text: #FFFFFF;
+    */
+
+    /* --- [Pattern E: Dark Mode] (High Contrast) --- */
+    /*
+    --bg-body: #000000;
+    --text-main: #FFFFFF;
+    --text-muted: #666666;
+    --bg-light: #111111;
+    --accent: #FFFFFF;
+    --btn-text: #000000;
+    */
+
+    --font-head: 'Cormorant Garamond', serif;
+    --font-body: 'Inter', sans-serif;
+    --container-width: 1100px;
+}
+
+/* ==========================================================================
+   3. Base Styles
+   ========================================================================== */
+body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    background-color: var(--bg-body);
+    margin: 0;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+img { width: 100%; height: 100%; object-fit: cover; display: block; }
+ul { list-style: none; padding: 0; margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: normal; }
+
+.container { width: 90%; max-width: var(--container-width); margin: 0 auto; }
+.section { padding: 100px 0; }
+.bg-light { background-color: var(--bg-light); }
+
+/* ==========================================================================
+   4. Header
+   ========================================================================== */
+.header {
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-body);
+    z-index: 100;
+    opacity: 0.95;
+}
+
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+
+.brand {
+    font-family: var(--font-head);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav { display: flex; gap: 25px; }
+.nav a { font-size: 14px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.nav a:hover { color: var(--text-main); }
+
+@media (max-width: 600px) {
+    .nav { gap: 15px; font-size: 12px; }
+}
+
+/* ==========================================================================
+   5. Hero
+   ========================================================================== */
+.hero {
+    height: 70vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.eyebrow {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: var(--font-head);
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.lead {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.btn-text {
+    font-family: var(--font-head);
+    font-size: 18px;
+    border-bottom: 1px solid var(--text-muted);
+    padding-bottom: 5px;
+}
+.btn-text:hover { color: var(--text-muted); border-color: transparent; }
+
+@media (max-width: 768px) {
+    .title { font-size: 42px; }
+}
+
+/* ==========================================================================
+   6. Gallery (Masonry Grid)
+   ========================================================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+.gallery-item {
+    position: relative;
+    break-inside: avoid;
+}
+
+.media-frame {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+/* Aspect Ratios */
+.portrait .media-frame { aspect-ratio: 3 / 4; }
+.square .media-frame { aspect-ratio: 1 / 1; }
+.landscape .media-frame { aspect-ratio: 16 / 9; }
+@media (min-width: 768px) {
+    .landscape { grid-column: span 2; } /* PCでは横長画像は2列分使う */
+}
+
+/* Hover Effect */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+.view-more {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.media-frame:hover .overlay { opacity: 1; }
+.media-frame img { transition: 0.5s; }
+.media-frame:hover img { transform: scale(1.05); }
+
+.work-title {
+    font-family: var(--font-head);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.work-cat {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   7. About (Split Layout)
+   ========================================================================== */
+.split-layout {
+    display: grid;
+    gap: 60px;
+}
+@media (min-width: 768px) {
+    .split-layout { grid-template-columns: 1fr 1fr; }
+}
+
+.section-title {
+    font-family: var(--font-head);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.desc { margin-bottom: 40px; text-align: justify; }
+
+.profile-list, .menu-list { font-size: 14px; }
+.list-row {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1); /* 薄い線 */
+}
+/* ダークモード用調整：線が見えるように */
+@media (prefers-color-scheme: dark) {
+    .list-row { border-color: rgba(255,255,255, 0.1); }
+}
+
+.list-row dt { width: 100px; color: var(--text-muted); }
+
+/* Menu */
+.menu-item { margin-bottom: 25px; }
+.menu-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-family: var(--font-head);
+    font-size: 18px;
+    border-bottom: 1px solid var(--text-muted);
+}
+.menu-desc { font-size: 13px; color: var(--text-muted); }
+
+/* ==========================================================================
+   8. Contact
+   ========================================================================== */
+.contact-container { text-align: center; max-width: 600px; }
+.contact-lead { margin-bottom: 40px; }
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--btn-text);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+
+.sns-links { display: flex; gap: 30px; font-size: 24px; }
+.sns-links a:hover { color: var(--text-muted); }
+
+.copy-area { text-align: left; }
+.copy-box {
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    background-color: var(--bg-light);
+    border: 1px solid var(--text-muted);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 14px;
+    resize: none;
+    box-sizing: border-box;
+    opacity: 0.8;
+}
+.copy-box:focus { outline: 1px solid var(--accent); opacity: 1; }
+
+/* ==========================================================================
+   9. Footer
+   ========================================================================== */
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* ==========================================================================
+   10. Lightbox Modal (CSS Only)
+   ========================================================================== */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none; /* 隠れている時はクリック不可に */
+    transition: opacity 0.3s ease;
+}
+
+/* URLの末尾が #lightbox-xx になった時だけ表示 */
+.lightbox:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 背景クリックで閉じるための透明な幕 */
+.lightbox-overlay {
+    position: absolute;
+    inset: 0;
+    cursor: default;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    z-index: 10000;
+}
+
+.lightbox-content img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* 閉じるボタン (×) */
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #fff;
+    font-size: 32px;
+    text-decoration: none;
+    line-height: 1;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.lightbox-close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
