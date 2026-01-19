@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. Google Fonts
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Tenor+Sans&display=swap');
+
+/* ==========================================================================
+   2. Color Variations (5 Patterns)
+   ========================================================================== */
+:root {
+    /* --- [Pattern A: Pure White] --- */
+    --bg-body: #FFFFFF;
+    --text-main: #111111;
+    --text-muted: #888888;
+    --line: #E5E5E5;
+    --accent: #111111;
+    
+    /* --- [Pattern B: Navy White] --- */
+    /*
+    --bg-body: #FFFFFF;
+    --text-main: #1A2A3A;
+    --text-muted: #6A7A8A;
+    --line: #E1E8EE;
+    --accent: #1A2A3A;
+    */
+
+    /* --- [Pattern C: Ivory Warm] --- */
+    /*
+    --bg-body: #FDFBF7;
+    --text-main: #4A4036;
+    --text-muted: #968B83;
+    --line: #EBE5DE;
+    --accent: #8C7B6C;
+    */
+
+    /* --- [Pattern D: Cool Gray] --- */
+    /*
+    --bg-body: #F5F5F7;
+    --text-main: #333333;
+    --text-muted: #999999;
+    --line: #D1D1D1;
+    --accent: #000000;
+    */
+
+    /* --- [Pattern E: Dark Minimal] --- */
+    /*
+    --bg-body: #111111;
+    --text-main: #FFFFFF;
+    --text-muted: #AAAAAA;
+    --line: #333333;
+    --accent: #FFFFFF;
+    */
+
+    --font-jp: 'Noto Sans JP', sans-serif;
+    --font-en: 'Tenor Sans', sans-serif;
+    --width-narrow: 700px;
+}
+
+/* ==========================================================================
+   3. Base Styles
+   ========================================================================== */
+body {
+    font-family: var(--font-jp);
+    color: var(--text-main);
+    background-color: var(--bg-body);
+    margin: 0;
+    line-height: 1.8;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; padding: 0; margin: 0; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { font-weight: normal; margin: 0; }
+
+.container { width: 90%; max-width: 1000px; margin: 0 auto; }
+.narrow { max-width: var(--width-narrow); }
+
+/* ==========================================================================
+   4. Header
+   ========================================================================== */
+.header {
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-body);
+    z-index: 100;
+    opacity: 0.98;
+}
+
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+.brand { font-family: var(--font-en); font-size: 20px; letter-spacing: 0.1em; }
+
+.nav { display: flex; gap: 20px; }
+.nav a {
+    font-family: var(--font-en);
+    font-size: 13px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.nav a:hover { color: var(--text-main); }
+
+/* ==========================================================================
+   5. Hero (Text + Mono Image)
+   ========================================================================== */
+.hero {
+    position: relative;
+    height: 70vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.4; /* 画像を薄く背景に敷く */
+    filter: grayscale(100%); /* 画像を自動で白黒にする */
+}
+.hero-bg img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+.hero-content {
+    animation: fadeIn 2s ease;
+}
+
+.title {
+    font-family: var(--font-en);
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+}
+.lead { font-size: 14px; color: var(--text-muted); line-height: 2; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   6. Section Common
+   ========================================================================== */
+.section { padding: 80px 0; }
+.section-header {
+    margin-bottom: 50px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+.section-num { font-family: var(--font-en); color: var(--text-muted); font-size: 14px; }
+.section-title { font-family: var(--font-en); font-size: 24px; letter-spacing: 0.1em; }
+
+/* ==========================================================================
+   7. About (Layout with Image)
+   ========================================================================== */
+.about-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-img {
+    width: 200px;
+    flex-shrink: 0;
+    filter: grayscale(100%); /* ★プロフィール写真も自動で白黒に */
+}
+.about-img img {
+    border-radius: 4px;
+}
+
+.about-text .text { margin-bottom: 30px; text-align: justify; }
+
+.facts { border-top: 1px solid var(--line); }
+.fact-row {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+}
+.fact-row dt { width: 80px; font-family: var(--font-en); color: var(--text-muted); }
+.fact-row dd { margin: 0; }
+
+@media (max-width: 600px) {
+    .about-layout { flex-direction: column; }
+    .about-img { width: 100%; max-width: 300px; margin: 0 auto; }
+}
+
+/* ==========================================================================
+   8. Service & Work
+   ========================================================================== */
+.service-list { display: grid; gap: 40px; }
+.service-item h3 { font-family: var(--font-en); font-size: 20px; margin-bottom: 10px; }
+.muted { color: var(--text-muted); font-size: 14px; line-height: 1.8; }
+
+.work-list { border-top: 1px solid var(--line); }
+.work-link {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: center;
+    gap: 20px;
+}
+.work-link:hover { padding-left: 10px; color: var(--text-muted); }
+.work-year { font-family: var(--font-en); font-size: 14px; color: var(--text-muted); width: 60px; }
+.work-name { flex: 1; font-size: 16px; font-weight: 500; }
+.work-cat { font-family: var(--font-en); font-size: 12px; color: var(--text-muted); }
+
+/* ==========================================================================
+   9. Contact (New Design)
+   ========================================================================== */
+.contact-wrap {
+    text-align: center;
+    padding: 20px 0;
+}
+.center { text-align: center; margin-bottom: 40px; }
+
+/* ボタン */
+.btn-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--accent); /* 変数で色変更 */
+    color: var(--bg-body); /* 文字は背景色と同じ（反転） */
+    padding: 18px 60px;
+    border-radius: 50px;
+    font-family: var(--font-en);
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+}
+.btn-contact:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* SNSアイコン */
+.sns-icons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.sns-item {
+    font-size: 24px;
+    color: var(--text-muted);
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.sns-item:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   10. Footer
+   ========================================================================== */
+.footer {
+    padding: 60px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-family: var(--font-en);
+    font-size: 12px;
+}
