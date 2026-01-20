@@ -1,0 +1,475 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. Google Fonts
+   ========================================================================== */
+/* Noto Sans JP (本文), Montserrat (英語見出し) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+/* ==========================================================================
+   2. Color Variations (5 Patterns)
+   ========================================================================== */
+:root {
+    /* --- [Pattern A: Trust Blue] (王道・IT・誠実) --- */
+    --bg-body: #FFFFFF;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --bg-light: #F4F8FB;
+    --primary: #0056B3;
+    --primary-hover: #004494;
+    --secondary: #FFFFFF;
+    --border: #E0E0E0;
+
+    /* --- [Pattern B: Navy & Gold] (士業・コンサル・高級感) --- */
+    /*
+    --bg-body: #FFFFFF;
+    --text-main: #2C3E50;
+    --text-muted: #808B96;
+    --bg-light: #F8F9FA;
+    --primary: #1A252F;
+    --primary-hover: #C5A059;
+    --secondary: #FFFFFF;
+    --border: #E5E7E9;
+    */
+    /* ※Navyの場合はアクセントにゴールドを使うこともありますが、
+       今回はシンプルにNavy単色でまとめています */
+
+    /* --- [Pattern C: Growth Green] (環境・教育・福祉) --- */
+    /*
+    --bg-body: #FFFFFF;
+    --text-main: #2E3B32;
+    --text-muted: #5C6B62;
+    --bg-light: #F1F8F3;
+    --primary: #2E7D32;
+    --primary-hover: #1B5E20;
+    --secondary: #FFFFFF;
+    --border: #C8E6C9;
+    */
+
+    /* --- [Pattern D: Passion Red] (ベンチャー・営業・活気) --- */
+    /*
+    --bg-body: #FFFFFF;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --bg-light: #FFF5F5;
+    --primary: #C62828;
+    --primary-hover: #B71C1C;
+    --secondary: #FFFFFF;
+    --border: #FFCDD2;
+    */
+
+    /* --- [Pattern E: Modern Gray] (建築・製造・工業) --- */
+    /*
+    --bg-body: #FFFFFF;
+    --text-main: #212121;
+    --text-muted: #616161;
+    --bg-light: #F5F5F5;
+    --primary: #424242;
+    --primary-hover: #212121;
+    --secondary: #FFFFFF;
+    --border: #E0E0E0;
+    */
+
+    /* 共通設定 */
+    --font-jp: 'Noto Sans JP', sans-serif;
+    --font-en: 'Montserrat', sans-serif;
+    --width-wide: 1100px;
+    --width-narrow: 800px;
+    --radius: 4px; /* コーポレートなので丸みは抑えめに */
+}
+
+/* ==========================================================================
+   3. Base Styles
+   ========================================================================== */
+body {
+    font-family: var(--font-jp);
+    color: var(--text-main);
+    background-color: var(--bg-body);
+    margin: 0;
+    line-height: 1.8;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; padding: 0; margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 700; }
+
+.container { width: 90%; margin: 0 auto; }
+.narrow { max-width: var(--width-narrow); }
+.text-center { text-align: center; }
+.sp-only { display: block; }
+.pc-only { display: none; }
+
+@media (min-width: 768px) {
+    .container { max-width: var(--width-wide); }
+    .sp-only { display: none; }
+    .pc-only { display: inline; }
+}
+
+/* ==========================================================================
+   4. Header
+   ========================================================================== */
+.header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+}
+
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+}
+.brand-icon { font-size: 24px; }
+.brand-text {
+    font-family: var(--font-en);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-main);
+}
+
+.nav { display: none; }
+.nav-btn {
+    background-color: var(--primary);
+    color: #fff !important;
+    padding: 8px 20px;
+    border-radius: var(--radius);
+}
+
+@media (min-width: 768px) {
+    .nav { display: flex; gap: 30px; align-items: center; }
+    .nav a { font-size: 14px; font-weight: 500; }
+    .nav a:hover { color: var(--primary); }
+}
+
+/* ==========================================================================
+   5. Hero
+   ========================================================================== */
+.hero {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: #333; /* 画像読み込み前の保険 */
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* 文字を読みやすくするため暗く */
+}
+/* 背景を暗くするオーバーレイ */
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    font-family: var(--font-en);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    color: rgba(255,255,255, 0.8);
+}
+
+.title {
+    font-size: 32px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 15px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero-actions { display: flex; gap: 15px; }
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 30px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #fff;
+    border: 2px solid var(--primary);
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn-secondary:hover {
+    background-color: #fff;
+    color: var(--primary);
+}
+
+@media (min-width: 768px) {
+    .hero { height: 600px; }
+    .title { font-size: 48px; }
+    .lead { font-size: 16px; }
+}
+
+/* ==========================================================================
+   6. Section Common
+   ========================================================================== */
+.section { padding: 80px 0; }
+.bg-light { background-color: var(--bg-light); }
+
+.section-head { margin-bottom: 60px; }
+.section-title {
+    font-family: var(--font-en);
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+.section-sub {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   7. About
+   ========================================================================== */
+.about-content {
+    text-align: center;
+}
+.text-body {
+    text-align: justify;
+    margin-bottom: 40px;
+}
+.about-sign {
+    text-align: right;
+    margin-top: 30px;
+}
+.about-sign p { font-size: 12px; color: var(--text-muted); margin-bottom: 5px; }
+.sign-img {
+    width: 120px;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+    .text-body { text-align: center; } /* PCでは中央揃えの方が見やすい場合も */
+}
+
+/* ==========================================================================
+   8. Service
+   ========================================================================== */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px;
+    transition: 0.3s;
+}
+.service-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transform: translateY(-3px);
+    border-color: var(--primary);
+}
+
+.card-icon-wrap {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-light);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-family: var(--font-en);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.card-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   9. Company
+   ========================================================================== */
+.info-list {
+    border-top: 1px solid var(--border);
+}
+
+.info-row {
+    display: flex;
+    flex-direction: column; /* スマホは縦並び */
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+.info-row dt {
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+.info-row dd { margin: 0; }
+
+@media (min-width: 768px) {
+    .info-row { flex-direction: row; }
+    .info-row dt { width: 250px; margin-bottom: 0; }
+}
+
+/* ==========================================================================
+   10. Contact
+   ========================================================================== */
+.contact-box {
+    background-color: #fff;
+    border: 1px solid var(--border);
+    padding: 40px 20px;
+    border-radius: var(--radius);
+}
+
+.contact-lead { margin-bottom: 30px; }
+
+.btn-large {
+    padding: 15px 50px;
+    font-size: 16px;
+    display: inline-flex;
+    gap: 10px;
+}
+
+.contact-note {
+    margin-top: 30px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.tel-link {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-main);
+    display: block;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   11. Footer
+   ========================================================================== */
+.footer {
+    padding: 40px 0;
+    background-color: var(--text-main); /* ダーク背景 */
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.footer-links a { color: #ccc; margin: 0 10px; }
+.footer-links a:hover { color: #fff; }
+
+@media (min-width: 768px) {
+    .footer-inner { flex-direction: row; justify-content: space-between; }
+}
+
+/* FAQの折り返し調整 */
+@media (min-width: 768px) {
+    .info-row dt {
+        width: 250px; /* 180pxから250pxに拡張 */
+        flex-shrink: 0; /* 折り返しを防止 */
+        margin-bottom: 0;
+        color: var(--primary);
+        font-weight: 700;
+    }
+}
+
+
+
+/* Serviceセクション（画像付きカード）のリデザイン */
+.service-card-rich {
+    padding: 0 !important; /* カード全体の標準余白をリセット */
+    overflow: hidden;
+}
+
+.service-card-rich .card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-card-rich .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* ホバー時に画像を拡大 */
+.service-card-rich:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.service-card-rich .card-content {
+    padding: 30px;
+    position: relative;
+}
+
+/* アイコンを画像に少し被せるデザイン */
+.service-card-rich .card-icon-wrap {
+    margin-top: -60px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+/* フッター中央寄せの補完 */
+.footer .text-center {
+    text-align: center;
+}
