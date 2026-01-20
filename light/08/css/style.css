@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. Color Variations (5 Patterns)
+   ========================================================================== */
+:root {
+    /* --- [Pattern A: Greige] (Default) --- */
+    --bg-body: #FFFFFF;
+    --text-main: #4A4A4A;
+    --text-muted: #9E9E9E;
+    --bg-light: #F9F8F7;
+    --primary: #8D8078;
+    --primary-hover: #6D6058;
+    --accent: #8D8078;
+    --border: #EAE6E3;
+
+    /* 他のパターンは変更なし */
+    /* ... */
+
+    /* Common Settings */
+    --font-jp: 'Zen Old Mincho', serif;
+    --font-en: 'Cormorant Garamond', serif;
+    --radius: 4px;
+    --width-wide: 1000px;
+    --width-narrow: 760px;
+}
+
+/* ==========================================================================
+   2. Base Styles
+   ========================================================================== */
+body {
+    font-family: var(--font-jp);
+    color: var(--text-main);
+    background-color: var(--bg-body);
+    margin: 0;
+    line-height: 1.9;
+    letter-spacing: 0.05em;
+    /* padding-bottom: 60px; ← ★削除しました (これが余白の原因でした) */
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; padding: 0; margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 500; }
+
+.container { width: 90%; max-width: var(--width-wide); margin: 0 auto; }
+.narrow { max-width: var(--width-narrow); }
+.text-center { text-align: center; }
+
+/* ==========================================================================
+   3. Header
+   ========================================================================== */
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
+
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+
+.brand {
+    font-family: var(--font-en);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.nav { display: none; }
+.btn-header-resv {
+    font-family: var(--font-en);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 8px 25px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.btn-header-resv:hover { background-color: var(--primary); color: #fff; }
+
+@media (min-width: 768px) {
+    .nav { display: flex; gap: 35px; }
+    .nav a { font-family: var(--font-en); font-size: 15px; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.1em; }
+    .nav a:hover { color: var(--primary); }
+}
+
+/* ==========================================================================
+   4. Hero
+   ========================================================================== */
+.hero { padding: 60px 0; }
+.hero-container { display: flex; flex-direction: column; gap: 40px; }
+
+.eyebrow {
+    font-family: var(--font-en);
+    font-size: 14px;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 32px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-feature-settings: "palt";
+}
+
+.lead {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.link-text {
+    font-family: var(--font-en);
+    font-size: 16px;
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 5px;
+}
+.link-text:hover { opacity: 0.7; }
+.link-text i { margin-left: 10px; transition: 0.3s; }
+.link-text:hover i { transform: translateX(5px); }
+
+.hero-visual img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+@media (min-width: 768px) {
+    .hero { padding: 100px 0; }
+    .hero-container { flex-direction: row; align-items: center; }
+    .hero-content { flex: 1; padding-right: 40px; }
+    .hero-visual { flex: 1.2; }
+    .title { font-size: 44px; }
+}
+
+/* Info Bar */
+.info-bar {
+    background-color: var(--bg-light);
+    padding: 20px 0;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.meta-list {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
+}
+.meta-list i { margin-right: 6px; color: var(--primary); }
+
+/* ==========================================================================
+   5. Section Common
+   ========================================================================== */
+.section { padding: 90px 0; }
+.bg-light { background-color: var(--bg-light); }
+
+.section-title {
+    font-family: var(--font-en);
+    font-size: 36px;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+.section-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    letter-spacing: 0.1em;
+}
+
+.text-body {
+    text-align: left;
+    display: inline-block;
+    text-align-last: left;
+}
+@media (min-width: 768px) { .text-body { text-align: center; text-align-last: center; } }
+
+/* ==========================================================================
+   6. Menu
+   ========================================================================== */
+.menu-list { display: grid; gap: 30px; }
+.menu-row { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 5px; }
+.menu-name { font-family: var(--font-en); font-size: 20px; font-weight: 500; }
+.menu-price { font-family: var(--font-en); font-size: 18px; }
+
+.menu-line {
+    flex-grow: 1; margin: 0 20px; border-bottom: 1px dotted var(--border);
+    position: relative; top: -5px;
+}
+
+.menu-desc { font-size: 13px; color: var(--text-muted); }
+.menu-note { margin-top: 50px; font-size: 12px; color: var(--text-muted); text-align: right; }
+
+/* ==========================================================================
+   7. Staff (3 Columns Grid)
+   ========================================================================== */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.staff-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.staff-visual {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.staff-visual img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.staff-content { text-align: center; }
+
+.staff-role {
+    font-family: var(--font-en);
+    font-size: 12px;
+    color: var(--primary);
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.staff-name {
+    font-family: var(--font-en);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.staff-bio {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.staff-sns a {
+    font-family: var(--font-en);
+    font-size: 14px;
+    color: var(--text-muted);
+}
+.staff-sns a:hover { color: var(--primary); }
+
+/* ==========================================================================
+   8. Access
+   ========================================================================== */
+.access-box { max-width: 600px; margin: 0 auto; }
+.access-list { margin-bottom: 40px; border-top: 1px solid var(--border); }
+.list-row {
+    display: flex; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 14px;
+}
+.list-row dt { width: 100px; font-family: var(--font-en); color: var(--text-muted); }
+.list-row dd { margin: 0; flex: 1; }
+
+.map-container {
+    position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden;
+    background-color: var(--bg-light);
+}
+.map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* ==========================================================================
+   9. Footer
+   ========================================================================== */
+.footer {
+    padding: 40px 0; /* 下部の余白を通常に戻しました */
+    text-align: center;
+    background-color: var(--bg-light);
+}
+.footer-logo { font-family: var(--font-en); font-size: 20px; margin-bottom: 10px; }
+.copyright { font-size: 11px; color: var(--text-muted); }
