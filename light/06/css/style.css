@@ -15,7 +15,7 @@
     --secondary: #111827;
     --border: #E5E7EB;
 
-    /* --- [Pattern B: Midnight Black] (Premium / Consulting) --- */
+    /* --- [Pattern B: Midnight Black] --- */
     /*
     --bg-body: #FFFFFF;
     --text-main: #000000;
@@ -28,7 +28,7 @@
     --border: #E5E5E5;
     */
 
-    /* --- [Pattern C: FinTech Green] (Growth / Finance) --- */
+    /* --- [Pattern C: FinTech Green] --- */
     /*
     --bg-body: #FFFFFF;
     --text-main: #064E3B;
@@ -41,7 +41,7 @@
     --border: #D1FAE5;
     */
 
-    /* --- [Pattern D: Innovation Purple] (SaaS / Startup) --- */
+    /* --- [Pattern D: Innovation Purple] --- */
     /*
     --bg-body: #FFFFFF;
     --text-main: #111827;
@@ -54,7 +54,7 @@
     --border: #E5E7EB;
     */
 
-    /* --- [Pattern E: Global Red] (Logistics / Energy) --- */
+    /* --- [Pattern E: Global Red] --- */
     /*
     --bg-body: #FFFFFF;
     --text-main: #111827;
@@ -82,7 +82,7 @@ body {
     background-color: var(--bg-body);
     margin: 0;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased; /* 文字を滑らかに */
+    -webkit-font-smoothing: antialiased;
 }
 
 a { text-decoration: none; color: inherit; transition: 0.3s; }
@@ -97,7 +97,7 @@ h1, h2, h3, h4 { color: var(--text-main); font-weight: 800; margin: 0; line-heig
 .mt-4 { margin-top: 2rem; }
 
 /* ==========================================================================
-   3. Header
+   3. Header (Updated: No Hamburger, CTA Only on Mobile)
    ========================================================================== */
 .header {
     height: 80px;
@@ -120,23 +120,42 @@ h1, h2, h3, h4 { color: var(--text-main); font-weight: 800; margin: 0; line-heig
     letter-spacing: -0.02em;
 }
 
-.nav { display: none; } /* Mobile first: hidden */
+/* Navigation Base */
+.nav { display: flex; align-items: center; gap: 32px; }
+.nav a { font-weight: 600; font-size: 15px; color: var(--text-body); }
+.nav a:hover { color: var(--primary); }
+
+/* CTA Button Style */
 .nav-cta {
     background-color: var(--primary);
     color: #fff !important;
     padding: 10px 24px;
     border-radius: var(--radius);
     font-weight: 600;
+    font-size: 14px !important;
+    transition: 0.3s;
 }
 .nav-cta:hover { background-color: var(--primary-hover); }
 
-.mobile-menu-btn { font-size: 24px; cursor: pointer; color: var(--text-main); }
+/* Hamburger Button (Hidden/Removed) */
+.mobile-menu-btn { display: none; }
 
-@media (min-width: 768px) {
-    .nav { display: flex; gap: 32px; align-items: center; }
-    .nav a { font-weight: 600; font-size: 15px; color: var(--text-body); }
-    .nav a:hover { color: var(--primary); }
-    .mobile-menu-btn { display: none; }
+/* Mobile Optimization (< 768px) */
+@media (max-width: 768px) {
+    /* リンクテキスト（Mission, Solutions...）を隠す */
+    .nav a:not(.nav-cta) {
+        display: none;
+    }
+    
+    /* CTAボタン（Get in Touch）だけ表示する調整 */
+    .nav { gap: 0; }
+    .nav-cta {
+        padding: 8px 16px;
+        font-size: 13px !important;
+    }
+    
+    .header { height: 60px; } /* スマホはヘッダー少し狭く */
+    .brand { font-size: 20px; }
 }
 
 /* ==========================================================================
@@ -145,7 +164,7 @@ h1, h2, h3, h4 { color: var(--text-main); font-weight: 800; margin: 0; line-heig
 .hero {
     position: relative;
     padding: 120px 0 100px;
-    background-color: #000; /* Fallback */
+    background-color: #000;
     color: #fff;
     overflow: hidden;
 }
@@ -157,7 +176,7 @@ h1, h2, h3, h4 { color: var(--text-main); font-weight: 800; margin: 0; line-heig
 }
 .hero-bg img {
     width: 100%; height: 100%; object-fit: cover;
-    opacity: 0.6; /* Darken image */
+    opacity: 0.6;
 }
 .hero-bg::after {
     content: ''; position: absolute; inset: 0;
@@ -173,10 +192,8 @@ h1, h2, h3, h4 { color: var(--text-main); font-weight: 800; margin: 0; line-heig
     letter-spacing: 0.1em;
     font-size: 14px;
     margin-bottom: 20px;
-    color: var(--primary); /* Use brand color for accent */
+    color: var(--primary);
 }
-/* If dark bg, maybe lighten the accent or keep it popping */
-.hero .eyebrow { color: #60A5FA; } /* Light blue for dark bg readability */
 
 .title {
     font-size: 48px;
@@ -275,7 +292,7 @@ h1, h2, h3, h4 { color: var(--text-main); font-weight: 800; margin: 0; line-heig
 .card-link:hover { gap: 10px; }
 
 /* ==========================================================================
-   7. Case Study (Dark Mode)
+   7. Case Study (Dark Mode) - Replaced Network
    ========================================================================== */
 .dark-mode {
     background-color: #111827;
@@ -301,7 +318,7 @@ h1, h2, h3, h4 { color: var(--text-main); font-weight: 800; margin: 0; line-heig
     border-radius: var(--radius);
     padding: 30px;
     transition: 0.3s;
-    height: 100%; /* 高さを揃える */
+    height: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -358,7 +375,7 @@ h1, h2, h3, h4 { color: var(--text-main); font-weight: 800; margin: 0; line-heig
 }
 
 .case-result {
-    margin-top: auto; /* 一番下に配置 */
+    margin-top: auto;
     padding-top: 20px;
     display: flex;
     align-items: center;
