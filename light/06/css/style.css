@@ -1,0 +1,392 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. Color Variations (5 Patterns)
+   ========================================================================== */
+:root {
+    /* --- [Pattern A: Tech Blue] (Default: Trust / Tech) --- */
+    --bg-body: #FFFFFF;
+    --text-main: #111827;
+    --text-body: #374151;
+    --text-muted: #6B7280;
+    --bg-light: #F3F4F6;
+    --primary: #2563EB;
+    --primary-hover: #1D4ED8;
+    --secondary: #111827;
+    --border: #E5E7EB;
+
+    /* --- [Pattern B: Midnight Black] (Premium / Consulting) --- */
+    /*
+    --bg-body: #FFFFFF;
+    --text-main: #000000;
+    --text-body: #333333;
+    --text-muted: #666666;
+    --bg-light: #F9FAFB;
+    --primary: #111111;
+    --primary-hover: #333333;
+    --secondary: #FFFFFF;
+    --border: #E5E5E5;
+    */
+
+    /* --- [Pattern C: FinTech Green] (Growth / Finance) --- */
+    /*
+    --bg-body: #FFFFFF;
+    --text-main: #064E3B;
+    --text-body: #374151;
+    --text-muted: #6B7280;
+    --bg-light: #ECFDF5;
+    --primary: #059669;
+    --primary-hover: #047857;
+    --secondary: #064E3B;
+    --border: #D1FAE5;
+    */
+
+    /* --- [Pattern D: Innovation Purple] (SaaS / Startup) --- */
+    /*
+    --bg-body: #FFFFFF;
+    --text-main: #111827;
+    --text-body: #4B5563;
+    --text-muted: #6B7280;
+    --bg-light: #F5F3FF;
+    --primary: #7C3AED;
+    --primary-hover: #6D28D9;
+    --secondary: #111827;
+    --border: #E5E7EB;
+    */
+
+    /* --- [Pattern E: Global Red] (Logistics / Energy) --- */
+    /*
+    --bg-body: #FFFFFF;
+    --text-main: #111827;
+    --text-body: #374151;
+    --text-muted: #6B7280;
+    --bg-light: #FEF2F2;
+    --primary: #DC2626;
+    --primary-hover: #B91C1C;
+    --secondary: #111827;
+    --border: #FEE2E2;
+    */
+
+    /* Common Settings */
+    --font-base: 'Inter', sans-serif;
+    --radius: 6px;
+    --width-max: 1200px;
+}
+
+/* ==========================================================================
+   2. Base Styles
+   ========================================================================== */
+body {
+    font-family: var(--font-base);
+    color: var(--text-body);
+    background-color: var(--bg-body);
+    margin: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased; /* 文字を滑らかに */
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; padding: 0; margin: 0; }
+h1, h2, h3, h4 { color: var(--text-main); font-weight: 800; margin: 0; line-height: 1.2; }
+
+.container { width: 90%; max-width: var(--width-max); margin: 0 auto; }
+.narrow { max-width: 700px; }
+.text-center { text-align: center; }
+.mb-4 { margin-bottom: 2rem; }
+.mt-4 { margin-top: 2rem; }
+
+/* ==========================================================================
+   3. Header
+   ========================================================================== */
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+
+.brand {
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+.nav { display: none; } /* Mobile first: hidden */
+.nav-cta {
+    background-color: var(--primary);
+    color: #fff !important;
+    padding: 10px 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+}
+.nav-cta:hover { background-color: var(--primary-hover); }
+
+.mobile-menu-btn { font-size: 24px; cursor: pointer; color: var(--text-main); }
+
+@media (min-width: 768px) {
+    .nav { display: flex; gap: 32px; align-items: center; }
+    .nav a { font-weight: 600; font-size: 15px; color: var(--text-body); }
+    .nav a:hover { color: var(--primary); }
+    .mobile-menu-btn { display: none; }
+}
+
+/* ==========================================================================
+   4. Hero
+   ========================================================================== */
+.hero {
+    position: relative;
+    padding: 120px 0 100px;
+    background-color: #000; /* Fallback */
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+.hero-bg img {
+    width: 100%; height: 100%; object-fit: cover;
+    opacity: 0.6; /* Darken image */
+}
+.hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+}
+
+.hero-container { position: relative; z-index: 1; }
+.hero-content { max-width: 700px; }
+
+.eyebrow {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--primary); /* Use brand color for accent */
+}
+/* If dark bg, maybe lighten the accent or keep it popping */
+.hero .eyebrow { color: #60A5FA; } /* Light blue for dark bg readability */
+
+.title {
+    font-size: 48px;
+    margin-bottom: 24px;
+    color: #fff;
+    letter-spacing: -0.03em;
+}
+.lead {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: rgba(255,255,255, 0.9);
+    line-height: 1.6;
+}
+
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn {
+    display: inline-flex; justify-content: center; align-items: center;
+    padding: 14px 32px; border-radius: var(--radius);
+    font-weight: 600; font-size: 16px; transition: 0.2s;
+}
+.btn-primary {
+    background-color: var(--primary); color: #fff; border: 2px solid var(--primary);
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover); border-color: var(--primary-hover); transform: translateY(-1px);
+}
+.btn-secondary {
+    background-color: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.3);
+}
+.btn-secondary:hover {
+    border-color: #fff; background-color: rgba(255,255,255,0.1);
+}
+
+@media (min-width: 768px) {
+    .title { font-size: 64px; }
+    .lead { font-size: 20px; }
+}
+
+/* ==========================================================================
+   5. Logo Strip
+   ========================================================================== */
+.logo-strip {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+    background-color: #FAFAFA;
+}
+.strip-label {
+    text-align: center; font-size: 12px; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;
+}
+.logos {
+    display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+    opacity: 0.6; font-weight: 800; font-size: 20px; color: var(--text-muted);
+}
+.logo-item { display: flex; align-items: center; gap: 8px; }
+
+/* ==========================================================================
+   6. Mission & Solutions
+   ========================================================================== */
+.section { padding: 100px 0; }
+.bg-light { background-color: var(--bg-light); }
+
+.grid-2 { display: grid; gap: 60px; }
+.grid-3 { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+@media (min-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr 1fr; align-items: center; }
+}
+
+.section-title {
+    font-size: 16px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 10px; display: block;
+}
+.headline-md { font-size: 32px; margin-bottom: 24px; letter-spacing: -0.02em; }
+.section-desc { font-size: 20px; color: var(--text-muted); margin-bottom: 60px; }
+.text-body { font-size: 16px; color: var(--text-body); margin-bottom: 40px; }
+
+.stat-row { display: flex; gap: 40px; border-top: 1px solid var(--border); padding-top: 30px; }
+.stat-item { display: flex; flex-direction: column; }
+.stat-num { font-size: 32px; font-weight: 800; color: var(--text-main); }
+.stat-label { font-size: 14px; color: var(--text-muted); }
+
+.img-mission { border-radius: var(--radius); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+/* Cards */
+.card {
+    background: #fff; padding: 40px; border-radius: var(--radius);
+    border: 1px solid var(--border); transition: 0.3s;
+}
+.card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+.card-icon { font-size: 32px; color: var(--primary); margin-bottom: 20px; }
+.card-title { font-size: 20px; margin-bottom: 12px; }
+.card-text { font-size: 15px; color: var(--text-muted); margin-bottom: 24px; }
+.card-link { font-weight: 600; font-size: 14px; color: var(--primary); display: flex; align-items: center; gap: 5px; }
+.card-link:hover { gap: 10px; }
+
+/* ==========================================================================
+   7. Case Study (Dark Mode)
+   ========================================================================== */
+.dark-mode {
+    background-color: #111827;
+    color: #fff;
+    position: relative;
+    padding: 100px 0;
+}
+/* テキストカラー調整用クラス */
+.text-primary { color: var(--primary); }
+.text-white { color: #fff; }
+.text-white-50 { color: rgba(255,255,255, 0.7); }
+
+.case-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin-top: 40px;
+}
+
+.case-card {
+    background-color: rgba(255, 255, 255, 0.05); /* 半透明の白 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    padding: 30px;
+    transition: 0.3s;
+    height: 100%; /* 高さを揃える */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.case-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.case-header {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.case-tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.case-title {
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.case-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.case-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.case-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.case-result {
+    margin-top: auto; /* 一番下に配置 */
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 16px;
+}
+
+.result-icon {
+    color: var(--primary);
+}
+
+/* ==========================================================================
+   8. Footer (Simplified)
+   ========================================================================== */
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+}
+.footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--text-muted);
+}
+.footer-social { display: flex; gap: 20px; font-size: 18px; }
+.footer-social a:hover { color: var(--primary); }
+
+@media (max-width: 600px) {
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+}
