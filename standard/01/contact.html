@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | Standard Corp.</title>
+    <meta name="description" content="Standard Corp.へのお問い合わせページです。制作のご依頼、お見積もりなどお気軽にご相談ください。">
+
+    <link rel="icon" href="assets/icon/favicon.png">
+
+    <meta property="og:site_name" content="Standard Corp.">
+    <meta property="og:title" content="お問い合わせ | Standard Corp.">
+    <meta property="og:description" content="ビジネスの課題解決、新規プロジェクトのご相談など、まずはお気軽にお問い合わせください。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://example.com/contact.html">
+    <meta property="og:image" content="https://example.com/assets/image/ogp.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <div class="page-header">
+        <h1 class="page-title">CONTACT</h1>
+        <p class="page-sub">お問い合わせ</p>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <p style="text-align: center; margin-bottom: 40px;">
+                制作のご依頼、お見積もり、ご相談などお気軽にお問い合わせください。<br>
+                通常2営業日以内に担当者よりご連絡いたします。
+            </p>
+
+            <div class="form-box">
+                <form action="#" method="POST">
+                    
+                    <div class="form-group">
+                        <label class="form-label">お名前 <span class="label-required">必須</span></label>
+                        <input type="text" name="name" class="form-input" placeholder="例：山田 太郎" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">会社名 <span class="label-optional">任意</span></label>
+                        <input type="text" name="company" class="form-input" placeholder="例：株式会社Standard Corp.">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">メールアドレス <span class="label-required">必須</span></label>
+                        <input type="email" name="email" class="form-input" placeholder="例：info@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">お問い合わせ種別 <span class="label-required">必須</span></label>
+                        <select name="subject" class="form-select" required>
+                            <option value="" disabled selected>選択してください</option>
+                            <option value="制作・開発のご依頼">制作・開発のご依頼</option>
+                            <option value="お見積もり依頼">お見積もり依頼</option>
+                            <option value="採用について">採用について</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">お問い合わせ内容 <span class="label-required">必須</span></label>
+                        <textarea name="message" class="form-textarea" placeholder="ご自由にご記入ください" required></textarea>
+                    </div>
+
+                    <div class="form-btn-area">
+                        <button type="submit" class="btn btn-primary btn-submit">送信する</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"></footer>
+
+    <script src="js/parts.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

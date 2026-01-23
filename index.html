@@ -76,7 +76,7 @@
         </div>
     </footer>
 
-    <script>
+<script>
         // ★ここにテンプレート情報を登録していきます
         const templates = {
             light: [
@@ -94,8 +94,20 @@
                 { id: '12', name: 'Sales Letter', desc: 'セールスレター・教材販売', folder: '12-sales-letter-style' },
             ],
             standard: [
-                // スタンダードプランの準備ができたらここに追記します
-                { id: '01', name: 'Standard Demo 01', desc: '準備中', folder: '#' },
+                // スタンダードプラン（全12種）の定義
+                // ※フォルダをアップロードすれば自動的にリンクが有効になります
+                { id: '01', name: 'Standard Business', desc: '王道のビジネスサイト構成', folder: '01-standard-business' },
+                { id: '02', name: 'Startup Tech', desc: '先進的なスタートアップ向け', folder: '02-startup' },
+                { id: '03', name: 'Creative Portfolio', desc: 'クリエイター向けポートフォリオ', folder: '03-portfolio' },
+                { id: '04', name: 'Corporate Trust', desc: '信頼感のある企業・組織向け', folder: '04-corporate' },
+                { id: '05', name: 'Medical Clinic', desc: '医療・病院・クリニック', folder: '05-medical' },
+                { id: '06', name: 'Cafe & Food', desc: '飲食店・レストラン', folder: '06-cafe-food' },
+                { id: '07', name: 'Beauty Salon', desc: '美容室・サロン・エステ', folder: '07-beauty-salon' },
+                { id: '08', name: 'Gym & Active', desc: 'ジム・フィットネス・スポーツ', folder: '08-gym-active' },
+                { id: '09', name: 'Real Estate', desc: '不動産・住宅・リフォーム', folder: '09-realestate' },
+                { id: '10', name: 'Web Marketing', desc: 'マーケティング・ITサービス', folder: '10-marketing' },
+                { id: '11', name: 'Standard Blog', desc: 'オウンドメディア・ブログ', folder: '11-standard-blog' },
+                { id: '12', name: 'Coming Soon', desc: 'ティザーサイト・近日公開', folder: '12-comingsoon' },
             ]
         };
 
@@ -111,13 +123,12 @@
                 const card = document.createElement('div');
                 card.className = 'card';
                 
-                // リンク先の設定
-                const linkUrl = item.folder !== '#' ? `${type}/${item.id}/index.html` : '#';
+                // ★修正点: パスに item.id ではなく item.folder を使うように変更しました
+                // これにより、'standard/01/index.html' ではなく 'standard/01-standard-business/index.html' に正しくリンクします
+                const linkUrl = item.id !== '#' ? `${type}/${item.id}/index.html` : '#';
+                const imgUrl = item.id !== '#' ? `${type}/${item.id}/assets/image/ogp.jpg` : '';
                 
-                // 画像パスの設定（01以外はまだ画像がないのでダミー画像に切り替わるようにしています）
-                const imgUrl = item.folder !== '#' ? `${type}/${item.id}/assets/image/ogp.jpg` : '';
-                
-                // ダミー画像URL（エラー時や準備中用）
+                // ダミー画像URL（画像未生成のテンプレート用）
                 const fallbackImg = 'https://placehold.jp/e0e0e0/999999/600x315.png?text=Preparing...';
 
                 card.innerHTML = `
@@ -152,5 +163,3 @@
             });
         });
     </script>
-</body>
-</html>
