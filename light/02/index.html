@@ -3,351 +3,510 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name | Personal Portfolio</title>
-  <meta name="description" content="名刺代わりに使える1ページポートフォリオ" />
-  
-  <meta property="og:url" content="https://donburakofx.github.io/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Personal Name Card" />
-  <meta property="og:description" content="名刺代わりに使える1ページポートフォリオ" />
-  <meta property="og:image" content="assets/image/ogp.jpg" />
-  
+  <title>NEXT CODE | 未経験からエンジニアへ。マンツーマンプログラミングスクール</title>
+
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NEXT CODE | 未経験からエンジニアへ" />
+  <meta property="og:description" content="挫折させないプログラミングスクール。現役エンジニアによる徹底したマンツーマン指導で、あなたのキャリアを変えます。" />
+  <meta property="og:image" content="https://あなたのドメイン/02-education-school/assets/image/ogp.jpg" />
+  <meta property="og:url" content="https://あなたのドメイン/02-education-school/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">
-        <span class="brand-text">Your Name</span>
-      </a>
 
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#services">Menu</a>
-        <a href="#works">Works</a>
-        <a href="#flow">Flow</a>
-        <a href="#contact" class="nav-cta">Contact</a>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a class="brand" href="#">NEXT CODE</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-container" id="nav-container">
+        <div class="nav-links">
+          <a href="#about" class="nav-link">特徴</a>
+          <a href="#curriculum" class="nav-link">カリキュラム</a>
+          <a href="#price" class="nav-link">料金</a>
+          <a href="#voice" class="nav-link">受講生の声</a>
+          <a href="#faq" class="nav-link">Q&A</a>
+        </div>
+        <div class="header-btns">
+          <a href="../common/contact.html" class="btn btn-sm btn-outline">資料請求</a>
+          <a href="../common/contact.html" class="btn btn-sm btn-accent">無料体験</a>
+        </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="eyebrow">Freelance / Creator</p>
-
-          <h1 class="title">伝わる1ページで、<br>依頼につなげる。</h1>
-
-          <p class="lead">
-            個人・小規模事業向けに、軽量で速いワンページを制作します。<br class="pc-only">
-            まずは要点だけの構成で公開できます。
-          </p>
-
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#contact">無料で相談する</a>
-            <a class="btn btn-ghost" href="#works">制作例を見る</a>
+    
+    <section class="hero" style="background-image: url('assets/image/hero_bg.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-container fade-up">
+        <p class="hero-tag">オンライン・マンツーマン指導</p>
+        <h1 class="hero-title">
+          「作れる」楽しさが、<br>
+          <span class="highlight">未来</span>を変える。
+        </h1>
+        <p class="hero-desc">
+          独学で挫折したあなたへ。<br>
+          現役エンジニアの伴走で、最短3ヶ月でアプリ開発スキルを習得。<br>
+          一生モノの技術を、ここから始めよう。
+        </p>
+        <div class="hero-btns">
+          <a href="../common/contact.html" class="btn btn-lg btn-accent shadow-pulse">無料体験レッスンを予約 <i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        
+        <div class="hero-badges">
+          <div class="badge-item">
+            <span class="b-val">98<small>%</small></span>
+            <span class="b-label">受講満足度</span>
           </div>
-
-          <ul class="meta">
-            <li><i class="fa-solid fa-check"></i> 対応：Web / LP / UI</li>
-            <li><i class="fa-solid fa-check"></i> 納期：最短3日〜</li>
-          </ul>
-
-          <div class="trust">
-            <div class="trust-item">
-              <p class="trust-k">実績</p>
-              <p class="trust-v">50+</p>
-            </div>
-            <div class="trust-item">
-              <p class="trust-k">返信</p>
-              <p class="trust-v">24h</p>
-            </div>
-            <div class="trust-item">
-              <p class="trust-k">制作</p>
-              <p class="trust-v">3day</p>
-            </div>
+          <div class="badge-item">
+            <span class="b-val">No.1</span>
+            <span class="b-label">継続率</span>
+          </div>
+          <div class="badge-item">
+            <span class="b-val">300<small>名+</small></span>
+            <span class="b-label">輩出実績</span>
           </div>
         </div>
-
-        <div class="hero-card-wrap">
-            <img src="assets/image/hero_img.jpg" alt="Hero Image" class="hero-img">
-        </div>
+      </div>
+      <div class="scroll-down">
+        <span>SCROLL</span>
+        <div class="line"></div>
       </div>
     </section>
 
-    <section id="about" class="section bg-gray">
-      <div class="container">
-        <div class="section-head">
-          <h2>About</h2>
-          <p>何をして、誰の役に立つかを短く。</p>
+    <section class="section section-problem bg-pattern">
+      <div class="container text-center">
+        <h2 class="section-title">こんな<span class="text-accent">お悩み</span>ありませんか？</h2>
+        <p class="section-desc">独学の限界を感じている方が、最後に選ぶスクールです。</p>
+        
+        <div class="problem-grid">
+          <div class="problem-card scroll-trigger">
+            <div class="p-img" style="background-image: url('assets/image/problem_01.jpg');"></div>
+            <div class="p-content">
+              <h3>挫折</h3>
+              <p>エラーが解決できず、<br>何時間も無駄にしてしまう</p>
+            </div>
+          </div>
+          <div class="problem-card scroll-trigger delay-1">
+            <div class="p-img" style="background-image: url('assets/image/problem_02.jpg');"></div>
+            <div class="p-content">
+              <h3>迷子</h3>
+              <p>教材が多すぎて、<br>何から学ぶべきかわからない</p>
+            </div>
+          </div>
+          <div class="problem-card scroll-trigger delay-2">
+            <div class="p-img" style="background-image: url('assets/image/problem_03.jpg');"></div>
+            <div class="p-content">
+              <h3>多忙</h3>
+              <p>仕事が忙しくて、<br>決まった時間に通えない</p>
+            </div>
+          </div>
         </div>
-
-        <div class="panel about-panel">
-          <p class="about-desc">
-            <strong>「速い・軽い・伝わる」</strong>をテーマに制作しています。<br>
-            見た目の美しさだけでなく、運用のしやすさと成果にこだわります。
-          </p>
-
-          <div class="about-grid">
-            <div class="about-box">
-              <i class="fa-solid fa-pen-nib icon-about"></i>
-              <p class="about-k">得意</p>
-              <p class="muted">LP / 個人サイト / 小規模事業サイト</p>
-            </div>
-            <div class="about-box">
-              <i class="fa-solid fa-bolt icon-about"></i>
-              <p class="about-k">特徴</p>
-              <p class="muted">軽量・高速、必要十分な構成</p>
-            </div>
-            <div class="about-box">
-              <i class="fa-solid fa-code icon-about"></i>
-              <p class="about-k">ツール</p>
-              <p class="muted">Figma / HTML / CSS / VS Code</p>
-            </div>
+        
+        <div class="problem-solution scroll-trigger">
+          <div class="solution-box">
+            <p>その悩み、<span class="text-primary">NEXT CODE</span> なら解決できます。</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <section id="about" class="section section-features">
       <div class="container">
-        <div class="section-head">
-          <h2>Menu</h2>
-          <p>迷わないように「3つ」だけ。</p>
+        <div class="section-header text-center">
+          <span class="section-sub">WHY CHOOSE US</span>
+          <h2 class="section-title">選ばれる3つの理由</h2>
         </div>
 
-        <div class="grid grid-3 pricing">
-          <article class="card plan">
-            <div class="plan-head">
-              <h3>Mini</h3>
-              <p class="muted plan-sub">とにかく早く公開したい</p>
-              <p class="price">¥29,800<span class="tax">〜</span></p>
+        <div class="feature-list">
+          <div class="feature-item scroll-trigger">
+            <div class="f-visual">
+              <img src="assets/image/feature_01.jpg" alt="マンツーマン指導">
             </div>
-            <ul class="list plan-list">
-              <li>1ページ（基本セクション）</li>
-              <li>スマホ対応（レスポンシブ）</li>
-              <li>問い合わせ導線</li>
-            </ul>
-            <div class="plan-foot">
-              <a class="btn btn-ghost btn-full" href="#contact">この内容で相談</a>
+            <div class="f-content">
+              <span class="f-num">01</span>
+              <h3>現役エンジニアによる<br>完全マンツーマン指導</h3>
+              <p>講師は全員、実務経験3年以上の現役プロフェッショナル。学生アルバイトではありません。あなたの理解度に合わせてカリキュラムを調整し、コードレビューも徹底的に行います。</p>
             </div>
-          </article>
+          </div>
 
-          <article class="card plan plan-featured">
-            <div class="ribbon">おすすめ</div>
-            <div class="plan-head">
-              <h3>Standard</h3>
-              <p class="muted plan-sub">依頼につながる構成に整える</p>
-              <p class="price">¥49,800<span class="tax">〜</span></p>
+          <div class="feature-item reverse scroll-trigger">
+            <div class="f-visual">
+              <img src="assets/image/feature_02.jpg" alt="オリジナルアプリ開発">
             </div>
-            <ul class="list plan-list">
-              <li>構成設計（順序最適化）</li>
-              <li>Menu / Works / FAQ 整備</li>
-              <li>速度・表示の基本最適化</li>
-            </ul>
-            <div class="plan-foot">
-              <a class="btn btn-primary btn-full" href="#contact">無料で相談する</a>
+            <div class="f-content">
+              <span class="f-num">02</span>
+              <h3>「作りたい」を形にする<br>オリジナルアプリ開発</h3>
+              <p>教科書をなぞるだけの学習は終わりです。カリキュラムの後半では、あなた自身のアイデアでオリジナルのWebアプリを開発。就職活動のポートフォリオとしても強力な武器になります。</p>
             </div>
-          </article>
+          </div>
 
-          <article class="card plan">
-            <div class="plan-head">
-              <h3>Support</h3>
-              <p class="muted plan-sub">公開後の更新も任せたい</p>
-              <p class="price">¥9,800<span class="tax">/月</span></p>
+          <div class="feature-item scroll-trigger">
+            <div class="f-visual">
+              <img src="assets/image/feature_03.jpg" alt="サポート体制">
             </div>
-            <ul class="list plan-list">
-              <li>テキスト/画像差し替え</li>
-              <li>軽微な修正（レイアウト等）</li>
-              <li>更新相談（導線・改善提案）</li>
-            </ul>
-            <div class="plan-foot">
-              <a class="btn btn-ghost btn-full" href="#contact">運用の相談</a>
+            <div class="f-content">
+              <span class="f-num">03</span>
+              <h3>いつでも質問し放題<br>挫折させないサポート</h3>
+              <p>学習中の疑問は、チャットツールで24時間いつでも質問可能。原則24時間以内に回答します。エラーで止まってしまう時間を最小限にし、効率よく学習を進められます。</p>
             </div>
-          </article>
+          </div>
         </div>
-
       </div>
     </section>
 
-    <section id="works" class="section bg-gray">
+    <section id="curriculum" class="section bg-primary-light diagonal-bg">
       <div class="container">
-        <div class="section-head">
-          <h2>Works</h2>
-          <p>「成果」と「役割」を明確に。</p>
+        <div class="section-header text-center">
+          <span class="section-sub">CURRICULUM</span>
+          <h2 class="section-title">学習の流れ</h2>
+          <p class="section-desc">未経験から3ヶ月で、自走できるエンジニアを目指します。</p>
         </div>
 
-        <div class="grid grid-3 works-grid">
-          <article class="card work">
-            <div class="work-thumb">
-                <img src="assets/image/work01.jpg" alt="Work 1">
+        <div class="timeline">
+          <div class="timeline-item scroll-trigger">
+            <div class="tl-marker">Month 1</div>
+            <div class="tl-content hover-lift">
+              <h3>基礎固め & サイト制作</h3>
+              <p>HTML/CSS/JavaScriptの基礎を学び、レスポンシブ対応のWebサイトを自力で作れるようになります。</p>
+              <ul class="tl-tags">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+              </ul>
             </div>
-            <div class="work-body">
-                <h3>OnePage 制作</h3>
-                <p class="muted">目的：問い合わせ・予約を増やす</p>
-                <div class="tags">
-                    <span class="tag">Design</span>
-                    <span class="tag">Coding</span>
+          </div>
+          <div class="timeline-item scroll-trigger delay-1">
+            <div class="tl-marker">Month 2</div>
+            <div class="tl-content hover-lift">
+              <h3>Webアプリ開発の基礎</h3>
+              <p>サーバーサイド言語（PHP/Ruby等）とデータベースを学び、会員登録機能や掲示板などのシステムを作ります。</p>
+              <ul class="tl-tags">
+                <li>PHP or Ruby</li>
+                <li>SQL</li>
+                <li>Database</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item scroll-trigger delay-2">
+            <div class="tl-marker">Month 3</div>
+            <div class="tl-content hover-lift">
+              <h3>オリジナルアプリ開発</h3>
+              <p>企画・設計から実装、インターネットへの公開までを一人で行います。プロのフィードバックを受けながら完成度を高めます。</p>
+              <ul class="tl-tags">
+                <li>Planning</li>
+                <li>Development</li>
+                <li>Deploy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="price" class="section bg-animated">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-sub">PRICE</span>
+          <h2 class="section-title">料金プラン</h2>
+          <p class="section-desc">スマホでは横にスワイプできます</p>
+        </div>
+
+        <div class="carousel-wrapper">
+          <button class="nav-arrow prev" onclick="document.getElementById('price-grid').scrollBy({left:-300, behavior:'smooth'})"><i class="fa-solid fa-chevron-left"></i></button>
+
+          <div class="carousel-container price-grid" id="price-grid">
+            <div class="price-card scroll-trigger">
+              <div class="pc-visual">
+                <img src="assets/image/plan_01.jpg" alt="Lite Plan">
+              </div>
+              <div class="pc-content">
+                <h3>ライトプラン</h3>
+                <p class="plan-target">趣味や教養として学びたい方</p>
+                <div class="price">
+                  <span class="yen">¥</span>19,800<span class="per">/月</span>
                 </div>
+                <ul class="pc-list">
+                  <li><i class="fa-solid fa-check"></i> 週1回 マンツーマン(50分)</li>
+                  <li><i class="fa-solid fa-check"></i> チャット質問 (月10回まで)</li>
+                </ul>
+                <a href="../common/contact.html" class="btn btn-block btn-outline">申し込む</a>
+              </div>
             </div>
-          </article>
 
-          <article class="card work">
-            <div class="work-thumb">
-                <img src="assets/image/work02.jpg" alt="Work 2">
-            </div>
-            <div class="work-body">
-                <h3>LP リニューアル</h3>
-                <p class="muted">目的：サービス説明・安心感の醸成</p>
-                <div class="tags">
-                    <span class="tag">LP</span>
-                    <span class="tag">Writing</span>
+            <div class="price-card recommended scroll-trigger delay-1">
+              <div class="reco-badge">人気 No.1</div>
+              <div class="pc-visual">
+                <img src="assets/image/plan_02.jpg" alt="Standard Plan">
+              </div>
+              <div class="pc-content">
+                <h3>スタンダード</h3>
+                <p class="plan-target">転職・副業を目指す方へ</p>
+                <div class="price">
+                  <span class="yen">¥</span>39,800<span class="per">/月</span>
                 </div>
+                <ul class="pc-list">
+                  <li><i class="fa-solid fa-check"></i> 週1回 マンツーマン(50分)</li>
+                  <li><i class="fa-solid fa-check"></i> <strong>チャット質問 無制限</strong></li>
+                  <li><i class="fa-solid fa-check"></i> <strong>全カリキュラム閲覧</strong></li>
+                </ul>
+                <a href="../common/contact.html" class="btn btn-block btn-accent btn-shiny">無料体験で相談する</a>
+              </div>
             </div>
-          </article>
 
-          <article class="card work">
-            <div class="work-thumb">
-                <img src="assets/image/work03.jpg" alt="Work 3">
-            </div>
-            <div class="work-body">
-                <h3>コーポレートサイト</h3>
-                <p class="muted">目的：信頼性の向上と採用強化</p>
-                <div class="tags">
-                    <span class="tag">CMS</span>
-                    <span class="tag">Branding</span>
+            <div class="price-card scroll-trigger delay-2">
+              <div class="pc-visual">
+                <img src="assets/image/plan_03.jpg" alt="Pro Plan">
+              </div>
+              <div class="pc-content">
+                <h3>短期集中コース</h3>
+                <p class="plan-target">3ヶ月で一気に習得したい方</p>
+                <div class="price">
+                  <span class="total-label">一括</span>
+                  <span class="yen">¥</span>198,000
                 </div>
+                <ul class="pc-list">
+                  <li><i class="fa-solid fa-check"></i> 全12回 マンツーマン</li>
+                  <li><i class="fa-solid fa-check"></i> チャット質問 無制限</li>
+                  <li><i class="fa-solid fa-check"></i> 就職・転職サポート付き</li>
+                </ul>
+                <a href="../common/contact.html" class="btn btn-block btn-outline">申し込む</a>
+              </div>
             </div>
-          </article>
+          </div>
+          
+          <button class="nav-arrow next" onclick="document.getElementById('price-grid').scrollBy({left:300, behavior:'smooth'})"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
 
-    <section id="flow" class="section">
+    <section id="voice" class="section bg-light diagonal-bg">
       <div class="container">
-        <div class="section-head">
-          <h2>Flow</h2>
-          <p>納品までの流れ</p>
+        <div class="section-header text-center">
+          <span class="section-sub">VOICE</span>
+          <h2 class="section-title">受講生の声</h2>
+          <p class="section-desc">数多くの卒業生が、新しいキャリアを歩んでいます。</p>
         </div>
 
-        <div class="flow-steps">
-          <div class="step">
-            <div class="step-icon">1</div>
-            <div class="step-content">
-              <p class="step-t">ヒアリング</p>
-              <p class="muted">目的・ターゲット・掲載内容を確認します。</p>
+        <div class="carousel-wrapper">
+          <button class="nav-arrow prev" onclick="document.getElementById('voice-grid').scrollBy({left:-300, behavior:'smooth'})"><i class="fa-solid fa-chevron-left"></i></button>
+
+          <div class="carousel-container voice-grid" id="voice-grid">
+            <div class="voice-card scroll-trigger">
+              <div class="v-head">
+                <div class="v-icon"><i class="fa-solid fa-user"></i></div>
+                <div>
+                  <p class="v-meta">20代 男性 / 営業職</p>
+                  <h4>エンジニア転職に成功！</h4>
+                </div>
+              </div>
+              <p class="v-text">「独学ではエラーが出るたびに何時間も止まっていましたが、ここではすぐに質問できるので学習スピードが段違いでした。ポートフォリオの添削も丁寧で、自信を持って面接に臨めました。」</p>
+            </div>
+
+            <div class="voice-card scroll-trigger delay-1">
+              <div class="v-head">
+                <div class="v-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                <div>
+                  <p class="v-meta">10代 女性 / 大学生</p>
+                  <h4>自分のアプリが作れた！</h4>
+                </div>
+              </div>
+              <p class="v-text">「大学の授業だけでは物足りず受講しました。先生が親身になってアイデアを形にする手伝いをしてくれて、本当に楽しかったです。リリースしたアプリを友達に使ってもらえた時は感動しました。」</p>
+            </div>
+
+            <div class="voice-card scroll-trigger delay-2">
+              <div class="v-head">
+                <div class="v-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <div>
+                  <p class="v-meta">30代 女性 / 事務職</p>
+                  <h4>副業で月5万稼げるように</h4>
+                </div>
+              </div>
+              <p class="v-text">「今の仕事を続けながら、Web制作の副業をしたくて入会しました。時間の使い方もアドバイスいただき、無理なく学習を継続できました。初案件を獲得できた時の喜びは忘れられません。」</p>
             </div>
           </div>
-          <div class="step">
-            <div class="step-icon">2</div>
-            <div class="step-content">
-              <p class="step-t">制作・確認</p>
-              <p class="muted">構成案作成、デザイン、実装を行い確認いただきます。</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-icon">3</div>
-            <div class="step-content">
-              <p class="step-t">公開・納品</p>
-              <p class="muted">サーバーへのアップロードや公開作業を行います。</p>
-            </div>
-          </div>
+
+          <button class="nav-arrow next" onclick="document.getElementById('voice-grid').scrollBy({left:300, behavior:'smooth'})"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section bg-accent">
+    <section id="faq" class="section">
+      <div class="container narrow">
+        <div class="section-header text-center">
+          <span class="section-sub">Q&A</span>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item scroll-trigger">
+            <summary class="faq-head">
+              <div class="faq-q-text">
+                <span class="q-mark">Q.</span> パソコン初心者ですが大丈夫ですか？
+              </div>
+              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="faq-body">
+              <div class="faq-content">
+                <p>はい、問題ありません。受講生の約半数がプログラミング未経験からのスタートです。ツールのインストール方法やタイピングの基礎から、専属の講師が画面共有をしながら丁寧にサポートいたしますので、ご安心ください。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item scroll-trigger">
+            <summary class="faq-head">
+              <div class="faq-q-text">
+                <span class="q-mark">Q.</span> 仕事をしながらでも通えますか？
+              </div>
+              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="faq-body">
+              <div class="faq-content">
+                <p>もちろんです。レッスンは平日・土日祝日問わず、朝10時から夜22時まで開講しています。お仕事終わりの時間や休日を有効活用して、ご自身のペースで学習を進めることができます。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item scroll-trigger">
+            <summary class="faq-head">
+              <div class="faq-q-text">
+                <span class="q-mark">Q.</span> 無料体験では何をするのですか？
+              </div>
+              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="faq-body">
+              <div class="faq-content">
+                <p>現状のスキルレベルや目標（転職、副業、教養など）をヒアリングし、あなたに最適な学習ロードマップをご提案します。実際の教材の一部をお見せすることも可能です。無理な勧誘は一切行いません。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item scroll-trigger">
+            <summary class="faq-head">
+              <div class="faq-q-text">
+                <span class="q-mark">Q.</span> 途中でプラン変更は可能ですか？
+              </div>
+              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="faq-body">
+              <div class="faq-content">
+                <p>はい、月単位でのプラン変更が可能です。学習時間を増やせる月はスタンダード、忙しい月はライトプランなど、ライフスタイルに合わせて柔軟に変更いただけます。変更希望月の前月20日までにお申し出ください。</p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-cta">
+      <div class="container narrow text-center">
+        <h2 class="cta-title">まずは「無料体験」で<br>プログラミングに触れてみよう</h2>
+        <p class="cta-desc">
+          「自分に向いているか不安」「どのプランがいいかわからない」<br>
+          そんな方は、まずは無料体験レッスンへお越しください。<br>
+          無理な勧誘は一切ありません。学習のロードマップを一緒に考えましょう。
+        </p>
+        <a href="../common/contact.html" class="btn btn-xl btn-accent btn-shiny shadow-pulse">無料体験レッスンを予約する</a>
+        <p class="cta-note">所要時間：約60分 / オンライン(Zoom)にて実施</p>
+      </div>
+    </section>
+
+    <footer class="footer">
       <div class="container">
-        <div class="section-head text-white">
-          <h2>Contact</h2>
-          <p>お気軽にご相談ください。</p>
+        <div class="footer-row">
+          <div class="footer-info">
+            <a class="brand" href="#">NEXT CODE</a>
+            <p>〒100-0000<br>東京都渋谷区テックストリート 1-2-3</p>
+          </div>
+          <div class="footer-menu">
+            <a href="../common/company.html">運営会社</a>
+            <a href="../common/law.html">特定商取引法</a>
+            <a href="../common/privacy.html">プライバシーポリシー</a>
+            <a href="../common/contact.html">お問い合わせ</a>
+          </div>
         </div>
-
-        <div class="contact-box">
-            <p class="contact-lead">
-                まずは現状の課題整理からお手伝いします。<br>
-                お仕事のご依頼・ご相談はこちらから。
-            </p>
-            
-            <a class="btn btn-white btn-lg" href="mailto:you@example.com">
-                <i class="fa-regular fa-envelope"></i> メールで相談する
-            </a>
-            
-            <div class="social-row">
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-
-            <p class="contact-note">※ 通常24時間以内に返信いたします</p>
-        </div>
+        <small class="copyright">© 2026 NEXT CODE Academy.</small>
       </div>
-    </section>
+    </footer>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>&copy; 2025 Your Name. Built with HTML & CSS.</small>
-    </div>
-  </footer>
+  <div class="floating-cta">
+    <a href="../common/contact.html" class="btn btn-accent btn-block btn-shiny">無料体験を予約</a>
+  </div>
 
-  <div id="demo-theme-switcher" style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.15); z-index: 9999; font-family: sans-serif; width: 220px;">
-      <p style="margin: 0 0 10px; font-size: 12px; font-weight: bold; color: #555;">🎨 カラーパターン確認</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          <button onclick="setTheme('standard')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #0066CC; cursor: pointer;" title="Standard Blue"></button>
-          <button onclick="setTheme('mono')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #111111; cursor: pointer;" title="Mono Black"></button>
-          <button onclick="setTheme('brown')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #A67B5B; cursor: pointer;" title="Warm Brown"></button>
-          <button onclick="setTheme('purple')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #6C5CE7; cursor: pointer;" title="Elegant Purple"></button>
-          <button onclick="setTheme('green')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #2E8B57; cursor: pointer;" title="Fresh Green"></button>
-      </div>
+  <div id="demo-palette" class="demo-palette">
+    <div class="palette-label">Color Theme</div>
+    <div class="palette-btns">
+      <button onclick="changeTheme('soda')" class="p-btn btn-soda" title="Soda Blue"></button>
+      <button onclick="changeTheme('berry')" class="p-btn btn-berry" title="Berry Pink"></button>
+      <button onclick="changeTheme('muscat')" class="p-btn btn-muscat" title="Muscat Green"></button>
+      <button onclick="changeTheme('lemon')" class="p-btn btn-lemon" title="Lemon Yellow"></button>
+      <button onclick="changeTheme('lavender')" class="p-btn btn-lavender" title="Lavender Purple"></button>
+    </div>
   </div>
 
   <script>
-      const themes = {
-          standard: {
-              '--bg-body': '#FFFFFF', '--bg-gray': '#F8F9FA',
-              '--text-main': '#333333', '--text-muted': '#666666',
-              '--primary': '#0066CC', '--primary-hover': '#0052A3',
-              '--accent-bg': '#0066CC', '--border': '#E5E5E5'
-          },
-          mono: {
-              '--bg-body': '#FFFFFF', '--bg-gray': '#F4F4F4',
-              '--text-main': '#111111', '--text-muted': '#555555',
-              '--primary': '#111111', '--primary-hover': '#333333',
-              '--accent-bg': '#111111', '--border': '#DDDDDD'
-          },
-          brown: {
-              '--bg-body': '#FFFEFA', '--bg-gray': '#F5F2EE',
-              '--text-main': '#4A3B32', '--text-muted': '#8C7B70',
-              '--primary': '#A67B5B', '--primary-hover': '#8A6548',
-              '--accent-bg': '#4A3B32', '--border': '#E6DED8'
-          },
-          purple: {
-              '--bg-body': '#FAFAFF', '--bg-gray': '#F0F0F5',
-              '--text-main': '#2D2B35', '--text-muted': '#6E6B7B',
-              '--primary': '#6C5CE7', '--primary-hover': '#5649C0',
-              '--accent-bg': '#6C5CE7', '--border': '#E0DEE8'
-          },
-          green: {
-              '--bg-body': '#F9FFF9', '--bg-gray': '#EDF7ED',
-              '--text-main': '#1B4D3E', '--text-muted': '#5C7A6F',
-              '--primary': '#2E8B57', '--primary-hover': '#246B43',
-              '--accent-bg': '#2E8B57', '--border': '#D8E6DE'
-          }
-      };
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Scroll Animation
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('is-active');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.scroll-trigger, .load-fade-up').forEach(el => observer.observe(el));
 
-      function setTheme(name) {
-          const root = document.documentElement;
-          const theme = themes[name];
-          for (const key in theme) {
-              root.style.setProperty(key, theme[key]);
+      // 2. Hamburger Menu
+      const hamburger = document.getElementById('hamburger');
+      const navContainer = document.getElementById('nav-container');
+      const header = document.getElementById('header');
+      const navLinks = document.querySelectorAll('.nav-link');
+      if(hamburger && navContainer) {
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          navContainer.classList.toggle('active');
+        });
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navContainer.classList.remove('active');
+          });
+        });
+        document.addEventListener('click', (e) => {
+          if (!header.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navContainer.classList.remove('active');
           }
+        });
       }
+    });
+
+    // 3. Demo Theme Switcher
+    const themes = {
+      'soda':     { p: '10, 189, 227', a: '255, 159, 67' },
+      'berry':    { p: '239, 87, 119', a: '11, 232, 129' },
+      'muscat':   { p: '32, 191, 107', a: '247, 183, 49' },
+      'lemon':    { p: '250, 130, 49', a: '56, 103, 214' },
+      'lavender': { p: '165, 94, 234', a: '255, 192, 72' }
+    };
+    function changeTheme(key) {
+      const t = themes[key];
+      if(t) {
+        document.documentElement.style.setProperty('--primary-rgb', t.p);
+        document.documentElement.style.setProperty('--accent-rgb', t.a);
+      }
+    }
   </script>
 </body>
 </html>
