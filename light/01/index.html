@@ -4,187 +4,409 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Social Link Profile</title>
-  <meta name="description" content="SNSリンク集プロフィール" />
-
-  <meta property="og:url" content="https://donburakofx.github.io/" />
+  <title>LUMIÈRE SERUM | あなた本来の輝きを</title>
+  <meta name="description" content="植物の力と科学の融合。次世代エイジングケア美容液「ルミエールセラム」公式サイト。" />
+  
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Social Link Profile" />
-  <meta property="og:description" content="SNSリンク集プロフィール" />
+  <meta property="og:title" content="LUMIÈRE SERUM | あなた本来の輝きを" />
   <meta property="og:image" content="assets/image/ogp.jpg" />
-
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Zen+Old+Mincho:wght@400;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="css/style.css" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
-  <div id="demo-theme-switcher"
-    style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.15); z-index: 9999; font-family: sans-serif; width: 200px;">
-    <p style="margin: 0 0 10px; font-size: 12px; font-weight: bold; color: #555;">🎨 カラーパターン確認</p>
-    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-      <button onclick="setTheme('mono')"
-        style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #333; cursor: pointer;"
-        title="Mono Black"></button>
-      <button onclick="setTheme('sakura')"
-        style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #FF8BA7; cursor: pointer;"
-        title="Sakura Pink"></button>
-      <button onclick="setTheme('sky')"
-        style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #0288D1; cursor: pointer;"
-        title="Sky Blue"></button>
-      <button onclick="setTheme('mint')"
-        style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #4CAF50; cursor: pointer;"
-        title="Mint Green"></button>
-      <button onclick="setTheme('purple')"
-        style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #BB86FC; cursor: pointer;"
-        title="Night Purple"></button>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">LUMIÈRE</a>
+      <a href="#cta" class="btn-header">購入する</a>
     </div>
-  </div>
+  </header>
 
-  <script>
-    // カラーパレット定義（CSSのコメントアウトにある値をJSで適用します）
-    const themes = {
-      mono: {
-        '--bg-body': '#F0F2F5', '--bg-card': '#FFFFFF',
-        '--text-main': '#333333', '--text-sub': '#777777',
-        '--accent': '#111111', '--accent-text': '#FFFFFF',
-        '--primary': '#E63946', '--border': '#E5E5E5'
-      },
-      sakura: {
-        '--bg-body': '#FFF0F5', '--bg-card': '#FFFFFF',
-        '--text-main': '#5D4037', '--text-sub': '#8D6E63',
-        '--accent': '#FF8BA7', '--accent-text': '#FFFFFF',
-        '--primary': '#D81B60', '--border': '#FFCDD2'
-      },
-      sky: {
-        '--bg-body': '#E0F7FA', '--bg-card': '#FFFFFF',
-        '--text-main': '#0277BD', '--text-sub': '#4FC3F7',
-        '--accent': '#0288D1', '--accent-text': '#FFFFFF',
-        '--primary': '#FF9800', '--border': '#B3E5FC'
-      },
-      mint: {
-        '--bg-body': '#E8F5E9', '--bg-card': '#FFFFFF',
-        '--text-main': '#1B5E20', '--text-sub': '#66BB6A',
-        '--accent': '#4CAF50', '--accent-text': '#FFFFFF',
-        '--primary': '#FF5722', '--border': '#C8E6C9'
-      },
-      purple: {
-        '--bg-body': '#121212', '--bg-card': '#1E1E1E',
-        '--text-main': '#E0E0E0', '--text-sub': '#AAAAAA',
-        '--accent': '#BB86FC', '--accent-text': '#000000',
-        '--primary': '#03DAC6', '--border': '#333333'
-      }
-    };
-
-    function setTheme(name) {
-      const root = document.documentElement;
-      const theme = themes[name];
-      for (const key in theme) {
-        root.style.setProperty(key, theme[key]);
-      }
-    }
-  </script>
-  <main class="wrap">
-
-    <article class="card">
-
-      <header class="profile-head">
-        <div class="avatar">
-          <img src="assets/image/profile.jpg" alt="Profile Image">
-        </div>
-
-        <h1 class="name">Your Name</h1>
-        <p class="role">Designer / Creator</p>
-
-        <p class="bio">
-          日々の活動リンクまとめ。<br>
-          お仕事のご相談はフォームよりお願いします。
+  <main id="top">
+    
+    <section class="hero">
+      <div class="hero-bg" style="background-image: url('assets/image/hero_bg.jpg');"></div>
+      
+      <div class="hero-content load-fade-up">
+        <p class="hero-eyebrow">The Botanical Science</p>
+        <h1 class="hero-title">
+          時を恐れない。<br>
+          <span class="serif-italic">美しさは、進化する。</span>
+        </h1>
+        <p class="hero-lead">
+          植物幹細胞エキス配合<br>
+          プレミアムエイジングケア美容液
         </p>
+        <a href="#cta" class="btn btn-gold btn-shiny shadow-pulse-gold">初回限定 60%OFF で試す</a>
+      </div>
+    </section>
 
-        <ul class="stats">
-          <li>
-            <span class="stat-label">Location</span>
-            <span class="stat-value">Tokyo</span>
-          </li>
-          <li>
-            <span class="stat-label">Works</span>
-            <span class="stat-value">100+</span>
-          </li>
-          <li>
-            <span class="stat-label">Reply</span>
-            <span class="stat-value">24h</span>
-          </li>
-        </ul>
-      </header>
+    <section class="section section-concept bg-white">
+      <div class="container concept-container">
+        <div class="concept-visual scroll-trigger">
+          <img src="assets/image/concept.jpg" alt="Concept Visual">
+        </div>
+        <div class="concept-text scroll-trigger delay-1">
+          <h2 class="vertical-title">
+            私らしく、<br>
+            透き通るような<br>
+            毎日を。
+          </h2>
+          <p class="vertical-body">
+            鏡を見るのが楽しみになる。<br>
+            そんな瞬間を届けたい。<br>
+            <br>
+            厳選された植物の生命力と<br>
+            最新の皮膚科学が出会い、<br>
+            あなたの肌に眠る可能性を<br>
+            呼び覚まします。
+          </p>
+        </div>
+      </div>
+    </section>
 
-      <div class="links">
+    <section class="section bg-light-gray">
+      <div class="container narrow text-center">
+        <div class="scroll-trigger">
+          <p class="section-sub">SKIN TROUBLE</p>
+          <h2 class="section-title mb-5">こんなお悩みありませんか？</h2>
+          <p class="section-desc mb-4">年齢とともに増える肌のサイン。<br>タップして原因をチェックしてみましょう。</p>
+        </div>
+        
+        <div class="accordion-group">
+          <details class="accordion-item scroll-trigger">
+            <summary class="accordion-header">
+              <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+              <span class="accordion-title">最近、化粧ノリが悪い気がする</span>
+              <span class="accordion-toggle"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <p><strong>その原因は「角質層の乱れ」かもしれません。</strong><br>
+                肌のターンオーバーが乱れると、古い角質が蓄積し、表面がゴワつく原因になります。これによりファンデーションが密着せず、浮いてしまうのです。</p>
+              </div>
+            </div>
+          </details>
 
-        <a href="#" target="_blank" class="btn">
-          <div class="btn-icon-left">
-            <i class="fa-regular fa-folder-open"></i>
-          </div>
-          <div class="btn-text">
-            Portfolio / Works
-            <span class="btn-sub">制作実績まとめ</span>
-          </div>
-          <span class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></span>
-        </a>
+          <details class="accordion-item scroll-trigger delay-1">
+            <summary class="accordion-header">
+              <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+              <span class="accordion-title">夕方になると肌がくすんで見える</span>
+              <span class="accordion-toggle"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <p><strong>その原因は「乾燥によるキメの粗さ」かもしれません。</strong><br>
+                日中のエアコンや紫外線ダメージで肌内部の水分が失われると、キメが乱れて光を綺麗に反射できなくなり、全体的に暗い印象を与えてしまいます。</p>
+              </div>
+            </div>
+          </details>
 
-        <a href="#" target="_blank" class="btn">
-          <div class="btn-icon-left">
-            <i class="fa-brands fa-x-twitter"></i>
-          </div>
-          <div class="btn-text">
-            X (Twitter)
-            <span class="btn-sub">@yourname</span>
-          </div>
-          <span class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></span>
-        </a>
+          <details class="accordion-item scroll-trigger delay-2">
+            <summary class="accordion-header">
+              <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+              <span class="accordion-title">スキンケアが入っていかない</span>
+              <span class="accordion-toggle"><i class="fa-solid fa-plus"></i></span>
+            </summary>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <p><strong>その原因は「浸透ルートの詰まり」かもしれません。</strong><br>
+                肌表面が硬くなっていると、どんなに良い成分も奥（角質層）まで届きません。まずは肌を柔らかくほぐす「導入ケア」が必要です。</p>
+              </div>
+            </div>
+          </details>
+        </div>
+        
+        <div class="arrow-down scroll-trigger">
+          <p>必要なのは、<br>肌の基礎力を底上げする<strong>「土台ケア」</strong>です。</p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+      </div>
+    </section>
 
-        <a href="#" target="_blank" class="btn">
-          <div class="btn-icon-left">
-            <i class="fa-brands fa-instagram"></i>
-          </div>
-          <div class="btn-text">
-            Instagram
-            <span class="btn-sub">ライフスタイル・写真</span>
-          </div>
-          <span class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></span>
-        </a>
-
-        <a href="#" target="_blank" class="btn">
-          <div class="btn-icon-left">
-            <i class="fa-brands fa-youtube"></i>
-          </div>
-          <div class="btn-text">
-            YouTube Channel
-            <span class="btn-sub">解説動画・Vlog</span>
-          </div>
-          <span class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></span>
-        </a>
-
-        <a href="mailto:you@example.com" class="btn btn-primary">
-          <div class="btn-icon-left">
-            <i class="fa-regular fa-envelope"></i>
-          </div>
-          <div class="btn-text">
-            Contact Me
-            <span class="btn-sub">お仕事のご依頼はこちら</span>
-          </div>
-          <span class="btn-arrow"><i class="fa-solid fa-paper-plane"></i></span>
-        </a>
-
+    <section class="section section-product overflow-hidden">
+      <div class="container text-center mb-4 scroll-trigger">
+        <p class="product-catch">Visual Gallery</p>
+        <h2 class="product-name">Product Features</h2>
+        <p class="product-spec">写真をタップすると詳細が表示されます <i class="fa-regular fa-hand-pointer"></i></p>
       </div>
 
-      <footer class="card-footer">
-        <small>&copy; 2026 Your Name</small>
-      </footer>
+      <div class="carousel-container scroll-trigger delay-1">
+        
+        <details class="carousel-card photo-card">
+          <summary class="photo-summary">
+            <div class="photo-frame">
+              <img src="assets/image/gallery_01.jpg" alt="Gallery 01" class="carousel-img">
+              <div class="photo-caption">
+                <h3>Refined Design</h3>
+                <span class="read-more">詳しく見る <i class="fa-solid fa-plus"></i></span>
+              </div>
+            </div>
+          </summary>
+          <div class="photo-details">
+            <p><strong>「飾っておきたくなる」美しさ。</strong><br>
+            インテリアに馴染む、洗練されたボトルデザインを追求しました。遮光性のある特殊ガラス容器を採用することで、繊細な植物由来成分の鮮度を最後の一滴まで守り抜きます。毎日のスキンケアタイムが、視覚からも満たされる至福の時間へと変わります。</p>
+          </div>
+        </details>
 
-    </article>
+        <details class="carousel-card photo-card">
+          <summary class="photo-summary">
+            <div class="photo-frame">
+              <img src="assets/image/gallery_02.jpg" alt="Gallery 02" class="carousel-img">
+              <div class="photo-caption">
+                <h3>Rich Texture</h3>
+                <span class="read-more">詳しく見る <i class="fa-solid fa-plus"></i></span>
+              </div>
+            </div>
+          </summary>
+          <div class="photo-details">
+            <p><strong>驚きの浸透力と、濃密な潤い。</strong><br>
+            手に出した瞬間はとろみのある濃厚なテクスチャですが、肌にのせた瞬間にスッと吸い込まれるように馴染みます。ベタつきを一切残さない独自の技術により、朝のメイク前にもヨレを気にせずお使いいただけます。内側から押し返すようなハリ感をご体感ください。</p>
+          </div>
+        </details>
+
+        <details class="carousel-card photo-card">
+          <summary class="photo-summary">
+            <div class="photo-frame">
+              <img src="assets/image/gallery_03.jpg" alt="Gallery 03" class="carousel-img">
+              <div class="photo-caption">
+                <h3>Botanical Power</h3>
+                <span class="read-more">詳しく見る <i class="fa-solid fa-plus"></i></span>
+              </div>
+            </div>
+          </summary>
+          <div class="photo-details">
+            <p><strong>生命力溢れる、希少な植物幹細胞。</strong><br>
+            過酷な環境でも枯れることなく育つ「奇跡のリンゴ」や「アルペンローズ」から抽出した幹細胞エキスを贅沢に配合しました。肌本来が持つコンディションを整え、年齢とともに失われがちな輝きを呼び覚まします。自然の力とバイオテクノロジーの融合です。</p>
+          </div>
+        </details>
+
+        <details class="carousel-card photo-card">
+          <summary class="photo-summary">
+            <div class="photo-frame">
+              <img src="assets/image/gallery_04.jpg" alt="Gallery 04" class="carousel-img">
+              <div class="photo-caption">
+                <h3>Daily Care</h3>
+                <span class="read-more">詳しく見る <i class="fa-solid fa-plus"></i></span>
+              </div>
+            </div>
+          </summary>
+          <div class="photo-details">
+            <p><strong>心まで解きほぐす、天然精油の香り。</strong><br>
+            合成香料は一切使用せず、ベルガモット、ゼラニウム、フランキンセンスなど厳選された天然精油のみをブレンドしました。深呼吸したくなるような穏やかで奥深い香りが、一日の疲れをリセットし、心身ともにリラックスした状態へと導きます。</p>
+          </div>
+        </details>
+      </div>
+      
+      <div class="carousel-indicator">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </section>
+
+    <section class="section section-parallax" style="background-image: url('assets/image/hero_bg.jpg');">
+      <div class="parallax-content text-center scroll-trigger">
+        <h2>Touch the Nature</h2>
+        <p>一滴に込められた、自然の恵み。</p>
+      </div>
+    </section>
+
+    <section class="section section-voice bg-light">
+      <div class="bg-shape shape-1"></div>
+      <div class="bg-shape shape-2"></div>
+      
+      <div class="container narrow relative-z">
+        <div class="text-center mb-5 scroll-trigger">
+          <p class="section-sub">VOICE</p>
+          <h2 class="section-title">愛用者の声</h2>
+        </div>
+
+        <input type="checkbox" id="view-more-check" class="view-more-check">
+        
+        <div class="voice-grid">
+          
+          <div class="voice-card scroll-trigger">
+            <div class="voice-header">
+              <img src="assets/image/user_01.jpg" alt="User 1" class="voice-avatar">
+              <div class="voice-info">
+                <p class="voice-user">A.S 様 (30代 / 乾燥肌)</p>
+                <div class="voice-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="voice-body">「とろみがあるのにスッと馴染んで驚きました。翌朝の肌の触り心地が全然違います！香りも自然で癒やされます。」</p>
+          </div>
+
+          <div class="voice-card scroll-trigger delay-1">
+            <div class="voice-header">
+              <img src="assets/image/user_02.jpg" alt="User 2" class="voice-avatar">
+              <div class="voice-info">
+                <p class="voice-user">M.K 様 (40代 / 混合肌)</p>
+                <div class="voice-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+              </div>
+            </div>
+            <p class="voice-body">「友人に勧められて購入。使い始めて2週間ですが、ファンデーションの厚塗りをしなくなりました。リピート決定です。」</p>
+          </div>
+
+          <div class="voice-card hidden-voice">
+            <div class="voice-header">
+              <img src="assets/image/user_03.jpg" alt="User 3" class="voice-avatar">
+              <div class="voice-info">
+                <p class="voice-user">Y.T 様 (50代 / 普通肌)</p>
+                <div class="voice-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="voice-body">「デパコスから乗り換えました。この価格でこのクオリティは信じられません。定期便で続けています。」</p>
+          </div>
+
+          <div class="voice-card hidden-voice">
+            <div class="voice-header">
+              <img src="assets/image/user_04.jpg" alt="User 4" class="voice-avatar">
+              <div class="voice-info">
+                <p class="voice-user">S.O 様 (20代 / 敏感肌)</p>
+                <div class="voice-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+              </div>
+            </div>
+            <p class="voice-body">「敏感肌で合う化粧品が少ないのですが、これはピリピリせず使えました。肌が柔らかくなった気がします。」</p>
+          </div>
+
+          <div class="voice-card hidden-voice">
+            <div class="voice-header">
+              <img src="assets/image/user_05.jpg" alt="User 5" class="voice-avatar">
+              <div class="voice-info">
+                <p class="voice-user">K.N 様 (30代 / 脂性肌)</p>
+                <div class="voice-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="voice-body">「ベタつかないのが良いです。メイク前に使ってもヨレないし、一日中乾燥知らずでした。」</p>
+          </div>
+        </div>
+
+        <div class="view-more-container">
+          <label for="view-more-check" class="btn-outline-gold">
+            <span class="text-show">もっと見る <i class="fa-solid fa-angle-down"></i></span>
+            <span class="text-hide">閉じる <i class="fa-solid fa-angle-up"></i></span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container narrow">
+        <div class="text-center mb-5 scroll-trigger">
+          <p class="section-sub">Q&A</p>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item scroll-trigger">
+            <div class="faq-visible">
+              <p class="faq-q"><span class="q-mark">Q.</span> 敏感肌でも使えますか？</p>
+              <p class="faq-a-short"><span class="a-mark">A.</span> はい、ご使用いただけます。7つのフリー処方で、パッチテスト済みです。</p>
+            </div>
+            <details class="faq-details">
+              <summary class="faq-more-btn">詳細を読む <i class="fa-solid fa-plus"></i></summary>
+              <div class="faq-body">
+                <p>パラベン、アルコール、香料、着色料、鉱物油、石油系界面活性剤、紫外線吸収剤を使用していない「7つのフリー処方」です。<br>
+                敏感肌の方を対象としたパッチテスト、スティンギングテストを実施済みですので、安心してお使いいただけます。（※すべての方にアレルギーや皮膚刺激が起きないというわけではありません。）</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item scroll-trigger">
+            <div class="faq-visible">
+              <p class="faq-q"><span class="q-mark">Q.</span> いつ使うのが効果的ですか？</p>
+              <p class="faq-a-short"><span class="a-mark">A.</span> 洗顔後すぐ、化粧水の前にご使用いただく「導入美容液」です。</p>
+            </div>
+            <details class="faq-details">
+              <summary class="faq-more-btn">詳細を読む <i class="fa-solid fa-plus"></i></summary>
+              <div class="faq-body">
+                <p>肌が一番水分を求めている「洗顔直後」にお使いいただくことで、美容成分が角質層のすみずみまで行き渡ります。<br>
+                また、肌を柔らかく整える効果があるため、その後に使う化粧水や乳液の浸透（角質層まで）もサポートします。</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item scroll-trigger">
+            <div class="faq-visible">
+              <p class="faq-q"><span class="q-mark">Q.</span> 定期購入の解約はいつでもできますか？</p>
+              <p class="faq-a-short"><span class="a-mark">A.</span> はい、回数の縛りはございません。いつでも解約・休止が可能です。</p>
+            </div>
+            <details class="faq-details">
+              <summary class="faq-more-btn">詳細を読む <i class="fa-solid fa-plus"></i></summary>
+              <div class="faq-body">
+                <p>よくある「最低○回購入」といった縛りは一切ございません。<br>
+                次回お届け予定日の10日前までにお電話、またはマイページよりお手続きいただければ、いつでも解約・休止・お届けサイクルの変更が可能です。まずはお気軽にお試しください。</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="section section-cta">
+      <div class="container narrow text-center">
+        <div class="scroll-trigger">
+          <h2 class="cta-head">First Trial Campaign</h2>
+          <p class="cta-sub">WEB限定・初回お試しキャンペーン</p>
+        </div>
+        
+        <div class="cta-box shadow-pulse scroll-trigger delay-1">
+          <div class="cta-product">
+            <img src="assets/image/gallery_01.jpg" alt="Product Small">
+          </div>
+          <div class="cta-info">
+            <p class="cta-name">LUMIÈRE SERUM (30ml)</p>
+            <p class="cta-price-label">通常価格 ¥6,800 のところ</p>
+            <p class="cta-price">
+              <span class="currency">¥</span>2,980<span class="tax">(税込)</span>
+            </p>
+            <p class="cta-off">初回 56% OFF</p>
+          </div>
+        </div>
+        <a href="#" class="btn btn-cta btn-shiny scroll-trigger">今すぐお得に申し込む <i class="fa-solid fa-angle-right"></i></a>
+        <p class="cta-note scroll-trigger">
+          ※定期コースへの自動登録はありません。<br>
+          ※お一人様1回限りとなります。<br>
+          ※送料は全国無料でお届けします。
+        </p>
+        <div class="payment-methods scroll-trigger">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-jcb"></i>
+          <i class="fa-brands fa-cc-amex"></i>
+          <span>Amazon Pay</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-nav">
+          <li><a href="../common/law.html">特定商取引法に基づく表記</a></li>
+          <li><a href="../common/privacy.html">プライバシーポリシー</a></li>
+          <li><a href="../common/law.html">会社概要</a></li>
+        </ul>
+        <small class="copyright">© 2025 LUMIÈRE Cosmetics.</small>
+      </div>
+    </footer>
+
   </main>
-</body>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('is-active');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.scroll-trigger').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
 </html>
