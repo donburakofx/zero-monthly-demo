@@ -369,7 +369,7 @@
             <p class="cta-off">初回 56% OFF</p>
           </div>
         </div>
-        <a href="#" class="btn btn-cta btn-shiny scroll-trigger">今すぐお得に申し込む <i class="fa-solid fa-angle-right"></i></a>
+        <a href="#CTA" class="btn btn-cta btn-shiny scroll-trigger">今すぐお得に申し込む <i class="fa-solid fa-angle-right"></i></a>
         <p class="cta-note scroll-trigger">
           ※定期コースへの自動登録はありません。<br>
           ※お一人様1回限りとなります。<br>
@@ -420,7 +420,7 @@
       document.querySelectorAll('.scroll-trigger').forEach(el => observer.observe(el));
 
       // 2. DEMO ONLY: Fake Purchase Alert
-      const buyButtons = document.querySelectorAll('.demo-buy-btn, .btn-header'); // ヘッダーボタンも含める
+      const buyButtons = document.querySelectorAll('.btn-cta'); // ヘッダーボタンも含める
       buyButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault(); // リンク遷移を無効化
