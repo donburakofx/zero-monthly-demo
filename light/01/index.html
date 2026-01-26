@@ -398,15 +398,83 @@
 
   </main>
 
+<div id="demo-palette">
+    <p>Color Pattern</p>
+    <div class="palette-btns">
+      <button onclick="changeTheme('A')" class="p-btn p-btn-a" title="Luxury Gold">A</button>
+      <button onclick="changeTheme('B')" class="p-btn p-btn-b" title="Medical Blue">B</button>
+      <button onclick="changeTheme('C')" class="p-btn p-btn-c" title="Organic Green">C</button>
+      <button onclick="changeTheme('D')" class="p-btn p-btn-d" title="Deep Navy">D</button>
+      <button onclick="changeTheme('E')" class="p-btn p-btn-e" title="Greige Minimal">E</button>
+    </div>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // 1. Scroll Trigger
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) entry.target.classList.add('is-active');
         });
       }, { threshold: 0.1 });
       document.querySelectorAll('.scroll-trigger').forEach(el => observer.observe(el));
+
+      // 2. DEMO ONLY: Fake Purchase Alert
+      const buyButtons = document.querySelectorAll('.demo-buy-btn, .btn-header'); // ヘッダーボタンも含める
+      buyButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault(); // リンク遷移を無効化
+          alert('【デモ用メッセージ】\n実際にはここに購入画面（カート）へのリンクを設定します。');
+        });
+      });
     });
+
+// 3. DEMO ONLY: Color Switcher Logic
+    const themes = {
+      'A': { // Luxury Gold -> CTA: RED
+        '--text-main': '#333', '--text-serif': '#1A1A1A', '--primary': '#A68E68',
+        '--primary-light': '#E8E0D5', '--accent': '#B76E79', 
+        '--cta-color': '#d10000', 
+        '--bg-body': '#FDFDFD',
+        '--bg-cta-tint': '#fff0f5' // 薄いピンク
+      },
+      'B': { // Medical Blue -> CTA: ORANGE
+        '--text-main': '#2C3E50', '--text-serif': '#1A252F', '--primary': '#008080',
+        '--primary-light': '#E0F2F1', '--accent': '#20B2AA', 
+        '--cta-color': '#F39C12', 
+        '--bg-body': '#F5FAFA',
+        '--bg-cta-tint': '#fff8e1' // 薄いオレンジ（クリーム色）
+      },
+      'C': { // Organic Green -> CTA: TERRA COTTA
+        '--text-main': '#4A4A4A', '--text-serif': '#2E3B28', '--primary': '#6B8E23',
+        '--primary-light': '#F0F5E5', '--accent': '#DAA520', 
+        '--cta-color': '#D35400', 
+        '--bg-body': '#FFFEF5',
+        '--bg-cta-tint': '#fbe9e7' // 薄いテラコッタ（赤茶）
+      },
+      'D': { // Deep Navy -> CTA: GOLD
+        '--text-main': '#333', '--text-serif': '#0F172A', '--primary': '#1e293b',
+        '--primary-light': '#E2E8F0', '--accent': '#D4AF37', 
+        '--cta-color': '#C59D5F', 
+        '--bg-body': '#F8FAFC',
+        '--bg-cta-tint': '#fffde7' // 薄いゴールド（イエロー系）
+      },
+      'E': { // Greige Minimal -> CTA: BLACK
+        '--text-main': '#444', '--text-serif': '#333', '--primary': '#9E9E9E',
+        '--primary-light': '#F5F5F5', '--accent': '#C0A080', 
+        '--cta-color': '#333333', 
+        '--bg-body': '#FFFAF0',
+        '--bg-cta-tint': '#f5f5f5' // 薄いグレー
+      }
+    };
+
+    function changeTheme(type) {
+      const theme = themes[type];
+      const root = document.documentElement;
+      for (let key in theme) {
+        root.style.setProperty(key, theme[key]);
+      }
+    }
   </script>
 </body>
 </html>
