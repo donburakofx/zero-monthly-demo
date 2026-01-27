@@ -96,6 +96,18 @@ button:hover~.cursor-circle,
     background: rgba(191, 165, 125, 0.1);
 }
 
+@media (max-width: 1024px), (hover: none) {
+    .cursor-dot, 
+    .cursor-circle {
+        display: none !important;
+    }
+    
+    /* カーソルを消した分、リンク等のタップ領域がわかるように標準に戻す */
+    body, a, button, .hamburger {
+        cursor: auto !important;
+    }
+}
+
 /* 【修正】モーダル展開時はカスタムカーソルを消し、デフォルトに戻す */
 body.modal-open {
     cursor: auto;
