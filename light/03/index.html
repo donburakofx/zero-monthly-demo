@@ -1,226 +1,527 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Minimal White | Portfolio</title>
-  <meta name="description" content="余白とモノクロームで魅せるポートフォリオ" />
-  
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Minimal White | Portfolio" />
-  <meta property="og:description" content="余白とモノクロームで魅せるポートフォリオ" />
-  <meta property="og:image" content="assets/image/ogp.jpg" />
+  <title>AERO | デスクの景色を変える、透明なハブ。</title>
+  <meta name="description" content="先行予約受付中。配線を消し去る、次世代ワイヤレスステーション。" />
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png"> <meta property="og:title" content="AERO | デスクの景色を変える、透明なハブ。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-website-domain.com/" />
+  <meta property="og:image" content="https://your-website-domain.com/assets/image/ogp.jpg" />
+  <meta property="og:description" content="先行予約開始。絡まるケーブルを過去のものに。世界初、透過型100Wワイヤレス充電ステーションがついに日本上陸。" />
+  <meta property="og:site_name" content="AERO Project" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
+
   <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="#top">Your Name.</a>
+    <div class="header-inner">
+      <a class="brand" href="#">AERO</a>
       <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
+        <a href="#concept">Concept</a>
+        <a href="#scenes">Scenes</a>
+        <a href="#specs">Specs</a>
+        <a href="#rewards">Rewards</a>
       </nav>
+      <a href="../common/contact.html" class="btn btn-sm btn-outline mobile-hide-btn">質問する</a>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-bg">
-        <img src="assets/image/hero.jpg" alt="Hero Image">
+  <div class="status-bar">
+    <div class="status-info">
+      <div class="s-item">
+        <span class="label">現在の支援総額</span>
+        <span class="value">¥24,800,000</span>
       </div>
-      <div class="container hero-content">
-        <h1 class="title">
-          Less is More.<br>
-          Essential Design.
+      <div class="s-item">
+        <span class="label">達成率</span>
+        <span class="value text-accent">820%</span>
+      </div>
+      <div class="s-item mobile-hide-text">
+        <span class="label">残り時間</span>
+        <span class="value">48時間</span>
+      </div>
+    </div>
+    <div class="status-action">
+      <a href="#rewards" class="btn btn-accent btn-shiny">先行予約する</a>
+    </div>
+  </div>
+
+  <main class="snap-container">
+
+    <section id="hero" class="section hero" style="background-image: url('assets/image/hero_bg.jpg');">
+      <div class="overlay"></div>
+      <div class="content fade-in">
+        <p class="tagline">INVISIBLE CONNECTION.</p>
+        <h1 class="hero-title">
+          その存在は、<br>
+          <span class="text-gradient">空気</span>のように。
         </h1>
-        <p class="lead">
-          必要なものだけを、美しく配置する。<br>
-          「余白」を活かしたWebデザイン。
+        <p class="hero-desc">
+          配線のノイズを、視界から消し去る。<br>
+          世界初、透過型ワイヤレス充電ステーション "AERO"。<br>
+          ついに日本上陸。
+        </p>
+      </div>
+      <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="line"></div>
+      </div>
+    </section>
+
+    <section id="concept" class="section text-left bg-dark">
+      <div class="bg-video-wrapper">
+        <img src="assets/image/concept_bg.jpg" alt="Concept Background" class="bg-img grayscale">
+      </div>
+      <div class="container narrow fade-in">
+        <span class="section-sub text-gray">THE NOISE</span>
+        <h2 class="section-title">デスク上の「ノイズ」に<br>疲れていませんか？</h2>
+        <p>
+          絡まる充電ケーブル。足りないポート。<br>
+          作業に集中したいのに、視界に入る「黒い線」が思考を妨げる。
+        </p>
+        <p>
+          高機能なガジェットが増えるほど、デスクは複雑になる。<br>
+          この矛盾を解決するために、私たちは3年の歳月を費やしました。
         </p>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container narrow">
-        <div class="section-header">
-          <span class="section-num">01</span>
-          <h2 class="section-title">About</h2>
+    <section id="solution" class="section bg-gradient text-center">
+      <div class="container fade-in">
+        <span class="section-sub text-accent">THE SOLUTION</span>
+        <h2 class="section-title">到達したのは、<br>「透明」という答え。</h2>
+        <div class="visual-large">
+          <img src="assets/image/item_main.jpg" alt="Main Visual" class="rounded-img shadow-box">
         </div>
-
-        <div class="about-layout">
-          <div class="about-img">
-            <img src="assets/image/profile.jpg" alt="Profile">
-          </div>
-          <div class="about-text">
-            <p class="text">
-              東京を拠点に活動するフリーランスのデザイナー。<br>
-              装飾に頼らず、コンテンツそのものの魅力を引き出す「引き算のデザイン」を得意としています。
-              写真と言葉を大切にし、静かで力強いWebサイトを制作します。
-            </p>
-            <dl class="facts">
-              <div class="fact-row">
-                <dt>Name</dt> <dd>Your Name</dd>
-              </div>
-              <div class="fact-row">
-                <dt>Loc</dt> <dd>Tokyo, Japan</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
+        <p class="mt-30">
+          強化ガラスとアルミニウムの融合。<br>
+          置くだけで、そこは充電ステーションになり、<br>
+          使わない時は、ただの美しいオブジェになる。
+        </p>
       </div>
     </section>
 
-    <section id="service" class="section">
-      <div class="container narrow">
-        <div class="section-header">
-          <span class="section-num">02</span>
-          <h2 class="section-title">Service</h2>
-        </div>
-        <div class="service-list">
-          <article class="service-item">
-            <h3>Web Design</h3>
-            <p class="muted">1ページ完結のLPから小規模コーポレートサイトまで。</p>
-          </article>
-          <article class="service-item">
-            <h3>UI/UX Audit</h3>
-            <p class="muted">既存サイトの課題発見と改善提案。</p>
-          </article>
-          <article class="service-item">
-            <h3>Writing</h3>
-            <p class="muted">ターゲットに響く言葉選びと構成作成。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="section">
-      <div class="container narrow">
-        <div class="section-header">
-          <span class="section-num">03</span>
-          <h2 class="section-title">Work</h2>
-        </div>
-        <ul class="work-list">
-          <li>
-            <a href="#" class="work-link">
-              <span class="work-year">2025</span>
-              <span class="work-name">Architecture Office Website</span>
-              <span class="work-cat">Design <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8em; margin-left: 5px;"></i></span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="work-link">
-              <span class="work-year">2024</span>
-              <span class="work-name">Coffee Stand "Blue" LP</span>
-              <span class="work-cat">Photo <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8em; margin-left: 5px;"></i></span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="work-link">
-              <span class="work-year">2024</span>
-              <span class="work-name">Minimal Portfolio Theme</span>
-              <span class="work-cat">Code <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8em; margin-left: 5px;"></i></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container narrow">
-        <div class="section-header">
-          <span class="section-num">04</span>
-          <h2 class="section-title">Contact</h2>
-        </div>
-
-        <div class="contact-wrap">
-          <p class="text center">
-            お仕事のご依頼・ご相談はお気軽に。<br>
-            通常2営業日以内に返信いたします。
+    <section id="scenes" class="section text-left bg-light">
+      <div class="half-img-right" style="background-image: url('assets/image/scene_01.jpg');"></div>
+      <div class="container fade-in">
+        <div class="text-block-left">
+          <span class="section-sub text-black">WORK MODE</span>
+          <h2 class="section-title text-black">思考を止めない、<br>シームレスな体験。</h2>
+          <p class="text-black">
+            iPhoneを置けば、瞬時にMagSafeが吸着。<br>
+            AirPodsもApple Watchも、定位置に置くだけ。
           </p>
-          
-          <a class="btn-contact" href="mailto:you@example.com">
-            <span class="btn-icon"><i class="fa-regular fa-envelope"></i></span>
-            <span class="btn-text">Send Message</span>
-          </a>
+          <p class="text-black">
+            100WのPDポートも搭載し、<br>
+            MacBook Proへの給電もこれ一台で完結します。<br>
+            もう、充電器を探す時間は必要ありません。
+          </p>
+        </div>
+      </div>
+    </section>
 
-          <div class="sns-icons">
-            <a href="#" aria-label="X (Twitter)" class="sns-item">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="#" aria-label="Instagram" class="sns-item">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" aria-label="Note" class="sns-item">
-              <i class="fa-solid fa-pencil"></i>
-            </a>
+    <section class="section text-right bg-dark">
+      <div class="half-img-left" style="background-image: url('assets/image/scene_02.jpg');"></div>
+      <div class="container fade-in">
+        <div class="text-block-right">
+          <span class="section-sub text-accent">NIGHT MODE</span>
+          <h2 class="section-title">夜を彩る、<br>アンビエントライト。</h2>
+          <p>
+            仕事が終われば、AEROはインテリアに変わります。<br>
+            アプリで調整可能なLEDが、ガラスの縁を優しく照らし出す。
+          </p>
+          <p>
+            サイバーパンクなネオンブルーから、<br>
+            落ち着きのあるキャンドルオレンジまで。<br>
+            その日の気分に合わせて、デスクの空気をデザインしよう。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section bg-gradient bg-img-section">
+      <div class="bg-video-wrapper">
+        <img src="assets/image/bg_feature.jpg" alt="Tech Background" class="bg-img grayscale" style="opacity: 0.4;">
+      </div>
+
+      <div class="container fade-in">
+        <span class="section-sub text-accent">PERFORMANCE</span>
+        <h2 class="section-title">美しさの中に、<br>怪物を宿す。</h2>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>100W PD出力</h3>
+            <p>MacBook Proも急速充電可能。<br>パワー不足とは無縁です。</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>3台同時ワイヤレス</h3>
+            <p>スマホ、イヤホン、ウォッチ。<br>置くだけで全てが整います。</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3>AI温度管理</h3>
+            <p>デバイスの発熱を検知し、<br>出力を自動で最適化します。</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
+            <h3>App Control</h3>
+            <p>ライトの色や充電状況を<br>スマホアプリから可視化。</p>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-        <small>© 2025 Minimal Style.</small>
+    <section id="reviews" class="section bg-light">
+      <div class="container fade-in">
+        <span class="section-sub text-black">REVIEWS</span>
+        <h2 class="section-title text-black">世界が賞賛。</h2>
+
+        <div class="review-grid">
+          <div class="review-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="r-text">「デスク周りの充電器がこれ1台にまとまった。ガラスのデザインが所有欲を満たしてくれる。まさに求めていたミニマリズムだ。」</p>
+            <div class="r-meta">
+              <span class="r-name">T.K. 様</span>
+              <span class="r-job">グラフィックデザイナー</span>
+            </div>
+          </div>
+          <div class="review-card highlight">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="r-text">「100W出力ができるハブで、ここまで美しいものは他にない。LEDの演出も最高で、夜の作業が楽しみになった。」</p>
+            <div class="r-meta">
+              <span class="r-name">Tech Gadget Weekly</span>
+              <span class="r-job">編集長</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="r-text">「クラウドファンディングで即支援した。届いた実物は写真以上の質感で感動しました。もうこれ無しでは仕事できない。」</p>
+            <div class="r-meta">
+              <span class="r-name">S.Y. 様</span>
+              <span class="r-job">システムエンジニア</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
+    </section>
+
+    <section id="specs" class="section bg-dark text-center">
+      <div class="container fade-in">
+        <span class="section-sub">SPECIFICATIONS</span>
+        <h2 class="section-title">技術仕様</h2>
+
+        <div class="spec-container">
+          <div class="spec-visual">
+            <img src="assets/image/item_detail.jpg" alt="Spec Detail">
+          </div>
+          <table class="spec-table">
+            <tr>
+              <th>サイズ</th>
+              <td>200 x 80 x 12 mm</td>
+            </tr>
+            <tr>
+              <th>重量</th>
+              <td>320g (アルミニウム筐体)</td>
+            </tr>
+            <tr>
+              <th>入力</th>
+              <td>USB-C (140W max)</td>
+            </tr>
+            <tr>
+              <th>ワイヤレス出力</th>
+              <td>MagSafe 15W + Qi 10W + Watch 5W</td>
+            </tr>
+            <tr>
+              <th>ポート出力</th>
+              <td>USB-C x2 (Total 100W)</td>
+            </tr>
+            <tr>
+              <th>カラー</th>
+              <td>ファントムブラック / グレイシャーシルバー</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section bg-gradient">
+      <div class="container narrow fade-in">
+        <span class="section-sub text-accent">FAQ</span>
+        <h2 class="section-title">よくある質問</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Android端末でも使用できますか？<span class="icon">+</span></summary>
+            <div class="answer">はい、Qi規格に対応したAndroidスマートフォンであれば、最大10Wでのワイヤレス充電が可能です。</div>
+          </details>
+          <details class="faq-item">
+            <summary>Apple Watchの急速充電には対応していますか？<span class="icon">+</span></summary>
+            <div class="answer">はい、Series 7以降のモデルであれば急速充電に対応しています。</div>
+          </details>
+          <details class="faq-item">
+            <summary>保証期間はどのくらいですか？<span class="icon">+</span></summary>
+            <div class="answer">通常プランは1年間、Pro Setプランは2年間のメーカー保証が付帯します。</div>
+          </details>
+          <details class="faq-item">
+            <summary>LEDライトは消灯できますか？<span class="icon">+</span></summary>
+            <div class="answer">はい、本体のタッチセンサーまたは専用アプリから、輝度調整および消灯が可能です。</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="rewards" class="section bg-light">
+      <div class="container fade-in">
+        <span class="section-sub text-black">EARLY BIRD</span>
+        <h2 class="section-title text-black">先行予約プラン</h2>
+        <p class="reward-note text-black">お届け予定：2026年4月下旬</p>
+
+        <div class="reward-scroll">
+          <div class="spacer"></div>
+
+          <div class="reward-card">
+            <div class="badge">早割 25%OFF</div>
+            <h3>AERO Single</h3>
+            <div class="price">
+              <span class="amount">¥14,800</span>
+              <span class="off"><s>¥19,800</s></span>
+            </div>
+            <ul class="reward-list">
+              <li>・AERO 本体 x1</li>
+              <li>・専用ケーブル (2m) x1</li>
+              <li>・1年保証付き</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="../common/contact.html" class="btn btn-block btn-dark">選択する</a>
+            </div>
+          </div>
+
+          <div class="reward-card recommended">
+            <div class="badge-rec">Most Popular</div>
+            <h3>AERO Pro Set</h3>
+            <div class="price">
+              <span class="amount">¥26,800</span>
+              <span class="off"><s>¥39,600</s></span>
+            </div>
+            <ul class="reward-list">
+              <li>・AERO 本体 x2</li>
+              <li>・専用ケーブル (2m) x2</li>
+              <li>・専用トラベルポーチ x1</li>
+              <li>・2年保証付き</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="../common/contact.html" class="btn btn-block btn-accent btn-shiny">選択する</a>
+            </div>
+          </div>
+
+          <div class="reward-card">
+            <div class="badge">Team Pack</div>
+            <h3>AERO x5 Pack</h3>
+            <div class="price">
+              <span class="amount">¥65,000</span>
+              <span class="off"><s>¥99,000</s></span>
+            </div>
+            <ul class="reward-list">
+              <li>・AERO 本体 x5</li>
+              <li>・オフィス導入サポート</li>
+              <li>・名入れ刻印オプション</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="../common/contact.html" class="btn btn-block btn-dark">選択する</a>
+            </div>
+          </div>
+
+          <div class="spacer"></div>
+        </div>
+
+        <p class="scroll-hint text-black"><i class="fa-solid fa-arrow-right-long"></i> Swipe to see more</p>
+      </div>
+    </section>
+
+    <section class="section footer-section" style="background-image: url('assets/image/hero_bg.jpg');">
+      <div class="overlay"></div>
+      <div class="container text-center fade-in footer-content">
+        <h2 class="last-msg">
+          デスクの景色を、<br>
+          今すぐ変えよう。
+        </h2>
+        <p class="last-sub">先行予約は予定数に達し次第、終了となります。</p>
+
+        <a href="#rewards" class="btn btn-xl btn-accent shadow-pulse">リターン一覧を見る</a>
+
+        <div class="footer-bottom">
+          <div class="footer-links">
+            <a href="../common/company.html">運営会社</a>
+            <a href="../common/law.html">特商法表記</a>
+            <a href="../common/privacy.html">プライバシー</a>
+          </div>
+          <small class="copyright">© 2026 AERO Project.</small>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <div id="demo-theme-switcher" style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); z-index: 9999; font-family: sans-serif; width: 220px; border: 1px solid #eee;">
-      <p style="margin: 0 0 10px; font-size: 11px; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.1em;">Theme Color</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          <button onclick="setTheme('white')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #FFFFFF; cursor: pointer;" title="Pure White"></button>
-          <button onclick="setTheme('nordic')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #999; background: #EEF4F8; cursor: pointer;" title="Nordic Blue"></button>
-          <button onclick="setTheme('ivory')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #FDFBF7; cursor: pointer;" title="Ivory Warm"></button>
-          <button onclick="setTheme('gray')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #F5F5F7; cursor: pointer;" title="Cool Gray"></button>
-          <button onclick="setTheme('dark')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #555; background: #111111; cursor: pointer;" title="Dark Minimal"></button>
-      </div>
+  <script>
+    // Fade-in Animation Logic
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+<div id="demo-palette" class="demo-palette">
+    <div class="palette-toggle" title="Change Color Theme">
+      <i class="fa-solid fa-palette"></i>
+    </div>
+    <div class="palette-options">
+      <button class="color-btn" data-color="cyan" style="background: #00f2ff;" title="Cyber Cyan"></button>
+      <button class="color-btn" data-color="orange" style="background: #ff6b6b;" title="Active Orange"></button>
+      <button class="color-btn" data-color="purple" style="background: #a55eea;" title="Future Purple"></button>
+      <button class="color-btn" data-color="green" style="background: #2ecc71;" title="Eco Green"></button>
+      <button class="color-btn" data-color="gold" style="background: #d4af37;" title="Luxury Gold"></button>
+    </div>
   </div>
 
+  <style>
+    /* パレットのスタイル定義 */
+    .demo-palette {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column-reverse; /* 下から上に展開 */
+      align-items: center;
+      gap: 10px;
+    }
+    .palette-toggle {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+    .palette-toggle:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+    .palette-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+      transition: 0.3s;
+    }
+    /* ホバーでメニューを展開 */
+    .demo-palette:hover .palette-options {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .color-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .color-btn:hover {
+      transform: scale(1.2);
+      border-color: #fff;
+    }
+  </style>
+
   <script>
-      // カラー切り替え処理
+    document.addEventListener('DOMContentLoaded', () => {
+      // カラーテーマの定義
       const themes = {
-          white: {
-              '--bg-body': '#FFFFFF', '--text-main': '#111111',
-              '--text-muted': '#888888', '--line': '#E5E5E5', '--accent': '#111111'
-          },
-          nordic: {
-              '--bg-body': '#EEF4F8', '--text-main': '#243B53',
-              '--text-muted': '#627D98', '--line': '#D9E2EC', '--accent': '#102A43'
-          },
-          ivory: {
-              '--bg-body': '#FDFBF7', '--text-main': '#4A4036',
-              '--text-muted': '#968B83', '--line': '#EBE5DE', '--accent': '#8C7B6C'
-          },
-          gray: {
-              '--bg-body': '#F5F5F7', '--text-main': '#333333',
-              '--text-muted': '#999999', '--line': '#D1D1D1', '--accent': '#000000'
-          },
-          dark: {
-              '--bg-body': '#111111', '--text-main': '#FFFFFF',
-              '--text-muted': '#AAAAAA', '--line': '#333333', '--accent': '#FFFFFF'
-          }
+        cyan: {
+          primary: '0, 242, 255',
+          accent: '0, 242, 255',
+          bgDark: '#050505',
+          bgPanel: '#111111'
+        },
+        orange: {
+          primary: '255, 107, 107',
+          accent: '255, 159, 67',
+          bgDark: '#1e1e1e',
+          bgPanel: '#2d2d2d'
+        },
+        purple: {
+          primary: '165, 94, 234',
+          accent: '217, 128, 250',
+          bgDark: '#130f1a',
+          bgPanel: '#1f1c2c'
+        },
+        green: {
+          primary: '46, 204, 113',
+          accent: '0, 184, 148',
+          bgDark: '#1e272e',
+          bgPanel: '#2d3436'
+        },
+        gold: {
+          primary: '212, 175, 55',
+          accent: '241, 196, 15',
+          bgDark: '#000000',
+          bgPanel: '#111111'
+        }
       };
 
-      function setTheme(name) {
-          const root = document.documentElement;
-          const theme = themes[name];
-          for (const key in theme) {
-              root.style.setProperty(key, theme[key]);
+      // ボタンクリックイベント
+      const root = document.documentElement;
+      document.querySelectorAll('.color-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const colorKey = btn.getAttribute('data-color');
+          const theme = themes[colorKey];
+          
+          if (theme) {
+            // CSS変数を書き換え
+            root.style.setProperty('--primary-rgb', theme.primary);
+            root.style.setProperty('--accent-rgb', theme.accent);
+            root.style.setProperty('--bg-dark', theme.bgDark);
+            root.style.setProperty('--bg-panel', theme.bgPanel);
           }
-      }
-
-      document.querySelectorAll('.work-link').forEach(link => {
-          link.addEventListener('click', (e) => {
-              e.preventDefault(); // ページトップへのジャンプを阻止
-              alert('【デモ動作】\n本来はここに「制作実績の詳細ページ」や「クライアントのサイト」へのURLを設定します。');
-          });
+        });
       });
+    });
   </script>
+
 </body>
+
 </html>
