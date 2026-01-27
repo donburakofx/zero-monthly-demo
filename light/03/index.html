@@ -407,123 +407,177 @@
     </div>
   </div>
 
-  <style>
-    /* パレットのスタイル定義 */
-    .demo-palette {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-      display: flex;
-      flex-direction: column-reverse; /* 下から上に展開 */
-      align-items: center;
-      gap: 10px;
-    }
-    .palette-toggle {
-      width: 50px;
-      height: 50px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      color: #fff;
-      font-size: 1.2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
-    .palette-toggle:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: scale(1.1);
-    }
-    .palette-options {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(20px);
-      transition: 0.3s;
-    }
-    /* ホバーでメニューを展開 */
-    .demo-palette:hover .palette-options {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
-    .color-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      cursor: pointer;
-      transition: 0.2s;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
-    .color-btn:hover {
-      transform: scale(1.2);
-      border-color: #fff;
-    }
-  </style>
+<style>
+  /* パレットのスタイル定義 */
+  .demo-palette {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column-reverse; /* 下から上に展開 */
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* ボタンのスタイルリセット (Safari対策) */
+  .palette-toggle, .color-btn {
+    appearance: none; -webkit-appearance: none;
+    border: none; background: none; margin: 0; padding: 0;
+    cursor: pointer; outline: none;
+  }
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // カラーテーマの定義
-      const themes = {
-        cyan: {
-          primary: '0, 242, 255',
-          accent: '0, 242, 255',
-          bgDark: '#050505',
-          bgPanel: '#111111'
-        },
-        orange: {
-          primary: '255, 107, 107',
-          accent: '255, 159, 67',
-          bgDark: '#1e1e1e',
-          bgPanel: '#2d2d2d'
-        },
-        purple: {
-          primary: '165, 94, 234',
-          accent: '217, 128, 250',
-          bgDark: '#130f1a',
-          bgPanel: '#1f1c2c'
-        },
-        green: {
-          primary: '46, 204, 113',
-          accent: '0, 184, 148',
-          bgDark: '#1e272e',
-          bgPanel: '#2d3436'
-        },
-        gold: {
-          primary: '212, 175, 55',
-          accent: '241, 196, 15',
-          bgDark: '#000000',
-          bgPanel: '#111111'
-        }
-      };
+  .palette-toggle {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+  }
+  .palette-toggle:hover, .palette-toggle.active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--primary); /* 現在の色で光らせる */
+  }
 
-      // ボタンクリックイベント
-      const root = document.documentElement;
-      document.querySelectorAll('.color-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const colorKey = btn.getAttribute('data-color');
-          const theme = themes[colorKey];
+  .palette-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* ホバー または アクティブクラスで展開 */
+  .demo-palette:hover .palette-options,
+  .demo-palette.active .palette-options {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .color-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+  .color-btn:hover {
+    transform: scale(1.2);
+    border-color: #fff;
+  }
+</style>
+
+<div class="demo-palette" id="demoPalette">
+  <button type="button" class="palette-toggle" id="paletteToggle">
+    <i class="fa-solid fa-palette"></i>
+  </button>
+  
+  <div class="palette-options">
+    <button type="button" class="color-btn" data-color="cyan" 
+      style="background: linear-gradient(135deg, #00f2ff, #00c3ff);" aria-label="Cyan"></button>
+    
+    <button type="button" class="color-btn" data-color="purple" 
+      style="background: linear-gradient(135deg, #a55eea, #d980fa);" aria-label="Purple"></button>
+    
+    <button type="button" class="color-btn" data-color="orange" 
+      style="background: linear-gradient(135deg, #ff6b6b, #ff9f43);" aria-label="Orange"></button>
+    
+    <button type="button" class="color-btn" data-color="green" 
+      style="background: linear-gradient(135deg, #2ecc71, #00b894);" aria-label="Green"></button>
+    
+    <button type="button" class="color-btn" data-color="gold" 
+      style="background: linear-gradient(135deg, #d4af37, #f1c40f);" aria-label="Gold"></button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // カラーテーマの定義
+    const themes = {
+      cyan: {
+        primary: '0, 242, 255',
+        accent: '0, 242, 255',
+        bgDark: '#050505',
+        bgPanel: '#111111'
+      },
+      orange: {
+        primary: '255, 107, 107',
+        accent: '255, 159, 67',
+        bgDark: '#1e1e1e',
+        bgPanel: '#2d2d2d'
+      },
+      purple: {
+        primary: '165, 94, 234',
+        accent: '217, 128, 250',
+        bgDark: '#130f1a',
+        bgPanel: '#1f1c2c'
+      },
+      green: {
+        primary: '46, 204, 113',
+        accent: '0, 184, 148',
+        bgDark: '#1e272e',
+        bgPanel: '#2d3436'
+      },
+      gold: {
+        primary: '212, 175, 55',
+        accent: '241, 196, 15',
+        bgDark: '#000000',
+        bgPanel: '#111111'
+      }
+    };
+
+    const root = document.documentElement;
+    const paletteContainer = document.getElementById('demoPalette');
+    const paletteToggle = document.getElementById('paletteToggle');
+
+    // スマホ対応: トグルボタンクリックでメニュー開閉
+    paletteToggle.addEventListener('click', (e) => {
+      e.stopPropagation(); // 親への伝播を防ぐ
+      paletteContainer.classList.toggle('active');
+      paletteToggle.classList.toggle('active');
+    });
+
+    // 画面のどこかをクリックしたら閉じる
+    document.addEventListener('click', (e) => {
+      if (!paletteContainer.contains(e.target)) {
+        paletteContainer.classList.remove('active');
+        paletteToggle.classList.remove('active');
+      }
+    });
+
+    // 色変更ボタンの処理
+    document.querySelectorAll('.color-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const colorKey = btn.getAttribute('data-color');
+        const theme = themes[colorKey];
+        
+        if (theme) {
+          root.style.setProperty('--primary-rgb', theme.primary);
+          root.style.setProperty('--accent-rgb', theme.accent);
+          root.style.setProperty('--bg-dark', theme.bgDark);
+          root.style.setProperty('--bg-panel', theme.bgPanel);
           
-          if (theme) {
-            // CSS変数を書き換え
-            root.style.setProperty('--primary-rgb', theme.primary);
-            root.style.setProperty('--accent-rgb', theme.accent);
-            root.style.setProperty('--bg-dark', theme.bgDark);
-            root.style.setProperty('--bg-panel', theme.bgPanel);
-          }
-        });
+          // スマホの場合は選択後に閉じる
+          paletteContainer.classList.remove('active');
+          paletteToggle.classList.remove('active');
+        }
       });
     });
-  </script>
-
+  });
+</script>
 </body>
 
 </html>

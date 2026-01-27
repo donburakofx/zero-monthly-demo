@@ -3,45 +3,149 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Photo Portfolio Mini</title>
-  <meta name="description" content="作品の世界観を伝えるポートフォリオ" />
   
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Photo Portfolio Mini" />
-  <meta property="og:description" content="作品の世界観を伝えるポートフォリオ" />
-  <meta property="og:image" content="assets/image/ogp.jpg" />
+  <title>LUMIÈRE | 記憶に残る、極上のひとときを。</title>
+  <meta name="description" content="都心の喧騒を離れ、本当の自分に還る場所。LUMIÈRE HOTEL & RESORTS。洗練された空間と最高級のおもてなしで、皆様をお迎えいたします。" />
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-  
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
+  <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
 
-<body>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LUMIÈRE | 記憶に残る、極上のひとときを。" />
+  <meta property="og:description" content="都心の喧騒を離れ、本当の自分に還る場所。最高級のおもてなしと静寂の空間をご提供します。" />
+  <meta property="og:url" content="https://demo.donb-web.com/light/04/" />
+  <meta property="og:image" content="https://demo.donb-web.com/light/04/assets/image/ogp.jpg" />
+  <meta property="og:site_name" content="LUMIÈRE Brand Site" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LUMIÈRE | 記憶に残る、極上のひとときを。" />
+  <meta name="twitter:description" content="都心の喧騒を離れ、本当の自分に還る場所。最高級のおもてなしと静寂の空間をご提供します。" />
+  <meta name="twitter:image" content="https://demo.donb-web.com/light/04/assets/image/ogp.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head><body class="loading">
+
+  <div class="loader">
+    <div class="loader-logo">LUMIÈRE</div>
+    <div class="loader-line"></div>
+  </div>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-circle"></div>
+
   <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="#top">Your Studio.</a>
-      <nav class="nav">
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="header-inner">
+      <a href="#" class="brand">LUMIÈRE</a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+      </div>
     </div>
+    <nav class="nav-overlay" id="nav-overlay">
+      <ul class="nav-list">
+        <li><a href="#concept" class="nav-link">Concept</a></li>
+        <li><a href="#featured" class="nav-link">Service</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#faq" class="nav-link">Q&A</a></li>
+        <li><a href="#access" class="nav-link">Access</a></li>
+        <li><a href="../common/contact.html" class="btn btn-outline">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <p class="eyebrow">Photographer / Creator</p>
-          <h1 class="title">Capturing the<br>Atmosphere.</h1>
-          <p class="lead">
-            光と空気感を大切にするフォトグラファーのポートフォリオ。<br>
-            ミニマルな構成で、作品の世界観を伝えます。
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-slider">
+        <div class="slide active" style="background-image: url('assets/image/hero_bg_01.jpg');"></div>
+        <div class="slide" style="background-image: url('assets/image/hero_bg_02.jpg');"></div>
+        <div class="slide" style="background-image: url('assets/image/hero_bg_03.jpg');"></div>
+        <div class="slide" style="background-image: url('assets/image/hero_bg_04.jpg');"></div>
+      </div>
+      <div class="hero-content fade-up">
+        <p class="hero-sub">The Art of Silence</p>
+        <h1 class="hero-title">静寂を、<br>纏う。</h1>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section id="concept" class="section">
+      <div class="container narrow">
+        <div class="concept-block">
+          <p class="vertical-text fade-up delay-1">
+            時の流れを忘れ、<br>
+            本来の自分に還る場所。<br>
+            ここにあるのは、<br>
+            ただ上質な「余白」だけ。
           </p>
-          
-          <div class="hero-links">
-            <a class="btn-text" href="#gallery">View Gallery <i class="fa-solid fa-arrow-down-long"></i></a>
+          <div class="concept-img reveal-img">
+            <img src="assets/image/concept.jpg" alt="Concept Image">
+          </div>
+        </div>
+        <div class="text-center mt-5 fade-up">
+          <h2 class="section-title">Philosophy</h2>
+          <p class="section-desc">
+            洗練された空間と、心尽くしのおもてなし。<br>
+            五感を満たす、至高の体験をお届けします。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="section bg-sub">
+      <div class="container">
+        <div class="section-head text-center fade-up">
+          <span class="eng-title">Our Services</span>
+          <h2 class="section-title">至高の体験</h2>
+        </div>
+
+        <div class="checker-item">
+          <div class="checker-img reveal-img">
+            <img src="assets/image/item_01.jpg" alt="Service 01">
+          </div>
+          <div class="checker-content fade-up">
+            <h3>Royal Suite</h3>
+            <p class="checker-desc">最上階に位置する、パノラマビューの特別な空間。洗練されたインテリアが、優雅な滞在を演出します。</p>
+            <ul class="checker-spec">
+              <li><i class="fa-solid fa-maximize"></i> Spacious</li>
+              <li><i class="fa-solid fa-star"></i> High Quality</li>
+            </ul>
+            <button class="btn-text open-modal" data-target="modal-01">View Details</button>
+          </div>
+        </div>
+
+        <div class="checker-item reverse">
+          <div class="checker-img reveal-img">
+            <img src="assets/image/item_02.jpg" alt="Service 02">
+          </div>
+          <div class="checker-content fade-up">
+            <h3>Premier Deluxe</h3>
+            <p class="checker-desc">和のテイストを取り入れたモダンなデザイン。心地よい静寂の中で、旅の疲れを癒やしてください。</p>
+            <ul class="checker-spec">
+              <li><i class="fa-solid fa-spa"></i> Relax</li>
+              <li><i class="fa-solid fa-wine-glass"></i> Luxury</li>
+            </ul>
+            <button class="btn-text open-modal" data-target="modal-02">View Details</button>
+          </div>
+        </div>
+
+        <div class="checker-item">
+          <div class="checker-img reveal-img">
+            <img src="assets/image/item_03.jpg" alt="Service 03">
+          </div>
+          <div class="checker-content fade-up">
+            <h3>Executive Lounge</h3>
+            <p class="checker-desc">選ばれたゲストだけが入室できる、完全プライベートなラウンジ空間。暖炉の炎が時間を忘れさせます。</p>
+            <ul class="checker-spec">
+              <li><i class="fa-solid fa-gem"></i> Premium</li>
+              <li><i class="fa-solid fa-user-secret"></i> Private</li>
+            </ul>
+            <button class="btn-text open-modal" data-target="modal-03">View Details</button>
           </div>
         </div>
       </div>
@@ -49,265 +153,369 @@
 
     <section id="gallery" class="section">
       <div class="container">
-        <div class="gallery-grid">
-          
-          <article class="gallery-item portrait">
-            <a href="#lightbox-01" class="media-frame">
-              <img src="assets/image/art01.jpg" alt="Work 1">
-              <div class="overlay">
-                <span class="view-more">View Work</span>
-              </div>
-            </a>
-            <div class="meta">
-              <h2 class="work-title">Morning Light</h2>
-              <p class="work-cat">Portrait</p>
-            </div>
-          </article>
-
-          <article class="gallery-item square">
-            <a href="#lightbox-02" class="media-frame">
-              <img src="assets/image/art02.jpg" alt="Work 2">
-              <div class="overlay">
-                <span class="view-more">View Work</span>
-              </div>
-            </a>
-            <div class="meta">
-              <h2 class="work-title">Silent Room</h2>
-              <p class="work-cat">Interior</p>
-            </div>
-          </article>
-
-          <article class="gallery-item portrait">
-            <a href="#lightbox-03" class="media-frame">
-              <img src="assets/image/art03.jpg" alt="Work 3">
-              <div class="overlay">
-                <span class="view-more">View Work</span>
-              </div>
-            </a>
-            <div class="meta">
-              <h2 class="work-title">Urban Blue</h2>
-              <p class="work-cat">Street</p>
-            </div>
-          </article>
-
-          <article class="gallery-item landscape">
-            <a href="#lightbox-04" class="media-frame">
-              <img src="assets/image/art04.jpg" alt="Work 4">
-              <div class="overlay">
-                <span class="view-more">View Work</span>
-              </div>
-            </a>
-            <div class="meta">
-              <h2 class="work-title">Grand Landscape</h2>
-              <p class="work-cat">Nature / Featured</p>
-            </div>
-          </article>
-
-          <article class="gallery-item square">
-            <a href="#lightbox-05" class="media-frame">
-              <img src="assets/image/art05.jpg" alt="Work 5">
-              <div class="overlay">
-                <span class="view-more">View Work</span>
-              </div>
-            </a>
-            <div class="meta">
-              <h2 class="work-title">Coffee Break</h2>
-              <p class="work-cat">Lifestyle</p>
-            </div>
-          </article>
-
-          <article class="gallery-item square">
-            <a href="#lightbox-06" class="media-frame">
-              <img src="assets/image/art06.jpg" alt="Work 6">
-              <div class="overlay">
-                <span class="view-more">View Work</span>
-              </div>
-            </a>
-            <div class="meta">
-              <h2 class="work-title">Abstract #01</h2>
-              <p class="work-cat">Art</p>
-            </div>
-          </article>
-
+        <div class="section-head text-center fade-up">
+          <span class="eng-title">Gallery & Works</span>
+          <h2 class="section-title">美の競演</h2>
         </div>
-      </div>
-    </section>
-
-    <section id="about" class="section bg-light">
-      <div class="container split-layout">
-        <div class="split-text">
-          <h2 class="section-title">About</h2>
-          <p class="desc">
-            東京を拠点に活動するフォトグラファー。<br>
-            自然光を活かした柔らかい表現が得意です。<br>
-            ショップ撮影、商品撮影、ポートレートなど、<br>
-            その場の「空気感」を大切に切り取ります。
-          </p>
-          
-          <dl class="profile-list">
-            <div class="list-row">
-              <dt>Location</dt>
-              <dd>Tokyo, Japan</dd>
-            </div>
-            <div class="list-row">
-              <dt>Service</dt>
-              <dd>Photo, Direction</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="split-menu">
-          <h2 class="section-title">Menu</h2>
-          <ul class="menu-list">
-            <li class="menu-item">
-              <div class="menu-head">
-                <span class="menu-name">Light Plan</span>
-                <span class="menu-price">¥29,800〜</span>
-              </div>
-              <span class="menu-desc">1〜2時間 / データ10枚</span>
-            </li>
-            <li class="menu-item">
-              <div class="menu-head">
-                <span class="menu-name">Standard Plan</span>
-                <span class="menu-price">¥49,800〜</span>
-              </div>
-              <span class="menu-desc">半日撮影 / データ30枚 / レタッチ込</span>
-            </li>
-            <li class="menu-item">
-              <div class="menu-head">
-                <span class="menu-name">Product Photo</span>
-                <span class="menu-price">¥5,000〜</span>
-              </div>
-              <span class="menu-desc">1カットあたり / 立会い可</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container contact-container">
-        <h2 class="section-title">Contact</h2>
-        <p class="contact-lead">
-          撮影のご依頼・ご相談はお気軽に。<br>
-          通常24時間以内に返信いたします。
-        </p>
         
-        <div class="contact-actions">
-          <a class="btn-primary" href="mailto:you@example.com">
-            <i class="fa-regular fa-envelope"></i> Email Me
-          </a>
-          
-          <div class="sns-links">
-            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+        <div class="grid-3">
+          <div class="card fade-up">
+            <div class="card-img"><img src="assets/image/gallery_01.jpg" alt="Gallery 01"></div>
+            <div class="card-body">
+              <h4>Grand Dining</h4>
+              <p>旬の食材を使用した、本格コース料理。</p>
+              <button class="btn-text-sm open-modal" data-target="modal-g1">More</button>
+            </div>
+          </div>
+          <div class="card fade-up delay-1">
+            <div class="card-img"><img src="assets/image/gallery_02.jpg" alt="Gallery 02"></div>
+            <div class="card-body">
+              <h4>Private Lounge</h4>
+              <p>選ばれた会員様だけの、特別な隠れ家。</p>
+              <button class="btn-text-sm open-modal" data-target="modal-g2">More</button>
+            </div>
+          </div>
+          <div class="card fade-up delay-2">
+            <div class="card-img"><img src="assets/image/gallery_03.jpg" alt="Gallery 03"></div>
+            <div class="card-body">
+              <h4>Night View</h4>
+              <p>夜景を眺めながら、極上のカクテルを。</p>
+              <button class="btn-text-sm open-modal" data-target="modal-g3">More</button>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="copy-area">
-          <p class="muted">ご依頼テンプレート（コピーしてご利用ください）</p>
-          <textarea readonly class="copy-box" onclick="this.select()">
-① 撮影内容（例：店舗写真、プロフィール）
-② 希望日時
-③ 撮影場所
-④ ご予算・納期</textarea>
+    <section id="faq" class="section bg-sub">
+      <div class="container narrow">
+        <div class="section-head text-center fade-up">
+          <span class="eng-title">Q&A</span>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item fade-up">
+            <summary>チェックイン・チェックアウトの時間は何時ですか？<span class="icon">+</span></summary>
+            <div class="answer">
+              通常のチェックインは午後3時から、チェックアウトは正午12時までとなっております。
+              なお、エグゼクティブフロアにご宿泊のお客様は、専用ラウンジにてアーリーチェックイン（午後2時〜）およびレイトチェックアウト（〜午後1時）を追加料金なしでご利用いただけます。
+              ご到着が遅れる場合は、事前にフロントまでご連絡いただけますと幸いです。
+            </div>
+          </details>
+          <details class="faq-item fade-up">
+            <summary>記念日での利用ですが、サプライズ等の対応は可能ですか？<span class="icon">+</span></summary>
+            <div class="answer">
+              はい、もちろんでございます。LUMIÈREでは、大切な記念日を彩るための様々なオプションをご用意しております。
+              お部屋へのシャンパンやフラワーアレンジメントのセッティング、レストランでの特製デザートプレートのご用意など、
+              お客様のご要望に合わせてコンシェルジュがプランをご提案いたします。ご予約時またはご宿泊の3日前までにご相談ください。
+            </div>
+          </details>
+          <details class="faq-item fade-up">
+            <summary>ドレスコードはありますか？<span class="icon">+</span></summary>
+            <div class="answer">
+              ロビーおよび客室フロアでのドレスコードはございませんが、メインダイニング「Grand Baileys」およびバーラウンジ「The Blue」のご利用時は、
+              「スマートカジュアル」をお願いしております。
+              男性のお客様は襟付きのシャツやジャケットの着用を推奨しており、短パン、サンダル、ノースリーブ等の軽装でのご入店はご遠慮いただいております。
+              特別な空間でのひとときを、皆様に心地よくお過ごしいただくため、ご協力をお願い申し上げます。
+            </div>
+          </details>
+          <details class="faq-item fade-up">
+            <summary>食物アレルギーへの対応は可能ですか？<span class="icon">+</span></summary>
+            <div class="answer">
+              はい、最大限の対応をさせていただきます。
+              レストランご予約時、またはチェックイン時に、アレルギー食材の詳細をお申し付けください。
+              重度のアレルギーをお持ちの場合や、調味料に含まれる成分についてご不安な場合は、事前にシェフと相談の上、
+              特別メニューをご提案させていただくことも可能です。すべてのお客様に安心してお食事をお楽しみいただけるよう努めております。
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="section bg-dark text-white parallax-section">
+      <div class="bg-overlay"></div>
+      <div class="container narrow relative text-center fade-up">
+        <h2 class="section-title text-white">Access</h2>
+        <p class="mb-4">
+          〒100-0000 東京都千代田区1-1-1<br>
+          東京駅よりタクシーで10分 / 地下鉄「大手町駅」直結
+        </p>
+        <div class="access-btns">
+          <button id="toggle-map" class="btn btn-outline-white">Google Maps</button>
+          <a href="tel:0300000000" class="btn btn-outline-white">03-0000-0000</a>
+        </div>
+        <div id="map-container" class="map-wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030772428!2d139.7645498762319!3d35.68123617258707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f7003%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <small>&copy; 2025 Your Studio.</small>
+    <div class="container text-center">
+      <div class="footer-logo">LUMIÈRE</div>
+      <div class="footer-nav">
+        <a href="#concept">Concept</a>
+        <a href="#featured">Service</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">Q&A</a>
+        <a href="#access">Access</a>
+        <a href="../common/contact.html">Contact</a>
+      </div>
+      <div class="footer-sns">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+      <small class="copyright">© 2026 LUMIÈRE LUXURY TEMPLATE.</small>
     </div>
   </footer>
 
-  <div id="lightbox-01" class="lightbox">
-    <a href="#gallery" class="lightbox-overlay"></a>
-    <div class="lightbox-content">
-      <img src="assets/image/art01.jpg" alt="Work 1">
-      <a href="#gallery" class="lightbox-close">&times;</a>
-    </div>
-  </div>
-  <div id="lightbox-02" class="lightbox">
-    <a href="#gallery" class="lightbox-overlay"></a>
-    <div class="lightbox-content">
-      <img src="assets/image/art02.jpg" alt="Work 2">
-      <a href="#gallery" class="lightbox-close">&times;</a>
-    </div>
-  </div>
-  <div id="lightbox-03" class="lightbox">
-    <a href="#gallery" class="lightbox-overlay"></a>
-    <div class="lightbox-content">
-      <img src="assets/image/art03.jpg" alt="Work 3">
-      <a href="#gallery" class="lightbox-close">&times;</a>
-    </div>
-  </div>
-  <div id="lightbox-04" class="lightbox">
-    <a href="#gallery" class="lightbox-overlay"></a>
-    <div class="lightbox-content">
-      <img src="assets/image/art04.jpg" alt="Work 4">
-      <a href="#gallery" class="lightbox-close">&times;</a>
-    </div>
-  </div>
-  <div id="lightbox-05" class="lightbox">
-    <a href="#gallery" class="lightbox-overlay"></a>
-    <div class="lightbox-content">
-      <img src="assets/image/art05.jpg" alt="Work 5">
-      <a href="#gallery" class="lightbox-close">&times;</a>
-    </div>
-  </div>
-  <div id="lightbox-06" class="lightbox">
-    <a href="#gallery" class="lightbox-overlay"></a>
-    <div class="lightbox-content">
-      <img src="assets/image/art06.jpg" alt="Work 6">
-      <a href="#gallery" class="lightbox-close">&times;</a>
-    </div>
+  <div id="modal-overlay" class="modal-overlay"></div>
+  
+  <div id="modal-01" class="modal-content">
+    <button class="modal-close">×</button>
+    <h3>Royal Suite Details</h3>
+    <p>
+      LUMIÈREが誇る最上級の「Royal Suite」は、地上200メートルから望むパノラマビューを独占できる、贅を尽くした空間です。
+      80㎡の広々とした室内には、イタリア製の最高級レザーソファや、シルクの寝具を備えたキングサイズベッドを配置。
+      窓際には、都会の夜景を見下ろしながら入浴できるビューバス（ジャグジー付）を完備しており、シャンパン片手に非日常のバスタイムをお楽しみいただけます。
+    </p>
+    <p>
+      また、本スイートにご宿泊のお客様には、専属のバトラーが24時間体制でご滞在をサポート。
+      荷解きからレストランの予約、サプライズの演出まで、あらゆるご要望にお応えいたします。
+      朝食はインルームダイニングにて、シェフ特製の特別メニューをご用意。誰にも邪魔されない、究極のプライベートステイをお約束します。
+    </p>
+    <ul>
+      <li>広さ: 80㎡ / 天井高 3.5m</li>
+      <li>定員: 1名〜2名（エキストラベッド不可）</li>
+      <li>設備: ビューバス（ジャグジー）、プライベートサウナ、75インチ4Kテレビ、ミニバー（無料）</li>
+      <li>特典: クラブラウンジアクセス、ウェルカムシャンパン、空港送迎サービス</li>
+    </ul>
   </div>
 
-  <div id="demo-theme-switcher" style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); z-index: 9999; font-family: sans-serif; width: 220px; border: 1px solid #eee;">
-      <p style="margin: 0 0 10px; font-size: 11px; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.1em;">Theme Color</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          <button onclick="setTheme('mono')" style="width: 30px; height: 30px; border-radius: 50%; border: 3px solid #111; background: #FFF; cursor: pointer;" title="Mono Black"></button>
-          <button onclick="setTheme('white')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #FFF; cursor: pointer;" title="Pure White"></button>
-          <button onclick="setTheme('navy')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #0F172A; cursor: pointer;" title="Film Navy"></button>
-          <button onclick="setTheme('sepia')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #FDFCF8; cursor: pointer;" title="Sepia Beige"></button>
-          <button onclick="setTheme('dark')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #555; background: #000; cursor: pointer;" title="Dark Mode"></button>
-      </div>
+  <div id="modal-02" class="modal-content">
+    <button class="modal-close">×</button>
+    <h3>Premier Deluxe Details</h3>
+    <p>
+      「Premier Deluxe」は、現代的な機能美と日本の伝統的な美意識が融合した、心安らぐ客室です。
+      52㎡のゆとりある空間には、素足でくつろげる畳の小上がりスペースをご用意。
+      障子越しに差し込む柔らかな自然光が、旅の疲れを優しく癒やします。
+    </p>
+    <p>
+      バスルームには、香り高い総檜（ヒノキ）造りの浴槽を完備。
+      お湯を張れば、まるで森林浴をしているかのような清々しい香りが立ち込め、都会にいながらにして温泉旅館のような風情をお楽しみいただけます。
+      アメニティには、オーガニック認証を受けた国産ブランドを採用。肌に優しく、環境にも配慮したアイテムを取り揃えております。
+      ビジネスでのご利用はもちろん、カップルやご夫婦での記念日ステイにも最適な、上質な和モダン空間です。
+    </p>
+    <ul>
+      <li>広さ: 52㎡</li>
+      <li>定員: 2名〜3名（エキストラベッド対応可）</li>
+      <li>設備: 檜風呂、独立シャワーブース、畳スペース、ワークデスク</li>
+      <li>特典: フィットネスジム無料利用、ターンダウンサービス</li>
+    </ul>
+  </div>
+
+  <div id="modal-03" class="modal-content">
+    <button class="modal-close">×</button>
+    <h3>Executive Lounge Details</h3>
+    <p>
+      限られたゲストのみが足を踏み入れることを許された「Executive Lounge」。
+      ホテル最上階に位置するこの隠れ家は、チェックイン・チェックアウトの手続きはもちろん、朝食からナイトキャップまで、一日を通して様々なフードプレゼンテーションをご提供いたします。
+    </p>
+    <p>
+      ラウンジ内には、重厚な革張りのソファが並ぶライブラリーエリアや、開放的なテラス席、そして夜には暖炉の炎が揺らめくバーエリアをご用意。
+      ティータイムにはパティシエ特製のアフタヌーンティーを、カクテルタイムにはソムリエ厳選のワインやオリジナルカクテルとともに、シェフこだわりのアンティパストをお好きなだけお召し上がりいただけます。
+      専任のコンシェルジュが常駐しており、ビジネスのサポートから観光案内まで、きめ細やかなサービスで皆様をお迎えいたします。
+    </p>
+    <ul>
+      <li>営業時間: 7:00 〜 22:00</li>
+      <li>フードプレゼンテーション: 朝食、ティータイム、アフタヌーンティー、カクテルタイム、ナイトキャップ</li>
+      <li>設備: ミーティングルーム（2時間無料）、ライブラリー、テラス席</li>
+      <li>対象: スイートルームおよびエグゼクティブフロアご宿泊のお客様</li>
+    </ul>
+  </div>
+
+  <div id="modal-g1" class="modal-content">
+    <button class="modal-close">×</button>
+    <h3>Grand Dining</h3>
+    <p>
+      ミシュランの星に輝くメインダイニング「Grand Baileys」。
+      ここでは、フランスの伝統技法をベースに、日本の四季折々の食材を融合させた「モダン・フレンチ」をご提供いたします。
+      シェフ自らが全国の産地を巡り、その目で確かめた最高品質の食材のみを使用。
+      一皿一皿がまるで絵画のように美しく盛り付けられ、五感全てで味わう芸術作品へと昇華されています。
+    </p>
+    <p>
+      店内は、高い天井とクリスタルのシャンデリアが印象的な、開放感あふれる空間。
+      窓の外には美しい庭園が広がり、昼は陽光が差し込む明るい雰囲気、夜はライトアップされた幻想的な景色をお楽しみいただけます。
+      記念日やプロポーズなど、人生の大切な瞬間を彩るための個室も完備しており、世界中から取り寄せた希少なヴィンテージワインとともに、至福のひとときをお過ごしいただけます。
+    </p>
+  </div>
+  <div id="modal-g2" class="modal-content">
+    <button class="modal-close">×</button>
+    <h3>Private Lounge</h3>
+    <p>
+      ホテルの喧騒から離れた場所にひっそりと佇む「Private Lounge」。
+      ここは、会員様とご宿泊のVIPゲストだけが利用できる、完全予約制の特別な空間です。
+      壁一面には数百冊のアートブックや希少な写真集が並び、知的な会話を楽しむ大人のための隠れ家のような雰囲気が漂います。
+    </p>
+    <p>
+      ここでは、通常のメニューには載っていない希少なシングルモルトウイスキーや、熟成されたシガーをご用意しております。
+      座り心地を追求した特注のソファに深く身を沈め、グラスを傾けながら静かに思索に耽るもよし、ビジネスパートナーと密談を交わすもよし。
+      時間の流れが止まったかのような静寂の中で、誰にも邪魔されない贅沢な時間をお過ごしください。
+    </p>
+  </div>
+  <div id="modal-g3" class="modal-content">
+    <button class="modal-close">×</button>
+    <h3>Night View Bar</h3>
+    <p>
+      地上200メートル、天空に浮かぶバーラウンジ「The Blue」。
+      店内に足を踏み入れると、目の前には宝石箱をひっくり返したかのような、息をのむほど美しい東京の夜景が広がります。
+      カウンターには、世界的なコンクールで受賞歴を持つトップバーテンダーが常駐。
+      お客様のその日の気分や好みに合わせて、世界に一つだけのオリジナルカクテルをお作りいたします。
+    </p>
+    <p>
+      毎晩開催されるジャズの生演奏が、大人の夜を艶やかに演出。
+      シグネチャーカクテル「Starry Night」は、夜空の星屑をイメージした金粉が舞う幻想的な一杯で、多くのゲストを魅了してやみません。
+      デートの締めくくりや、大切な友人との語らいの場として、最高のロケーションと美酒をご提供いたします。
+    </p>
   </div>
 
   <script>
-      const themes = {
-          mono: {
-              '--bg-body': '#FFFFFF', '--text-main': '#111111', '--text-muted': '#888888', 
-              '--bg-light': '#F9F9F9', '--accent': '#111111', '--btn-text': '#FFFFFF'
-          },
-          white: {
-              '--bg-body': '#FFFFFF', '--text-main': '#333333', '--text-muted': '#AAAAAA', 
-              '--bg-light': '#FFFFFF', '--accent': '#999999', '--btn-text': '#FFFFFF'
-          },
-          navy: {
-              '--bg-body': '#0F172A', '--text-main': '#F1F5F9', '--text-muted': '#94A3B8', 
-              '--bg-light': '#1E293B', '--accent': '#38BDF8', '--btn-text': '#0F172A'
-          },
-          sepia: {
-              '--bg-body': '#FDFCF8', '--text-main': '#4A403A', '--text-muted': '#9C8C84', 
-              '--bg-light': '#F5F2EC', '--accent': '#8D7B68', '--btn-text': '#FFFFFF'
-          },
-          dark: {
-              '--bg-body': '#000000', '--text-main': '#FFFFFF', '--text-muted': '#666666', 
-              '--bg-light': '#111111', '--accent': '#FFFFFF', '--btn-text': '#000000'
-          }
-      };
+    // 1. Loading
+    window.addEventListener('load', () => {
+      setTimeout(() => { document.body.classList.remove('loading'); document.body.classList.add('loaded'); }, 1000);
+    });
 
-      function setTheme(name) {
-          const root = document.documentElement;
-          const theme = themes[name];
-          for (const key in theme) {
-              root.style.setProperty(key, theme[key]);
-          }
-      }
+    // 2. Scroll Animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in-view'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up, .reveal-img').forEach(el => observer.observe(el));
+
+    // 3. Hero Slideshow
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 5000);
+
+    // 4. Map Toggle
+    const mapBtn = document.getElementById('toggle-map');
+    const mapContainer = document.getElementById('map-container');
+    mapBtn.addEventListener('click', () => {
+      mapContainer.classList.toggle('active');
+    });
+
+    // 5. Modal Logic (Cursor visibility control included)
+    const overlay = document.getElementById('modal-overlay');
+    const opens = document.querySelectorAll('.open-modal');
+    const closes = document.querySelectorAll('.modal-close');
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorCircle = document.querySelector('.cursor-circle');
+
+    opens.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        document.getElementById(targetId).classList.add('active');
+        overlay.classList.add('active');
+        // モーダルオープン時はカスタムカーソルを隠し、デフォルトカーソルを表示
+        document.body.classList.add('modal-open'); 
+      });
+    });
+
+    const closeModal = () => {
+      document.querySelectorAll('.modal-content.active').forEach(m => m.classList.remove('active'));
+      overlay.classList.remove('active');
+      // モーダルクローズ時は元に戻す
+      document.body.classList.remove('modal-open');
+    };
+
+    closes.forEach(btn => btn.addEventListener('click', closeModal));
+    overlay.addEventListener('click', closeModal);
+
+    // 6. Custom Cursor
+    document.addEventListener('mousemove', (e) => {
+        // モーダルが開いているときは追従しない（非表示）
+        if (document.body.classList.contains('modal-open')) return;
+
+        cursorDot.style.left = e.clientX + 'px';
+        cursorDot.style.top = e.clientY + 'px';
+        setTimeout(() => {
+            cursorCircle.style.left = e.clientX + 'px';
+            cursorCircle.style.top = e.clientY + 'px';
+        }, 100);
+    });
+
+    // 7. Hamburger
+    const hb = document.getElementById('hamburger');
+    const nav = document.getElementById('nav-overlay');
+    hb.addEventListener('click', () => { hb.classList.toggle('active'); nav.classList.toggle('active'); });
+    document.querySelectorAll('.nav-link').forEach(l => {
+      l.addEventListener('click', () => { hb.classList.remove('active'); nav.classList.remove('active'); });
+    });
   </script>
+
+<style>
+    .theme-switcher {
+      position: fixed; bottom: 20px; right: 20px; z-index: 9999;
+      background: #fff; padding: 12px; border-radius: 50px;
+      display: flex; gap: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      border: 1px solid rgba(0,0,0,0.05); transition: transform 0.3s;
+    }
+    @media (max-width: 768px) {
+      .theme-switcher { bottom: 90px; right: 15px; transform: scale(0.9); }
+    }
+    .t-btn { 
+      /* Button Reset */
+      appearance: none; -webkit-appearance: none;
+      border: none; background: none; padding: 0; margin: 0; outline: none;
+      
+      /* Style */
+      width: 30px; height: 30px; border-radius: 50%; cursor: pointer; 
+      border: 2px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+      transition: transform 0.2s; position: relative;
+    }
+    .t-btn:hover { transform: scale(1.2); }
+    
+    /* Colors */
+    .c-gold   { background: #bfa57d; }
+    .c-silver { background: #718093; }
+    .c-bronze { background: #cd6133; }
+    .c-navy   { background: #273c75; }
+    .c-black  { background: #2f3640; border-color: #bfa57d !important; }
+  </style>
+
+  <div class="theme-switcher">
+    <button type="button" class="t-btn c-gold"   onclick="setTheme('#bfa57d', '#f7f1e3')" aria-label="Gold Theme"></button>
+    <button type="button" class="t-btn c-silver" onclick="setTheme('#718093', '#dcdde1')" aria-label="Silver Theme"></button>
+    <button type="button" class="t-btn c-bronze" onclick="setTheme('#cd6133', '#f5f6fa')" aria-label="Bronze Theme"></button>
+    <button type="button" class="t-btn c-navy"   onclick="setTheme('#273c75', '#f5f6fa')" aria-label="Navy Theme"></button>
+    <button type="button" class="t-btn c-black"  onclick="setTheme('#bfa57d', '#2f3640', '#1e272e', '#f5f6fa')" aria-label="Black Theme"></button>
+  </div>
+
+  <script>
+    function setTheme(primary, sub, bg, text) {
+      const root = document.documentElement;
+      
+      root.style.setProperty('--c-primary', primary);
+      root.style.setProperty('--c-bg-sub', sub);
+      
+      if (bg) {
+        // Modern Black Mode
+        root.style.setProperty('--c-bg', bg);
+        root.style.setProperty('--c-text', text);
+        root.style.setProperty('--c-text-light', '#b2bec3');
+      } else {
+        // Standard Mode
+        root.style.setProperty('--c-bg', '#ffffff');
+        root.style.setProperty('--c-text', '#2d3436');
+        root.style.setProperty('--c-text-light', '#636e72');
+      }
+    }
+  </script>
+
 </body>
 </html>
