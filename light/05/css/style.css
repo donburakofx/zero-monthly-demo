@@ -1,475 +1,388 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   1. Google Fonts
-   ========================================================================== */
-/* Noto Sans JP (本文), Montserrat (英語見出し) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
-
-/* ==========================================================================
-   2. Color Variations (5 Patterns)
+   1. COLOR THEME SELECTION (カラー設定)
    ========================================================================== */
 :root {
-    /* --- [Pattern A: Trust Blue] (王道・IT・誠実) --- */
-    --bg-body: #FFFFFF;
+
+    /* --- [Option 1: Dark Cyber] (デフォルト: 黒 × ネオンブルー) --- */
+    --bg-grad-1: #0f0c29;
+    --bg-grad-2: #302b63;
+    --bg-grad-3: #24243e;
+    --glass-bg: rgba(0, 0, 0, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --text-sub:  #b3b3b3;
+    --accent:    #00f2ff;
+    --text-on-accent: #000000;
+
+
+    /* --- [Option 2: Light Minimal] (白 × グレー) --- */
+    /* --bg-grad-1: #fdfbfb;
+    --bg-grad-2: #ebedee;
+    --bg-grad-3: #fdfbfb;
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(0, 0, 0, 0.05);
     --text-main: #333333;
-    --text-muted: #666666;
-    --bg-light: #F4F8FB;
-    --primary: #0056B3;
-    --primary-hover: #004494;
-    --secondary: #FFFFFF;
-    --border: #E0E0E0;
+    --text-sub:  #666666;
+    --accent:    #333333;
+    --text-on-accent: #ffffff; */
 
-    /* --- [Pattern B: Navy & Gold] (士業・コンサル・高級感) --- */
-    /*
-    --bg-body: #FFFFFF;
-    --text-main: #2C3E50;
-    --text-muted: #808B96;
-    --bg-light: #F8F9FA;
-    --primary: #1A252F;
-    --primary-hover: #C5A059;
-    --secondary: #FFFFFF;
-    --border: #E5E7E9;
-    */
-    /* ※Navyの場合はアクセントにゴールドを使うこともありますが、
-       今回はシンプルにNavy単色でまとめています */
 
-    /* --- [Pattern C: Growth Green] (環境・教育・福祉) --- */
-    /*
-    --bg-body: #FFFFFF;
-    --text-main: #2E3B32;
-    --text-muted: #5C6B62;
-    --bg-light: #F1F8F3;
-    --primary: #2E7D32;
-    --primary-hover: #1B5E20;
-    --secondary: #FFFFFF;
-    --border: #C8E6C9;
-    */
+    /* --- [Option 3: Ocean Blue] (水色 × 白) --- */
+    /* --bg-grad-1: #c2e9fb;
+    --bg-grad-2: #a1c4fd;
+    --bg-grad-3: #c2e9fb;
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --text-main: #003366;
+    --text-sub:  #4a6fa5;
+    --accent:    #0056b3;
+    --text-on-accent: #ffffff; */
 
-    /* --- [Pattern D: Passion Red] (ベンチャー・営業・活気) --- */
-    /*
-    --bg-body: #FFFFFF;
-    --text-main: #333333;
-    --text-muted: #666666;
-    --bg-light: #FFF5F5;
-    --primary: #C62828;
-    --primary-hover: #B71C1C;
-    --secondary: #FFFFFF;
-    --border: #FFCDD2;
-    */
 
-    /* --- [Pattern E: Modern Gray] (建築・製造・工業) --- */
-    /*
-    --bg-body: #FFFFFF;
-    --text-main: #212121;
-    --text-muted: #616161;
-    --bg-light: #F5F5F5;
-    --primary: #424242;
-    --primary-hover: #212121;
-    --secondary: #FFFFFF;
-    --border: #E0E0E0;
-    */
+    /* --- [Option 4: Luxury Gold] (黒 × ゴールド) --- */
 
-    /* 共通設定 */
-    --font-jp: 'Noto Sans JP', sans-serif;
-    --font-en: 'Montserrat', sans-serif;
-    --width-wide: 1100px;
-    --width-narrow: 800px;
-    --radius: 4px; /* コーポレートなので丸みは抑えめに */
+    /* --bg-grad-1: #000000;
+    --bg-grad-2: #2c2c2c;
+    --bg-grad-3: #000000;
+    --glass-bg: rgba(10, 10, 10, 0.6);
+    --glass-border: rgba(212, 175, 55, 0.3);
+    --text-main: #ffffff;
+    --text-sub:  #dcdcdc;
+    --accent:    #d4af37; 
+    --text-on-accent: #000000; */
+   
+
+    /* --- [Option 5: Royal Purple] (紫 × ピンク) --- */
+    /* --bg-grad-1: #e0c3fc;
+    --bg-grad-2: #8ec5fc;
+    --bg-grad-3: #e0c3fc;
+    --glass-bg: rgba(255, 255, 255, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --text-main: #4a235a;
+    --text-sub:  #7d3c98;
+    --accent:    #8e44ad;
+    --text-on-accent: #ffffff; */
+
+
+
+    /* --- 基本設定 (変更不要) --- */
+    --font-base: "Inter", "Noto Sans JP", sans-serif;
+    --radius: 20px;
+    --gap: 16px;
 }
 
-/* ==========================================================================
-   3. Base Styles
-   ========================================================================== */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
 body {
-    font-family: var(--font-jp);
+    font-family: var(--font-base);
     color: var(--text-main);
-    background-color: var(--bg-body);
     margin: 0;
-    line-height: 1.8;
-}
-
-a { text-decoration: none; color: inherit; transition: 0.3s; }
-img { max-width: 100%; display: block; }
-ul { list-style: none; padding: 0; margin: 0; }
-h1, h2, h3 { margin: 0; font-weight: 700; }
-
-.container { width: 90%; margin: 0 auto; }
-.narrow { max-width: var(--width-narrow); }
-.text-center { text-align: center; }
-.sp-only { display: block; }
-.pc-only { display: none; }
-
-@media (min-width: 768px) {
-    .container { max-width: var(--width-wide); }
-    .sp-only { display: none; }
-    .pc-only { display: inline; }
-}
-
-/* ==========================================================================
-   4. Header
-   ========================================================================== */
-.header {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid var(--border);
-    z-index: 100;
-}
-
-.header-inner { display: flex; justify-content: space-between; align-items: center; }
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--primary);
-}
-.brand-icon { font-size: 24px; }
-.brand-text {
-    font-family: var(--font-en);
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: var(--text-main);
-}
-
-.nav { display: none; }
-.nav-btn {
-    background-color: var(--primary);
-    color: #fff !important;
-    padding: 8px 20px;
-    border-radius: var(--radius);
-}
-
-@media (min-width: 768px) {
-    .nav { display: flex; gap: 30px; align-items: center; }
-    .nav a { font-size: 14px; font-weight: 500; }
-    .nav a:hover { color: var(--primary); }
-}
-
-/* ==========================================================================
-   5. Hero
-   ========================================================================== */
-.hero {
-    position: relative;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    background-color: #333; /* 画像読み込み前の保険 */
-}
-
-.hero-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-}
-.hero-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5; /* 文字を読みやすくするため暗く */
-}
-/* 背景を暗くするオーバーレイ */
-.hero-bg::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
-}
-
-.hero-container {
-    position: relative;
-    z-index: 1;
-}
-
-.eyebrow {
-    font-family: var(--font-en);
-    font-size: 14px;
-    letter-spacing: 0.1em;
-    margin-bottom: 15px;
-    opacity: 0.9;
-    color: rgba(255,255,255, 0.8);
-}
-
-.title {
-    font-size: 32px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-}
-
-.lead {
-    font-size: 15px;
-    margin-bottom: 40px;
-    opacity: 0.9;
-}
-
-.hero-actions { display: flex; gap: 15px; }
-
-/* Buttons */
-.btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 30px;
-    border-radius: var(--radius);
-    font-weight: 700;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.btn-primary {
-    background-color: var(--primary);
-    color: #fff;
-    border: 2px solid var(--primary);
-}
-.btn-primary:hover {
-    background-color: var(--primary-hover);
-    border-color: var(--primary-hover);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-}
-.btn-secondary:hover {
-    background-color: #fff;
-    color: var(--primary);
-}
-
-@media (min-width: 768px) {
-    .hero { height: 600px; }
-    .title { font-size: 48px; }
-    .lead { font-size: 16px; }
-}
-
-/* ==========================================================================
-   6. Section Common
-   ========================================================================== */
-.section { padding: 80px 0; }
-.bg-light { background-color: var(--bg-light); }
-
-.section-head { margin-bottom: 60px; }
-.section-title {
-    font-family: var(--font-en);
-    font-size: 32px;
-    color: var(--primary);
-    margin-bottom: 10px;
-}
-.section-sub {
-    font-size: 14px;
-    color: var(--text-muted);
-    font-weight: 500;
-}
-
-/* ==========================================================================
-   7. About
-   ========================================================================== */
-.about-content {
-    text-align: center;
-}
-.text-body {
-    text-align: justify;
-    margin-bottom: 40px;
-}
-.about-sign {
-    text-align: right;
-    margin-top: 30px;
-}
-.about-sign p { font-size: 12px; color: var(--text-muted); margin-bottom: 5px; }
-.sign-img {
-    width: 120px;
-    display: inline-block;
-    opacity: 0.7;
-}
-
-@media (min-width: 768px) {
-    .text-body { text-align: center; } /* PCでは中央揃えの方が見やすい場合も */
-}
-
-/* ==========================================================================
-   8. Service
-   ========================================================================== */
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 30px;
-    transition: 0.3s;
-}
-.service-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transform: translateY(-3px);
-    border-color: var(--primary);
-}
-
-.card-icon-wrap {
-    width: 60px;
-    height: 60px;
-    background-color: var(--bg-light);
-    color: var(--primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.card-title {
-    font-family: var(--font-en);
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-.card-desc {
-    font-size: 14px;
-    color: var(--text-muted);
-}
-
-/* ==========================================================================
-   9. Company
-   ========================================================================== */
-.info-list {
-    border-top: 1px solid var(--border);
-}
-
-.info-row {
-    display: flex;
-    flex-direction: column; /* スマホは縦並び */
-    padding: 15px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
-}
-.info-row dt {
-    font-weight: 700;
-    margin-bottom: 5px;
-    color: var(--primary);
-}
-.info-row dd { margin: 0; }
-
-@media (min-width: 768px) {
-    .info-row { flex-direction: row; }
-    .info-row dt { width: 250px; margin-bottom: 0; }
-}
-
-/* ==========================================================================
-   10. Contact
-   ========================================================================== */
-.contact-box {
-    background-color: #fff;
-    border: 1px solid var(--border);
-    padding: 40px 20px;
-    border-radius: var(--radius);
-}
-
-.contact-lead { margin-bottom: 30px; }
-
-.btn-large {
-    padding: 15px 50px;
-    font-size: 16px;
-    display: inline-flex;
-    gap: 10px;
-}
-
-.contact-note {
-    margin-top: 30px;
-    font-size: 13px;
-    color: var(--text-muted);
-}
-.tel-link {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text-main);
-    display: block;
-    margin-top: 5px;
-}
-
-/* ==========================================================================
-   11. Footer
-   ========================================================================== */
-.footer {
-    padding: 40px 0;
-    background-color: var(--text-main); /* ダーク背景 */
-    color: #fff;
-    font-size: 12px;
-}
-
-.footer-inner {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-}
-.footer-links a { color: #ccc; margin: 0 10px; }
-.footer-links a:hover { color: #fff; }
-
-@media (min-width: 768px) {
-    .footer-inner { flex-direction: row; justify-content: space-between; }
+    justify-content: center;
+    padding: 30px 15px;
+    overflow-x: hidden;
 }
 
-/* FAQの折り返し調整 */
-@media (min-width: 768px) {
-    .info-row dt {
-        width: 250px; /* 180pxから250pxに拡張 */
-        flex-shrink: 0; /* 折り返しを防止 */
-        margin-bottom: 0;
-        color: var(--primary);
-        font-weight: 700;
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+/* ==========================================================================
+   2. BACKGROUND ANIMATION
+   ========================================================================== */
+.bg-gradient {
+    position: fixed; inset: 0; z-index: -1;
+    background: linear-gradient(45deg, var(--bg-grad-1), var(--bg-grad-2), var(--bg-grad-3));
+    background-size: 400% 400%;
+    animation: bgFlow 15s ease infinite;
+}
+@keyframes bgFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==========================================================================
+   3. BENTO GRID LAYOUT
+   ========================================================================== */
+.bento-container {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    /* PC: 4カラム */
+    grid-template-columns: repeat(4, 1fr);
+    
+    /* PCの行の高さ：1画面に収まりやすい200px */
+    grid-auto-rows: 200px;
+    
+    gap: var(--gap);
+}
+
+@media (max-width: 900px) {
+    .bento-container {
+        /* Tablet: 2カラム */
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 210px;
     }
 }
+@media (max-width: 600px) {
+    .bento-container {
+        /* Mobile: 1カラム */
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
 
+    /* スマホ表示時の並び順 */
+    .profile-box { order: 1; }
+    .map-box     { order: 2; }
+    .twitter     { order: 3; }
+    .instagram   { order: 4; }
+    .threads     { order: 5; }
+    .note        { order: 6; }
+    .work-box    { order: 7; }
+    .service-box { order: 8; }
+    .contact-box { order: 9; }
+}
 
+/* ==========================================================================
+   4. BENTO BOX STYLES
+   ========================================================================== */
+.bento-box {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 
-/* Serviceセクション（画像付きカード）のリデザイン */
-.service-card-rich {
-    padding: 0 !important; /* カード全体の標準余白をリセット */
+.bento-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* --- Box 1: Profile (Span 2 cols, 2 rows) --- */
+.profile-box {
+    grid-column: span 2;
+    grid-row: span 2;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
     overflow: hidden;
 }
+@media (max-width: 600px) { .profile-box { grid-column: span 1; } }
 
-.service-card-rich .card-image {
-    width: 100%;
-    height: 200px;
+.profile-img {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    overflow: hidden; border: 3px solid rgba(255,255,255,0.2);
+    margin-bottom: 12px;
+}
+.name { font-size: 1.6rem; margin: 0 0 5px; font-weight: 800; line-height: 1.2; }
+.job { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+.bio { font-size: 0.85rem; line-height: 1.6; color: var(--text-sub); margin-bottom: 15px; }
+.status-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 20px;
+    font-size: 0.7rem; font-weight: 500;
+}
+.dot { width: 6px; height: 6px; background: #2ecc71; border-radius: 50%; box-shadow: 0 0 8px #2ecc71; }
+
+/* --- Box 2: Map (Span 2 cols) --- */
+.map-box {
+    grid-column: span 2;
+    grid-row: span 1;
+    position: relative; padding: 0;
+    display: flex; align-items: flex-end;
     overflow: hidden;
 }
+@media (max-width: 600px) { .map-box { grid-column: span 1; height: 180px; } }
 
-.service-card-rich .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+.map-bg {
+    position: absolute; inset: 0; background-size: cover; background-position: center;
+    transition: transform 0.5s;
+}
+.map-box:hover .map-bg { transform: scale(1.1); }
+.map-content {
+    position: relative; z-index: 2; padding: 15px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    width: 100%; color: #fff;
+}
+.map-content i { color: #e74c3c; margin-right: 5px; }
+
+/* --- Box 3, 5: Social (1 col each) --- */
+.social-box {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    font-size: 0.9rem; font-weight: 600;
+    overflow: hidden;
+}
+.social-box i { font-size: 2rem; transition: 0.3s; }
+.social-box:hover i { transform: scale(1.2) rotate(10deg); color: var(--accent); }
+
+.twitter:hover { border-color: #1da1f2; color: #1da1f2; }
+.instagram:hover { border-color: #e1306c; color: #e1306c; }
+.threads:hover { border-color: #ffffff; color: #ffffff; text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+.note:hover { border-color: #41c9b4; color: #41c9b4; }
+
+/* --- Box 4: Work (Span 2 cols, 2 rows) --- */
+.work-box {
+    grid-column: span 2;
+    grid-row: span 2;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+}
+@media (max-width: 600px) { .work-box { grid-column: span 1; } }
+
+.box-header { 
+    display: flex; justify-content: space-between; align-items: center; 
+    margin-bottom: 10px; flex-shrink: 0; 
+}
+.box-header h2 { margin: 0; font-size: 1rem; }
+.arrow-link { 
+    width: 24px; height: 24px; 
+    background: rgba(255,255,255,0.1); border-radius: 50%; 
+    display: flex; align-items: center; justify-content: center; 
+    font-size: 0.7rem; 
+}
+/* ▼▼▼ 修正: 矢印ホバー時の文字色も可変に ▼▼▼ */
+.arrow-link:hover { background: var(--accent); color: var(--text-on-accent); }
+
+.work-grid {
+    display: flex; flex-direction: column; gap: 8px;
+    overflow-y: auto; height: 100%; 
+    padding-right: 5px; padding-bottom: 5px;
+}
+.work-grid::-webkit-scrollbar { width: 4px; }
+.work-grid::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
+.work-grid::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+
+.work-item {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,0.05); padding: 8px; border-radius: 8px;
+    transition: 0.2s; flex-shrink: 0;
+    text-decoration: none; 
+}
+.work-item:hover { background: rgba(255,255,255,0.1); transform: translateX(3px); }
+
+.work-item img { width: 44px; height: 44px; border-radius: 6px; object-fit: cover; }
+.work-item .work-title { 
+    font-weight: 600; font-size: 0.85rem; 
+    line-height: 1.2; flex-grow: 1; 
 }
 
-/* ホバー時に画像を拡大 */
-.service-card-rich:hover .card-image img {
-    transform: scale(1.05);
+.work-item .link-icon {
+    font-size: 0.8rem;
+    color: var(--text-sub);
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.work-item:hover .link-icon {
+    opacity: 1;
+    color: var(--accent);
 }
 
-.service-card-rich .card-content {
-    padding: 30px;
-    position: relative;
+/* --- Box 6: Service / Skills (Span 1 col) --- */
+.service-box {
+    grid-row: span 1;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    padding: 15px 18px;
+}
+.service-box h2 { 
+    font-size: 1rem; margin-top: 0; margin-bottom: 8px; 
+    flex-shrink: 0; 
 }
 
-/* アイコンを画像に少し被せるデザイン */
-.service-card-rich .card-icon-wrap {
-    margin-top: -60px;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 2;
+.service-list { 
+    display: flex; flex-direction: column; 
+    gap: 5px; height: 100%;
 }
 
-/* フッター中央寄せの補完 */
-.footer .text-center {
-    text-align: center;
+.service-list li { 
+    display: flex; align-items: center; gap: 8px;
+    padding: 4px 6px; 
+    border-radius: 6px;
+    transition: 0.3s;
+    border: 1px solid transparent; flex-shrink: 0;
 }
+.service-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02); 
+    border-color: rgba(255,255,255,0.2);
+}
+.service-list i {
+    width: 26px; height: 26px; 
+    background: rgba(255,255,255,0.05); border-radius: 6px;
+    display: flex; align-items: center; justify-content: center; color: var(--accent);
+    font-size: 0.8rem;
+}
+/* ▼▼▼ 修正: アイコンホバー時の文字色も可変に ▼▼▼ */
+.service-list li:hover i { background: var(--accent); color: var(--text-on-accent); }
+
+.service-list div { display: flex; flex-direction: column; }
+.service-list strong { font-size: 0.8rem; line-height: 1.1; }
+.service-list span { font-size: 0.65rem; color: var(--text-sub); }
+.service-list li:hover span { color: var(--text-main); }
+
+/* --- Box 7: Contact (Span 1 col) --- */
+.contact-box {
+    grid-row: span 1;
+    background: var(--accent); 
+    /* ▼▼▼ 修正: 文字色を変数化（黒背景なら白文字、ネオンなら黒文字） ▼▼▼ */
+    color: var(--text-on-accent);
+    border: none;
+    display: flex; flex-direction: column; 
+    align-items: center; justify-content: center; text-align: center;
+    overflow: hidden;
+}
+.contact-content i { font-size: 1.6rem; margin-bottom: 6px; display: block; }
+.contact-content h2 { margin: 0; font-size: 1rem; }
+.contact-content p { margin: 2px 0 0; font-size: 0.7rem; opacity: 0.8; }
+.contact-box:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--accent); }
+
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
+.footer {
+    margin-top: 30px; text-align: center; color: var(--text-sub); font-size: 0.75rem; width: 100%;
+}
+
+/* ==========================================================================
+   6. OPENING ANIMATION
+   ========================================================================== */
+#loading-screen {
+    position: fixed; inset: 0; z-index: 9999;
+    background: var(--bg-grad-1);
+    display: flex; justify-content: center; align-items: center;
+    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+}
+.loader-content { text-align: center; color: var(--text-main); }
+.loader-text { font-size: 1.2rem; font-weight: 600; letter-spacing: 0.1em; animation: pulseText 1.5s infinite alternate; }
+.loader-bar { width: 0%; height: 2px; background: var(--accent); margin-top: 10px; animation: loadBar 2s ease-in-out infinite; }
+body.loaded #loading-screen { opacity: 0; visibility: hidden; pointer-events: none; }
+@keyframes pulseText { 0% { opacity: 0.5; } 100% { opacity: 1; } }
+@keyframes loadBar { 0% { width: 0%; margin-left: 0; } 50% { width: 100%; margin-left: 0; } 100% { width: 0%; margin-left: 100%; } }
+
+body:not(.loaded) .bento-box { opacity: 0; transform: translateY(20px); }
+body.loaded .bento-box { animation: popIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; }
+@keyframes popIn { 0% { opacity: 0; transform: translateY(30px) scale(0.95); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+
+/* Stagger Effect */
+body.loaded .profile-box { animation-delay: 0.1s; }
+body.loaded .map-box     { animation-delay: 0.2s; }
+body.loaded .twitter     { animation-delay: 0.3s; }
+body.loaded .instagram   { animation-delay: 0.35s; }
+body.loaded .work-box    { animation-delay: 0.4s; }
+body.loaded .threads     { animation-delay: 0.45s; }
+body.loaded .note        { animation-delay: 0.5s; }
+body.loaded .service-box { animation-delay: 0.55s; }
+body.loaded .contact-box { animation-delay: 0.6s; }
