@@ -629,3 +629,23 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.4; }
     .news-meta { margin-bottom: 10px; width: 100%; }
     .news-body-inner { padding: 0 0 20px 0; }
 }
+
+/* ==========================================================================
+   Mobile Tap Highlight Fix (追加修正)
+   ========================================================================== */
+
+/* ニュースのアコーディオンボタンなど、タップ時の「水色/グレーの背景」を消す */
+.news-header,
+button, 
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* 透明にする魔法のコード */
+    -webkit-tap-highlight-color: transparent; /* 念のため別記法も */
+    outline: none; /* フォーカス時の枠線も消す */
+}
+
+/* ※もしタップした瞬間だけ文字色を変えたい等の「押し感」が必要なら、
+   以下のように自前で指定するとリッチになります（任意） */
+.news-header:active {
+    opacity: 0.5; /* 押している間だけ半透明に */
+    background-color: transparent; /* 背景色は付けない */
+}
