@@ -631,27 +631,28 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.4; }
 }
 
 /* ==========================================================================
-   Mobile Tap Highlight Fix (追加修正)
+   Mobile Fix (追加修正)
    ========================================================================== */
 
-/* 念のため、全てのリンクの色を親要素に合わせる設定 */
-.news-title {
-    color: inherit !important;
-    text-decoration: none !important;
+.news-header {
+    /* 1. iPhoneで文字が勝手に水色になるのを防ぐ */
+    color: var(--text-main); 
+
+    /* 2. タップした瞬間の「水色/グレーの背景膜」を消す */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    
+    /* 3. その他、ボタンのリセットを念入りに */
+    background-color: transparent;
+    border: none;
+    padding: 25px 0;
+    width: 100%;
+    text-align: left; /* 文字を左揃えに強制 */
+    cursor: pointer;
+    outline: none;
 }
 
-/* ニュースのアコーディオンボタンなど、タップ時の「水色/グレーの背景」を消す */
-.news-header,
-button, 
-a {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* 透明にする魔法のコード */
-    -webkit-tap-highlight-color: transparent; /* 念のため別記法も */
-    outline: none; /* フォーカス時の枠線も消す */
-}
-
-/* ※もしタップした瞬間だけ文字色を変えたい等の「押し感」が必要なら、
-   以下のように自前で指定するとリッチになります（任意） */
+/* 押した時のリアクション（膜の代わりに薄くする） */
 .news-header:active {
-    opacity: 0.5; /* 押している間だけ半透明に */
-    background-color: transparent; /* 背景色は付けない */
+    opacity: 0.5;
 }
