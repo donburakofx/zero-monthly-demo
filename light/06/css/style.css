@@ -634,6 +634,12 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.4; }
    Mobile Tap Highlight Fix (追加修正)
    ========================================================================== */
 
+/* 念のため、全てのリンクの色を親要素に合わせる設定 */
+.news-title {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
 /* ニュースのアコーディオンボタンなど、タップ時の「水色/グレーの背景」を消す */
 .news-header,
 button, 
