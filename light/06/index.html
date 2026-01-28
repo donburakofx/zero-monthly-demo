@@ -1,22 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Global Inc. | Borderless Solutions</title>
-  <meta name="description" content="Empowering businesses to scale globally with innovative digital solutions." />
-  
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Global Inc. | Borderless Solutions" />
-  <meta property="og:description" content="Empowering businesses to scale globally with innovative digital solutions." />
-  <meta property="og:image" content="assets/image/ogp.jpg" />
+  <title>Cafe Store | 心安らぐひとときを</title>
+  <meta name="description" content="こだわりのコーヒーと自家製スイーツを提供するカフェ。" />
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-  
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cafe Store | 心安らぐひとときを" />
+  <meta property="og:description" content="こだわりのコーヒーと自家製スイーツを提供するカフェ。" />
+  <meta property="og:url" content="https://demo.donb-web.com/light/06/" />
+  <meta property="og:image" content="https://demo.donb-web.com/light/06/assets/image/ogp.jpg" />
+  <meta property="og:site_name" content="Your Name Portfolio" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cafe Store | 心安らぐひとときを" />
+  <meta name="twitter:description" content="こだわりのコーヒーと自家製スイーツを提供するカフェ。" />
+  <meta name="twitter:image" content="https://demo.donb-web.com/light/06/assets/image/ogp.jpg" />
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Shippori+Mincho&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -24,295 +34,463 @@
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a class="brand" href="#top">Global Inc.</a>
+      <a class="brand" href="#top">The Coffee Stand.</a>
 
       <nav class="nav">
-        <a href="#mission">Mission</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#cases">Case Study</a>
-        <a href="#contact" class="nav-cta">Get in Touch</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#access">Access</a>
+        <a href="https://instagram.com" target="_blank" class="nav-sns"><i class="fa-brands fa-instagram"></i></a>
       </nav>
-      
-      <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
+
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="hero-bg">
-        <img src="assets/image/hero_global.jpg" alt="Global Connection">
-      </div>
-      <div class="container hero-container">
+    <section id="home" class="hero">
+      <div class="container hero-grid">
         <div class="hero-content">
-          <p class="eyebrow">Connect the World</p>
-          <h1 class="title">
-            Innovate for a<br>
-            Borderless Future.
+          <p class="eyebrow anim-up" style="--delay: 0.1s;">
+            <i class="fa-solid fa-mug-hot"></i> Roastery & Bake
+          </p>
+          <h1 class="title anim-up" style="--delay: 0.2s;">
+            一杯のコーヒーで、<br>日常を少し豊かに。
           </h1>
-          
-          <p class="lead">
-            We provide seamless digital solutions that empower businesses to scale globally.<br>
-            Reliable, fast, and secure infrastructure for modern enterprises.
+          <p class="lead anim-up" style="--delay: 0.3s;">
+            丁寧にハンドピックした豆と、手作りの焼き菓子。<br>
+            静かな音楽とともに、お待ちしております。
           </p>
+          <div class="hero-actions anim-up" style="--delay: 0.4s;">
+            <a class="btn btn-primary" href="#access">アクセスを見る</a>
+            <a class="btn btn-text" href="#menu">メニューを見る <i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+          <ul class="tags anim-up" style="--delay: 0.5s;">
+            <li><i class="fa-solid fa-wifi"></i> Wi-Fiあり</li>
+            <li><i class="fa-solid fa-paw"></i> ペットOK</li>
+            <li><i class="fa-solid fa-bag-shopping"></i> テイクアウト可</li>
+          </ul>
+        </div>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Start Project</a>
-            <a class="btn btn-secondary" href="#mission">Learn More</a>
+        <div class="hero-visual">
+          <div class="visual-deco"></div>
+          <div class="reveal-wrap">
+            <img src="assets/image/hero.jpg" alt="Hero Image">
           </div>
         </div>
       </div>
     </section>
 
-    <div class="logo-strip">
-      <div class="container">
-        <p class="strip-label">Trusted by industry leaders</p>
-        <div class="logos">
-          <span class="logo-item"><i class="fa-brands fa-google"></i> GOOGLE</span>
-          <span class="logo-item"><i class="fa-brands fa-aws"></i> AMAZON</span>
-          <span class="logo-item"><i class="fa-brands fa-stripe"></i> STRIPE</span>
-          <span class="logo-item"><i class="fa-brands fa-spotify"></i> SPOTIFY</span>
-          <span class="logo-item"><i class="fa-brands fa-airbnb"></i> AIRBNB</span>
+    <section id="about" class="section bg-beige">
+      <div class="container narrow">
+        <div class="about-grid">
+          <div class="about-img js-scroll slide-right">
+            <img src="assets/image/about.jpg" alt="About Us">
+          </div>
+          <div class="about-text js-scroll slide-right" style="--delay: 0.2s;">
+            <div class="section-head text-left">
+              <h2 class="section-title">About</h2>
+              <p class="section-desc">私たちについて</p>
+            </div>
+            <p class="text-body">
+              2025年、静かな裏路地にオープンしました。<br>
+              「毎日飲みたくなる味」を目指して、酸味と苦味のバランスにこだわったブレンドを提供しています。<br>
+              <br>
+              朝の散歩ついでや、仕事の合間のリフレッシュに。<br>
+              あなたの日常に寄り添う場所でありたいと願っています。
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <section id="mission" class="section">
-      <div class="container grid-2">
-        <div class="section-text">
-          <h2 class="section-title">Our Mission</h2>
-          <h3 class="headline-md">Bridging the gap between<br>technology and humanity.</h3>
-          <p class="text-body">
-            In an increasingly complex world, simplicity is power. 
-            We strive to create intuitive solutions that not only solve business problems but also enhance human connection.
-            <br><br>
-            Our team of experts from 10+ countries brings diverse perspectives to every project, ensuring cultural relevance and technical excellence.
-          </p>
-          
-          <div class="stat-row">
-            <div class="stat-item">
-              <span class="stat-num">50+</span>
-              <span class="stat-label">Countries</span>
+    <section id="features" class="section">
+      <div class="container narrow">
+        <div class="section-head text-center" style="margin-bottom: 80px;">
+          <span class="section-sub">Our Commitment</span>
+          <h2 class="section-title">3つのこだわり</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid feature-unit alt-layout">
+          <div class="about-img js-scroll slide-left">
+            <img src="assets/image/feature_01.jpg" alt="Feature 01">
+          </div>
+          <div class="about-text js-scroll slide-right" style="--delay: 0.2s;">
+            <div class="section-head text-left">
+              <h3 class="feature-title">01. 自家焙煎の豆</h3>
             </div>
-            <div class="stat-item">
-              <span class="stat-num">200+</span>
-              <span class="stat-label">Projects</span>
+            <p class="text-body">
+              世界各地から厳選したスペシャルティコーヒー豆を使用。<br>
+              その日の気温や湿度に合わせて、毎日少量ずつ丁寧に焙煎しています。<br>
+              豆本来の果実味と香りを最大限に引き出した、鮮度の高い一杯をお楽しみください。
+            </p>
+          </div>
+        </div>
+
+        <div class="about-grid feature-unit">
+          <div class="about-img js-scroll slide-right">
+            <img src="assets/image/feature_02.jpg" alt="Feature 02">
+          </div>
+          <div class="about-text js-scroll slide-left" style="--delay: 0.2s;">
+            <div class="section-head text-left">
+              <h3 class="feature-title">02. 手作りの焼き菓子</h3>
             </div>
-            <div class="stat-item">
-              <span class="stat-num">98%</span>
-              <span class="stat-label">Retention</span>
+            <p class="text-body">
+              保存料を使わず、素材のやさしい甘みを活かした自家製スイーツ。<br>
+              コーヒーとのペアリング（相性）を第一に考えたレシピで焼き上げています。<br>
+              季節のフルーツを使ったタルトや、濃厚なチーズケーキが人気です。
+            </p>
+          </div>
+        </div>
+
+        <div class="about-grid feature-unit alt-layout">
+          <div class="about-img js-scroll slide-left">
+            <img src="assets/image/feature_03.jpg" alt="Feature 03">
+          </div>
+          <div class="about-text js-scroll slide-right" style="--delay: 0.2s;">
+            <div class="section-head text-left">
+              <h3 class="feature-title">03. 心地よい空間</h3>
+            </div>
+            <p class="text-body">
+              アンティーク家具と観葉植物に囲まれた、深呼吸できる空間。<br>
+              Wi-Fiと電源も完備しており、読書やワークスペースとしてもご利用いただけます。<br>
+              自分だけの時間を、心ゆくまでお過ごしください。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section bg-beige">
+      <div class="container narrow">
+        <div class="text-center">
+          <h2 class="section-title">Menu</h2>
+          <p class="section-desc">おすすめメニュー</p>
+        </div>
+
+        <div class="menu-category-row">
+          <div class="menu-cat-image js-scroll slide-right">
+            <img src="assets/image/menu_01.jpg" alt="Drink Menu">
+          </div>
+          <div class="menu-cat-content js-scroll slide-left">
+            <h3 class="cat-title"><i class="fa-solid fa-coffee"></i> Drink</h3>
+            <div class="menu-list">
+              <article class="menu-item">
+                <div class="menu-row">
+                  <h4 class="menu-name">Today's Drip Coffee</h4>
+                  <span class="menu-line"></span>
+                  <span class="menu-price">¥550</span>
+                </div>
+                <p class="menu-detail">日替わりのシングルオリジン（Hot / Ice）</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-row">
+                  <h4 class="menu-name">Cafe Latte</h4>
+                  <span class="menu-line"></span>
+                  <span class="menu-price">¥600</span>
+                </div>
+                <p class="menu-detail">濃厚なエスプレッソとスチームミルク</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-row">
+                  <h4 class="menu-name">Espresso Tonic</h4>
+                  <span class="menu-line"></span>
+                  <span class="menu-price">¥650</span>
+                </div>
+                <p class="menu-detail">夏におすすめ。柑橘香る爽やかな一杯</p>
+              </article>
             </div>
           </div>
         </div>
-        
-        <div class="section-visual">
-          <img src="assets/image/mission.jpg" alt="Our Team" class="img-mission">
+
+        <div class="menu-category-row reverse mt-5">
+          <div class="menu-cat-image js-scroll slide-left">
+            <img src="assets/image/menu_02.jpg" alt="Food Menu">
+          </div>
+          <div class="menu-cat-content js-scroll slide-right">
+            <h3 class="cat-title"><i class="fa-solid fa-cookie-bite"></i> Food</h3>
+            <div class="menu-list">
+              <article class="menu-item">
+                <div class="menu-row">
+                  <h4 class="menu-name">Homemade Scone</h4>
+                  <span class="menu-line"></span>
+                  <span class="menu-price">¥400</span>
+                </div>
+                <p class="menu-detail">国産小麦使用。ジャムとクリーム付き</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-row">
+                  <h4 class="menu-name">Lunch Plate</h4>
+                  <span class="menu-line"></span>
+                  <span class="menu-price">¥1,200</span>
+                </div>
+                <p class="menu-detail">11:30 - 14:00 限定 / サラダ・スープ付</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <p class="menu-note">※ 表示価格は税込です。テイクアウトは軽減税率(8%)が適用されます。</p>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="container narrow">
+        <div class="section-head text-center" style="margin-bottom: 50px;">
+          <span class="section-sub">News & Topics</span>
+          <h2 class="section-title">お知らせ</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="news-accordion">
+
+          <div class="news-item">
+            <button class="news-header" aria-expanded="false">
+              <div class="news-meta">
+                <time>2026.04.20</time>
+                <span class="news-label">Info</span>
+              </div>
+              <h3 class="news-title">ゴールデンウィーク期間中の営業について</h3>
+              <span class="news-icon"></span>
+            </button>
+            <div class="news-body">
+              <div class="news-body-inner">
+                <p>
+                  いつもご利用いただきありがとうございます。<br>
+                  GW期間中（4/29〜5/6）は休まず営業いたします。<br>
+                  5/7（木）は振替休日とさせていただきますのでご注意ください。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <button class="news-header" aria-expanded="false">
+              <div class="news-meta">
+                <time>2026.04.01</time>
+                <span class="news-label">Menu</span>
+              </div>
+              <h3 class="news-title">春の季節限定「桜のシフォンケーキ」が始まりました</h3>
+              <span class="news-icon"></span>
+            </button>
+            <div class="news-body">
+              <div class="news-body-inner">
+                <p>
+                  ほんのり桜が香る、春色のシフォンケーキをご用意しました。<br>
+                  数量限定ですので、お早めにお越しください。<br>
+                  <br>
+                  価格：¥650（ドリンクセット ¥1,100）
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <button class="news-header" aria-expanded="false">
+              <div class="news-meta">
+                <time>2026.03.15</time>
+                <span class="news-label">Event</span>
+              </div>
+              <h3 class="news-title">コーヒー淹れ方ワークショップ開催のお知らせ</h3>
+              <span class="news-icon"></span>
+            </button>
+            <div class="news-body">
+              <div class="news-body-inner">
+                <p>
+                  初心者向けのハンドドリップ講座を開催します。<br>
+                  豆の選び方から、美味しい淹れ方のコツまでバリスタが丁寧にレクチャーします。<br>
+                  参加ご希望の方は、店頭またはお電話にてお問い合わせください。
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="solutions" class="section bg-light">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">Solutions</h2>
-          <p class="section-desc">Comprehensive services for your growth.</p>
+    <section id="access" class="section bg-beige">
+      <div class="container narrow">
+        <div class="text-center">
+          <h2 class="section-title">Store Info</h2>
+          <p class="section-desc">店舗情報・アクセス</p>
         </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <div class="card-icon"><i class="fa-solid fa-earth-americas"></i></div>
-            <h3 class="card-title">Global Strategy</h3>
-            <p class="card-text">
-              Market research and localization strategies to help you enter new markets successfully with minimal risk.
-            </p>
-            <a href="#" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
+        <div class="info-card">
+          <dl class="info-list">
+            <div class="info-row">
+              <dt>Hours</dt>
+              <dd>
+                08:00 - 19:00 (L.O. 18:30)<br>
+                <span class="muted">※ 土日祝は 09:00 Open</span>
+              </dd>
+            </div>
+            <div class="info-row">
+              <dt>Closed</dt>
+              <dd>水曜日 / 第3木曜日</dd>
+            </div>
+            <div class="info-row">
+              <dt>Address</dt>
+              <dd>
+                〒150-0041<br>
+                東京都渋谷区神南 1-2-3
+              </dd>
+            </div>
+            <div class="info-row">
+              <dt>Tel</dt>
+              <dd><a href="tel:0300000000">03-0000-0000</a></dd>
+            </div>
+            <div class="info-row">
+              <dt>Payment</dt>
+              <dd>Cash / Card / Electronic Money</dd>
+            </div>
+          </dl>
 
-          <article class="card">
-            <div class="card-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-            <h3 class="card-title">Digital Transformation</h3>
-            <p class="card-text">
-              Modernizing legacy systems with cloud-native architectures and AI integration to boost efficiency.
-            </p>
-            <a href="#" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-
-          <article class="card">
-            <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
-            <h3 class="card-title">Brand Identity</h3>
-            <p class="card-text">
-              Building strong, resonant brands that communicate your values across cultures and languages.
-            </p>
-            <a href="#" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="cases" class="section dark-mode">
-      <div class="container relative-z">
-        <div class="section-head text-center">
-          <h2 class="section-title text-primary">Success Stories</h2>
-          <p class="headline-md text-white">Proven results across industries.</p>
-          <p class="section-desc text-white-50">
-            Discover how we help global enterprises overcome challenges<br>
-            and achieve sustainable growth through digital innovation.
-          </p>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.392686886273!2d139.6963430755495!3d35.66733273071856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca801053429%3A0x1ec84e3d64673838!2z5p2x5Lqs6YO95riL6LC35Yy656We5Y2X!5e0!3m2!1sja!2sjp!4v1705500000000!5m2!1sja!2sjp"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
 
-        <div class="case-grid">
-          <article class="case-card">
-            <div class="case-header">
-              <span class="case-tag">SaaS / North America</span>
-              <h3 class="case-title">Scaling a Unicorn to Global Markets</h3>
-            </div>
-            <div class="case-body">
-              <div class="case-row">
-                <h4 class="case-label">The Challenge</h4>
-                <p class="case-text">
-                  The client faced stagnation in domestic markets and needed a comprehensive strategy to enter the highly competitive US market without diluting their brand identity.
-                </p>
-              </div>
-              <div class="case-row">
-                <h4 class="case-label">The Solution</h4>
-                <p class="case-text">
-                  We conducted thorough market research and rebranded their core product to align with local user expectations, implementing a cloud-native infrastructure for low-latency access.
-                </p>
-              </div>
-              <div class="case-result">
-                <span class="result-icon"><i class="fa-solid fa-arrow-trend-up"></i></span>
-                <span class="result-text">200% YOY Growth</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="case-card">
-            <div class="case-header">
-              <span class="case-tag">Logistics / Asia Pacific</span>
-              <h3 class="case-title">AI-Driven Supply Chain Optimization</h3>
-            </div>
-            <div class="case-body">
-              <div class="case-row">
-                <h4 class="case-label">The Challenge</h4>
-                <p class="case-text">
-                  Legacy systems were causing significant delays in supply chain visibility, resulting in increased operational costs and customer dissatisfaction during peak seasons.
-                </p>
-              </div>
-              <div class="case-row">
-                <h4 class="case-label">The Solution</h4>
-                <p class="case-text">
-                  We architected a bespoke AI tracking system that predicts potential bottlenecks in real-time, integrating seamlessly with their existing IoT hardware network.
-                </p>
-              </div>
-              <div class="case-result">
-                <span class="result-icon"><i class="fa-solid fa-check"></i></span>
-                <span class="result-text">Cost Reduced by 40%</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="case-card">
-            <div class="case-header">
-              <span class="case-tag">FinTech / Europe</span>
-              <h3 class="case-title">Secure Blockchain Infrastructure</h3>
-            </div>
-            <div class="case-body">
-              <div class="case-row">
-                <h4 class="case-label">The Challenge</h4>
-                <p class="case-text">
-                  With tightening regulations in the EU, the client required a highly secure, compliant, and scalable infrastructure to handle cross-border cryptocurrency transactions.
-                </p>
-              </div>
-              <div class="case-row">
-                <h4 class="case-label">The Solution</h4>
-                <p class="case-text">
-                  Our team developed a private blockchain network with automated compliance checks, ensuring zero-knowledge proof privacy while maintaining transaction speed.
-                </p>
-              </div>
-              <div class="case-result">
-                <span class="result-icon"><i class="fa-solid fa-shield-halved"></i></span>
-                <span class="result-text">100% Compliance Rate</span>
-              </div>
-            </div>
-          </article>
+        <div class="sns-area text-center">
+          <p class="muted">最新情報はSNSで更新中</p>
+          <div class="sns-links">
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container narrow text-center">
-        <h2 class="section-title">Get in Touch</h2>
-        <p class="headline-md">Ready to scale your business?</p>
-        <p class="text-body mb-4">
-          We are currently accepting new projects.<br>
-          Send us an email regarding your inquiry.
-        </p>
-
-        <div class="contact-actions">
-          <a class="btn btn-primary btn-large" href="mailto:hello@example.com">
-            <i class="fa-regular fa-envelope"></i> hello@example.com
-          </a>
-        </div>
-        
-        <p class="muted mt-4">
-          or call us at <a href="tel:+1000000000" class="link-u">+1 (555) 123-4567</a>
-        </p>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="container footer-bottom">
-        <small>&copy; 2025 Global Inc. All rights reserved.</small>
-        <div class="footer-social">
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+      <div class="container">
+        <small>&copy; 2025 The Coffee Stand.</small>
       </div>
     </footer>
   </main>
 
-  <div id="demo-theme-switcher" style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); z-index: 9999; font-family: sans-serif; width: 220px; border: 1px solid #eee;">
-      <p style="margin: 0 0 10px; font-size: 11px; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.1em;">Theme Color</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          <button onclick="setTheme('blue')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #2563EB; cursor: pointer;" title="Tech Blue"></button>
-          <button onclick="setTheme('black')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #111111; cursor: pointer;" title="Midnight Black"></button>
-          <button onclick="setTheme('green')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #059669; cursor: pointer;" title="FinTech Green"></button>
-          <button onclick="setTheme('purple')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #7C3AED; cursor: pointer;" title="Innovation Purple"></button>
-          <button onclick="setTheme('red')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #DC2626; cursor: pointer;" title="Global Red"></button>
-      </div>
+  <script>
+    const observerOptions = {
+      root: null, // 画面全体
+      rootMargin: '0px 0px -20% 0px', // 画面の下から20%の位置に来たら発火（早すぎず遅すぎず）
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-active');
+          observer.unobserve(entry.target); // 一度動いたら監視終了
+        }
+      });
+    }, observerOptions);
+
+    // .js-scroll がついている要素を監視開始
+    document.querySelectorAll('.js-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    const accordions = document.querySelectorAll('.news-header');
+
+    accordions.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const body = item.querySelector('.news-body');
+
+        // 開閉の切り替え
+        if (item.classList.contains('is-open')) {
+          // 閉じる
+          item.classList.remove('is-open');
+          header.setAttribute('aria-expanded', 'false');
+          body.style.height = '0px';
+        } else {
+          // 開く
+          // ※他を自動で閉じたい場合はここに処理を追加しますが、今回は複数開きOKにします
+          item.classList.add('is-open');
+          header.setAttribute('aria-expanded', 'true');
+          body.style.height = body.scrollHeight + 'px'; // 中身の高さを取得して設定
+        }
+      });
+    });
+
+  </script>
+
+<div id="demo-palette" style="
+    position: fixed;
+    /* iPhoneのホームバーと重ならないように計算 */
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    right: 20px;
+    z-index: 9999;
+    font-family: sans-serif;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+  ">
+    <style>
+      #demo-palette-panel {
+        background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        display: none; width: 200px;
+        margin-bottom: 10px; /* スマホで指が隠れないよう少し上に */
+      }
+      #demo-palette-panel.is-open { display: block; }
+      
+      .demo-btn {
+        width: 100%; padding: 12px; /* スマホで押しやすいよう少し広く */
+        margin-bottom: 8px; border: none; border-radius: 4px;
+        cursor: pointer; font-size: 13px; color: #fff; font-weight: bold;
+        transition: transform 0.2s; text-align: left; display: flex; align-items: center; justify-content: space-between;
+      }
+      /* スマホのタップ時のハイライトを消す */
+      .demo-btn:active { opacity: 0.8; }
+      
+      .demo-btn:last-child { margin-bottom: 0; }
+      
+      #demo-toggle {
+        width: 50px; height: 50px; border-radius: 50%; background: #333; color: #fff;
+        border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2); font-size: 20px; transition: 0.3s;
+        /* スマホでの誤タップ防止 */
+        touch-action: manipulation; 
+      }
+    </style>
+
+    <div id="demo-palette-panel">
+      <div style="font-size: 12px; font-weight: bold; color: #555; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">Color Theme</div>
+      
+      <button class="demo-btn" style="background: #6F4E37;" onclick="setTheme('coffee')">Coffee <span style="font-size:10px; opacity:0.8;">Default</span></button>
+      <button class="demo-btn" style="background: #556B2F;" onclick="setTheme('matcha')">Matcha</button>
+      <button class="demo-btn" style="background: #E67E22;" onclick="setTheme('bakery')">Bakery</button>
+      <button class="demo-btn" style="background: #111111;" onclick="setTheme('mono')">Mono</button>
+      <button class="demo-btn" style="background: #C2185B;" onclick="setTheme('berry')">Berry</button>
+    </div>
+
+    <button id="demo-toggle" aria-label="Color Palette" onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
+      <i class="fa-solid fa-palette"></i>
+    </button>
   </div>
 
   <script>
+    function setTheme(theme) {
+      const root = document.documentElement;
       const themes = {
-          blue: {
-              '--bg-body': '#FFFFFF', '--text-main': '#111827', '--bg-light': '#F3F4F6',
-              '--primary': '#2563EB', '--primary-hover': '#1D4ED8', '--secondary': '#111827'
-          },
-          black: {
-              '--bg-body': '#FFFFFF', '--text-main': '#000000', '--bg-light': '#F9FAFB',
-              '--primary': '#111111', '--primary-hover': '#333333', '--secondary': '#FFFFFF'
-          },
-          green: {
-              '--bg-body': '#FFFFFF', '--text-main': '#064E3B', '--bg-light': '#ECFDF5',
-              '--primary': '#059669', '--primary-hover': '#047857', '--secondary': '#064E3B'
-          },
-          purple: {
-              '--bg-body': '#FFFFFF', '--text-main': '#111827', '--bg-light': '#F5F3FF',
-              '--primary': '#7C3AED', '--primary-hover': '#6D28D9', '--secondary': '#111827'
-          },
-          red: {
-              '--bg-body': '#FFFFFF', '--text-main': '#111827', '--bg-light': '#FEF2F2',
-              '--primary': '#DC2626', '--primary-hover': '#B91C1C', '--secondary': '#111827'
-          }
+        coffee: { '--bg-body': '#FFFFFF', '--text-main': '#4A3B32', '--text-muted': '#8D7B6F', '--bg-beige': '#F5F2EE', '--primary': '#6F4E37', '--primary-hover': '#5A3E2B', '--border': '#E6DED8' },
+        matcha: { '--bg-body': '#FFFFFF', '--text-main': '#2F3E33', '--text-muted': '#6E7E72', '--bg-beige': '#F0F4F1', '--primary': '#556B2F', '--primary-hover': '#3E4F22', '--border': '#DDE6E0' },
+        bakery: { '--bg-body': '#FFFCF7', '--text-main': '#5D4037', '--text-muted': '#9E8578', '--bg-beige': '#FFF3E0', '--primary': '#E67E22', '--primary-hover': '#D35400', '--border': '#FFE0B2' },
+        mono:   { '--bg-body': '#FFFFFF', '--text-main': '#222222', '--text-muted': '#777777', '--bg-beige': '#F9F9F9', '--primary': '#111111', '--primary-hover': '#333333', '--border': '#DDDDDD' },
+        berry:  { '--bg-body': '#FFFFFF', '--text-main': '#4A1525', '--text-muted': '#8E5A6A', '--bg-beige': '#FFF0F5', '--primary': '#C2185B', '--primary-hover': '#880E4F', '--border': '#F8BBD0' }
       };
-
-      function setTheme(name) {
-          const root = document.documentElement;
-          const theme = themes[name];
-          for (const key in theme) {
-              root.style.setProperty(key, theme[key]);
-          }
-      }
+      const selected = themes[theme];
+      for (let prop in selected) { root.style.setProperty(prop, selected[prop]); }
+      
+      // パネルを閉じる（スマホで画面を占領しないように）
+      document.getElementById('demo-palette-panel').classList.remove('is-open');
+    }
   </script>
+
 </body>
+
 </html>
