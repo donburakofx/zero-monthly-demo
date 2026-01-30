@@ -4,267 +4,484 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Coffee Stand. | Cafe Site</title>
-  <meta name="description" content="こだわりのコーヒーと焼き菓子のお店" />
-  
+  <title>Salon Name. | Private Hair & Spa</title>
+  <meta name="description" content="表参道の完全予約制プライベートサロン" />
+
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Coffee Stand. | Cafe Site" />
-  <meta property="og:description" content="こだわりのコーヒーと焼き菓子のお店" />
-  <meta property="og:image" content="assets/image/ogp.jpg" />
+  <meta property="og:title" content="Salon Name. | Private Hair & Spa" />
+  <meta property="og:description" content="表参道の完全予約制プライベートサロン" />
+  <meta property="og:url" content="https://demo.donb-web.com/light/07/" />
+  <meta property="og:image" content="https://demo.donb-web.com/light/07/assets/image/ogp.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Salon Name. | Private Hair & Spa" />
+  <meta name="twitter:description" content="表参道の完全予約制プライベートサロン" />
+  <meta name="twitter:image" content="https://demo.donb-web.com/light/07/assets/image/ogp.jpg" />
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Shippori+Mincho:wght@400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Zen+Old+Mincho:wght@400;500;700&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
-<body>
+<body id="top">
+
   <header class="header">
     <div class="container header-inner">
-      <a class="brand" href="#top">The Coffee Stand.</a>
+      <a class="brand" href="#top">Salon Name.</a>
 
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#menu">Menu</a>
+        <a href="#style">Style</a>
+        <a href="#staff">Staff</a>
         <a href="#access">Access</a>
-        <a href="https://instagram.com" target="_blank" class="nav-sns"><i class="fa-brands fa-instagram"></i></a>
       </nav>
 
+      <a href="https://example.com/reserve" target="_blank" class="btn-header-resv">Reserve</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="drawer" id="drawer">
+      <nav class="drawer-nav">
+        <a href="#about" class="drawer-link">About</a>
+        <a href="#menu" class="drawer-link">Menu</a>
+        <a href="#style" class="drawer-link">Style</a>
+        <a href="#staff" class="drawer-link">Staff</a>
+        <a href="#access" class="drawer-link">Access</a>
+        <a href="https://example.com/reserve" target="_blank" class="btn-drawer-resv">Online Reserve</a>
+      </nav>
     </div>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow"><i class="fa-solid fa-mug-hot"></i> Roastery & Bake</p>
-          <h1 class="title">一杯のコーヒーで、<br>日常を少し豊かに。</h1>
+      <div class="hero-bg">
+        <img src="assets/image/hero.jpg" alt="Salon Interior" class="hero-img-anim">
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Your Private Sanctuary</h1>
+        <p class="hero-sub">本来の美しさを引き出す、<br>あなただけのプライベートサロン。</p>
+      </div>
+    </section>
 
-          <p class="lead">
-            丁寧にハンドピックした豆と、手作りの焼き菓子。<br>
-            静かな音楽とともに、お待ちしております。
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#access">アクセスを見る</a>
-            <a class="btn btn-text" href="#menu">メニューを見る <i class="fa-solid fa-arrow-down"></i></a>
-          </div>
-
-          <ul class="tags">
-            <li><i class="fa-solid fa-wifi"></i> Wi-Fiあり</li>
-            <li><i class="fa-solid fa-paw"></i> ペットOK</li>
-            <li><i class="fa-solid fa-bag-shopping"></i> テイクアウト可</li>
-          </ul>
+    <section id="news" class="section">
+      <div class="container narrow">
+        <div class="section-head text-center">
+          <h2 class="section-title">News</h2>
+          <p class="section-desc">お知らせ</p>
         </div>
 
-        <div class="hero-visual">
-          <img src="assets/image/hero_cafe.jpg" alt="Cafe Interior">
+        <div class="news-accordion">
+          <div class="news-item">
+            <button class="news-header" aria-expanded="false">
+              <div class="news-meta">
+                <time>2026.05.20</time>
+                <span class="news-label">Info</span>
+              </div>
+              <h3 class="news-title">6月の定休日のお知らせ</h3>
+              <span class="news-icon"></span>
+            </button>
+            <div class="news-body">
+              <div class="news-body-inner">
+                <p>いつもご利用ありがとうございます。<br>6月は毎週火曜日のほか、15日（月）をお休みとさせていただきます。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <button class="news-header" aria-expanded="false">
+              <div class="news-meta">
+                <time>2026.05.01</time>
+                <span class="news-label">Menu</span>
+              </div>
+              <h3 class="news-title">新メニュー「オーガニックヘッドスパ」導入しました</h3>
+              <span class="news-icon"></span>
+            </button>
+            <div class="news-body">
+              <div class="news-body-inner">
+                <p>イタリア産のオーガニックアロマオイルを使用した、新しいヘッドスパメニューです。<br>30分コース ¥4,400〜 ご用意しております。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <button class="news-header" aria-expanded="false">
+              <div class="news-meta">
+                <time>2026.04.15</time>
+                <span class="news-label">Campaign</span>
+              </div>
+              <h3 class="news-title">【ご新規様限定】カット＋カラー 20%OFFキャンペーン</h3>
+              <span class="news-icon"></span>
+            </button>
+            <div class="news-body">
+              <div class="news-body-inner">
+                <p>初めてご来店のお客様に限り、全てのメニューを20%OFFとさせていただきます。<br>ご予約の際に「ホームページを見た」とお伝えください。</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section bg-beige">
+    <section id="about" class="section bg-light">
       <div class="container narrow">
-        <div class="about-grid">
-          <div class="about-img">
-            <img src="assets/image/about_cafe.jpg" alt="About Us">
-          </div>
-          <div class="about-text">
-            <div class="section-head text-left">
-              <h2 class="section-title">About</h2>
-              <p class="section-desc">私たちについて</p>
-            </div>
-            <p class="text-body">
-              2025年、静かな裏路地にオープンしました。<br>
-              「毎日飲みたくなる味」を目指して、酸味と苦味のバランスにこだわったブレンドを提供しています。<br>
-              <br>
-              朝の散歩ついでや、仕事の合間のリフレッシュに。<br>
-              あなたの日常に寄り添う場所でありたいと願っています。
-            </p>
-          </div>
+        <div class="section-head text-center">
+          <h2 class="section-title">Concept</h2>
+          <p class="section-desc">サロンのこだわり</p>
+        </div>
+        <div class="about-text text-center">
+          <p>
+            表参道の路地裏に佇む、大人の隠れ家。<br>
+            一歩足を踏み入れれば、そこは都会の喧騒を忘れる静寂の空間。<br>
+            <br>
+            私たちは、髪を切るだけでなく、<br>
+            心まで解きほぐす時間をご提供します。<br>
+            <br>
+            一人ひとりの骨格や髪質に合わせた似合わせカットと、<br>
+            厳選されたオーガニック薬剤で、<br>
+            あなたらしい美しさを叶えます。
+          </p>
         </div>
       </div>
     </section>
 
     <section id="menu" class="section">
       <div class="container narrow">
-        <div class="text-center">
+        <div class="section-head text-center">
           <h2 class="section-title">Menu</h2>
-          <p class="section-desc">おすすめメニュー</p>
+          <p class="section-desc">メニュー</p>
         </div>
 
-        <div class="menu-category">
-          <h3 class="cat-title"><i class="fa-solid fa-coffee"></i> Drink</h3>
+        <div class="menu-group">
+          <h3 class="menu-cat">Cut & Color</h3>
           <div class="menu-list">
-            <article class="menu-item">
-              <div class="menu-row">
-                <h4 class="menu-name">Today's Drip Coffee</h4>
-                <span class="menu-line"></span>
-                <span class="menu-price">¥550</span>
-              </div>
-              <p class="menu-detail">日替わりのシングルオリジン（Hot / Ice）</p>
-            </article>
-
-            <article class="menu-item">
-              <div class="menu-row">
-                <h4 class="menu-name">Cafe Latte</h4>
-                <span class="menu-line"></span>
-                <span class="menu-price">¥600</span>
-              </div>
-              <p class="menu-detail">濃厚なエスプレッソとスチームミルク</p>
-            </article>
-
-            <article class="menu-item">
-              <div class="menu-row">
-                <h4 class="menu-name">Espresso Tonic</h4>
-                <span class="menu-line"></span>
-                <span class="menu-price">¥650</span>
-              </div>
-              <p class="menu-detail">夏におすすめ。柑橘香る爽やかな一杯</p>
-            </article>
+            <div class="menu-item">
+              <span class="menu-name">似合わせカット</span>
+              <span class="menu-price">¥7,700</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-name">オーガニックカラー</span>
+              <span class="menu-price">¥8,800</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-name">デザインカラー（ハイライト/インナー）</span>
+              <span class="menu-price">¥11,000~</span>
+            </div>
           </div>
         </div>
 
-        <div class="menu-category mt-5">
-          <h3 class="cat-title"><i class="fa-solid fa-cookie-bite"></i> Food</h3>
+        <div class="menu-group">
+          <h3 class="menu-cat">Spa & Treatment</h3>
           <div class="menu-list">
-            <article class="menu-item">
-              <div class="menu-row">
-                <h4 class="menu-name">Homemade Scone</h4>
-                <span class="menu-line"></span>
-                <span class="menu-price">¥400</span>
-              </div>
-              <p class="menu-detail">国産小麦使用。ジャムとクリーム付き</p>
-            </article>
-
-            <article class="menu-item">
-              <div class="menu-row">
-                <h4 class="menu-name">Lunch Plate</h4>
-                <span class="menu-line"></span>
-                <span class="menu-price">¥1,200</span>
-              </div>
-              <p class="menu-detail">11:30 - 14:00 限定 / サラダ・スープ付</p>
-            </article>
+            <div class="menu-item">
+              <span class="menu-name">Aujuaトリートメント</span>
+              <span class="menu-price">¥5,500</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-name">ヘッドスパ (30min)</span>
+              <span class="menu-price">¥4,400</span>
+            </div>
           </div>
         </div>
-
-        <p class="menu-note">※ 表示価格は税込です。テイクアウトは軽減税率(8%)が適用されます。</p>
       </div>
     </section>
 
-    <section id="access" class="section bg-beige">
-      <div class="container narrow">
-        <div class="text-center">
-          <h2 class="section-title">Store Info</h2>
-          <p class="section-desc">店舗情報・アクセス</p>
+    <section id="style" class="section bg-light">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2 class="section-title">Style</h2>
+          <p class="section-desc">ヘアカタログ</p>
         </div>
 
-        <div class="info-card">
-          <dl class="info-list">
-            <div class="info-row">
-              <dt>Hours</dt>
-              <dd>
-                08:00 - 19:00 (L.O. 18:30)<br>
-                <span class="muted">※ 土日祝は 09:00 Open</span>
-              </dd>
+        <div class="mobile-scroll-wrap">
+          <div class="style-grid">
+            <div class="style-item">
+              <div class="style-img"><img src="assets/image/gallery_01.jpg" alt="Short Bob"></div>
+              <div class="style-content">
+                <h3>Natural Short Bob</h3>
+                <p>骨格をきれいに見せる、丸みのあるショートボブ。</p>
+              </div>
             </div>
-            <div class="info-row">
-              <dt>Closed</dt>
-              <dd>水曜日 / 第3木曜日</dd>
+            <div class="style-item">
+              <div class="style-img"><img src="assets/image/gallery_02.jpg" alt="Long Wave"></div>
+              <div class="style-content">
+                <h3>Airy Greige Long</h3>
+                <p>透明感のあるグレージュカラーと、ゆるふわウェーブ。</p>
+              </div>
             </div>
-            <div class="info-row">
+            <div class="style-item">
+              <div class="style-img"><img src="assets/image/gallery_03.jpg" alt="Mens Short"></div>
+              <div class="style-content">
+                <h3>Business Short</h3>
+                <p>清潔感と遊び心を両立した、大人のメンズショート。</p>
+              </div>
+            </div>
+            <div class="style-item">
+              <div class="style-img"><img src="assets/image/gallery_04.jpg" alt="Pink Color"></div>
+              <div class="style-content">
+                <h3>Pink Beige Color</h3>
+                <p>ブリーチなしで叶う、艶やかなピンクベージュ。</p>
+              </div>
+            </div>
+          </div>
+          <button class="scroll-next" aria-label="Next Slide"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="staff" class="section">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2 class="section-title">Staff</h2>
+          <p class="section-desc">スタイリスト</p>
+        </div>
+
+        <div class="mobile-scroll-wrap">
+          <div class="staff-grid">
+            <div class="staff-item">
+              <div class="staff-img"><img src="assets/image/staff_01.jpg" alt="Staff"></div>
+              <div class="staff-info">
+                <span class="staff-role">Director</span>
+                <h3 class="staff-name">Sakura Tanaka</h3>
+                <p class="staff-bio">青山・表参道の有名店を経て独立。再現性の高いショートヘアが得意です。</p>
+                <div class="staff-sns"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                      class="fa-brands fa-instagram"></i>
+                    @sakura_hair</a></div>
+              </div>
+            </div>
+            <div class="staff-item">
+              <div class="staff-img"><img src="assets/image/staff_02.jpg" alt="Staff"></div>
+              <div class="staff-info">
+                <span class="staff-role">Top Stylist</span>
+                <h3 class="staff-name">Kenji Sato</h3>
+                <p class="staff-bio">柔らかい質感のパーマスタイルならお任せください。メンズカットも好評です。</p>
+                <div class="staff-sns"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                      class="fa-brands fa-instagram"></i>
+                    @kenji_perm</a></div>
+              </div>
+            </div>
+            <div class="staff-item">
+              <div class="staff-img"><img src="assets/image/staff_03.jpg" alt="Staff"></div>
+              <div class="staff-info">
+                <span class="staff-role">Stylist / Spa List</span>
+                <h3 class="staff-name">Yui Suzuki</h3>
+                <p class="staff-bio">ヘッドスパ指名No.1。極上の癒やしタイムを提供します。</p>
+                <div class="staff-sns"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                      class="fa-brands fa-instagram"></i>
+                    @yui_spa</a></div>
+              </div>
+            </div>
+          </div>
+          <button class="scroll-next" aria-label="Next Slide"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="section bg-light">
+      <div class="container narrow">
+        <div class="section-head text-center">
+          <h2 class="section-title">Access</h2>
+          <p class="section-desc">店舗情報</p>
+        </div>
+
+        <div class="access-box">
+          <dl class="access-list">
+            <div class="list-row">
               <dt>Address</dt>
-              <dd>
-                〒150-0041<br>
-                東京都渋谷区神南 1-2-3
-              </dd>
+              <dd>東京都港区南青山 3-2-1 青山ビル 2F</dd>
             </div>
-            <div class="info-row">
+            <div class="list-row">
+              <dt>Open</dt>
+              <dd>10:00 - 20:00 (日祝 - 19:00)</dd>
+            </div>
+            <div class="list-row">
+              <dt>Close</dt>
+              <dd>毎週火曜日 / 第1・3月曜日</dd>
+            </div>
+            <div class="list-row">
               <dt>Tel</dt>
               <dd><a href="tel:0300000000">03-0000-0000</a></dd>
-            </div>
-            <div class="info-row">
-              <dt>Payment</dt>
-              <dd>Cash / Card / Electronic Money</dd>
             </div>
           </dl>
 
           <div class="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.392686886273!2d139.6963430755495!3d35.66733273071856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca801053429%3A0x1ec84e3d64673838!2z5p2x5Lqs6YO95riL6LC35Yy656We5Y2X!5e0!3m2!1sja!2sjp!4v1705500000000!5m2!1sja!2sjp"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-
-        <div class="sns-area text-center">
-          <p class="muted">最新情報はSNSで更新中</p>
-          <div class="sns-links">
-            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.696160356133!2d139.7136066762335!3d35.66982243115456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9fa861757b%3A0xe54d86b99e7161b9!2z5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx!5e0!3m2!1sja!2sjp!4v1705300000000!5m2!1sja!2sjp"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="container">
-        <small>© 2025 The Coffee Stand.</small>
+      <div class="container text-center">
+        <p class="copyright">© 2026 Salon Name.</p>
       </div>
     </footer>
   </main>
 
-  <div id="demo-theme-switcher" style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); z-index: 9999; font-family: sans-serif; width: 220px; border: 1px solid #eee;">
-      <p style="margin: 0 0 10px; font-size: 11px; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.1em;">Theme Color</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          <button onclick="setTheme('brown')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #6F4E37; cursor: pointer;" title="Coffee Brown"></button>
-          <button onclick="setTheme('green')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #556B2F; cursor: pointer;" title="Matcha Green"></button>
-          <button onclick="setTheme('orange')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #E67E22; cursor: pointer;" title="Bakery Orange"></button>
-          <button onclick="setTheme('mono')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #222222; cursor: pointer;" title="Modern Mono"></button>
-          <button onclick="setTheme('berry')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #C2185B; cursor: pointer;" title="Berry Red"></button>
-      </div>
+  <script>
+    // 1. Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+    const links = document.querySelectorAll('.drawer-link');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-active');
+      drawer.classList.toggle('is-active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-active');
+        drawer.classList.remove('is-active');
+      });
+    });
+
+    // 2. News Accordion
+    const accordions = document.querySelectorAll('.news-header');
+    accordions.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const body = item.querySelector('.news-body');
+        if (item.classList.contains('is-open')) {
+          item.classList.remove('is-open');
+          header.setAttribute('aria-expanded', 'false');
+          body.style.height = '0px';
+        } else {
+          item.classList.add('is-open');
+          header.setAttribute('aria-expanded', 'true');
+          body.style.height = body.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // 3. Horizontal Scroll Button Logic
+    document.querySelectorAll('.scroll-next').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // ボタンの兄要素（.style-grid や .staff-grid）を取得
+        const scroller = btn.previousElementSibling;
+
+        // スクロールする幅（カード1枚分 + 隙間）
+        const item = scroller.querySelector('.style-item, .staff-item');
+        if (item) {
+          const scrollAmount = item.offsetWidth + 20;
+          scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+<div id="demo-palette" style="
+    position: fixed;
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    right: 20px;
+    z-index: 9999;
+    font-family: sans-serif;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+  ">
+    <style>
+      #demo-palette-panel {
+        background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        display: none; width: 200px;
+        margin-bottom: 10px;
+      }
+      #demo-palette-panel.is-open { display: block; }
+      
+      .demo-btn {
+        width: 100%; padding: 12px;
+        margin-bottom: 8px; border: none; border-radius: 4px;
+        cursor: pointer; font-size: 13px; color: #fff; font-weight: bold;
+        transition: transform 0.2s; text-align: left; display: flex; align-items: center; justify-content: space-between;
+      }
+      .demo-btn:active { opacity: 0.8; }
+      .demo-btn:last-child { margin-bottom: 0; }
+      
+      #demo-toggle {
+        width: 50px; height: 50px; border-radius: 50%; background: #333; color: #fff;
+        border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2); font-size: 20px; transition: 0.3s;
+        touch-action: manipulation; 
+      }
+    </style>
+
+    <div id="demo-palette-panel">
+      <div style="font-size: 12px; font-weight: bold; color: #555; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">Color Theme</div>
+      
+      <button class="demo-btn" style="background: #8D8078;" onclick="setTheme('greige')">
+        Greige <span style="font-size:10px; opacity:0.8;">Default</span>
+      </button>
+
+      <button class="demo-btn" style="background: #222222;" onclick="setTheme('monotone')">
+        Monotone
+      </button>
+
+      <button class="demo-btn" style="background: #556B2F;" onclick="setTheme('botanical')">
+        Botanical
+      </button>
+
+      <button class="demo-btn" style="background: #C07B88;" onclick="setTheme('pink')">
+        Dusty Pink
+      </button>
+
+      <button class="demo-btn" style="background: #34495E;" onclick="setTheme('navy')">
+        Clean Navy
+      </button>
+    </div>
+
+    <button id="demo-toggle" aria-label="Color Palette" onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
+      <i class="fa-solid fa-palette"></i>
+    </button>
   </div>
 
   <script>
+    function setTheme(theme) {
+      const root = document.documentElement;
+      
       const themes = {
-          brown: {
-              '--bg-body': '#FFFFFF', '--text-main': '#4A3B32', '--text-muted': '#8D7B6F',
-              '--bg-beige': '#F5F2EE', '--primary': '#6F4E37', '--primary-hover': '#5A3E2B', '--border': '#E6DED8'
-          },
-          green: {
-              '--bg-body': '#FFFFFF', '--text-main': '#2F3E33', '--text-muted': '#6E7E72',
-              '--bg-beige': '#F0F4F1', '--primary': '#556B2F', '--primary-hover': '#3E4F22', '--border': '#DDE6E0'
-          },
-          orange: {
-              '--bg-body': '#FFFCF7', '--text-main': '#5D4037', '--text-muted': '#9E8578',
-              '--bg-beige': '#FFF3E0', '--primary': '#E67E22', '--primary-hover': '#D35400', '--border': '#FFE0B2'
-          },
-          mono: {
-              '--bg-body': '#FFFFFF', '--text-main': '#222222', '--text-muted': '#777777',
-              '--bg-beige': '#F9F9F9', '--primary': '#111111', '--primary-hover': '#333333', '--border': '#DDDDDD'
-          },
-          berry: {
-              '--bg-body': '#FFFFFF', '--text-main': '#4A1525', '--text-muted': '#8E5A6A',
-              '--bg-beige': '#FFF0F5', '--primary': '#C2185B', '--primary-hover': '#880E4F', '--border': '#F8BBD0'
-          }
+        greige: {
+            '--bg-body': '#FFFFFF', '--text-main': '#4A4A4A', '--text-muted': '#9E9E9E', '--bg-light': '#F9F8F7', '--primary': '#8D8078', '--primary-hover': '#6D6058', '--border': '#EAE6E3'
+        },
+        monotone: {
+            '--bg-body': '#FFFFFF', '--text-main': '#222222', '--text-muted': '#777777', '--bg-light': '#F4F4F4', '--primary': '#111111', '--primary-hover': '#333333', '--border': '#DDDDDD'
+        },
+        botanical: {
+            '--bg-body': '#FFFCF7', '--text-main': '#3E423A', '--text-muted': '#849686', '--bg-light': '#F0F4F0', '--primary': '#556B2F', '--primary-hover': '#3E4F22', '--border': '#E0E6DA'
+        },
+        pink: {
+            '--bg-body': '#FFFFFF', '--text-main': '#5D4D50', '--text-muted': '#A89096', '--bg-light': '#FFF0F5', '--primary': '#C07B88', '--primary-hover': '#A05D69', '--border': '#F8DADD'
+        },
+        navy: {
+            '--bg-body': '#FFFFFF', '--text-main': '#2C3E50', '--text-muted': '#7F8C8D', '--bg-light': '#F0F6FA', '--primary': '#34495E', '--primary-hover': '#2C3E50', '--border': '#DDE6F0'
+        }
       };
 
-      function setTheme(name) {
-          const root = document.documentElement;
-          const theme = themes[name];
-          for (const key in theme) {
-              root.style.setProperty(key, theme[key]);
-          }
+      const selected = themes[theme];
+      for (let prop in selected) {
+        root.style.setProperty(prop, selected[prop]);
       }
+      
+      // パネルを閉じる
+      document.getElementById('demo-palette-panel').classList.remove('is-open');
+    }
   </script>
+
 </body>
 
 </html>
