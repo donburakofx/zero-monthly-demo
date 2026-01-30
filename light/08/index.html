@@ -1,294 +1,724 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Salon Name. | Private Hair & Spa</title>
-  <meta name="description" content="表参道の完全予約制プライベートサロン" />
-  
+  <title>Recruit | スタッフ募集</title>
+  <meta name="description" content="未経験歓迎！私たちと一緒に働きませんか？求人・採用情報ページ。" />
+
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Salon Name. | Private Hair & Spa" />
-  <meta property="og:description" content="表参道の完全予約制プライベートサロン" />
-  <meta property="og:image" content="assets/image/ogp.jpg" />
+  <meta property="og:title" content="Recruit | スタッフ募集" />
+  <meta property="og:description" content="未経験歓迎！私たちと一緒に働きませんか？求人・採用情報ページ。" />
+  <meta property="og:url" content="https://demo.donb-web.com/light/08/" />
+  <meta property="og:image" content="https://demo.donb-web.com/light/08/assets/image/ogp.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Recruit | スタッフ募集" />
+  <meta name="twitter:description" content="未経験歓迎！私たちと一緒に働きませんか？求人・採用情報ページ。" />
+  <meta name="twitter:image" content="https://demo.donb-web.com/light/08/assets/image/ogp.jpg" />
+
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css" />
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
-<body>
+<body id="top">
+
   <header class="header">
     <div class="container header-inner">
-      <a class="brand" href="#top">Salon Name.</a>
+      <a class="brand" href="#top">Recruit Site.</a>
 
       <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#staff">Staff</a>
-        <a href="#access">Access</a>
+        <a href="#message">私たちについて</a>
+        <a href="#job">仕事内容</a>
+        <a href="#schedule">1日の流れ</a>
+        <a href="#voice">先輩の声</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#requirements">募集要項</a>
       </nav>
-      
-      <a href="https://example.com/reserve" target="_blank" class="btn-header-resv">Reserve</a>
+
+      <a href="#entry" class="nav-btn">応募する</a>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <p class="eyebrow">Private Hair & Spa</p>
-          <h1 class="title">
-            毎日を、<br>
-            少しだけ整える。
-          </h1>
-          <p class="lead">
-            忙しい日々に、深呼吸できる時間を。<br>
-            一人ひとりの髪と心に寄り添う、<br>
-            完全予約制のプライベートサロンです。
-          </p>
-          
-          <div class="hero-links">
-            <a class="link-text" href="#menu">View Menu <i class="fa-solid fa-arrow-right-long"></i></a>
-          </div>
-        </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-        <div class="hero-visual">
-          <img src="assets/image/hero_salon.jpg" alt="Salon Interior">
+  <div class="drawer" id="drawer">
+    <nav class="drawer-nav">
+      <a href="#message" class="drawer-link">私たちについて</a>
+      <a href="#job" class="drawer-link">仕事内容</a>
+      <a href="#schedule" class="drawer-link">1日の流れ</a>
+      <a href="#voice" class="drawer-link">先輩の声</a>
+      <a href="#faq" class="drawer-link">よくある質問</a>
+      <a href="#requirements" class="drawer-link">募集要項</a>
+      <a href="#entry" class="drawer-link btn-drawer-cta">今すぐ応募する</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="assets/image/hero.jpg" alt="We are hiring">
+      </div>
+      <div class="hero-content">
+        <p class="hero-tag">We are Hiring!</p>
+        <h1 class="hero-title">
+          「好き」を仕事に、<br>
+          仲間と笑おう。
+        </h1>
+        <p class="hero-lead">
+          未経験から始めたスタッフが9割。<br>
+          あなたの「やってみたい」を応援する場所がここにあります。
+        </p>
+        <div class="hero-actions">
+          <a href="#entry" class="btn-main">エントリーはこちら <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#requirements" class="btn-sub">募集要項を見る</a>
         </div>
       </div>
     </section>
 
-    <div class="info-bar">
-      <div class="container">
-        <ul class="meta-list">
-          <li><i class="fa-solid fa-door-closed"></i> 完全個室・予約制</li>
-          <li><i class="fa-solid fa-leaf"></i> オーガニック薬剤使用</li>
-          <li><i class="fa-solid fa-train"></i> 表参道駅 徒歩3分</li>
-        </ul>
-      </div>
-    </div>
+    <section id="message" class="section">
+      <div class="container narrow text-center js-fade-up">
+        <h2 class="section-title">私たちについて</h2>
+        <p class="section-sub">MESSAGE</p>
 
-    <section id="about" class="section bg-light">
-      <div class="container narrow text-center">
-        <h2 class="section-title">About</h2>
-        <p class="section-sub">サロンについて</p>
-        
-        <p class="text-body">
-          鏡を見たとき、少しだけ自信が持てる。<br>
-          そんな日常の積み重ねを大切にしています。<br>
+        <p class="msg-lead">
+          大切にしているのは、<br>
+          <span class="highlight">「お客様もスタッフも楽しむこと」</span>
+        </p>
+        <p class="msg-text">
+          私たちは、ただ商品を売るだけではありません。<br>
+          訪れる人と心を通わせ、空間そのものを楽しんでもらうことを目指しています。<br>
           <br>
-          髪質や骨格に合わせたカットはもちろん、<br>
-          頭皮から整えるヘッドスパにも力を入れています。<br>
-          静かな空間で、ゆったりとお過ごしください。
+          特別なスキルは必要ありません。<br>
+          「人が好き」「喜ばせたい」という気持ちがあれば十分です。<br>
+          私たちと一緒に、新しい一歩を踏み出してみませんか？
         </p>
       </div>
     </section>
 
-    <section id="menu" class="section">
-      <div class="container narrow">
+    <section id="job" class="section bg-light">
+      <div class="container js-fade-up">
         <div class="text-center">
-          <h2 class="section-title">Menu</h2>
-          <p class="section-sub">施術メニュー</p>
+          <h2 class="section-title">仕事内容</h2>
+          <p class="section-sub">JOB DESCRIPTION</p>
         </div>
 
-        <div class="menu-list">
-          <article class="menu-item">
-            <div class="menu-row">
-              <h3 class="menu-name">Standard Cut</h3>
-              <span class="menu-line"></span>
-              <span class="menu-price">¥6,600</span>
+        <div class="job-grid">
+          <div class="job-card">
+            <div class="job-img">
+              <img src="assets/image/job_01.jpg" alt="Hall Staff">
             </div>
-            <p class="menu-desc">シャンプー・ブロー・眉カット込</p>
-          </article>
-
-          <article class="menu-item">
-            <div class="menu-row">
-              <h3 class="menu-name">Organic Color</h3>
-              <span class="menu-line"></span>
-              <span class="menu-price">¥8,800〜</span>
-            </div>
-            <p class="menu-desc">92%天然由来成分のヴィラロドラカラー使用</p>
-          </article>
-
-          <article class="menu-item">
-            <div class="menu-row">
-              <h3 class="menu-name">Aroma Head Spa</h3>
-              <span class="menu-line"></span>
-              <span class="menu-price">¥4,400</span>
-            </div>
-            <p class="menu-desc">30分コース / 好みのアロマオイルを選択</p>
-          </article>
-
-          <article class="menu-item">
-            <div class="menu-row">
-              <h3 class="menu-name">Treatment</h3>
-              <span class="menu-line"></span>
-              <span class="menu-price">¥5,500〜</span>
-            </div>
-            <p class="menu-desc">髪質改善 / 超音波アイロン使用</p>
-          </article>
-        </div>
-        
-        <p class="menu-note">※ 表示価格はすべて税込です。<br>※ ロング料金は別途 ¥1,100〜 頂戴いたします。</p>
-      </div>
-    </section>
-
-    <section id="staff" class="section bg-light">
-      <div class="container">
-        <div class="text-center">
-          <h2 class="section-title">Staff</h2>
-          <p class="section-sub">スタイリスト</p>
-        </div>
-
-        <div class="staff-grid">
-          
-          <div class="staff-card">
-            <div class="staff-visual">
-              <img src="assets/image/staff01.jpg" alt="Mina. K">
-            </div>
-            <div class="staff-content">
-              <p class="staff-role">Owner Stylist</p>
-              <h3 class="staff-name">Mina. K</h3>
-              <p class="staff-bio">
-                都内2店舗を経て独立。ショートカットと透明感カラーが得意です。「作り込みすぎない美しさ」を提案します。
+            <div class="job-body">
+              <h3>ホールスタッフ</h3>
+              <p class="job-desc">
+                お客様のご案内、オーダー、お料理の提供、レジ対応など、接客全般をお任せします。
+                まずは笑顔で「いらっしゃいませ」が言えればOK！
               </p>
-              <div class="staff-sns">
-                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-              </div>
+              <ul class="job-points">
+                <li><i class="fa-solid fa-check"></i> 未経験でも安心の研修あり</li>
+                <li><i class="fa-solid fa-check"></i> 接客スキルが身につく</li>
+              </ul>
             </div>
           </div>
 
-          <div class="staff-card">
-            <div class="staff-visual">
-              <img src="assets/image/staff02.jpg" alt="Yui. S">
+          <div class="job-card">
+            <div class="job-img">
+              <img src="assets/image/job_02.jpg" alt="Kitchen Staff">
             </div>
-            <div class="staff-content">
-              <p class="staff-role">Top Stylist</p>
-              <h3 class="staff-name">Yui. S</h3>
-              <p class="staff-bio">
-                柔らかい質感のパーマスタイルが得意。毎朝のスタイリングが楽しくなるようなヘアを作ります。
+            <div class="job-body">
+              <h3>キッチンスタッフ</h3>
+              <p class="job-desc">
+                簡単な仕込みや盛り付け、調理補助、食器洗いなどをお任せします。
+                マニュアルがあるので、料理未経験でも安心してスタートできます。
               </p>
-              <div class="staff-sns">
-                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-              </div>
+              <ul class="job-points">
+                <li><i class="fa-solid fa-check"></i> 料理の基礎が学べる</li>
+                <li><i class="fa-solid fa-check"></i> 接客が苦手でも活躍できる</li>
+              </ul>
             </div>
           </div>
 
-          <div class="staff-card">
-            <div class="staff-visual">
-              <img src="assets/image/staff03.jpg" alt="Ren. T">
+          <div class="job-card">
+            <div class="job-img">
+              <img src="assets/image/job_03.jpg" alt="Patissier" onerror="this.src='assets/image/job_kitchen.jpg'">
             </div>
-            <div class="staff-content">
-              <p class="staff-role">Spaist / Colorist</p>
-              <h3 class="staff-name">Ren. T</h3>
-              <p class="staff-bio">
-                ヘッドスパ指名No.1。アロマの知識を活かし、心身ともにリラックスできる時間を提供します。
+            <div class="job-body">
+              <h3>パティシエ・製造</h3>
+              <p class="job-desc">
+                ケーキや焼き菓子の製造、新商品の開発補助を行います。
+                お菓子作りが好きな方なら、実務経験がなくてもイチから教えます。
               </p>
-              <div class="staff-sns">
-                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-              </div>
+              <ul class="job-points">
+                <li><i class="fa-solid fa-check"></i> お菓子作りの技術習得</li>
+                <li><i class="fa-solid fa-check"></i> 商品開発に携われる</li>
+              </ul>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <section id="access" class="section">
-      <div class="container narrow">
+    <section id="schedule" class="section">
+      <div class="container js-fade-up">
         <div class="text-center">
-          <h2 class="section-title">Access</h2>
-          <p class="section-sub">店舗情報</p>
+          <h2 class="section-title">1日の流れ</h2>
+          <p class="section-sub">ONE DAY</p>
         </div>
 
-        <div class="access-box">
-          <dl class="access-list">
-            <div class="list-row">
-              <dt>Address</dt>
-              <dd>東京都港区南青山 3-2-1 青山ビル 2F</dd>
+        <div class="mobile-scroll-wrap">
+          <div class="schedule-cols">
+
+            <div class="schedule-col">
+              <h3 class="schedule-role"><i class="fa-solid fa-user-tie"></i> ホールスタッフ</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="time">17:00</span>
+                  <div class="timeline-content">
+                    <h4>出勤・ミーティング</h4>
+                    <p>着替えて身だしなみをチェック。予約状況を確認します。</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="time">18:00</span>
+                  <div class="timeline-content">
+                    <h4>ディナーピーク</h4>
+                    <p>お客様をご案内。一番活気がある楽しい時間帯です。</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="time">21:00</span>
+                  <div class="timeline-content">
+                    <h4>片付け</h4>
+                    <p>テーブルの片付けや、翌日のセッティングを行います。</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="time">22:00</span>
+                  <div class="timeline-content">
+                    <h4>退勤</h4>
+                    <p>お疲れ様でした！美味しいまかないを食べて帰宅します。</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="list-row">
-              <dt>Open</dt>
-              <dd>10:00 - 20:00 (日祝 - 19:00)</dd>
+
+            <div class="schedule-col">
+              <h3 class="schedule-role"><i class="fa-solid fa-utensils"></i> キッチンスタッフ</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="time">10:00</span>
+                  <div class="timeline-content">
+                    <h4>出勤・仕込み</h4>
+                    <p>野菜のカットや、ランチタイムに向けた準備を進めます。</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="time">12:00</span>
+                  <div class="timeline-content">
+                    <h4>ランチピーク</h4>
+                    <p>次々と入るオーダーに合わせて、手際よく調理・盛り付け。</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="time">14:00</span>
+                  <div class="timeline-content">
+                    <h4>休憩・まかない</h4>
+                    <p>スタッフみんなでランチ休憩。リラックスできる時間です。</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="time">15:00</span>
+                  <div class="timeline-content">
+                    <h4>退勤</h4>
+                    <p>夕方以降は自由時間。Wワークや趣味との両立も可能です。</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="list-row">
-              <dt>Close</dt>
-              <dd>毎週火曜日 / 第1・3月曜日</dd>
+
+            <div class="schedule-col">
+              <h3 class="schedule-role"><i class="fa-solid fa-cake-candles"></i> パティシエ</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="time">07:00</span>
+                  <div class="timeline-content">
+                    <h4>出勤・生地作り</h4>
+                    <p>開店前に並べるケーキや焼き菓子の仕込みからスタート。</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="time">10:00</span>
+                  <div class="timeline-content">
+                    <h4>開店・仕上げ</h4>
+                    <p>お店がオープン。ショーケースの状況を見ながら追加製造。</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="time">13:00</span>
+                  <div class="timeline-content">
+                    <h4>翌日仕込み</h4>
+                    <p>明日のための生地を寝かせたり、発注業務を行います。</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="time">16:00</span>
+                  <div class="timeline-content">
+                    <h4>退勤</h4>
+                    <p>早朝勤務なので夕方はゆっくり。自分の時間を楽しめます。</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="list-row">
-              <dt>Tel</dt>
-              <dd><a href="tel:0300000000">03-0000-0000</a></dd>
+
+          </div>
+          <div class="swipe-hint"><i class="fa-regular fa-hand-pointer"></i> Swipe</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="voice" class="section bg-light">
+      <div class="container js-fade-up">
+        <div class="text-center">
+          <h2 class="section-title">先輩の声</h2>
+          <p class="section-sub">STAFF VOICE</p>
+        </div>
+
+        <div class="voice-list">
+          <article class="voice-item">
+            <div class="voice-visual">
+              <img src="assets/image/staff_01.jpg" alt="Staff A">
+            </div>
+            <div class="voice-content">
+              <div class="voice-meta">
+                <span class="voice-role">学生アルバイト</span>
+                <span class="voice-exp">入社1年目</span>
+              </div>
+              <h3 class="voice-head">「テスト期間も考慮してくれるので、<br>学業と両立しやすいです。」</h3>
+              <p class="voice-body">
+                初めてのバイトで不安でしたが、先輩が優しく教えてくれたので、すぐに馴染めました。
+                シフトの融通が利くので、テスト前は少なめ、長期休みはガッツリ稼ぐ！という働き方ができて助かっています。
+              </p>
+            </div>
+          </article>
+
+          <article class="voice-item reverse">
+            <div class="voice-visual">
+              <img src="assets/image/staff_02.jpg" alt="Staff B">
+            </div>
+            <div class="voice-content">
+              <div class="voice-meta">
+                <span class="voice-role">フリーター / 社員登用</span>
+                <span class="voice-exp">入社3年目</span>
+              </div>
+              <h3 class="voice-head">「自分のアイデアがお店のメニューに。<br>やりがいを感じます。」</h3>
+              <p class="voice-body">
+                最初はホール担当でしたが、料理に興味を持ちキッチンへ。
+                先日、提案した季節限定メニューが採用されました！
+                頑張りをしっかり評価してくれる環境なので、今は正社員を目指して働いています。
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container narrow js-fade-up">
+        <div class="text-center">
+          <h2 class="section-title">よくある質問</h2>
+          <p class="section-sub">Q&A</p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-header" aria-expanded="false">
+              <span class="faq-q">Q</span>
+              <span class="faq-title">未経験でも大丈夫ですか？</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-inner">
+                <span class="faq-a">A</span>
+                <p>はい、大歓迎です！現在働いているスタッフの8割が未経験からのスタートでした。研修マニュアルもあり、先輩がマンツーマンで教えるのでご安心ください。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header" aria-expanded="false">
+              <span class="faq-q">Q</span>
+              <span class="faq-title">シフトの融通は利きますか？</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-inner">
+                <span class="faq-a">A</span>
+                <p>はい。週2日、1日3時間から勤務可能です。「テスト期間は休みたい」「子供の行事がある」などのご相談も柔軟に対応しています。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header" aria-expanded="false">
+              <span class="faq-q">Q</span>
+              <span class="faq-title">髪色やネイル、ピアスは自由ですか？</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-inner">
+                <span class="faq-a">A</span>
+                <p>清潔感があれば、髪色やピアスは基本的に自由です！ネイルに関しては、ホールスタッフはOKですが、キッチン（調理）担当の方は衛生面からご遠慮いただいています。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-header" aria-expanded="false">
+              <span class="faq-q">Q</span>
+              <span class="faq-title">面接時の服装や持ち物は？</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-inner">
+                <span class="faq-a">A</span>
+                <p>服装は普段着で構いません。履歴書も不要ですので、手ぶらでお越しください。面接というより、お互いを知るための「面談」のような雰囲気です。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="requirements" class="section bg-light">
+      <div class="container narrow js-fade-up">
+        <div class="text-center">
+          <h2 class="section-title">募集要項</h2>
+          <p class="section-sub">REQUIREMENTS</p>
+        </div>
+
+        <div class="req-table-wrap">
+          <dl class="req-list">
+            <div class="req-row">
+              <dt><i class="fa-solid fa-briefcase"></i> 雇用形態</dt>
+              <dd>アルバイト / パート（正社員登用あり）</dd>
+            </div>
+            <div class="req-row">
+              <dt><i class="fa-solid fa-yen-sign"></i> 給与</dt>
+              <dd>
+                時給 1,200円〜<br>
+                <span class="req-note">※ 研修期間（1ヶ月）は時給 1,150円</span>
+                <span class="req-note">※ 22時以降は深夜手当あり（25%UP）</span>
+              </dd>
+            </div>
+            <div class="req-row">
+              <dt><i class="fa-regular fa-clock"></i> 勤務時間</dt>
+              <dd>
+                10:00 〜 23:00 の間でシフト制<br>
+                <span class="req-note">★ 週2日、1日4時間〜OK</span>
+                <span class="req-note">★ 土日祝のみ勤務も歓迎</span>
+              </dd>
+            </div>
+            <div class="req-row">
+              <dt><i class="fa-solid fa-location-dot"></i> 勤務地</dt>
+              <dd>
+                東京都渋谷区神南 1-2-3<br>
+                （各線「渋谷駅」より徒歩5分）
+              </dd>
+            </div>
+            <div class="req-row">
+              <dt><i class="fa-solid fa-gift"></i> 待遇・福利厚生</dt>
+              <dd>
+                <ul>
+                  <li>交通費全額支給</li>
+                  <li>美味しいまかない無料</li>
+                  <li>制服貸与</li>
+                  <li>昇給あり</li>
+                </ul>
+              </dd>
             </div>
           </dl>
-          
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.696160356133!2d139.7136066762335!3d35.66982243115456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9fa861757b%3A0xe54d86b99e7161b9!2z5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx!5e0!3m2!1sja!2sjp!4v1705300000000!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="entry" class="section cta-section">
+      <div class="container text-center js-fade-up">
+        <h2 class="cta-title">まずは気軽に応募しよう！</h2>
+        <p class="cta-desc">面接でお会いできるのを楽しみにしています。<br>履歴書不要、手ぶらでOKです。</p>
+
+        <div class="cta-buttons">
+          <a href="#" class="btn-entry btn-tel">
+            <span class="label">お電話で</span>
+            <span class="value"><i class="fa-solid fa-phone"></i> 03-0000-0000</span>
+          </a>
+          <a href="#" class="btn-entry btn-web">
+            <span class="label">WEBフォームから</span>
+            <span class="value">24時間エントリー <i class="fa-solid fa-angle-right"></i></span>
+          </a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="container">
-        <div class="footer-logo">Salon Name.</div>
-        <p class="copyright">© 2025 Salon Name. All Rights Reserved.</p>
+      <div class="container text-center">
+        <p class="copyright">&copy; 2026 Recruitment.</p>
       </div>
     </footer>
+
+    <div class="floating-entry">
+      <a href="#entry" class="btn-float">
+        <span class="float-sub">まずは気軽に応募！</span>
+        <span class="float-main">エントリーする</span>
+      </a>
+    </div>
+
   </main>
 
-  <div id="demo-theme-switcher" style="position: fixed; bottom: 20px; right: 20px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); z-index: 9999; font-family: sans-serif; width: 220px; border: 1px solid #eee;">
-      <p style="margin: 0 0 10px; font-size: 11px; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.1em;">Theme Color</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          <button onclick="setTheme('greige')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #8D8078; cursor: pointer;" title="Greige"></button>
-          <button onclick="setTheme('pink')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #C08492; cursor: pointer;" title="Shell Pink"></button>
-          <button onclick="setTheme('green')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #708C74; cursor: pointer;" title="Herbal Green"></button>
-          <button onclick="setTheme('blue')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #7889A3; cursor: pointer;" title="Smoky Blue"></button>
-          <button onclick="setTheme('black')" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #333333; cursor: pointer;" title="Chic Black"></button>
+  <script>
+    // 1. Hamburger Menu & Drawer
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+    const links = document.querySelectorAll('.drawer-link');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-active');
+      drawer.classList.toggle('is-active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-active');
+        drawer.classList.remove('is-active');
+      });
+    });
+
+    // 2. Q&A Accordion
+    const accordions = document.querySelectorAll('.faq-header');
+    accordions.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const body = item.querySelector('.faq-body');
+        if (item.classList.contains('is-open')) {
+          item.classList.remove('is-open');
+          header.setAttribute('aria-expanded', 'false');
+          body.style.height = '0px';
+        } else {
+          item.classList.add('is-open');
+          header.setAttribute('aria-expanded', 'true');
+          body.style.height = body.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // 3. Scroll Animation (Fade Up)
+    const observerOptions = {
+      root: null, rootMargin: '0px 0px -10% 0px', threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-active');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.js-fade-up').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+  <div id="demo-palette" style="
+    position: fixed;
+    bottom: calc(80px + env(safe-area-inset-bottom)); /* スマホの応募ボタン(80px)と被らないように調整 */
+    right: 20px;
+    z-index: 9999;
+    font-family: sans-serif;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+  ">
+    <style>
+      #demo-palette-panel {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        display: none;
+        width: 220px;
+        margin-bottom: 10px;
+      }
+
+      #demo-palette-panel.is-open {
+        display: block;
+        animation: panelFadeUp 0.3s ease;
+      }
+
+      @keyframes panelFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .demo-btn {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 8px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+        color: #fff;
+        font-weight: bold;
+        transition: transform 0.2s;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .demo-btn:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+      }
+
+      .demo-btn:last-child {
+        margin-bottom: 0;
+      }
+
+      #demo-toggle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        font-size: 20px;
+        transition: 0.3s;
+        touch-action: manipulation;
+      }
+
+      #demo-toggle:hover {
+        transform: scale(1.1);
+      }
+
+      /* PC調整 */
+      @media (min-width: 768px) {
+        #demo-palette {
+          bottom: 30px;
+        }
+
+        /* PCは応募ボタンがないので下詰め */
+      }
+    </style>
+
+    <div id="demo-palette-panel">
+      <div
+        style="font-size: 12px; font-weight: bold; color: #555; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">
+        Select Color Theme
       </div>
+
+      <button class="demo-btn" style="background: #4CAF50;" onclick="setTheme('green')">
+        Fresh Green <span style="font-size:10px; opacity:0.8;">Default</span>
+      </button>
+
+      <button class="demo-btn" style="background: #FF9800;" onclick="setTheme('orange')">
+        Energetic Orange
+      </button>
+
+      <button class="demo-btn" style="background: #0D47A1;" onclick="setTheme('navy')">
+        Trust Navy
+      </button>
+
+      <button class="demo-btn" style="background: #D84315;" onclick="setTheme('beige')">
+        Warm Beige
+      </button>
+
+      <button class="demo-btn" style="background: #212121;" onclick="setTheme('mono')">
+        Modern Mono
+      </button>
+    </div>
+
+    <button id="demo-toggle" aria-label="Color Palette"
+      onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
+      <i class="fa-solid fa-palette"></i>
+    </button>
   </div>
 
   <script>
+    function setTheme(theme) {
+      const root = document.documentElement;
+
       const themes = {
-          greige: {
-              '--bg-body': '#FFFFFF', '--text-main': '#4A4A4A', '--text-muted': '#9E9E9E',
-              '--bg-light': '#F9F8F7', '--primary': '#8D8078', '--primary-hover': '#6D6058',
-              '--border': '#EAE6E3'
-          },
-          pink: {
-              '--bg-body': '#FFFFFF', '--text-main': '#5E4044', '--text-muted': '#A88E91',
-              '--bg-light': '#FFF5F6', '--primary': '#C08492', '--primary-hover': '#A06370',
-              '--border': '#FDE8EB'
-          },
-          green: {
-              '--bg-body': '#FFFFFF', '--text-main': '#3E473F', '--text-muted': '#8E9C8F',
-              '--bg-light': '#F2F7F3', '--primary': '#708C74', '--primary-hover': '#536E57',
-              '--border': '#E0EBE2'
-          },
-          blue: {
-              '--bg-body': '#FFFFFF', '--text-main': '#3B404D', '--text-muted': '#8A91A3',
-              '--bg-light': '#F4F6F9', '--primary': '#7889A3', '--primary-hover': '#5A6B85',
-              '--border': '#DEE3EB'
-          },
-          black: {
-              '--bg-body': '#FFFFFF', '--text-main': '#222222', '--text-muted': '#777777',
-              '--bg-light': '#F5F5F5', '--primary': '#333333', '--primary-hover': '#000000',
-              '--border': '#DDDDDD'
-          }
+        green: {
+          '--bg-body': '#FFFFFF', '--text-main': '#444444', '--text-muted': '#888888', '--bg-light': '#F5F9F7',
+          '--primary': '#4CAF50', '--primary-hover': '#388E3C', '--accent': '#FFC107',
+          '--cta-bg': '#FF7043', '--border': '#E0E0E0', '--radius': '12px'
+        },
+        orange: {
+          '--bg-body': '#FFFFFF', '--text-main': '#4E342E', '--text-muted': '#8D6E63', '--bg-light': '#FFF8E1',
+          '--primary': '#FF9800', '--primary-hover': '#F57C00', '--accent': '#FFEB3B',
+          '--cta-bg': '#D32F2F', '--border': '#FFE0B2', '--radius': '8px'
+        },
+        navy: {
+          '--bg-body': '#FFFFFF', '--text-main': '#2C3E50', '--text-muted': '#7F8C8D', '--bg-light': '#F0F4F8',
+          '--primary': '#0D47A1', '--primary-hover': '#1565C0', '--accent': '#00BCD4',
+          '--cta-bg': '#FBC02D', '--border': '#CFD8DC', '--radius': '4px'
+        },
+        beige: {
+          '--bg-body': '#FFFCF9', '--text-main': '#5D4037', '--text-muted': '#A1887F', '--bg-light': '#FBE9E7',
+          '--primary': '#D84315', '--primary-hover': '#BF360C', '--accent': '#8D6E63',
+          '--cta-bg': '#6D4C41', '--border': '#FFCCBC', '--radius': '16px'
+        },
+        mono: {
+          '--bg-body': '#FFFFFF', '--text-main': '#212121', '--text-muted': '#757575', '--bg-light': '#F5F5F5',
+          '--primary': '#212121', '--primary-hover': '#424242', '--accent': '#000000',
+          '--cta-bg': '#2962FF', '--border': '#E0E0E0', '--radius': '0px'
+        }
       };
 
-      function setTheme(name) {
-          const root = document.documentElement;
-          const theme = themes[name];
-          for (const key in theme) {
-              root.style.setProperty(key, theme[key]);
-          }
+      const selected = themes[theme];
+      for (let prop in selected) {
+        root.style.setProperty(prop, selected[prop]);
       }
+
+      // パネルを閉じる
+      document.getElementById('demo-palette-panel').classList.remove('is-open');
+    }
   </script>
+
 </body>
+
 </html>
