@@ -438,7 +438,7 @@ body.modal-open .modal-close {
 
 /* Hero Slideshow */
 .hero {
-    height: 100vh;
+    height: 100dvh;
     position: relative;
     overflow: hidden;
     display: flex;
