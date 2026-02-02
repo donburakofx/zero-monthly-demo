@@ -541,6 +541,11 @@ button {
     text-align: left;
     cursor: pointer;
     transition: 0.3s;
+    color: var(--text-main);
+}
+
+.news-header * {
+    color: inherit !important;
 }
 
 .news-header:hover {
