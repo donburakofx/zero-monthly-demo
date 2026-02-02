@@ -568,7 +568,7 @@ button {
 .news-cat {
     font-size: 11px;
     background: var(--primary);
-    color: #fff;
+    color: #fff !important;
     padding: 2px 8px;
     border-radius: var(--radius-s);
 }
