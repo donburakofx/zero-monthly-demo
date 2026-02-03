@@ -1,14 +1,12 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
   <title>Your Name | Profile & Works</title>
   <meta name="description" content="〇〇〇〇の公式ポートフォリオサイト。Web制作、デザイン、開発の実績を掲載しています。" />
-
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-  <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Your Name | Profile & Works" />
@@ -22,238 +20,343 @@
   <meta name="twitter:description" content="〇〇〇〇のポートフォリオ。実績やスキルをまとめています。" />
   <meta name="twitter:image" content="https://demo.donb-web.com/light/05/assets/image/ogp.jpg" />
 
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <div id="loading-screen">
+    <div class="loader-content">
+      <span class="loader-text">Loading...</span>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+  <div class="bg-gradient"></div>
 
-  <body>
-    <div id="loading-screen">
-      <div class="loader-content">
-        <span class="loader-text">Loading...</span>
-        <div class="loader-bar"></div>
+  <main class="bento-container fade-in">
+
+    <div class="bento-box profile-box">
+      <div class="profile-img">
+        <img src="assets/image/profile.jpg" alt="Profile Picture">
+      </div>
+      <div class="profile-info">
+        <h1 class="name">KENTO SUZUKI</h1>
+        <p class="job">Web Developer / UI Designer</p>
+        <p class="bio">
+          東京を拠点に活動するフリーランスエンジニア。<br>
+          「使いやすさ」と「美しさ」を両立するWebサイトを制作します。<br>
+          趣味はサウナとカメラ。
+        </p>
+        <div class="status-badge">
+          <span class="dot"></span> Available for work
+        </div>
       </div>
     </div>
-    <div class="bg-gradient"></div>
 
-    <main class="bento-container fade-in">
+    <div class="bento-box map-box">
+      <div class="map-bg" style="background-image: url('assets/image/map_bg.jpg');"></div>
+      <div class="map-content">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Tokyo, Shibuya</h3>
+        <p>Based in Japan</p>
+      </div>
+    </div>
 
-      <div class="bento-box profile-box">
-        <div class="profile-img">
-          <img src="assets/image/profile.jpg" alt="Profile Picture">
-        </div>
-        <div class="profile-info">
-          <h1 class="name">KENTO SUZUKI</h1>
-          <p class="job">Web Developer / UI Designer</p>
-          <p class="bio">
-            東京を拠点に活動するフリーランスエンジニア。<br>
-            「使いやすさ」と「美しさ」を両立するWebサイトを制作します。<br>
-            趣味はサウナとカメラ。
-          </p>
-          <div class="status-badge">
-            <span class="dot"></span> Available for work
+    <a href="#" class="bento-box social-box twitter">
+      <i class="fa-brands fa-x-twitter"></i>
+      <span>X (Twitter)</span>
+    </a>
+    <a href="#" class="bento-box social-box instagram">
+      <i class="fa-brands fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+
+    <div class="bento-box work-box">
+      <div class="box-header">
+        <h2>Recent Works</h2>
+
+      </div>
+      <div class="work-grid">
+        <a href="#" class="work-item" target="_blank">
+          <img src="assets/image/work_01.jpg" alt="Work 1">
+          <span class="work-title">E-Commerce UI</span>
+          <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+        </a>
+        <a href="#" class="work-item" target="_blank">
+          <img src="assets/image/work_02.jpg" alt="Work 2">
+          <span class="work-title">Travel App</span>
+          <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+        </a>
+        <a href="#" class="work-item" target="_blank">
+          <img src="assets/image/work_03.jpg" alt="Work 3">
+          <span class="work-title">Corporate Site</span>
+          <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+        </a>
+
+      </div>
+    </div>
+
+    <a href="#" class="bento-box social-box threads">
+      <i class="fa-brands fa-threads"></i>
+      <span>Threads</span>
+    </a>
+    <a href="#" class="bento-box social-box note">
+      <i class="fa-solid fa-pen-nib"></i>
+      <span>note</span>
+    </a>
+
+    <div class="bento-box service-box">
+      <h2>Skills & Tools</h2>
+      <ul class="service-list">
+        <li>
+          <i class="fa-solid fa-laptop-code"></i>
+          <div>
+            <strong>Web Design</strong>
+            <span>Figma / HTML / CSS</span>
           </div>
-        </div>
+        </li>
+        <li>
+          <i class="fa-solid fa-video"></i>
+          <div>
+            <strong>Video Edit</strong>
+            <span>Premiere / AfterEffects</span>
+          </div>
+        </li>
+        <li>
+          <i class="fa-solid fa-camera"></i>
+          <div>
+            <strong>Photography</strong>
+            <span>Portrait / Landscape</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <a href="../common/contact.html" class="bento-box contact-box">
+      <div class="contact-content">
+        <i class="fa-regular fa-paper-plane"></i>
+        <h2>Get in Touch</h2>
+        <p>お仕事のご相談はこちら</p>
       </div>
+    </a>
 
-      <div class="bento-box map-box">
-        <div class="map-bg" style="background-image: url('assets/image/map_bg.jpg');"></div>
-        <div class="map-content">
-          <i class="fa-solid fa-location-dot"></i>
-          <h3>Tokyo, Shibuya</h3>
-          <p>Based in Japan</p>
-        </div>
-      </div>
+  </main>
 
-      <a href="#" class="bento-box social-box twitter">
-        <i class="fa-brands fa-x-twitter"></i>
-        <span>X (Twitter)</span>
-      </a>
-      <a href="#" class="bento-box social-box instagram">
-        <i class="fa-brands fa-instagram"></i>
-        <span>Instagram</span>
-      </a>
+  <footer class="footer">
+    <small>© 2026 Kento Suzuki. All Rights Reserved.</small>
+  </footer>
 
-      <div class="bento-box work-box">
-        <div class="box-header">
-          <h2>Recent Works</h2>
+  <script>
+    window.addEventListener('load', () => {
+      // 読み込み完了から少しだけ待って（0.5秒）、クラスを付与
+      setTimeout(() => {
+        document.body.classList.add('loaded');
+      }, 500);
+    });
+  </script>
 
-        </div>
-        <div class="work-grid">
-          <a href="#" class="work-item" target="_blank">
-            <img src="assets/image/work_01.jpg" alt="Work 1">
-            <span class="work-title">E-Commerce UI</span>
-            <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
-          </a>
-          <a href="#" class="work-item" target="_blank">
-            <img src="assets/image/work_02.jpg" alt="Work 2">
-            <span class="work-title">Travel App</span>
-            <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
-          </a>
-          <a href="#" class="work-item" target="_blank">
-            <img src="assets/image/work_03.jpg" alt="Work 3">
-            <span class="work-title">Corporate Site</span>
-            <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
-          </a>
+  <div id="demo-palette" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+  ">
+    <style>
+      #demo-palette-panel {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 15px;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        display: none;
+        width: 220px;
+        margin-bottom: 10px;
+        color: #111;
+      }
 
-        </div>
-      </div>
+      #demo-palette-panel.is-open {
+        display: block;
+        animation: panelPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
 
-      <a href="#" class="bento-box social-box threads">
-        <i class="fa-brands fa-threads"></i>
-        <span>Threads</span>
-      </a>
-      <a href="#" class="bento-box social-box note">
-        <i class="fa-solid fa-pen-nib"></i>
-        <span>note</span>
-      </a>
+      @keyframes panelPop {
+        from {
+          opacity: 0;
+          transform: translateY(20px) scale(0.9);
+        }
 
-      <div class="bento-box service-box">
-        <h2>Skills & Tools</h2>
-        <ul class="service-list">
-          <li>
-            <i class="fa-solid fa-laptop-code"></i>
-            <div>
-              <strong>Web Design</strong>
-              <span>Figma / HTML / CSS</span>
-            </div>
-          </li>
-          <li>
-            <i class="fa-solid fa-video"></i>
-            <div>
-              <strong>Video Edit</strong>
-              <span>Premiere / AfterEffects</span>
-            </div>
-          </li>
-          <li>
-            <i class="fa-solid fa-camera"></i>
-            <div>
-              <strong>Photography</strong>
-              <span>Portrait / Landscape</span>
-            </div>
-          </li>
-        </ul>
-      </div>
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
 
-      <a href="../common/contact.html" class="bento-box contact-box">
-        <div class="contact-content">
-          <i class="fa-regular fa-paper-plane"></i>
-          <h2>Get in Touch</h2>
-          <p>お仕事のご相談はこちら</p>
-        </div>
-      </a>
+      .demo-header {
+        font-size: 11px;
+        font-weight: 800;
+        color: #555;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+      }
 
-    </main>
+      .demo-btn {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 6px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        transition: 0.2s;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        color: #333;
+      }
 
-    <footer class="footer">
-      <small>© 2026 Kento Suzuki. All Rights Reserved.</small>
-    </footer>
+      .demo-btn:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
-    <script>
-      window.addEventListener('load', () => {
-        // 読み込み完了から少しだけ待って（0.5秒）、クラスを付与
-        setTimeout(() => {
-          document.body.classList.add('loaded');
-        }, 500);
-      });
-    </script>
-<style>
-    .theme-switcher {
-      position: fixed; bottom: 20px; right: 20px; z-index: 10000;
-      background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(10px);
-      padding: 12px; border-radius: 50px; display: flex; gap: 10px;
-      border: 1px solid rgba(255,255,255,0.2);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      transition: 0.3s;
-    }
-    .theme-switcher:hover { opacity: 1; transform: scale(1.05); }
-    
-    .t-btn {
-      appearance: none; -webkit-appearance: none; border: none; outline: none;
-      width: 30px; height: 30px; border-radius: 50%; cursor: pointer;
-      position: relative; transition: transform 0.2s;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      border: 2px solid rgba(255,255,255,0.8);
-    }
-    .t-btn:hover { transform: scale(1.2); z-index: 2; }
-    
-    /* ボタンの色見本（テーマに合わせて修正） */
-    .t-btn[data-theme="cyber"]   { background: linear-gradient(135deg, #0f0c29, #302b63); }
-    .t-btn[data-theme="minimal"] { background: linear-gradient(135deg, #ffffff, #e0e0e0); }
-    .t-btn[data-theme="blue"]    { background: linear-gradient(135deg, #c2e9fb, #a1c4fd); }
-    .t-btn[data-theme="gold"]    { background: linear-gradient(135deg, #000000, #d4af37); } /* 黒×ゴールド */
-    .t-btn[data-theme="purple"]  { background: linear-gradient(135deg, #e0c3fc, #8ec5fc); }
+      .demo-btn:active {
+        transform: scale(0.98);
+      }
 
-    /* スマホでの位置調整 */
-    @media(max-width: 600px){ 
-      .theme-switcher { bottom: 20px; right: 50%; transform: translateX(50%); } 
-      .theme-switcher:hover { transform: translateX(50%) scale(1.05); }
-    }
-  </style>
+      .demo-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+      }
 
-  <div class="theme-switcher">
-    <button type="button" class="t-btn" data-theme="cyber"   title="Dark Cyber"></button>
-    <button type="button" class="t-btn" data-theme="minimal" title="Light Minimal"></button>
-    <button type="button" class="t-btn" data-theme="blue"    title="Ocean Blue"></button>
-    <button type="button" class="t-btn" data-theme="gold"    title="Luxury Gold"></button>
-    <button type="button" class="t-btn" data-theme="purple"  title="Royal Purple"></button>
+      #demo-toggle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #fff;
+        color: #000;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      #demo-toggle:hover {
+        transform: scale(1.1) rotate(90deg);
+      }
+    </style>
+
+    <div id="demo-palette-panel">
+      <div class="demo-header">Select Bento Theme</div>
+
+      <button class="demo-btn" onclick="setTheme('cyber')">
+        Dark Cyber
+        <span class="demo-dot" style="background: linear-gradient(45deg, #0f0c29, #302b63);"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('minimal')">
+        Light Minimal
+        <span class="demo-dot" style="background: #fdfbfb;"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('ocean')">
+        Ocean Blue
+        <span class="demo-dot" style="background: linear-gradient(45deg, #a1c4fd, #c2e9fb);"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('gold')">
+        Luxury Gold
+        <span class="demo-dot" style="background: #000; border: 2px solid #d4af37;"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('purple')">
+        Royal Purple
+        <span class="demo-dot" style="background: linear-gradient(45deg, #e0c3fc, #8ec5fc);"></span>
+      </button>
+    </div>
+
+    <button id="demo-toggle" aria-label="Color Palette"
+      onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
+      <i class="fa-solid fa-palette"></i>
+    </button>
   </div>
 
   <script>
-    // カラー設定の定義（ご提示いただいたCSS変数と同期）
-    const themes = {
-      cyber: {
-        '--bg-grad-1': '#0f0c29', '--bg-grad-2': '#302b63', '--bg-grad-3': '#24243e',
-        '--glass-bg': 'rgba(0, 0, 0, 0.4)', '--glass-border': 'rgba(255, 255, 255, 0.1)',
-        '--text-main': '#ffffff', '--text-sub': '#b3b3b3',
-        '--accent': '#00f2ff', '--text-on-accent': '#000000'
-      },
-      minimal: {
-        '--bg-grad-1': '#fdfbfb', '--bg-grad-2': '#ebedee', '--bg-grad-3': '#fdfbfb',
-        '--glass-bg': 'rgba(255, 255, 255, 0.6)', '--glass-border': 'rgba(0, 0, 0, 0.05)',
-        '--text-main': '#333333', '--text-sub': '#666666',
-        '--accent': '#333333', '--text-on-accent': '#ffffff'
-      },
-      blue: {
-        '--bg-grad-1': '#c2e9fb', '--bg-grad-2': '#a1c4fd', '--bg-grad-3': '#c2e9fb',
-        '--glass-bg': 'rgba(255, 255, 255, 0.4)', '--glass-border': 'rgba(255, 255, 255, 0.3)',
-        '--text-main': '#003366', '--text-sub': '#4a6fa5',
-        '--accent': '#0056b3', '--text-on-accent': '#ffffff'
-      },
-      gold: { /* Luxury Gold */
-        '--bg-grad-1': '#000000', '--bg-grad-2': '#2c2c2c', '--bg-grad-3': '#000000',
-        '--glass-bg': 'rgba(10, 10, 10, 0.6)', '--glass-border': 'rgba(212, 175, 55, 0.3)',
-        '--text-main': '#ffffff', '--text-sub': '#dcdcdc',
-        '--accent': '#d4af37', '--text-on-accent': '#000000'
-      },
-      purple: { /* Royal Purple */
-        '--bg-grad-1': '#e0c3fc', '--bg-grad-2': '#8ec5fc', '--bg-grad-3': '#e0c3fc',
-        '--glass-bg': 'rgba(255, 255, 255, 0.5)', '--glass-border': 'rgba(255, 255, 255, 0.4)',
-        '--text-main': '#4a235a', '--text-sub': '#7d3c98',
-        '--accent': '#8e44ad', '--text-on-accent': '#ffffff'
-      }
-    };
+    function setTheme(theme) {
+      const root = document.documentElement;
 
-    // ボタンクリック時の動作
-    document.querySelectorAll('.t-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const themeKey = btn.getAttribute('data-theme');
-        const theme = themes[themeKey];
-        if(theme) {
-          const root = document.documentElement;
-          // 変数を上書き
-          for (const [key, value] of Object.entries(theme)) {
-            root.style.setProperty(key, value);
-          }
+      // style.css の定義に基づいた変数のセット
+      const themes = {
+        cyber: {
+          '--bg-grad-1': '#0f0c29', '--bg-grad-2': '#302b63', '--bg-grad-3': '#24243e',
+          '--glass-bg': 'rgba(0, 0, 0, 0.4)', '--glass-border': 'rgba(255, 255, 255, 0.1)',
+          '--text-main': '#ffffff', '--text-sub': '#b3b3b3',
+          '--accent': '#00f2ff', '--text-on-accent': '#000000'
+        },
+        minimal: {
+          '--bg-grad-1': '#fdfbfb', '--bg-grad-2': '#ebedee', '--bg-grad-3': '#fdfbfb',
+          '--glass-bg': 'rgba(255, 255, 255, 0.6)', '--glass-border': 'rgba(0, 0, 0, 0.05)',
+          '--text-main': '#333333', '--text-sub': '#666666',
+          '--accent': '#333333', '--text-on-accent': '#ffffff'
+        },
+        ocean: {
+          '--bg-grad-1': '#c2e9fb', '--bg-grad-2': '#a1c4fd', '--bg-grad-3': '#c2e9fb',
+          '--glass-bg': 'rgba(255, 255, 255, 0.4)', '--glass-border': 'rgba(255, 255, 255, 0.3)',
+          '--text-main': '#003366', '--text-sub': '#4a6fa5',
+          '--accent': '#0056b3', '--text-on-accent': '#ffffff'
+        },
+        gold: {
+          '--bg-grad-1': '#000000', '--bg-grad-2': '#2c2c2c', '--bg-grad-3': '#000000',
+          '--glass-bg': 'rgba(10, 10, 10, 0.6)', '--glass-border': 'rgba(212, 175, 55, 0.3)',
+          '--text-main': '#ffffff', '--text-sub': '#dcdcdc',
+          '--accent': '#d4af37', '--text-on-accent': '#000000'
+        },
+        purple: {
+          '--bg-grad-1': '#e0c3fc', '--bg-grad-2': '#8ec5fc', '--bg-grad-3': '#e0c3fc',
+          '--glass-bg': 'rgba(255, 255, 255, 0.5)', '--glass-border': 'rgba(255, 255, 255, 0.4)',
+          '--text-main': '#4a235a', '--text-sub': '#7d3c98',
+          '--accent': '#8e44ad', '--text-on-accent': '#ffffff'
         }
-      });
-    });
-  </script>    
-  </body>
+      };
+
+      const selected = themes[theme];
+      if (selected) {
+        for (let prop in selected) {
+          root.style.setProperty(prop, selected[prop]);
+        }
+      }
+
+      // パネルを閉じる
+      document.getElementById('demo-palette-panel').classList.remove('is-open');
+    }
+  </script>
+
+</body>
 
 </html>

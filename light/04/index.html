@@ -1,14 +1,11 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
   <title>LUMIÈRE | 記憶に残る、極上のひとときを。</title>
   <meta name="description" content="都心の喧騒を離れ、本当の自分に還る場所。LUMIÈRE HOTEL & RESORTS。洗練された空間と最高級のおもてなしで、皆様をお迎えいたします。" />
-
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-  <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="LUMIÈRE | 記憶に残る、極上のひとときを。" />
@@ -23,13 +20,19 @@
   <meta name="twitter:description" content="都心の喧騒を離れ、本当の自分に還る場所。最高級のおもてなしと静寂の空間をご提供します。" />
   <meta name="twitter:image" content="https://demo.donb-web.com/light/04/assets/image/ogp.jpg" />
 
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css" />
-</head><body class="loading">
+</head>
+
+<body class="loading">
 
   <div class="loader">
     <div class="loader-logo">LUMIÈRE</div>
@@ -157,7 +160,7 @@
           <span class="eng-title">Gallery & Works</span>
           <h2 class="section-title">美の競演</h2>
         </div>
-        
+
         <div class="grid-3">
           <div class="card fade-up">
             <div class="card-img"><img src="assets/image/gallery_01.jpg" alt="Gallery 01"></div>
@@ -245,7 +248,9 @@
           <a href="tel:0300000000" class="btn btn-outline-white">TEL</a>
         </div>
         <div id="map-container" class="map-wrapper">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030772428!2d139.7645498762319!3d35.68123617258707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f7003%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030772428!2d139.7645498762319!3d35.68123617258707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f7003%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </section>
@@ -272,7 +277,7 @@
   </footer>
 
   <div id="modal-overlay" class="modal-overlay"></div>
-  
+
   <div id="modal-01" class="modal-content">
     <button class="modal-close">×</button>
     <h3>Royal Suite Details</h3>
@@ -422,7 +427,7 @@
         document.getElementById(targetId).classList.add('active');
         overlay.classList.add('active');
         // モーダルオープン時はカスタムカーソルを隠し、デフォルトカーソルを表示
-        document.body.classList.add('modal-open'); 
+        document.body.classList.add('modal-open');
       });
     });
 
@@ -438,15 +443,15 @@
 
     // 6. Custom Cursor
     document.addEventListener('mousemove', (e) => {
-        // モーダルが開いているときは追従しない（非表示）
-        if (document.body.classList.contains('modal-open')) return;
+      // モーダルが開いているときは追従しない（非表示）
+      if (document.body.classList.contains('modal-open')) return;
 
-        cursorDot.style.left = e.clientX + 'px';
-        cursorDot.style.top = e.clientY + 'px';
-        setTimeout(() => {
-            cursorCircle.style.left = e.clientX + 'px';
-            cursorCircle.style.top = e.clientY + 'px';
-        }, 100);
+      cursorDot.style.left = e.clientX + 'px';
+      cursorDot.style.top = e.clientY + 'px';
+      setTimeout(() => {
+        cursorCircle.style.left = e.clientX + 'px';
+        cursorCircle.style.top = e.clientY + 'px';
+      }, 100);
     });
 
     // 7. Hamburger
@@ -458,64 +463,210 @@
     });
   </script>
 
-<style>
-    .theme-switcher {
-      position: fixed; bottom: 20px; right: 20px; z-index: 9999;
-      background: #fff; padding: 12px; border-radius: 50px;
-      display: flex; gap: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-      border: 1px solid rgba(0,0,0,0.05); transition: transform 0.3s;
-    }
-    @media (max-width: 768px) {
-      .theme-switcher { bottom: 90px; right: 15px; transform: scale(0.9); }
-    }
-    .t-btn { 
-      /* Button Reset */
-      appearance: none; -webkit-appearance: none;
-      border: none; background: none; padding: 0; margin: 0; outline: none;
-      
-      /* Style */
-      width: 30px; height: 30px; border-radius: 50%; cursor: pointer; 
-      border: 2px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
-      transition: transform 0.2s; position: relative;
-    }
-    .t-btn:hover { transform: scale(1.2); }
-    
-    /* Colors */
-    .c-gold   { background: #bfa57d; }
-    .c-silver { background: #718093; }
-    .c-bronze { background: #cd6133; }
-    .c-navy   { background: #273c75; }
-    .c-black  { background: #2f3640; border-color: #bfa57d !important; }
-  </style>
+  <div id="demo-palette" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10002; /* モーダル(10001)より上に */
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+  ">
+    <style>
+      #demo-palette-panel {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        display: none;
+        width: 240px;
+        margin-bottom: 10px;
+        color: #111;
+        font-family: "Shippori Mincho", serif;
+      }
 
-  <div class="theme-switcher">
-    <button type="button" class="t-btn c-gold"   onclick="setTheme('#bfa57d', '#f7f1e3')" aria-label="Gold Theme"></button>
-    <button type="button" class="t-btn c-silver" onclick="setTheme('#718093', '#dcdde1')" aria-label="Silver Theme"></button>
-    <button type="button" class="t-btn c-bronze" onclick="setTheme('#cd6133', '#f5f6fa')" aria-label="Bronze Theme"></button>
-    <button type="button" class="t-btn c-navy"   onclick="setTheme('#273c75', '#f5f6fa')" aria-label="Navy Theme"></button>
-    <button type="button" class="t-btn c-black"  onclick="setTheme('#bfa57d', '#2f3640', '#1e272e', '#f5f6fa')" aria-label="Black Theme"></button>
+      #demo-palette-panel.is-open {
+        display: block;
+        animation: panelFadeUp 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+      }
+
+      @keyframes panelFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .demo-header {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 8px;
+      }
+
+      .demo-btn {
+        width: 100%;
+        padding: 10px 0;
+        margin-bottom: 5px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.4s;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+        color: #333;
+        font-family: "Cormorant Garamond", serif;
+        letter-spacing: 0.05em;
+      }
+
+      .demo-btn:hover {
+        padding-left: 10px;
+        color: #bfa57d;
+      }
+
+      .demo-btn:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+
+      .demo-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      #demo-toggle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #111;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        font-size: 20px;
+        transition: 0.5s;
+      }
+
+      #demo-toggle:hover {
+        transform: scale(1.1);
+        background: #bfa57d;
+        border-color: #bfa57d;
+      }
+    </style>
+
+    <div id="demo-palette-panel">
+      <div class="demo-header">Select Atmosphere</div>
+
+      <button class="demo-btn" onclick="setTheme('gold')">
+        Royal Gold
+        <span class="demo-dot" style="background: #bfa57d;"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('silver')">
+        Urban Silver
+        <span class="demo-dot" style="background: #718093;"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('bronze')">
+        Classic Bronze
+        <span class="demo-dot" style="background: #cd6133;"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('navy')">
+        Noble Navy
+        <span class="demo-dot" style="background: #273c75;"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('black')">
+        Modern Black
+        <span class="demo-dot" style="background: #1e272e; border:1px solid #ccc;"></span>
+      </button>
+    </div>
+
+    <button id="demo-toggle" aria-label="Color Palette"
+      onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
+      <i class="fa-solid fa-palette"></i>
+    </button>
   </div>
 
   <script>
-    function setTheme(primary, sub, bg, text) {
+    function setTheme(theme) {
       const root = document.documentElement;
-      
-      root.style.setProperty('--c-primary', primary);
-      root.style.setProperty('--c-bg-sub', sub);
-      
-      if (bg) {
-        // Modern Black Mode
-        root.style.setProperty('--c-bg', bg);
-        root.style.setProperty('--c-text', text);
-        root.style.setProperty('--c-text-light', '#b2bec3');
-      } else {
-        // Standard Mode
-        root.style.setProperty('--c-bg', '#ffffff');
-        root.style.setProperty('--c-text', '#2d3436');
-        root.style.setProperty('--c-text-light', '#636e72');
+
+      // style.css の定義に基づいた変数のセット
+      const themes = {
+        gold: {
+          '--c-primary': '#bfa57d',
+          '--c-bg-sub': '#f7f1e3',
+          '--c-text': '#2d3436',
+          '--c-text-light': '#636e72',
+          '--c-bg': '#ffffff'
+        },
+        silver: {
+          '--c-primary': '#718093',
+          '--c-bg-sub': '#dcdde1',
+          '--c-text': '#2d3436',
+          '--c-text-light': '#636e72',
+          '--c-bg': '#ffffff'
+        },
+        bronze: {
+          '--c-primary': '#cd6133',
+          '--c-bg-sub': '#f5f6fa',
+          '--c-text': '#2d3436',
+          '--c-text-light': '#636e72',
+          '--c-bg': '#ffffff'
+        },
+        navy: {
+          '--c-primary': '#273c75',
+          '--c-bg-sub': '#f0f4f8',
+          '--c-text': '#2d3436',
+          '--c-text-light': '#636e72',
+          '--c-bg': '#ffffff'
+        },
+        black: {
+          '--c-primary': '#bfa57d', /* Gold Accent */
+          '--c-bg-sub': '#2f3640',
+          '--c-text': '#f5f6fa',
+          '--c-text-light': '#dcdde1',
+          '--c-bg': '#1e272e' /* Dark Mode Background */
+        }
+      };
+
+      const selected = themes[theme];
+      if (selected) {
+        for (let prop in selected) {
+          root.style.setProperty(prop, selected[prop]);
+        }
       }
+
+      // パネルを閉じる
+      document.getElementById('demo-palette-panel').classList.remove('is-open');
     }
   </script>
 
 </body>
+
 </html>

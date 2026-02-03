@@ -7,18 +7,21 @@
   <title>LUMIÈRE SERUM | あなた本来の輝きを</title>
   <meta name="description" content="植物の力と科学の融合。次世代エイジングケア美容液「ルミエールセラム」公式サイト。" />
   
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
-  <meta property="og:title" content="LUMIÈRE SERUM | あなた本来の輝きを" />
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="LUMIÈRE SERUM | あなた本来の輝きを" />
+  <meta property="og:description" content="植物の力と科学の融合。次世代エイジングケア美容液「ルミエールセラム」公式サイト。" />
   <meta property="og:url" content="https://demo.donb-web.com/light/01/" />
   <meta property="og:image" content="https://demo.donb-web.com/light/01/assets/image/ogp.jpg" />
-  <meta property="og:description" content="植物の力と科学の融合。次世代エイジングケア美容液「ルミエールセラム」公式サイト。" />
   <meta property="og:site_name" content="LUMIÈRE SERUM" />
-  
+
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LUMIÈRE SERUM | あなた本来の輝きを" />
+  <meta name="twitter:description" content="植物の力と科学の融合。次世代エイジングケア美容液「ルミエールセラム」公式サイト。" />
   <meta name="twitter:image" content="https://demo.donb-web.com/light/01/assets/image/ogp.jpg" />
 
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Zen+Old+Mincho:wght@400;600&display=swap" rel="stylesheet">
@@ -435,53 +438,137 @@
         });
       });
     });
+  </script>
 
-// 3. DEMO ONLY: Color Switcher Logic
-    const themes = {
-      'A': { // Luxury Gold -> CTA: RED
-        '--text-main': '#333', '--text-serif': '#1A1A1A', '--primary': '#A68E68',
-        '--primary-light': '#E8E0D5', '--accent': '#B76E79', 
-        '--cta-color': '#d10000', 
-        '--bg-body': '#FDFDFD',
-        '--bg-cta-tint': '#fff0f5' // 薄いピンク
-      },
-      'B': { // Medical Blue -> CTA: ORANGE
-        '--text-main': '#2C3E50', '--text-serif': '#1A252F', '--primary': '#008080',
-        '--primary-light': '#E0F2F1', '--accent': '#20B2AA', 
-        '--cta-color': '#F39C12', 
-        '--bg-body': '#F5FAFA',
-        '--bg-cta-tint': '#fff8e1' // 薄いオレンジ（クリーム色）
-      },
-      'C': { // Organic Green -> CTA: TERRA COTTA
-        '--text-main': '#4A4A4A', '--text-serif': '#2E3B28', '--primary': '#6B8E23',
-        '--primary-light': '#F0F5E5', '--accent': '#DAA520', 
-        '--cta-color': '#D35400', 
-        '--bg-body': '#FFFEF5',
-        '--bg-cta-tint': '#fbe9e7' // 薄いテラコッタ（赤茶）
-      },
-      'D': { // Deep Navy -> CTA: GOLD
-        '--text-main': '#333', '--text-serif': '#0F172A', '--primary': '#1e293b',
-        '--primary-light': '#E2E8F0', '--accent': '#D4AF37', 
-        '--cta-color': '#C59D5F', 
-        '--bg-body': '#F8FAFC',
-        '--bg-cta-tint': '#fffde7' // 薄いゴールド（イエロー系）
-      },
-      'E': { // Greige Minimal -> CTA: BLACK
-        '--text-main': '#444', '--text-serif': '#333', '--primary': '#9E9E9E',
-        '--primary-light': '#F5F5F5', '--accent': '#C0A080', 
-        '--cta-color': '#333333', 
-        '--bg-body': '#FFFAF0',
-        '--bg-cta-tint': '#f5f5f5' // 薄いグレー
+<div id="demo-palette" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+  ">
+    <style>
+      #demo-palette-panel {
+        background: #fff;
+        border: 1px solid #e0e0e0; padding: 15px; border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        display: none; width: 240px;
+        margin-bottom: 10px; color: #333;
       }
-    };
+      #demo-palette-panel.is-open { display: block; animation: panelFadeUp 0.3s ease; }
+      @keyframes panelFadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      
+      .demo-header {
+        font-size: 11px; font-weight: bold; color: #999; 
+        text-transform: uppercase; letter-spacing: 0.1em;
+        margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;
+      }
+      
+      .demo-btn {
+        width: 100%; padding: 12px 15px;
+        margin-bottom: 8px; border: 1px solid rgba(0,0,0,0.05); border-radius: 6px;
+        cursor: pointer; font-size: 13px; font-weight: 500;
+        transition: transform 0.2s, box-shadow 0.2s; 
+        text-align: left; display: flex; align-items: center; justify-content: space-between;
+        background: #fff; color: #333;
+      }
+      .demo-btn:hover { transform: translateX(2px); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+      .demo-btn:last-child { margin-bottom: 0; }
+      
+      .demo-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-left: 10px; }
 
-    function changeTheme(type) {
-      const theme = themes[type];
+      #demo-toggle {
+        width: 50px; height: 50px; border-radius: 50%; background: #333; color: #fff;
+        border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 20px; transition: 0.3s;
+      }
+      #demo-toggle:hover { transform: scale(1.1); background: #000; }
+    </style>
+
+    <div id="demo-palette-panel">
+      <div class="demo-header">Select Brand Theme</div>
+      
+      <button class="demo-btn" onclick="setTheme('gold')">
+        Luxury Gold
+        <span class="demo-dot" style="background: #A68E68;"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('blue')">
+        Medical Blue
+        <span class="demo-dot" style="background: #008080;"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('green')">
+        Organic Green
+        <span class="demo-dot" style="background: #6B8E23;"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('navy')">
+        Deep Navy
+        <span class="demo-dot" style="background: #0F172A;"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('greige')">
+        Greige Minimal
+        <span class="demo-dot" style="background: #9E9E9E;"></span>
+      </button>
+    </div>
+
+    <button id="demo-toggle" aria-label="Color Palette" onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
+      <i class="fa-solid fa-palette"></i>
+    </button>
+  </div>
+
+  <script>
+    function setTheme(theme) {
       const root = document.documentElement;
-      for (let key in theme) {
-        root.style.setProperty(key, theme[key]);
+      
+      const themes = {
+        gold: {
+            '--text-main': '#333', '--text-serif': '#1A1A1A',
+            '--primary': '#A68E68', '--primary-light': '#E8E0D5',
+            '--accent': '#B76E79', '--cta-color': '#d10000',
+            '--bg-body': '#FDFDFD', '--bg-cta-tint': '#fff0f5'
+        },
+        blue: {
+            '--text-main': '#2C3E50', '--text-serif': '#1A252F',
+            '--primary': '#008080', '--primary-light': '#E0F2F1',
+            '--accent': '#20B2AA', '--cta-color': '#F39C12',
+            '--bg-body': '#F5FAFA', '--bg-cta-tint': '#fff8e1'
+        },
+        green: {
+            '--text-main': '#4A4A4A', '--text-serif': '#2E3B28',
+            '--primary': '#6B8E23', '--primary-light': '#F0F5E5',
+            '--accent': '#DAA520', '--cta-color': '#D35400',
+            '--bg-body': '#FFFEF5', '--bg-cta-tint': '#fbe9e7'
+        },
+        navy: {
+            '--text-main': '#333', '--text-serif': '#0F172A',
+            '--primary': '#1e293b', '--primary-light': '#E2E8F0',
+            '--accent': '#D4AF37', '--cta-color': '#C59D5F',
+            '--bg-body': '#F8FAFC', '--bg-cta-tint': '#fffde7'
+        },
+        greige: {
+            '--text-main': '#444', '--text-serif': '#333',
+            '--primary': '#9E9E9E', '--primary-light': '#F5F5F5',
+            '--accent': '#C0A080', '--cta-color': '#333333',
+            '--bg-body': '#FFFAF0', '--bg-cta-tint': '#f5f5f5'
+        }
+      };
+
+      const selected = themes[theme];
+      for (let prop in selected) {
+        root.style.setProperty(prop, selected[prop]);
       }
+      
+      // パネルを閉じる
+      document.getElementById('demo-palette-panel').classList.remove('is-open');
     }
   </script>
+
 </body>
 </html>

@@ -7,18 +7,20 @@
   <title>AERO | デスクの景色を変える、透明なハブ。</title>
   <meta name="description" content="先行予約受付中。配線を消し去る、次世代ワイヤレスステーション。" />
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
-  <meta property="og:title" content="AERO | デスクの景色を変える、透明なハブ。" />
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="AERO | デスクの景色を変える、透明なハブ。" />
+  <meta property="og:description" content="先行予約開始。絡まるケーブルを過去のものに。世界初、透過型100Wワイヤレス充電ステーションがついに日本上陸。" />
   <meta property="og:url" content="https://demo.donb-web.com/light/03/" />
   <meta property="og:image" content="https://demo.donb-web.com/light/03/assets/image/ogp.jpg" />
-  <meta property="og:description" content="先行予約開始。絡まるケーブルを過去のものに。世界初、透過型100Wワイヤレス充電ステーションがついに日本上陸。" />
   <meta property="og:site_name" content="AERO Project" />
-  
+
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AERO | デスクの景色を変える、透明なハブ。" />
+  <meta name="twitter:description" content="先行予約開始。絡まるケーブルを過去のものに。世界初、透過型100Wワイヤレス充電ステーションがついに日本上陸。" />
   <meta name="twitter:image" content="https://demo.donb-web.com/light/03/assets/image/ogp.jpg" />
-  
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -394,190 +396,202 @@
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 
-<div id="demo-palette" class="demo-palette">
-    <div class="palette-toggle" title="Change Color Theme">
-      <i class="fa-solid fa-palette"></i>
-    </div>
-    <div class="palette-options">
-      <button class="color-btn" data-color="cyan" style="background: #00f2ff;" title="Cyber Cyan"></button>
-      <button class="color-btn" data-color="orange" style="background: #ff6b6b;" title="Active Orange"></button>
-      <button class="color-btn" data-color="purple" style="background: #a55eea;" title="Future Purple"></button>
-      <button class="color-btn" data-color="green" style="background: #2ecc71;" title="Eco Green"></button>
-      <button class="color-btn" data-color="gold" style="background: #d4af37;" title="Luxury Gold"></button>
-    </div>
-  </div>
-
-<style>
-  /* パレットのスタイル定義 */
-  .demo-palette {
+  <div id="demo-palette" style="
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 9999;
+    z-index: 10000;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
-    flex-direction: column-reverse; /* 下から上に展開 */
-    align-items: center;
-    gap: 10px;
-  }
-  
-  /* ボタンのスタイルリセット (Safari対策) */
-  .palette-toggle, .color-btn {
-    appearance: none; -webkit-appearance: none;
-    border: none; background: none; margin: 0; padding: 0;
-    cursor: pointer; outline: none;
-  }
-
-  .palette-toggle {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 1.2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: 0.3s;
-  }
-  .palette-toggle:hover, .palette-toggle.active {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-    box-shadow: 0 0 15px var(--primary); /* 現在の色で光らせる */
-  }
-
-  .palette-options {
-    display: flex;
+    align-items: flex-end;
     flex-direction: column;
     gap: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(20px);
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  /* ホバー または アクティブクラスで展開 */
-  .demo-palette:hover .palette-options,
-  .demo-palette.active .palette-options {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
-  .color-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    transition: 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  }
-  .color-btn:hover {
-    transform: scale(1.2);
-    border-color: #fff;
-  }
-</style>
-
-<div class="demo-palette" id="demoPalette">
-  <button type="button" class="palette-toggle" id="paletteToggle">
-    <i class="fa-solid fa-palette"></i>
-  </button>
-  
-  <div class="palette-options">
-    <button type="button" class="color-btn" data-color="cyan" 
-      style="background: linear-gradient(135deg, #00f2ff, #00c3ff);" aria-label="Cyan"></button>
-    
-    <button type="button" class="color-btn" data-color="purple" 
-      style="background: linear-gradient(135deg, #a55eea, #d980fa);" aria-label="Purple"></button>
-    
-    <button type="button" class="color-btn" data-color="orange" 
-      style="background: linear-gradient(135deg, #ff6b6b, #ff9f43);" aria-label="Orange"></button>
-    
-    <button type="button" class="color-btn" data-color="green" 
-      style="background: linear-gradient(135deg, #2ecc71, #00b894);" aria-label="Green"></button>
-    
-    <button type="button" class="color-btn" data-color="gold" 
-      style="background: linear-gradient(135deg, #d4af37, #f1c40f);" aria-label="Gold"></button>
-  </div>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // カラーテーマの定義
-    const themes = {
-      cyan: {
-        primary: '0, 242, 255',
-        accent: '0, 242, 255',
-        bgDark: '#050505',
-        bgPanel: '#111111'
-      },
-      orange: {
-        primary: '255, 107, 107',
-        accent: '255, 159, 67',
-        bgDark: '#1e1e1e',
-        bgPanel: '#2d2d2d'
-      },
-      purple: {
-        primary: '165, 94, 234',
-        accent: '217, 128, 250',
-        bgDark: '#130f1a',
-        bgPanel: '#1f1c2c'
-      },
-      green: {
-        primary: '46, 204, 113',
-        accent: '0, 184, 148',
-        bgDark: '#1e272e',
-        bgPanel: '#2d3436'
-      },
-      gold: {
-        primary: '212, 175, 55',
-        accent: '241, 196, 15',
-        bgDark: '#000000',
-        bgPanel: '#111111'
+  ">
+    <style>
+      #demo-palette-panel {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        display: none;
+        width: 220px;
+        margin-bottom: 10px;
+        color: #111;
       }
-    };
 
-    const root = document.documentElement;
-    const paletteContainer = document.getElementById('demoPalette');
-    const paletteToggle = document.getElementById('paletteToggle');
-
-    // スマホ対応: トグルボタンクリックでメニュー開閉
-    paletteToggle.addEventListener('click', (e) => {
-      e.stopPropagation(); // 親への伝播を防ぐ
-      paletteContainer.classList.toggle('active');
-      paletteToggle.classList.toggle('active');
-    });
-
-    // 画面のどこかをクリックしたら閉じる
-    document.addEventListener('click', (e) => {
-      if (!paletteContainer.contains(e.target)) {
-        paletteContainer.classList.remove('active');
-        paletteToggle.classList.remove('active');
+      #demo-palette-panel.is-open {
+        display: block;
+        animation: panelFadeUp 0.3s ease;
       }
-    });
 
-    // 色変更ボタンの処理
-    document.querySelectorAll('.color-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const colorKey = btn.getAttribute('data-color');
-        const theme = themes[colorKey];
-        
-        if (theme) {
-          root.style.setProperty('--primary-rgb', theme.primary);
-          root.style.setProperty('--accent-rgb', theme.accent);
-          root.style.setProperty('--bg-dark', theme.bgDark);
-          root.style.setProperty('--bg-panel', theme.bgPanel);
-          
-          // スマホの場合は選択後に閉じる
-          paletteContainer.classList.remove('active');
-          paletteToggle.classList.remove('active');
+      @keyframes panelFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
         }
-      });
-    });
-  });
-</script>
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .demo-header {
+        font-size: 10px;
+        font-weight: 900;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+      }
+
+      .demo-btn {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 6px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+        transition: 0.2s;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        color: #111;
+      }
+
+      .demo-btn:hover {
+        transform: translateX(2px);
+        background: #f0f0f0;
+      }
+
+      .demo-btn:last-child {
+        margin-bottom: 0;
+      }
+
+      .demo-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #demo-toggle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #fff;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      #demo-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+      }
+    </style>
+
+    <div id="demo-palette-panel">
+      <div class="demo-header">Select Project Theme</div>
+
+      <button class="demo-btn" onclick="setTheme('cyan')">
+        Cyber Cyan
+        <span class="demo-dot" style="background: rgb(0, 242, 255);"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('orange')">
+        Active Orange
+        <span class="demo-dot" style="background: rgb(255, 107, 107);"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('purple')">
+        Future Purple
+        <span class="demo-dot" style="background: rgb(165, 94, 234);"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('green')">
+        Eco Green
+        <span class="demo-dot" style="background: rgb(46, 204, 113);"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('gold')">
+        Luxury Gold
+        <span class="demo-dot" style="background: rgb(212, 175, 55);"></span>
+      </button>
+    </div>
+
+    <button id="demo-toggle" aria-label="Color Palette"
+      onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
+      <i class="fa-solid fa-palette"></i>
+    </button>
+  </div>
+
+  <script>
+    function setTheme(theme) {
+      const root = document.documentElement;
+
+      // style.css の :root コメントアウト定義に基づいた値
+      const themes = {
+        cyan: {
+          '--primary-rgb': '0, 242, 255',
+          '--accent-rgb': '0, 242, 255',
+          '--bg-dark': '#050505',
+          '--bg-panel': '#111111'
+        },
+        orange: {
+          '--primary-rgb': '255, 107, 107',
+          '--accent-rgb': '255, 159, 67',
+          '--bg-dark': '#1e1e1e',
+          '--bg-panel': '#2d2d2d'
+        },
+        purple: {
+          '--primary-rgb': '165, 94, 234',
+          '--accent-rgb': '217, 128, 250',
+          '--bg-dark': '#130f1a',
+          '--bg-panel': '#1f1c2c'
+        },
+        green: {
+          '--primary-rgb': '46, 204, 113',
+          '--accent-rgb': '0, 184, 148',
+          '--bg-dark': '#1e272e',
+          '--bg-panel': '#2d3436'
+        },
+        gold: {
+          '--primary-rgb': '212, 175, 55',
+          '--accent-rgb': '241, 196, 15',
+          '--bg-dark': '#000000',
+          '--bg-panel': '#111111'
+        }
+      };
+
+      const selected = themes[theme];
+      if (selected) {
+        root.style.setProperty('--primary-rgb', selected['--primary-rgb']);
+        root.style.setProperty('--accent-rgb', selected['--accent-rgb']);
+        root.style.setProperty('--bg-dark', selected['--bg-dark']);
+        root.style.setProperty('--bg-panel', selected['--bg-panel']);
+      }
+
+      // パネルを閉じる
+      document.getElementById('demo-palette-panel').classList.remove('is-open');
+    }
+  </script>
+
 </body>
 
 </html>

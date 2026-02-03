@@ -7,17 +7,19 @@
   <title>NEXT CODE | 未経験からエンジニアへ。マンツーマンプログラミングスクール</title>
   <meta name="description" content="挫折させないプログラミングスクール。現役エンジニアによる徹底したマンツーマン指導で、あなたのキャリアを変えます。" />
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-
-  <meta property="og:title" content="NEXT CODE | 未経験からエンジニアへ" />
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="NEXT CODE | 未経験からエンジニアへ" />
+  <meta property="og:description" content="挫折させないプログラミングスクール。現役エンジニアによる徹底したマンツーマン指導で、あなたのキャリアを変えます。" />
   <meta property="og:url" content="https://demo.donb-web.com/light/02/" />
   <meta property="og:image" content="https://demo.donb-web.com/light/02/assets/image/ogp.jpg" />
-  <meta property="og:description" content="挫折させないプログラミングスクール。現役エンジニアによる徹底したマンツーマン指導で、あなたのキャリアを変えます。" />
   <meta property="og:site_name" content="NEXT CODE" />
 
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NEXT CODE | 未経験からエンジニアへ" />
+  <meta name="twitter:description" content="挫折させないプログラミングスクール。現役エンジニアによる徹底したマンツーマン指導で、あなたのキャリアを変えます。" />
   <meta name="twitter:image" content="https://demo.donb-web.com/light/02/assets/image/ogp.jpg" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -505,81 +507,128 @@
     });
   </script>
 
-<style>
-  .theme-switcher {
+<div id="demo-palette" style="
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 10000; /* Floating CTAより上に来るように */
+    font-family: 'Noto Sans JP', sans-serif;
     display: flex;
+    align-items: flex-end;
+    flex-direction: column;
     gap: 10px;
-    z-index: 9999;
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-  }
-  @media (max-width: 768px) {
-    .theme-switcher {
-      bottom: 90px; 
-      right: 15px;
-      transform: scale(0.9);
+  ">
+    <style>
+      #demo-palette-panel {
+        background: #fff;
+        border: 1px solid #eee; padding: 15px; border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        display: none; width: 220px;
+        margin-bottom: 10px; color: #333;
+      }
+      #demo-palette-panel.is-open { display: block; animation: panelFadeUp 0.3s ease; }
+      @keyframes panelFadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      
+      .demo-header {
+        font-size: 11px; font-weight: bold; color: #999; 
+        text-transform: uppercase; letter-spacing: 0.1em;
+        margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;
+      }
+      
+      .demo-btn {
+        width: 100%; padding: 10px 12px;
+        margin-bottom: 8px; border: 1px solid #f0f0f0; border-radius: 6px;
+        cursor: pointer; font-size: 13px; font-weight: 500;
+        transition: transform 0.2s, background 0.2s; 
+        text-align: left; display: flex; align-items: center; justify-content: space-between;
+        background: #fff; color: #333;
+      }
+      .demo-btn:hover { transform: translateX(2px); background: #f9f9f9; }
+      .demo-btn:last-child { margin-bottom: 0; }
+      
+      .demo-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+
+      #demo-toggle {
+        width: 50px; height: 50px; border-radius: 50%; 
+        background: #2d3436; color: #fff;
+        border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 20px; transition: 0.3s;
+      }
+      #demo-toggle:hover { transform: scale(1.1); }
+    </style>
+
+    <div id="demo-palette-panel">
+      <div class="demo-header">Select School Theme</div>
+      
+      <button class="demo-btn" onclick="setTheme('blue')">
+        Trust Blue
+        <span class="demo-dot" style="background: rgb(10, 189, 227);"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('sakura')">
+        Sakura Pink
+        <span class="demo-dot" style="background: rgb(239, 87, 119);"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('nature')">
+        Fresh Nature
+        <span class="demo-dot" style="background: rgb(32, 191, 107);"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('active')">
+        Active Orange
+        <span class="demo-dot" style="background: rgb(250, 130, 49);"></span>
+      </button>
+
+      <button class="demo-btn" onclick="setTheme('enji')">
+        Modern Gold
+        <span class="demo-dot" style="background: rgb(184, 134, 11);"></span>
+      </button>
+    </div>
+
+    <button id="demo-toggle" aria-label="Color Palette" onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
+      <i class="fa-solid fa-palette"></i>
+    </button>
+  </div>
+
+  <script>
+    function setTheme(theme) {
+      const root = document.documentElement;
+      
+      // style.css の :root 定義に基づいた RGB値
+      const themes = {
+        blue: {
+            '--primary-rgb': '10, 189, 227',
+            '--accent-rgb':  '30, 144, 255'
+        },
+        sakura: {
+            '--primary-rgb': '239, 87, 119',
+            '--accent-rgb':  '220, 20, 60'
+        },
+        nature: {
+            '--primary-rgb': '32, 191, 107',
+            '--accent-rgb':  '0, 128, 0'
+        },
+        active: {
+            '--primary-rgb': '250, 130, 49',
+            '--accent-rgb':  '56, 103, 214'
+        },
+        enji: {
+            '--primary-rgb': '105, 105, 105',
+            '--accent-rgb':  '184, 134, 11'
+        }
+      };
+
+      const selected = themes[theme];
+      if(selected) {
+          root.style.setProperty('--primary-rgb', selected['--primary-rgb']);
+          root.style.setProperty('--accent-rgb', selected['--accent-rgb']);
+      }
+      
+      // パネルを閉じる
+      document.getElementById('demo-palette-panel').classList.remove('is-open');
     }
-  }
-  .theme-btn {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  .theme-btn:hover { transform: scale(1.2); }
-
-  /* 各テーマの色定義 (ご指定のRGB値を反映) */
-  .t-blue   { background: linear-gradient(135deg, rgb(10, 189, 227), rgb(30, 144, 255)); }
-  .t-pink   { background: linear-gradient(135deg, rgb(239, 87, 119), rgb(220, 20, 60)); }
-  .t-green  { background: linear-gradient(135deg, rgb(32, 191, 107), rgb(0, 128, 0)); }
-  .t-yellow { background: linear-gradient(135deg, rgb(250, 130, 49), rgb(56, 103, 214)); }
-  .t-gray   { background: linear-gradient(135deg, rgb(105, 105, 105), rgb(184, 134, 11)); }
-</style>
-
-<div class="theme-switcher">
-  <div class="theme-btn t-blue"   onclick="setTheme('10, 189, 227', '30, 144, 255')" title="Trust Blue"></div>
-  
-  <div class="theme-btn t-pink"   onclick="setTheme('239, 87, 119', '220, 20, 60')" title="Sakura Forest"></div>
-  
-  <div class="theme-btn t-green"  onclick="setTheme('32, 191, 107', '0, 128, 0')" title="Fresh Nature"></div>
-  
-  <div class="theme-btn t-yellow" onclick="setTheme('250, 130, 49', '56, 103, 214')" title="Active Yellow"></div>
-  
-  <div class="theme-btn t-gray"   onclick="setTheme('105, 105, 105', '184, 134, 11')" title="Modern Gray/Gold"></div>
-</div>
-
-<script>
-  function setTheme(primary, accent) {
-    const root = document.documentElement;
-    root.style.setProperty('--primary-rgb', primary);
-    root.style.setProperty('--accent-rgb', accent);
-    
-    // 暗いアクセントカラーの場合、Hero文字色を白にする処理
-    // (RGBのR成分が100未満なら暗いとみなす簡易判定)
-    const accentR = parseInt(accent.split(',')[0]);
-    if (accentR < 100) {
-       document.querySelectorAll('.hero .text-accent').forEach(el => {
-           el.style.color = '#ffffff';
-           el.style.textShadow = '0 0 15px rgba(255,255,255,0.8)';
-       });
-    } else {
-       document.querySelectorAll('.hero .text-accent').forEach(el => {
-           el.style.color = ''; 
-           el.style.textShadow = '';
-       });
-    }
-  }
-</script>
+  </script>
 
 </body>
 
