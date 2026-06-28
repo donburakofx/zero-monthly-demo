@@ -142,7 +142,7 @@ ul { margin: 0; padding: 0; list-style: none; }
     transition: opacity 0.65s ease, transform 0.65s ease;
 }
 html.js .scroll-trigger { opacity: 0; }
-.scroll-trigger.is-active {
+html.js .scroll-trigger.is-active {
     opacity: 1;
     transform: translateY(0);
 }

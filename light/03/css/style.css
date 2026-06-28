@@ -1007,12 +1007,14 @@ img {
 
 /* Animation */
 .fade-in {
-    opacity: 0;
     transform: translateY(30px);
     transition: 0.8s ease-out;
 }
+html.js .fade-in {
+    opacity: 0;
+}
 
-.fade-in.active {
+html.js .fade-in.active {
     opacity: 1;
     transform: translateY(0);
 }

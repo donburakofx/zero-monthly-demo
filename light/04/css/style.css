@@ -284,7 +284,7 @@ html.js .loaded .loader {
 }
 html.js .fade-up { opacity: 0; }
 
-.fade-up.in-view {
+html.js .fade-up.in-view {
     opacity: 1;
     transform: translateY(0);
 }
@@ -304,7 +304,7 @@ html.js .fade-up { opacity: 0; }
     z-index: 2;
 }
 
-.reveal-img.in-view::after {
+html.js .reveal-img.in-view::after {
     transform: translateX(101%);
 }
 
@@ -313,7 +313,7 @@ html.js .fade-up { opacity: 0; }
     transition: transform 1.5s ease-out;
 }
 
-.reveal-img.in-view img {
+html.js .reveal-img.in-view img {
     transform: scale(1);
 }
 

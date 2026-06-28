@@ -162,7 +162,7 @@ button {
 }
 html.js .js-fade-up { opacity: 0; }
 
-.js-fade-up.is-show {
+html.js .js-fade-up.is-show {
     opacity: 1;
     transform: translateY(0);
 }

@@ -188,7 +188,7 @@ p {
 }
 html.js .fade-in-up { opacity: 0; }
 
-.fade-in-up.is-show {
+html.js .fade-in-up.is-show {
     opacity: 1;
     transform: translateY(0);
 }

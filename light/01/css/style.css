@@ -185,7 +185,7 @@ main {
 }
 html.js .scroll-trigger { opacity: 0; }
 
-.scroll-trigger.is-active {
+html.js .scroll-trigger.is-active {
     opacity: 1;
     transform: translateY(0);
 }

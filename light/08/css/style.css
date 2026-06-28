@@ -152,7 +152,7 @@ h3 {
 }
 html.js .js-fade-up { opacity: 0; }
 
-.js-fade-up.is-active {
+html.js .js-fade-up.is-active {
     opacity: 1;
     transform: translateY(0);
 }

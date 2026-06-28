@@ -444,7 +444,7 @@ html.js .js-scroll { opacity: 0; }
 }
 
 /* アクティブ（表示）状態 */
-.js-scroll.is-active {
+html.js .js-scroll.is-active {
     opacity: 1;
     transform: translateX(0);
 }

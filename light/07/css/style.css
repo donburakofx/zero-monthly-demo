@@ -374,11 +374,13 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
    11. Scroll Animations (スクロールアニメーション)
    ========================================================================== */
 .scroll-anim {
-    opacity: 0;
     transform: translateY(22px);
     transition: opacity 0.65s ease, transform 0.65s ease;
 }
-.scroll-anim.is-visible {
+html.js .scroll-anim {
+    opacity: 0;
+}
+html.js .scroll-anim.is-visible {
     opacity: 1;
     transform: translateY(0);
 }

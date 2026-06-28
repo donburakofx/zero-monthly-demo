@@ -138,7 +138,7 @@ ul { list-style: none; }
     transition: 1s var(--easing);
 }
 html.js .js-fade-up { opacity: 0; }
-.js-fade-up.is-visible {
+html.js .js-fade-up.is-visible {
     opacity: 1; transform: translateY(0);
 }
 
@@ -148,7 +148,7 @@ html.js .js-fade-up { opacity: 0; }
     transition: opacity 0.01s, clip-path 1.2s var(--easing);
 }
 html.js .js-text-reveal { opacity: 0; }
-.js-text-reveal.is-visible {
+html.js .js-text-reveal.is-visible {
     opacity: 1;
     clip-path: inset(0 0% 0 0);
 }
