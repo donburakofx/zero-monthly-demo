@@ -10,15 +10,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Recruit | スタッフ募集" />
   <meta property="og:description" content="未経験歓迎！私たちと一緒に働きませんか？求人・採用情報ページ。" />
-  <meta property="og:url" content="https://demo.donb-web.com/light/08/" />
-  <meta property="og:image" content="https://demo.donb-web.com/light/08/assets/image/ogp.jpg" />
+  <meta property="og:image" content="https://your-domain.com/assets/image/ogp.jpg" />
+  <meta property="og:url" content="https://your-domain.com/" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Recruit | スタッフ募集" />
   <meta name="twitter:description" content="未経験歓迎！私たちと一緒に働きませんか？求人・採用情報ページ。" />
-  <meta name="twitter:image" content="https://demo.donb-web.com/light/08/assets/image/ogp.jpg" />
-
-
+  <meta name="twitter:image" content="https://your-domain.com/assets/image/ogp.jpg" />
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -155,7 +153,7 @@
 
           <div class="job-card">
             <div class="job-img">
-              <img src="assets/image/job_03.jpg" alt="Patissier" onerror="this.src='assets/image/job_kitchen.jpg'">
+              <img src="assets/image/job_03.jpg" alt="Patissier">
             </div>
             <div class="job-body">
               <h3>パティシエ・製造</h3>
@@ -354,7 +352,7 @@
             <div class="faq-body">
               <div class="faq-inner">
                 <span class="faq-a">A</span>
-                <p>はい、大歓迎です！現在働いているスタッフの8割が未経験からのスタートでした。研修マニュアルもあり、先輩がマンツーマンで教えるのでご安心ください。</p>
+                <p>はい、大歓迎です！現在働いているスタッフの9割が未経験からのスタートでした。研修マニュアルもあり、先輩がマンツーマンで教えるのでご安心ください。</p>
               </div>
             </div>
           </div>
@@ -463,7 +461,8 @@
         <p class="cta-desc">面接でお会いできるのを楽しみにしています。<br>履歴書不要、手ぶらでOKです。</p>
 
         <div class="cta-buttons">
-          <a href="#" class="btn-entry btn-tel">
+          <!-- ★ href の電話番号をご自身のものに変更してください -->
+          <a href="tel:0300000000" class="btn-entry btn-tel">
             <span class="label">お電話で</span>
             <span class="value"><i class="fa-solid fa-phone"></i> 03-0000-0000</span>
           </a>
@@ -543,181 +542,6 @@
     document.querySelectorAll('.js-fade-up').forEach(el => {
       observer.observe(el);
     });
-  </script>
-
-  <div id="demo-palette" style="
-    position: fixed;
-    bottom: calc(80px + env(safe-area-inset-bottom)); /* スマホの応募ボタン(80px)と被らないように調整 */
-    right: 20px;
-    z-index: 9999;
-    font-family: sans-serif;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    gap: 10px;
-  ">
-    <style>
-      #demo-palette-panel {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid #ddd;
-        padding: 15px;
-        border-radius: 12px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        display: none;
-        width: 220px;
-        margin-bottom: 10px;
-      }
-
-      #demo-palette-panel.is-open {
-        display: block;
-        animation: panelFadeUp 0.3s ease;
-      }
-
-      @keyframes panelFadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .demo-btn {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 8px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 13px;
-        color: #fff;
-        font-weight: bold;
-        transition: transform 0.2s;
-        text-align: left;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      .demo-btn:active {
-        transform: scale(0.98);
-        opacity: 0.9;
-      }
-
-      .demo-btn:last-child {
-        margin-bottom: 0;
-      }
-
-      #demo-toggle {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: #333;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        font-size: 20px;
-        transition: 0.3s;
-        touch-action: manipulation;
-      }
-
-      #demo-toggle:hover {
-        transform: scale(1.1);
-      }
-
-      /* PC調整 */
-      @media (min-width: 768px) {
-        #demo-palette {
-          bottom: 30px;
-        }
-
-        /* PCは応募ボタンがないので下詰め */
-      }
-    </style>
-
-    <div id="demo-palette-panel">
-      <div
-        style="font-size: 12px; font-weight: bold; color: #555; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">
-        Select Color Theme
-      </div>
-
-      <button class="demo-btn" style="background: #4CAF50;" onclick="setTheme('green')">
-        Fresh Green <span style="font-size:10px; opacity:0.8;">Default</span>
-      </button>
-
-      <button class="demo-btn" style="background: #FF9800;" onclick="setTheme('orange')">
-        Energetic Orange
-      </button>
-
-      <button class="demo-btn" style="background: #0D47A1;" onclick="setTheme('navy')">
-        Trust Navy
-      </button>
-
-      <button class="demo-btn" style="background: #D84315;" onclick="setTheme('beige')">
-        Warm Beige
-      </button>
-
-      <button class="demo-btn" style="background: #212121;" onclick="setTheme('mono')">
-        Modern Mono
-      </button>
-    </div>
-
-    <button id="demo-toggle" aria-label="Color Palette"
-      onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
-      <i class="fa-solid fa-palette"></i>
-    </button>
-  </div>
-
-  <script>
-    function setTheme(theme) {
-      const root = document.documentElement;
-
-      const themes = {
-        green: {
-          '--bg-body': '#FFFFFF', '--text-main': '#444444', '--text-muted': '#888888', '--bg-light': '#F5F9F7',
-          '--primary': '#4CAF50', '--primary-hover': '#388E3C', '--accent': '#FFC107',
-          '--cta-bg': '#FF7043', '--border': '#E0E0E0', '--radius': '12px'
-        },
-        orange: {
-          '--bg-body': '#FFFFFF', '--text-main': '#4E342E', '--text-muted': '#8D6E63', '--bg-light': '#FFF8E1',
-          '--primary': '#FF9800', '--primary-hover': '#F57C00', '--accent': '#FFEB3B',
-          '--cta-bg': '#D32F2F', '--border': '#FFE0B2', '--radius': '8px'
-        },
-        navy: {
-          '--bg-body': '#FFFFFF', '--text-main': '#2C3E50', '--text-muted': '#7F8C8D', '--bg-light': '#F0F4F8',
-          '--primary': '#0D47A1', '--primary-hover': '#1565C0', '--accent': '#00BCD4',
-          '--cta-bg': '#FBC02D', '--border': '#CFD8DC', '--radius': '4px'
-        },
-        beige: {
-          '--bg-body': '#FFFCF9', '--text-main': '#5D4037', '--text-muted': '#A1887F', '--bg-light': '#FBE9E7',
-          '--primary': '#D84315', '--primary-hover': '#BF360C', '--accent': '#8D6E63',
-          '--cta-bg': '#6D4C41', '--border': '#FFCCBC', '--radius': '16px'
-        },
-        mono: {
-          '--bg-body': '#FFFFFF', '--text-main': '#212121', '--text-muted': '#757575', '--bg-light': '#F5F5F5',
-          '--primary': '#212121', '--primary-hover': '#424242', '--accent': '#000000',
-          '--cta-bg': '#2962FF', '--border': '#E0E0E0', '--radius': '0px'
-        }
-      };
-
-      const selected = themes[theme];
-      for (let prop in selected) {
-        root.style.setProperty(prop, selected[prop]);
-      }
-
-      // パネルを閉じる
-      document.getElementById('demo-palette-panel').classList.remove('is-open');
-    }
   </script>
 
 </body>

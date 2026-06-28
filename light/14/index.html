@@ -10,13 +10,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="IRON BODY GYM | パーソナルトレーニングジム" />
   <meta property="og:description" content="完全個室のプライベートジム。専属トレーナーが目標達成まで徹底サポート。初回体験セッション無料受付中。" />
-  <meta property="og:image" content="https://demo.donb-web.com/light/14/assets/image/ogp.jpg" />
-  <meta property="og:url" content="https://demo.donb-web.com/light/14/" />
+  <meta property="og:image" content="https://your-domain.com/assets/image/ogp.jpg" />
+  <meta property="og:url" content="https://your-domain.com/" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="IRON BODY GYM | パーソナルトレーニングジム" />
   <meta name="twitter:description" content="完全個室のプライベートジム。初回体験セッション無料受付中。" />
-  <meta name="twitter:image" content="https://demo.donb-web.com/light/14/assets/image/ogp.jpg" />
+  <meta name="twitter:image" content="https://your-domain.com/assets/image/ogp.jpg" />
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
@@ -416,7 +416,7 @@
           <div class="map-container">
             <!-- ★ Google マップの「共有 > 地図を埋め込む」から取得した iframe に差し替えてください -->
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.696160356133!2d139.7136066762335!3d35.66982243115456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9fa861757b%3A0xe54d86b99e7161b9!2z5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx!5e0!3m2!1sja!2sjp!4v1705300000000!5m2!1sja!2sjp"
+              src="about:blank" data-src-placeholder="★ここにGoogle マップの埋め込みURLを入力してください"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
           </div>
@@ -438,7 +438,7 @@
         <a href="#price">料金</a>
         <a href="#trial">無料体験</a>
         <a href="#access">アクセス</a>
-        <a href="../common/privacy.html">プライバシーポリシー</a>
+        <a href="common/privacy.html">プライバシーポリシー</a>
       </nav>
     </div>
     <div class="container">
@@ -491,45 +491,6 @@
 
     document.querySelectorAll('.scroll-trigger').forEach(el => observer.observe(el));
   </script>
-
-<div id="demo-palette" style="position:fixed;bottom:20px;right:20px;z-index:9999;font-family:'Helvetica Neue',Arial,sans-serif;display:flex;align-items:flex-end;flex-direction:column;gap:10px;">
-  <style>
-    #demo-palette-panel{background:#fff;border:1px solid #e0e0e0;padding:15px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.15);display:none;width:250px;margin-bottom:10px;color:#333;}
-    #demo-palette-panel.is-open{display:block;animation:panelFadeUp 0.3s ease;}
-    @keyframes panelFadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-    .demo-header{font-size:11px;font-weight:bold;color:#999;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;border-bottom:1px solid #eee;padding-bottom:5px;}
-    .demo-btn{width:100%;padding:12px 15px;margin-bottom:8px;border:1px solid rgba(0,0,0,.05);border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:transform .2s,box-shadow .2s;text-align:left;display:flex;align-items:center;justify-content:space-between;background:#fff;color:#333;}
-    .demo-btn:hover{transform:translateX(2px);box-shadow:0 4px 10px rgba(0,0,0,.05);}
-    .demo-btn:last-child{margin-bottom:0;}
-    .demo-dot{width:12px;height:12px;border-radius:50%;display:inline-block;margin-left:10px;}
-    #demo-toggle{width:50px;height:50px;border-radius:50%;background:#333;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,.2);font-size:20px;transition:.3s;}
-    #demo-toggle:hover{transform:scale(1.1);background:#000;}
-  </style>
-  <div id="demo-palette-panel">
-    <div class="demo-header">Select Gym Theme</div>
-    <button class="demo-btn" onclick="setTheme14('orange')">Dark Steel + Orange<span class="demo-dot" style="background:#E86500;"></span></button>
-    <button class="demo-btn" onclick="setTheme14('blue')">Sports Club Blue<span class="demo-dot" style="background:#1A56DB;"></span></button>
-    <button class="demo-btn" onclick="setTheme14('gold')">Luxury Gold<span class="demo-dot" style="background:#C5A059;"></span></button>
-    <button class="demo-btn" onclick="setTheme14('coral')">Navy + Coral<span class="demo-dot" style="background:#FF6B6B;"></span></button>
-    <button class="demo-btn" onclick="setTheme14('forest')">Forest Green<span class="demo-dot" style="background:#3A7D44;"></span></button>
-  </div>
-  <button id="demo-toggle" aria-label="Color Palette" onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')"><i class="fa-solid fa-palette"></i></button>
-</div>
-
-<script>
-  function setTheme14(t) {
-    const r = document.documentElement;
-    const themes = {
-      orange: {'--bg-body':'#FFFFFF','--bg-dark':'#111820','--bg-dark-card':'#1A2230','--text-main':'#1A1A2E','--text-muted':'#6B7280','--text-on-dark':'#FFFFFF','--text-muted-on-dark':'rgba(255,255,255,0.6)','--bg-light':'#F8F9FA','--primary':'#E86500','--primary-hover':'#CC5700','--primary-light':'#FFF3E8','--border':'#E5E7EB','--border-dark':'rgba(255,255,255,0.12)','--cta-bg':'linear-gradient(135deg,#E86500 0%,#FF8C2A 100%)'},
-      blue:   {'--bg-body':'#FFFFFF','--bg-dark':'#1A237E','--bg-dark-card':'#283593','--text-main':'#1A237E','--text-muted':'#5C6BC0','--text-on-dark':'#FFFFFF','--text-muted-on-dark':'rgba(255,255,255,0.7)','--bg-light':'#F3F4FC','--primary':'#1A56DB','--primary-hover':'#1240AB','--primary-light':'#EBF0FF','--border':'#C5CAE9','--border-dark':'rgba(255,255,255,0.15)','--cta-bg':'linear-gradient(135deg,#1A56DB 0%,#3B82F6 100%)'},
-      gold:   {'--bg-body':'#FFFFFF','--bg-dark':'#0D0D0D','--bg-dark-card':'#1A1A1A','--text-main':'#111111','--text-muted':'#777777','--text-on-dark':'#FFFFFF','--text-muted-on-dark':'rgba(255,255,255,0.55)','--bg-light':'#F9F9F7','--primary':'#C5A059','--primary-hover':'#A8843D','--primary-light':'#FDF6E8','--border':'#E8E0D5','--border-dark':'rgba(255,255,255,0.1)','--cta-bg':'linear-gradient(135deg,#C5A059 0%,#E5C56C 100%)'},
-      coral:  {'--bg-body':'#FFFFFF','--bg-dark':'#2C3E6E','--bg-dark-card':'#364882','--text-main':'#2C3E6E','--text-muted':'#7B88AA','--text-on-dark':'#FFFFFF','--text-muted-on-dark':'rgba(255,255,255,0.65)','--bg-light':'#F5F7FF','--primary':'#FF6B6B','--primary-hover':'#E55555','--primary-light':'#FFF0F0','--border':'#DCE4F5','--border-dark':'rgba(255,255,255,0.15)','--cta-bg':'linear-gradient(135deg,#FF6B6B 0%,#FF8E53 100%)'},
-      forest: {'--bg-body':'#FFFFFF','--bg-dark':'#1B2E1B','--bg-dark-card':'#243024','--text-main':'#1B2E1B','--text-muted':'#5A7A5A','--text-on-dark':'#FFFFFF','--text-muted-on-dark':'rgba(255,255,255,0.6)','--bg-light':'#F2F7F2','--primary':'#3A7D44','--primary-hover':'#2D6335','--primary-light':'#E8F5E9','--border':'#C8DFC8','--border-dark':'rgba(255,255,255,0.12)','--cta-bg':'linear-gradient(135deg,#3A7D44 0%,#5CB85C 100%)'}
-    };
-    Object.entries(themes[t]).forEach(([k,v]) => r.style.setProperty(k, v));
-    document.getElementById('demo-palette-panel').classList.remove('is-open');
-  }
-</script>
 </body>
 
 </html>

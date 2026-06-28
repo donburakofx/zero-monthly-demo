@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 
+<!-- ★★★ カスタマイズ必須 ★★★
+  このファイル全体の「株式会社サンプル」を貴社名に置き換えてください。
+  エディタで「株式会社サンプル」を一括検索・置換するのが最も確実です。
+  公開前に必ずご確認ください。
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ★ 要変更: 「株式会社サンプル」を貴社名に変更してください -->
     <title>株式会社サンプル | 信頼と実績のパートナー</title>
     <meta name="description" content="株式会社サンプルの公式コーポレートサイトです。私たちは顧客のビジネスを加速させる最適なソリューションを提供します。">
     
     <meta property="og:type" content="website" />
     <meta property="og:title" content="株式会社サンプル | 信頼と実績のパートナー" />
     <meta property="og:description" content="株式会社サンプルの公式コーポレートサイトです。私たちは顧客のビジネスを加速させる最適なソリューションを提供します。" />
-    <meta property="og:url" content="https://demo.donb-web.com/light/10/" />
-    <meta property="og:image" content="https://demo.donb-web.com/light/10/assets/image/ogp.jpg" />
+    <meta property="og:image" content="https://your-domain.com/assets/image/ogp.jpg" />
+    <meta property="og:url" content="https://your-domain.com/" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="株式会社サンプル | 信頼と実績のパートナー" />
     <meta name="twitter:description" content="株式会社サンプルの公式コーポレートサイトです。私たちは顧客のビジネスを加速させる最適なソリューションを提供します。" />
-    <meta name="twitter:image" content="https://demo.donb-web.com/light/10/assets/image/ogp.jpg" />
+    <meta name="twitter:image" content="https://your-domain.com/assets/image/ogp.jpg" />
 
     <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
-  <script>document.documentElement.classList.add('js');</script>
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body id="top">
@@ -298,6 +304,7 @@
                 </dl>
 
                 <div class="map-container mt-40">
+                    <!-- ★ Google マップの「共有 > 地図を埋め込む」から取得した iframe に差し替えてください -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7477985498595!2d139.76060987676245!3d35.6812405725867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
@@ -312,7 +319,7 @@
                 サービスに関するご質問やご相談など、<br class="sp-only">お気軽にお問い合わせください。<br>
                 担当者より折り返しご連絡いたします。
             </p>
-            <a href="../common/contact.html" class="btn-contact pulse-anim">
+            <a href="common/contact.html" class="btn-contact pulse-anim">
                 お問い合わせフォームへ <i class="fa-regular fa-envelope"></i>
             </a>
             <p class="contact-tel text-white">
@@ -344,9 +351,9 @@
                         <li><a href="#company">Company</a></li>
                     </ul>
                     <ul class="link-list">
-                        <li><a href="../common/privacy.html">プライバシーポリシー</a></li>
-                        <li><a href="../common/law.html">特定商取引法に基づく表記</a></li>
-                        <li><a href="../common/contact.html">お問い合わせ</a></li>
+                        <li><a href="common/privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="common/law.html">特定商取引法に基づく表記</a></li>
+                        <li><a href="common/contact.html">お問い合わせ</a></li>
                     </ul>
                 </div>
             </div>
@@ -422,124 +429,6 @@
 
         document.querySelectorAll('.js-fade-up').forEach(el => observer.observe(el));
     </script>
-
-<div id="demo-palette" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    font-family: sans-serif;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    gap: 10px;
-  ">
-    <style>
-      #demo-palette-panel {
-        background: #fff;
-        border: 1px solid #e0e0e0; padding: 15px; border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        display: none; width: 220px;
-        margin-bottom: 10px; color: #333;
-      }
-      #demo-palette-panel.is-open { display: block; animation: panelFadeUp 0.3s ease; }
-      @keyframes panelFadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-      
-      .demo-btn {
-        width: 100%; padding: 12px;
-        margin-bottom: 8px; border: none; border-radius: 6px;
-        cursor: pointer; font-size: 13px; color: #fff; font-weight: bold;
-        transition: transform 0.2s; text-align: left; display: flex; align-items: center; justify-content: space-between;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      }
-      .demo-btn:active { transform: scale(0.98); opacity: 0.9; }
-      .demo-btn:last-child { margin-bottom: 0; }
-      
-      #demo-toggle {
-        width: 50px; height: 50px; border-radius: 50%; background: #333; color: #fff;
-        border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 20px; transition: 0.3s;
-      }
-      #demo-toggle:hover { transform: scale(1.1); }
-    </style>
-
-    <div id="demo-palette-panel">
-      <div style="font-size: 12px; font-weight: bold; color: #999; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">
-        Select Color Theme
-      </div>
-      
-      <button class="demo-btn" style="background: linear-gradient(135deg, #0044CC, #003399);" onclick="setTheme('blue')">
-        Trust Blue <span style="font-size:10px; opacity:0.8;">Default</span>
-      </button>
-
-      <button class="demo-btn" style="background: linear-gradient(135deg, #1A237E, #0D1352);" onclick="setTheme('navy')">
-        Intelligent Navy
-      </button>
-
-      <button class="demo-btn" style="background: linear-gradient(135deg, #2E7D32, #1B5E20);" onclick="setTheme('green')">
-        Sustainable Green
-      </button>
-
-      <button class="demo-btn" style="background: linear-gradient(135deg, #8D6E63, #5D4037);" onclick="setTheme('warm')">
-        Warm Human
-      </button>
-
-      <button class="demo-btn" style="background: linear-gradient(135deg, #222222, #000000);" onclick="setTheme('black')">
-        Innovation Black
-      </button>
-    </div>
-
-    <button id="demo-toggle" aria-label="Color Palette" onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
-      <i class="fa-solid fa-palette"></i>
-    </button>
-  </div>
-
-  <script>
-    function setTheme(theme) {
-      const root = document.documentElement;
-      
-      const themes = {
-        blue: {
-            '--text-main': '#333333', '--text-muted': '#666666',
-            '--bg-body': '#FFFFFF', '--bg-light': '#F8F9FA', '--bg-gray': '#F0F2F5',
-            '--primary': '#0044CC', '--primary-dark': '#003399', '--accent': '#00AEEF',
-            '--border': '#E0E0E0', '--bg-cta': '#003399'
-        },
-        navy: {
-            '--text-main': '#2C3E50', '--text-muted': '#7F8C8D',
-            '--bg-body': '#FFFFFF', '--bg-light': '#F5F7FA', '--bg-gray': '#E8ECF1',
-            '--primary': '#1A237E', '--primary-dark': '#0D1352', '--accent': '#D4AF37',
-            '--border': '#CFD8DC', '--bg-cta': '#1A237E'
-        },
-        green: {
-            '--text-main': '#2E3B32', '--text-muted': '#6E7D73',
-            '--bg-body': '#FFFFFF', '--bg-light': '#F4F9F6', '--bg-gray': '#E9F0EC',
-            '--primary': '#2E7D32', '--primary-dark': '#1B5E20', '--accent': '#81C784',
-            '--border': '#DCE6E0', '--bg-cta': '#2E7D32'
-        },
-        warm: {
-            '--text-main': '#4A4A4A', '--text-muted': '#888888',
-            '--bg-body': '#FFFFFF', '--bg-light': '#FAF9F7', '--bg-gray': '#F2F0EB',
-            '--primary': '#8D6E63', '--primary-dark': '#5D4037', '--accent': '#FF7043',
-            '--border': '#E0E0E0', '--bg-cta': '#5D4037'
-        },
-        black: {
-            '--text-main': '#222222', '--text-muted': '#777777',
-            '--bg-body': '#FFFFFF', '--bg-light': '#F8F8F8', '--bg-gray': '#EEEEEE',
-            '--primary': '#222222', '--primary-dark': '#000000', '--accent': '#3B82F6',
-            '--border': '#DDDDDD', '--bg-cta': '#222222'
-        }
-      };
-
-      const selected = themes[theme];
-      for (let prop in selected) {
-        root.style.setProperty(prop, selected[prop]);
-      }
-      
-      // パネルを閉じる
-      document.getElementById('demo-palette-panel').classList.remove('is-open');
-    }
-  </script>
 
 </body>
 </html>

@@ -7,19 +7,16 @@
   <title>AERO | デスクの景色を変える、透明なハブ。</title>
   <meta name="description" content="先行予約受付中。配線を消し去る、次世代ワイヤレスステーション。" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="AERO | デスクの景色を変える、透明なハブ。" />
-  <meta property="og:description" content="先行予約開始。絡まるケーブルを過去のものに。世界初、透過型100Wワイヤレス充電ステーションがついに日本上陸。" />
-  <meta property="og:url" content="https://demo.donb-web.com/light/03/" />
-  <meta property="og:image" content="https://demo.donb-web.com/light/03/assets/image/ogp.jpg" />
-  <meta property="og:site_name" content="AERO Project" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AERO | デスクの景色を変える、透明なハブ。" />
-  <meta name="twitter:description" content="先行予約開始。絡まるケーブルを過去のものに。世界初、透過型100Wワイヤレス充電ステーションがついに日本上陸。" />
-  <meta name="twitter:image" content="https://demo.donb-web.com/light/03/assets/image/ogp.jpg" />
-
   <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
+  <meta property="og:title" content="AERO | デスクの景色を変える、透明なハブ。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-website-domain.com/" />
+  <meta property="og:image" content="https://your-website-domain.com/assets/image/ogp.jpg" />
+  <meta property="og:description" content="先行予約開始。絡まるケーブルを過去のものに。世界初、透過型100Wワイヤレス充電ステーションがついに日本上陸。" />
+  <meta property="og:site_name" content="AERO Project" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +40,7 @@
         <a href="#specs">Specs</a>
         <a href="#rewards">Rewards</a>
       </nav>
-      <a href="../common/contact.html" class="btn btn-sm btn-outline mobile-hide-btn">質問する</a>
+      <a href="common/contact.html" class="btn btn-sm btn-outline mobile-hide-btn">質問する</a>
     </div>
   </header>
 
@@ -79,6 +76,7 @@
         </h1>
         <p class="hero-desc">
           配線のノイズを、視界から消し去る。<br>
+          <!-- ★ 要確認: 「世界初」は客観的な根拠が必要です。根拠がない場合は削除または表現を変更してください（景品表示法対応） -->
           世界初、透過型ワイヤレス充電ステーション "AERO"。<br>
           ついに日本上陸。
         </p>
@@ -182,6 +180,7 @@
           </div>
           <div class="feature-card">
             <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+            <!-- ★ 要確認: 「AI温度管理」は実際の機能に基づく表現に変更してください。誇大表現にならないようご注意ください -->
             <h3>AI温度管理</h3>
             <p>デバイスの発熱を検知し、<br>出力を自動で最適化します。</p>
           </div>
@@ -315,7 +314,7 @@
               <li>・1年保証付き</li>
             </ul>
             <div class="btn-wrap">
-              <a href="../common/contact.html" class="btn btn-block btn-dark">選択する</a>
+              <a href="common/contact.html" class="btn btn-block btn-dark">選択する</a>
             </div>
           </div>
 
@@ -333,7 +332,7 @@
               <li>・2年保証付き</li>
             </ul>
             <div class="btn-wrap">
-              <a href="../common/contact.html" class="btn btn-block btn-accent btn-shiny">選択する</a>
+              <a href="common/contact.html" class="btn btn-block btn-accent btn-shiny">選択する</a>
             </div>
           </div>
 
@@ -350,7 +349,7 @@
               <li>・名入れ刻印オプション</li>
             </ul>
             <div class="btn-wrap">
-              <a href="../common/contact.html" class="btn btn-block btn-dark">選択する</a>
+              <a href="common/contact.html" class="btn btn-block btn-dark">選択する</a>
             </div>
           </div>
 
@@ -374,9 +373,9 @@
 
         <div class="footer-bottom">
           <div class="footer-links">
-            <a href="../common/company.html">運営会社</a>
-            <a href="../common/law.html">特商法表記</a>
-            <a href="../common/privacy.html">プライバシー</a>
+            <a href="common/company.html">運営会社</a>
+            <a href="common/law.html">特商法表記</a>
+            <a href="common/privacy.html">プライバシー</a>
           </div>
           <small class="copyright">© 2026 AERO Project.</small>
         </div>
@@ -396,203 +395,6 @@
     }, { threshold: 0.2 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
-
-  <div id="demo-palette" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10000;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    gap: 10px;
-  ">
-    <style>
-      #demo-palette-panel {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-        display: none;
-        width: 220px;
-        margin-bottom: 10px;
-        color: #111;
-      }
-
-      #demo-palette-panel.is-open {
-        display: block;
-        animation: panelFadeUp 0.3s ease;
-      }
-
-      @keyframes panelFadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .demo-header {
-        font-size: 10px;
-        font-weight: 900;
-        color: #666;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 5px;
-      }
-
-      .demo-btn {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 6px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-        font-weight: 700;
-        transition: 0.2s;
-        text-align: left;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: #fff;
-        color: #111;
-      }
-
-      .demo-btn:hover {
-        transform: translateX(2px);
-        background: #f0f0f0;
-      }
-
-      .demo-btn:last-child {
-        margin-bottom: 0;
-      }
-
-      .demo-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        display: inline-block;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      }
-
-      #demo-toggle {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: #fff;
-        color: #000;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-        font-size: 20px;
-        transition: 0.3s;
-      }
-
-      #demo-toggle:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-      }
-    </style>
-
-    <div id="demo-palette-panel">
-      <div class="demo-header">Select Project Theme</div>
-
-      <button class="demo-btn" onclick="setTheme('cyan')">
-        Cyber Cyan
-        <span class="demo-dot" style="background: rgb(0, 242, 255);"></span>
-      </button>
-
-      <button class="demo-btn" onclick="setTheme('orange')">
-        Active Orange
-        <span class="demo-dot" style="background: rgb(255, 107, 107);"></span>
-      </button>
-
-      <button class="demo-btn" onclick="setTheme('purple')">
-        Future Purple
-        <span class="demo-dot" style="background: rgb(165, 94, 234);"></span>
-      </button>
-
-      <button class="demo-btn" onclick="setTheme('green')">
-        Eco Green
-        <span class="demo-dot" style="background: rgb(46, 204, 113);"></span>
-      </button>
-
-      <button class="demo-btn" onclick="setTheme('gold')">
-        Luxury Gold
-        <span class="demo-dot" style="background: rgb(212, 175, 55);"></span>
-      </button>
-    </div>
-
-    <button id="demo-toggle" aria-label="Color Palette"
-      onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
-      <i class="fa-solid fa-palette"></i>
-    </button>
-  </div>
-
-  <script>
-    function setTheme(theme) {
-      const root = document.documentElement;
-
-      // style.css の :root コメントアウト定義に基づいた値
-      const themes = {
-        cyan: {
-          '--primary-rgb': '0, 242, 255',
-          '--accent-rgb': '0, 242, 255',
-          '--bg-dark': '#050505',
-          '--bg-panel': '#111111'
-        },
-        orange: {
-          '--primary-rgb': '255, 107, 107',
-          '--accent-rgb': '255, 159, 67',
-          '--bg-dark': '#1e1e1e',
-          '--bg-panel': '#2d2d2d'
-        },
-        purple: {
-          '--primary-rgb': '165, 94, 234',
-          '--accent-rgb': '217, 128, 250',
-          '--bg-dark': '#130f1a',
-          '--bg-panel': '#1f1c2c'
-        },
-        green: {
-          '--primary-rgb': '46, 204, 113',
-          '--accent-rgb': '0, 184, 148',
-          '--bg-dark': '#1e272e',
-          '--bg-panel': '#2d3436'
-        },
-        gold: {
-          '--primary-rgb': '212, 175, 55',
-          '--accent-rgb': '241, 196, 15',
-          '--bg-dark': '#000000',
-          '--bg-panel': '#111111'
-        }
-      };
-
-      const selected = themes[theme];
-      if (selected) {
-        root.style.setProperty('--primary-rgb', selected['--primary-rgb']);
-        root.style.setProperty('--accent-rgb', selected['--accent-rgb']);
-        root.style.setProperty('--bg-dark', selected['--bg-dark']);
-        root.style.setProperty('--bg-panel', selected['--bg-panel']);
-      }
-
-      // パネルを閉じる
-      document.getElementById('demo-palette-panel').classList.remove('is-open');
-    }
-  </script>
-
 </body>
 
 </html>
