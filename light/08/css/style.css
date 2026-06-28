@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   1. Color Variations (Select One)
+   1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
     /* ▼▼▼ 使いたいテーマのコメントアウトを外してください ▼▼▼ */
@@ -12,10 +12,10 @@
     --text-main: #444444;
     --text-muted: #888888;
     --bg-light: #F5F9F7;
-    --primary: #4CAF50;      /* メインの緑 */
+    --primary: #4CAF50;
     --primary-hover: #388E3C;
-    --accent: #FFC107;       /* アイコン等の黄色 */
-    --cta-bg: #FF7043;       /* 応募ボタンのオレンジ */
+    --accent: #FFC107;
+    --cta-bg: #FF7043;
     --border: #E0E0E0;
     --radius: 12px;
 
@@ -147,10 +147,10 @@ h3 {
 
 /* Scroll Animation */
 .js-fade-up {
-    opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
+html.js .js-fade-up { opacity: 0; }
 
 .js-fade-up.is-active {
     opacity: 1;
@@ -1064,4 +1064,22 @@ h3 {
 .float-main {
     font-size: 16px;
     line-height: 1;
+}
+
+/* Timeline: narrow screen overflow fix */
+@media (max-width: 640px) {
+    .timeline {
+        margin-left: 16px;
+        padding-left: 20px;
+    }
+    .time {
+        position: static;
+        display: block;
+        text-align: left;
+        margin-bottom: 4px;
+        width: auto;
+    }
+    .timeline-item::before {
+        left: -26px;
+    }
 }

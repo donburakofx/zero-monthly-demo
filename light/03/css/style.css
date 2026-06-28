@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   1. COLOR THEME & BASE
+   1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
     /* --- [Option 1: Cyber Cyan] (デフォルト) --- */
@@ -15,7 +15,7 @@
 
     /* --- [Option 2: Active Orange] --- */
     /* 用途: クラウドファンディング(Makuake風)、アウトドア、スポーツ、挑戦 */
-/*     
+    /*     
     --primary-rgb: 255, 107, 107;   
     --accent-rgb:  255, 159, 67;    
     --bg-dark:     #1e1e1e;         
@@ -24,7 +24,7 @@
 
     /* --- [Option 3: Future Purple] --- */
     /* 用途: Web3、仮想通貨、エンタメ、ナイトイベント、妖艶 */
-/*     
+    /*     
     --primary-rgb: 165, 94, 234;    
     --accent-rgb:  217, 128, 250;   
     --bg-dark:     #130f1a;         
@@ -567,7 +567,7 @@ img {
 }
 
 .shadow-box {
-    box-shadow: 0 20px 50px rgba(0, 242, 255, 0.15);
+    box-shadow: 0 20px 50px rgba(var(--primary-rgb), 0.15);
 }
 
 .half-img-right,
@@ -848,11 +848,20 @@ img {
     transition: 0.3s;
 }
 
+.reward-card:not(.recommended):hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
 .reward-card.recommended {
     border: 3px solid var(--primary);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transform: scale(1.05);
     z-index: 2;
+}
+.reward-card.recommended:hover {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
 .badge,

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   1. Theme Variables & 5 Color Patterns
+   1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
     /* --- [Pattern A: Luxury Gold] (王道・高級感) --- */
@@ -140,7 +140,7 @@ button {
 }
 
 .bg-light-gray {
-    background: var(--bg-light);
+    background: var(--primary-light);
 }
 
 .bg-light {
@@ -180,10 +180,10 @@ main {
 
 /* Scroll Trigger */
 .scroll-trigger {
-    opacity: 0;
     transform: translateY(30px);
     transition: all 1s ease-out;
 }
+html.js .scroll-trigger { opacity: 0; }
 
 .scroll-trigger.is-active {
     opacity: 1;
@@ -1244,4 +1244,3 @@ details[open] .faq-more-btn {
 .footer-nav a:hover {
     color: #fff;
 }
-

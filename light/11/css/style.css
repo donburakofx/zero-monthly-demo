@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   1. Design Tokens (Luxury Modern)
+   1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
 
@@ -11,6 +11,7 @@
     --c-gray: #F5F5F5;
     --c-white: #FFFFFF;
     --c-accent: #C5A059;
+    --c-accent-rgb: 197, 160, 89;
     --c-accent-light: #E5C56C;
     --grad-gold: linear-gradient(135deg, #C5A059 0%, #E5C56C 50%, #C5A059 100%);
     --btn-text: #111111;
@@ -23,39 +24,42 @@
     --c-dark: #1E293B;
     --c-gray: #F1F5F9;
     --c-white: #FFFFFF;
-    --c-accent: #38BDF8; 
+    --c-accent: #38BDF8;
+    --c-accent-rgb: 56, 189, 248;
     --c-accent-light: #7DD3FC;
     --grad-gold: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%);
-    --btn-text: #111111; 
+    --btn-text: #111111;
     --text-main: #334155;
     --text-light: #64748B;
     --text-white: #F8FAFC; */
-   
+
 
     /* --- [Pattern C: Hard Sell Red] (Info-Product / Urgent) --- */
-    
+
     /* --c-black: #000000;
     --c-dark: #220000;
     --c-gray: #FFF9C4;
     --c-white: #FFFFFF;
-    --c-accent: #FF0000; 
+    --c-accent: #FF0000;
+    --c-accent-rgb: 255, 0, 0;
     --c-accent-light: #FFD700;
     --grad-gold: linear-gradient(to bottom, #FFD700 0%, #FFA500 100%);
-    --btn-text: #000000; 
+    --btn-text: #000000;
     --text-main: #222222;
     --text-light: #444444;
     --text-white: #FFFF00; */
-   
+
 
     /* --- [Pattern D: Urban Mono] (Minimal / Modern) --- */
     /* --c-black: #000000;
     --c-dark: #111111;
     --c-gray: #F5F5F5;
     --c-white: #FFFFFF;
-    --c-accent: #666666; 
+    --c-accent: #666666;
+    --c-accent-rgb: 102, 102, 102;
     --c-accent-light: #AAAAAA;
     --grad-gold: linear-gradient(135deg, #333333 0%, #000000 100%);
-    --btn-text: #FFFFFF; 
+    --btn-text: #FFFFFF;
     --text-main: #111111;
     --text-light: #777777;
     --text-white: #FFFFFF; */
@@ -65,10 +69,11 @@
     --c-dark: #1A1A1A;
     --c-gray: #F0FDF4;
     --c-white: #FFFFFF;
-    --c-accent: #10B981; 
+    --c-accent: #10B981;
+    --c-accent-rgb: 16, 185, 129;
     --c-accent-light: #34D399;
     --grad-gold: linear-gradient(135deg, #10B981 0%, #059669 100%);
-    --btn-text: #FFFFFF; 
+    --btn-text: #FFFFFF;
     --text-main: #111111;
     --text-light: #6B7280;
     --text-white: #F9F9F9; */
@@ -178,10 +183,10 @@ p {
 
 /* Animation Utils */
 .fade-in-up {
-    opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
+html.js .fade-in-up { opacity: 0; }
 
 .fade-in-up.is-show {
     opacity: 1;
@@ -704,6 +709,16 @@ p {
     width: 100%;
     max-width: 500px;
     padding: 20px;
+}
+
+.shadow-glow {
+    box-shadow: 0 0 25px rgba(var(--c-accent-rgb, 197, 160, 89), 0.5), 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(var(--c-accent-rgb, 197, 160, 89), 0.4), 0 8px 20px rgba(0,0,0,0.2); }
+    50%       { box-shadow: 0 0 40px rgba(var(--c-accent-rgb, 197, 160, 89), 0.7), 0 8px 25px rgba(0,0,0,0.25); }
 }
 
 .offer-footer-note {

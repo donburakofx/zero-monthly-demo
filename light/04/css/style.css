@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   1. COLOR THEME SELECTION
+   1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
     /* --- [Option 1: Royal Gold] --- */
@@ -127,7 +127,7 @@ body.modal-open .modal-close {
 }
 
 /* Loading */
-.loading {
+html.js body.loading {
     overflow: hidden;
     height: 100vh;
 }
@@ -137,14 +137,15 @@ body.modal-open .modal-close {
     inset: 0;
     background: var(--c-bg);
     z-index: 10000;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: opacity 1s, visibility 1s;
 }
+html.js .loader { display: flex; }
 
-.loaded .loader {
+html.js .loaded .loader {
     opacity: 0;
     visibility: hidden;
 }
@@ -278,10 +279,10 @@ body.modal-open .modal-close {
 
 /* Animations */
 .fade-up {
-    opacity: 0;
     transform: translateY(40px);
     transition: 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
+html.js .fade-up { opacity: 0; }
 
 .fade-up.in-view {
     opacity: 1;

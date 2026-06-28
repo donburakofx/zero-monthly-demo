@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   1. Color Variations (Select One)
+   1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
 
@@ -157,10 +157,10 @@ button {
 
 /* Scroll Animation */
 .js-fade-up {
-    opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+html.js .js-fade-up { opacity: 0; }
 
 .js-fade-up.is-show {
     opacity: 1;
@@ -373,16 +373,20 @@ button {
     height: 100%;
     object-fit: cover;
     animation: zoomBg 20s infinite alternate linear;
+    will-change: transform;
 }
 
 @keyframes zoomBg {
-    from {
-        transform: scale(1.0);
-    }
+    from { transform: scale(1.0); }
+    to   { transform: scale(1.15); }
+}
 
-    to {
-        transform: scale(1.15);
-    }
+/* モバイル・省エネ設定：バッテリー節約のためアニメーションを停止 */
+@media (max-width: 768px) {
+    .hero-bg img { animation: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg img { animation: none; }
 }
 
 .hero-overlay {

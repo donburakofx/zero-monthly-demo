@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   1. Variables & Reset
+   1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
     /* --- Fonts --- */
@@ -134,11 +134,23 @@ ul { list-style: none; }
 
 /* Fade Up */
 .js-fade-up {
-    opacity: 0; transform: translateY(40px);
+    transform: translateY(40px);
     transition: 1s var(--easing);
 }
+html.js .js-fade-up { opacity: 0; }
 .js-fade-up.is-visible {
     opacity: 1; transform: translateY(0);
+}
+
+/* Text Reveal (Hero title) */
+.js-text-reveal {
+    clip-path: inset(0 100% 0 0);
+    transition: opacity 0.01s, clip-path 1.2s var(--easing);
+}
+html.js .js-text-reveal { opacity: 0; }
+.js-text-reveal.is-visible {
+    opacity: 1;
+    clip-path: inset(0 0% 0 0);
 }
 
 /* ==========================================================================
@@ -183,7 +195,10 @@ ul { list-style: none; }
     position: relative; background: none; border: none; z-index: 200;
     cursor: pointer;
 }
-@media (max-width: 768px) { .header__toggle { display: block; } }
+@media (max-width: 768px) {
+    .header__toggle { display: block; }
+    .header__list { display: none; }
+}
 
 .header__toggle span {
     position: absolute; left: 5px; width: 30px; height: 1px;

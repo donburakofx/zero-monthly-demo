@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   1. COLOR THEME SELECTION (カラー設定)
+   1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
 
@@ -362,27 +362,28 @@ ul { list-style: none; padding: 0; margin: 0; }
 #loading-screen {
     position: fixed; inset: 0; z-index: 9999;
     background: var(--bg-grad-1);
-    display: flex; justify-content: center; align-items: center;
+    display: none; justify-content: center; align-items: center;
     transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
 }
+html.js #loading-screen { display: flex; }
 .loader-content { text-align: center; color: var(--text-main); }
 .loader-text { font-size: 1.2rem; font-weight: 600; letter-spacing: 0.1em; animation: pulseText 1.5s infinite alternate; }
 .loader-bar { width: 0%; height: 2px; background: var(--accent); margin-top: 10px; animation: loadBar 2s ease-in-out infinite; }
-body.loaded #loading-screen { opacity: 0; visibility: hidden; pointer-events: none; }
+html.js body.loaded #loading-screen { opacity: 0; visibility: hidden; pointer-events: none; }
 @keyframes pulseText { 0% { opacity: 0.5; } 100% { opacity: 1; } }
 @keyframes loadBar { 0% { width: 0%; margin-left: 0; } 50% { width: 100%; margin-left: 0; } 100% { width: 0%; margin-left: 100%; } }
 
-body:not(.loaded) .bento-box { opacity: 0; transform: translateY(20px); }
-body.loaded .bento-box { animation: popIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; }
+html.js body:not(.loaded) .bento-box { opacity: 0; transform: translateY(20px); }
+html.js body.loaded .bento-box { animation: popIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; }
 @keyframes popIn { 0% { opacity: 0; transform: translateY(30px) scale(0.95); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
 
 /* Stagger Effect */
-body.loaded .profile-box { animation-delay: 0.1s; }
-body.loaded .map-box     { animation-delay: 0.2s; }
-body.loaded .twitter     { animation-delay: 0.3s; }
-body.loaded .instagram   { animation-delay: 0.35s; }
-body.loaded .work-box    { animation-delay: 0.4s; }
-body.loaded .threads     { animation-delay: 0.45s; }
-body.loaded .note        { animation-delay: 0.5s; }
-body.loaded .service-box { animation-delay: 0.55s; }
-body.loaded .contact-box { animation-delay: 0.6s; }
+html.js body.loaded .profile-box { animation-delay: 0.1s; }
+html.js body.loaded .map-box     { animation-delay: 0.2s; }
+html.js body.loaded .twitter     { animation-delay: 0.3s; }
+html.js body.loaded .instagram   { animation-delay: 0.35s; }
+html.js body.loaded .work-box    { animation-delay: 0.4s; }
+html.js body.loaded .threads     { animation-delay: 0.45s; }
+html.js body.loaded .note        { animation-delay: 0.5s; }
+html.js body.loaded .service-box { animation-delay: 0.55s; }
+html.js body.loaded .contact-box { animation-delay: 0.6s; }

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   1. Color Variations (5 Patterns)
+   1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
     /* --- [Pattern A: Coffee Brown] (Default: Cafe / Roastery) --- */
@@ -119,6 +119,59 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.4; }
     .nav a { font-family: var(--font-en); font-size: 14px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
     .nav a:hover { color: var(--primary); }
 }
+
+/* ハンバーガーボタン（スマホのみ表示） */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 200;
+}
+.hamburger span {
+    display: block;
+    height: 2px;
+    background: var(--text-main);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.is-open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.is-open span:nth-child(2) { opacity: 0; }
+.hamburger.is-open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+@media (min-width: 768px) { .hamburger { display: none; } }
+
+/* ドロワーメニュー */
+.drawer {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 260px;
+    height: calc(100vh - 70px);
+    background: var(--bg-beige);
+    z-index: 150;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.drawer.is-open { transform: translateX(0); }
+.drawer-nav { display: flex; flex-direction: column; gap: 28px; }
+.drawer-nav a { font-family: var(--font-en); font-size: 15px; color: var(--text-main); letter-spacing: 0.08em; text-transform: uppercase; }
+.drawer-sns { display: flex; align-items: center; gap: 8px; }
+.drawer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 140;
+}
+.drawer-overlay.is-open { display: block; }
 
 /* ==========================================================================
    4. Hero
@@ -379,11 +432,11 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.4; }
 
 /* 共通: 初期状態は透明 */
 .js-scroll {
-    opacity: 0;
     transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     /* HTML側の style="--delay: 0.2s;" を反映させる */
     transition-delay: var(--delay, 0s);
 }
+html.js .js-scroll { opacity: 0; }
 
 /* 左から右へ流れる動き */
 .slide-right {
@@ -656,3 +709,10 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.4; }
 .news-header:active {
     opacity: 0.5;
 }
+
+/* 画像ホバーエフェクト */
+.reveal-wrap img { transition: transform 0.45s ease; }
+.reveal-wrap:hover img { transform: scale(1.05); }
+.menu-cat-image { overflow: hidden; }
+.menu-cat-image img { transition: transform 0.45s ease; }
+.menu-cat-image:hover img { transform: scale(1.04); }
