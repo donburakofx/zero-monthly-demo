@@ -402,7 +402,6 @@ html.js .scroll-trigger.is-active { opacity: 1; transform: translateY(0); }
     .carousel-container {
         display: grid; overflow-x: visible; scroll-snap-type: none; padding: 0;
     }
-    .nav-arrow { display: none; }
 }
 
 .nav-arrow {
@@ -417,6 +416,9 @@ html.js .scroll-trigger.is-active { opacity: 1; transform: translateY(0); }
 .nav-arrow:hover { background: var(--primary); color: #fff; }
 .nav-arrow.prev { left: 0px; }
 .nav-arrow.next { right: 0px; }
+@media (min-width: 768px) {
+    .nav-arrow { display: none; }
+}
 
 /* ==========================================================================
    Price
