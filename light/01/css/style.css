@@ -1244,3 +1244,23 @@ details[open] .faq-more-btn {
 .footer-nav a:hover {
     color: #fff;
 }
+/* === Accessibility: keyboard focus ring（追加） === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+label:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+/* 既存の outline:none をキーボードフォーカス時のみ復活 */
+.photo-summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+*:focus:not(:focus-visible) {
+    outline: none;
+}

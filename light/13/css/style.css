@@ -358,7 +358,7 @@ html.js .scroll-trigger.is-active {
     background: var(--bg-light); border-radius: var(--radius-m);
     padding: 36px 28px; text-align: center;
     border: 1px solid var(--border);
-    transition: box-shadow 0.25s, transform 0.25s, opacity 0.6s ease, translateY 0.6s ease;
+    transition: box-shadow 0.25s, transform 0.25s, opacity 0.6s ease, transform 0.6s ease;
 }
 .feature-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-4px); }
 
@@ -489,7 +489,7 @@ html.js .scroll-trigger.is-active {
     background: var(--bg-body); border-radius: var(--radius-m);
     padding: 28px; border: 1px solid var(--border);
     box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    transition: box-shadow 0.25s, transform 0.25s, opacity 0.6s ease, translateY 0.6s ease;
+    transition: box-shadow 0.25s, transform 0.25s, opacity 0.6s ease, transform 0.6s ease;
 }
 .voice-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.09); transform: translateY(-3px); }
 .voice-stars { color: #F5A623; font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
@@ -579,4 +579,17 @@ html.js .scroll-trigger.is-active {
 @media (max-width: 600px) {
     .footer-inner { flex-direction: column; }
     .footer-nav { gap: 16px; }
+}
+
+/* === Accessibility: keyboard focus ring（追加） === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+label:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
 }

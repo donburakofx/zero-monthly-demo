@@ -913,3 +913,15 @@ html.js .reveal-img.in-view img {
     line-height: 1.8;
     margin-bottom: 15px;
 }
+/* === Accessibility: keyboard focus ring（追加） === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+label:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--c-primary);
+    outline-offset: 2px;
+}

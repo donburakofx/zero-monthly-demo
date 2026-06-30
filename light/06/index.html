@@ -7,24 +7,22 @@
   <title>Cafe Store | 心安らぐひとときを</title>
   <meta name="description" content="こだわりのコーヒーと自家製スイーツを提供するカフェ。" />
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Cafe Store | 心安らぐひとときを" />
   <meta property="og:description" content="こだわりのコーヒーと自家製スイーツを提供するカフェ。" />
-  <meta property="og:url" content="https://demo.donb-web.com/light/06/" />
-  <meta property="og:image" content="https://demo.donb-web.com/light/06/assets/image/ogp.jpg" />
-  <meta property="og:site_name" content="Your Name Portfolio" />
+  <meta property="og:image" content="https://your-domain.com/assets/image/ogp.jpg" />
+  <meta property="og:url" content="https://your-domain.com/" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Cafe Store | 心安らぐひとときを" />
   <meta name="twitter:description" content="こだわりのコーヒーと自家製スイーツを提供するカフェ。" />
-  <meta name="twitter:image" content="https://demo.donb-web.com/light/06/assets/image/ogp.jpg" />
+  <meta name="twitter:image" content="https://your-domain.com/assets/image/ogp.jpg" />
 
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Shippori+Mincho&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Serif+JP:wght@400;600&family=Shippori+Mincho&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
@@ -44,8 +42,23 @@
         <a href="https://instagram.com" target="_blank" class="nav-sns"><i class="fa-brands fa-instagram"></i></a>
       </nav>
 
+      <button id="js-hamburger" class="hamburger" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <div id="js-drawer" class="drawer">
+    <nav class="drawer-nav">
+      <a href="#about" class="js-drawer-link">About</a>
+      <a href="#menu" class="js-drawer-link">Menu</a>
+      <a href="#access" class="js-drawer-link">Access</a>
+      <a href="https://instagram.com" target="_blank" class="drawer-sns"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </nav>
+  </div>
+  <div id="js-drawer-overlay" class="drawer-overlay"></div>
 
   <main id="top">
     <section id="home" class="hero">
@@ -347,6 +360,7 @@
           </dl>
 
           <div class="map-container">
+            <!-- ★ Google マップの「共有 > 地図を埋め込む」から取得した iframe に差し替えてください -->
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.392686886273!2d139.6963430755495!3d35.66733273071856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca801053429%3A0x1ec84e3d64673838!2z5p2x5Lqs6YO95riL6LC35Yy656We5Y2X!5e0!3m2!1sja!2sjp!4v1705500000000!5m2!1sja!2sjp"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -367,7 +381,7 @@
 
     <footer class="footer">
       <div class="container">
-        <small>&copy; 2025 The Coffee Stand.</small>
+        <small>&copy; 2026 The Coffee Stand.</small>
       </div>
     </footer>
   </main>
@@ -393,6 +407,34 @@
       observer.observe(el);
     });
 
+    // ハンバーガーメニュー
+    const hamburger = document.getElementById('js-hamburger');
+    const drawer = document.getElementById('js-drawer');
+    const overlay = document.getElementById('js-drawer-overlay');
+    const drawerLinks = document.querySelectorAll('.js-drawer-link');
+
+    function closeDrawer() {
+      hamburger.classList.remove('is-open');
+      drawer.classList.remove('is-open');
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = drawer.classList.contains('is-open');
+      if (isOpen) {
+        closeDrawer();
+      } else {
+        hamburger.classList.add('is-open');
+        drawer.classList.add('is-open');
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+
+    overlay.addEventListener('click', closeDrawer);
+    drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
     const accordions = document.querySelectorAll('.news-header');
 
     accordions.forEach(header => {
@@ -417,81 +459,6 @@
     });
 
   </script>
-
-<div id="demo-palette" style="
-    position: fixed;
-    /* iPhoneのホームバーと重ならないように計算 */
-    bottom: calc(20px + env(safe-area-inset-bottom));
-    right: 20px;
-    z-index: 9999;
-    font-family: sans-serif;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    gap: 10px;
-  ">
-    <style>
-      #demo-palette-panel {
-        background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        display: none; width: 200px;
-        margin-bottom: 10px; /* スマホで指が隠れないよう少し上に */
-      }
-      #demo-palette-panel.is-open { display: block; }
-      
-      .demo-btn {
-        width: 100%; padding: 12px; /* スマホで押しやすいよう少し広く */
-        margin-bottom: 8px; border: none; border-radius: 4px;
-        cursor: pointer; font-size: 13px; color: #fff; font-weight: bold;
-        transition: transform 0.2s; text-align: left; display: flex; align-items: center; justify-content: space-between;
-      }
-      /* スマホのタップ時のハイライトを消す */
-      .demo-btn:active { opacity: 0.8; }
-      
-      .demo-btn:last-child { margin-bottom: 0; }
-      
-      #demo-toggle {
-        width: 50px; height: 50px; border-radius: 50%; background: #333; color: #fff;
-        border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2); font-size: 20px; transition: 0.3s;
-        /* スマホでの誤タップ防止 */
-        touch-action: manipulation; 
-      }
-    </style>
-
-    <div id="demo-palette-panel">
-      <div style="font-size: 12px; font-weight: bold; color: #555; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">Color Theme</div>
-      
-      <button class="demo-btn" style="background: #6F4E37;" onclick="setTheme('coffee')">Coffee <span style="font-size:10px; opacity:0.8;">Default</span></button>
-      <button class="demo-btn" style="background: #556B2F;" onclick="setTheme('matcha')">Matcha</button>
-      <button class="demo-btn" style="background: #E67E22;" onclick="setTheme('bakery')">Bakery</button>
-      <button class="demo-btn" style="background: #111111;" onclick="setTheme('mono')">Mono</button>
-      <button class="demo-btn" style="background: #C2185B;" onclick="setTheme('berry')">Berry</button>
-    </div>
-
-    <button id="demo-toggle" aria-label="Color Palette" onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
-      <i class="fa-solid fa-palette"></i>
-    </button>
-  </div>
-
-  <script>
-    function setTheme(theme) {
-      const root = document.documentElement;
-      const themes = {
-        coffee: { '--bg-body': '#FFFFFF', '--text-main': '#4A3B32', '--text-muted': '#8D7B6F', '--bg-beige': '#F5F2EE', '--primary': '#6F4E37', '--primary-hover': '#5A3E2B', '--border': '#E6DED8' },
-        matcha: { '--bg-body': '#FFFFFF', '--text-main': '#2F3E33', '--text-muted': '#6E7E72', '--bg-beige': '#F0F4F1', '--primary': '#556B2F', '--primary-hover': '#3E4F22', '--border': '#DDE6E0' },
-        bakery: { '--bg-body': '#FFFCF7', '--text-main': '#5D4037', '--text-muted': '#9E8578', '--bg-beige': '#FFF3E0', '--primary': '#E67E22', '--primary-hover': '#D35400', '--border': '#FFE0B2' },
-        mono:   { '--bg-body': '#FFFFFF', '--text-main': '#222222', '--text-muted': '#777777', '--bg-beige': '#F9F9F9', '--primary': '#111111', '--primary-hover': '#333333', '--border': '#DDDDDD' },
-        berry:  { '--bg-body': '#FFFFFF', '--text-main': '#4A1525', '--text-muted': '#8E5A6A', '--bg-beige': '#FFF0F5', '--primary': '#C2185B', '--primary-hover': '#880E4F', '--border': '#F8BBD0' }
-      };
-      const selected = themes[theme];
-      for (let prop in selected) { root.style.setProperty(prop, selected[prop]); }
-      
-      // パネルを閉じる（スマホで画面を占領しないように）
-      document.getElementById('demo-palette-panel').classList.remove('is-open');
-    }
-  </script>
-
 </body>
 
 </html>

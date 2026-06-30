@@ -263,7 +263,7 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
     padding: 15px 0; border-bottom: 1px dotted var(--border);
 }
 .menu-name { font-size: 15px; }
-.menu-price { font-family: var(--font-en); font-size: 16px; color: var(--text-muted); }
+.menu-price { font-family: var(--font-en); font-size: 16px; color: var(--text-main); }
 
 /* ==========================================================================
    7. Style Section
@@ -383,4 +383,17 @@ html.js .scroll-anim {
 html.js .scroll-anim.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* === Accessibility: keyboard focus ring（追加） === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+label:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
 }

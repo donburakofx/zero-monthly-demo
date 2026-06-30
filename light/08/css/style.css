@@ -411,6 +411,7 @@ html.js .js-fade-up.is-active {
     font-weight: 700;
     letter-spacing: 0.1em;
     background: var(--primary);
+    color: #fff;
     display: inline-block;
     padding: 5px 15px;
     border-radius: 50px;
@@ -1082,4 +1083,17 @@ html.js .js-fade-up.is-active {
     .timeline-item::before {
         left: -26px;
     }
+}
+
+/* === Accessibility: keyboard focus ring（追加） === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+label:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
 }

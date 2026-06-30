@@ -95,9 +95,6 @@ button { font-family: inherit; }
 img { display: block; width: 100%; height: auto; }
 ul { list-style: none; }
 
-/* Custom Cursor Removed */
-.cursor-dot, .cursor-outline { display: none !important; }
-
 /* Utility */
 .container { width: 90%; max-width: var(--container-width); margin: 0 auto; }
 .container.is-fluid { max-width: 100%; padding: 0 5%; }
@@ -570,4 +567,17 @@ html.js .js-text-reveal.is-visible {
     font-size: 2rem; background: none; border: none;
     color: var(--c-text); cursor: pointer;
     pointer-events: auto;
+}
+
+/* === Accessibility: keyboard focus ring（追加） === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+label:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 2px;
 }

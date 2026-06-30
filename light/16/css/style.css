@@ -36,7 +36,7 @@
     --text-muted:    #5C7080;
     --text-white:    #FFFFFF;
     --text-gray:     #9DB3C8;
-    --border:        #CCDCf0;
+    --border:        #CCDCF0;
     --hero-overlay:  rgba(20, 40, 80, 0.75);
     */
 
@@ -572,4 +572,17 @@ html.js .scroll-trigger.is-active {
     .stats-inner { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
     .section-title { font-size: 1.35rem; }
     .footer-inner { flex-direction: column; padding: 36px 0 24px; }
+}
+
+/* === Accessibility: keyboard focus ring（追加） === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+label:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }

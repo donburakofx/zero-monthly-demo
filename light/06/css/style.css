@@ -317,9 +317,6 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.4; }
 }
 .info-row dd { margin: 0; flex: 1; font-size: 15px; }
 
-.map-actions { text-align: center; }
-.full-width { width: 100%; box-sizing: border-box; }
-
 .sns-area { margin-top: 50px; }
 .sns-links { display: flex; justify-content: center; gap: 20px; font-size: 24px; margin-top: 15px; }
 .sns-links a:hover { color: var(--primary); }
@@ -454,11 +451,6 @@ html.js .js-scroll.is-active {
    ========================================================================== */
 
 /* 1. アニメーション定義 */
-/* 左から右へ出現 (slide-right) */
-.slide-right {
-    transform: translateX(-40px);
-}
-
 /* 右から左へ出現 (slide-left) */
 .slide-left {
     transform: translateX(40px);
@@ -716,3 +708,16 @@ html.js .js-scroll.is-active {
 .menu-cat-image { overflow: hidden; }
 .menu-cat-image img { transition: transform 0.45s ease; }
 .menu-cat-image:hover img { transform: scale(1.04); }
+
+/* === Accessibility: keyboard focus ring（追加） === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+label:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}

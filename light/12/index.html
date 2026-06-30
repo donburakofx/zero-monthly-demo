@@ -7,15 +7,15 @@
     <meta name="description" content="光と影を紡ぐ写真スタジオ、アトリエ・クラルテのポートフォリオサイト。">
     
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-website.com/">
+    <meta property="og:url" content="https://your-domain.com/">
     <meta property="og:title" content="ATELIER CLARTÉ | Photo Studio">
-      <meta property="og:url" content="https://demo.donb-web.com/light/12/" />
-    <meta property="og:image" content="https://demo.donb-web.com/light/12/assets/image/ogp.jpg" />
+    <meta property="og:description" content="光と影を紡ぐ写真スタジオ、アトリエ・クラルテのポートフォリオサイト。">
+    <meta property="og:image" content="https://your-domain.com/assets/image/ogp.jpg">
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ATELIER CLARTÉ | Photo Studio" />
     <meta name="twitter:description" content="光と影を紡ぐ写真スタジオ、アトリエ・クラルテのポートフォリオサイト。" />
-      <meta name="twitter:image" content="https://demo.donb-web.com/light/12/assets/image/ogp.jpg" />
+    <meta name="twitter:image" content="https://your-domain.com/assets/image/ogp.jpg" />
 
     <link rel="icon" href="assets/icon/favicon.png">
 
@@ -23,10 +23,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
-  <script>document.documentElement.classList.add('js');</script>
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
     
@@ -281,7 +281,7 @@
                     </div>
 
                     <div class="contact__map js-fade-up">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683745!2d139.7016358!3d35.6585805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5p2x5Lqs6YO95riL6LC35Yy6!5e0!3m2!1sja!2sjp!4v1625624840000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683745!2d139.7016358!3d35.6585805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5p2x5Lqs6YO95riL6LC35Yy6!5e0!3m2!1sja!2sjp!4v1625624840000!5m2!1sja!2sjp" title="アクセスマップ" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
 
                 </div>
@@ -378,147 +378,16 @@
 
             // 6. Parallax Effect
             window.addEventListener('scroll', () => {
-                const scrolled = window.scrollY;
                 document.querySelectorAll('.js-parallax-img img').forEach(img => {
-                    const speed = 0.05;
+                    const speed = 0.12;
                     const rect = img.parentElement.getBoundingClientRect();
                     if(rect.top < window.innerHeight && rect.bottom > 0) {
-                        img.style.transform = `translateY(${scrolled * speed}px)`;
+                        const center = rect.top + rect.height / 2 - window.innerHeight / 2;
+                        img.style.transform = `translateY(${center * speed}px)`;
                     }
                 });
             });
         });
     </script>
-
-<div id="demo-palette" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10000;
-    font-family: 'Manrope', sans-serif;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    gap: 10px;
-  ">
-    <style>
-      #demo-palette-panel {
-        background: #ffffff;
-        border: 1px solid rgba(0,0,0,0.1); padding: 15px; border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        display: none; width: 220px;
-        margin-bottom: 10px; color: #333;
-        animation: panelFadeUp 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-      }
-      #demo-palette-panel.is-open { display: block; }
-      @keyframes panelFadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-      
-      .demo-title { font-size: 11px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-      
-      .demo-btn {
-        width: 100%; padding: 10px 12px;
-        margin-bottom: 6px; border: 1px solid rgba(0,0,0,0.05); border-radius: 4px;
-        cursor: pointer; font-size: 13px; font-weight: 500;
-        transition: 0.2s; text-align: left; display: flex; align-items: center; justify-content: space-between;
-      }
-      .demo-btn:hover { transform: translateX(2px); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-      .demo-btn:last-child { margin-bottom: 0; }
-      
-      .demo-color-preview { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); }
-      
-      #demo-toggle {
-        width: 44px; height: 44px; border-radius: 50%; background: #1a1a1a; color: #fff;
-        border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 18px; transition: 0.3s;
-      }
-      #demo-toggle:hover { transform: scale(1.1); }
-    </style>
-
-    <div id="demo-palette-panel">
-      <div class="demo-title">Select Theme</div>
-      
-      <button class="demo-btn" style="background: #fff; color: #111;" onclick="setTheme('white')">
-        Sharp White
-        <span class="demo-color-preview" style="background: #fff;"></span>
-      </button>
-
-      <button class="demo-btn" style="background: #121212; color: #f4f4f4;" onclick="setTheme('dark')">
-        Dark Cinema
-        <span class="demo-color-preview" style="background: #121212; border-color: #333;"></span>
-      </button>
-
-      <button class="demo-btn" style="background: #f9f7f2; color: #4a4036;" onclick="setTheme('silk')">
-        Unbleached Silk
-        <span class="demo-color-preview" style="background: #f9f7f2;"></span>
-      </button>
-
-      <button class="demo-btn" style="background: #f0f2f5; color: #2c3e50;" onclick="setTheme('concrete')">
-        Urban Concrete
-        <span class="demo-color-preview" style="background: #f0f2f5;"></span>
-      </button>
-
-      <button class="demo-btn" style="background: #1b2620; color: #e8ece9;" onclick="setTheme('forest')">
-        Deep Forest
-        <span class="demo-color-preview" style="background: #1b2620;"></span>
-      </button>
-    </div>
-
-    <button id="demo-toggle" aria-label="Color Palette" onclick="document.getElementById('demo-palette-panel').classList.toggle('is-open')">
-      <i class="fa-solid fa-palette"></i>
-    </button>
-  </div>
-
-  <script>
-    function setTheme(theme) {
-      const root = document.documentElement;
-      
-      const themes = {
-        white: {
-            '--c-text': '#1a1a1a', '--c-text-light': '#666666', 
-            '--c-bg': '#ffffff', '--c-bg-light': '#f7f7f7', 
-            '--c-accent': '#111111', 
-            '--c-bg-glass': 'rgba(255, 255, 255, 0.85)', 
-            '--c-line': 'rgba(0, 0, 0, 0.1)'
-        },
-        dark: {
-            '--c-text': '#f4f4f4', '--c-text-light': '#aaaaaa', 
-            '--c-bg': '#121212', '--c-bg-light': '#1c1c1c', 
-            '--c-accent': '#ffffff', 
-            '--c-bg-glass': 'rgba(18, 18, 18, 0.85)', 
-            '--c-line': 'rgba(255, 255, 255, 0.1)'
-        },
-        silk: {
-            '--c-text': '#4a4036', '--c-text-light': '#8c8070', 
-            '--c-bg': '#f9f7f2', '--c-bg-light': '#efede6', 
-            '--c-accent': '#4a4036', 
-            '--c-bg-glass': 'rgba(249, 247, 242, 0.9)', 
-            '--c-line': 'rgba(74, 64, 54, 0.15)'
-        },
-        concrete: {
-            '--c-text': '#2c3e50', '--c-text-light': '#7f8c8d', 
-            '--c-bg': '#f0f2f5', '--c-bg-light': '#e1e4e8', 
-            '--c-accent': '#34495e', 
-            '--c-bg-glass': 'rgba(240, 242, 245, 0.9)', 
-            '--c-line': 'rgba(44, 62, 80, 0.1)'
-        },
-        forest: {
-            '--c-text': '#e8ece9', '--c-text-light': '#8f9e94', 
-            '--c-bg': '#1b2620', '--c-bg-light': '#243029', 
-            '--c-accent': '#e8ece9', 
-            '--c-bg-glass': 'rgba(27, 38, 32, 0.85)', 
-            '--c-line': 'rgba(232, 236, 233, 0.15)'
-        }
-      };
-
-      const selected = themes[theme];
-      for (let prop in selected) {
-        root.style.setProperty(prop, selected[prop]);
-      }
-      
-      // パネルを閉じる
-      document.getElementById('demo-palette-panel').classList.remove('is-open');
-    }
-  </script>
-
 </body>
 </html>

@@ -390,7 +390,7 @@ html.js .scroll-trigger.is-active {
 .program-card {
     background: var(--bg-dark-card); border-radius: var(--radius-m);
     overflow: hidden; border: 1px solid var(--border-dark);
-    transition: box-shadow 0.3s, transform 0.3s, opacity 0.65s ease, translateY 0.65s ease;
+    transition: box-shadow 0.3s, transform 0.3s, opacity 0.65s ease, transform 0.65s ease;
 }
 .program-card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.4); transform: translateY(-5px); opacity: 1; }
 .program-img { overflow: hidden; aspect-ratio: 4/3; }
@@ -467,7 +467,7 @@ html.js .scroll-trigger.is-active {
     background: var(--bg-body); border: 2px solid var(--border);
     border-radius: var(--radius-m); padding: 32px 24px;
     position: relative;
-    transition: box-shadow 0.3s, transform 0.3s, opacity 0.65s ease, translateY 0.65s ease;
+    transition: box-shadow 0.3s, transform 0.3s, opacity 0.65s ease, transform 0.65s ease;
 }
 .price-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.08); transform: translateY(-4px); opacity: 1; }
 .price-card--featured {
@@ -525,7 +525,7 @@ html.js .scroll-trigger.is-active {
 .voice-card {
     background: var(--bg-body); border: 1px solid var(--border);
     border-radius: var(--radius-m); padding: 28px;
-    transition: box-shadow 0.25s, transform 0.25s, opacity 0.65s ease, translateY 0.65s ease;
+    transition: box-shadow 0.25s, transform 0.25s, opacity 0.65s ease, transform 0.65s ease;
 }
 .voice-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.09); transform: translateY(-3px); opacity: 1; }
 .voice-result {
@@ -668,4 +668,17 @@ html.js .scroll-trigger.is-active {
 
 @media (max-width: 600px) {
     .footer-inner { flex-direction: column; }
+}
+
+/* === Accessibility: keyboard focus ring（追加） === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+label:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
 }

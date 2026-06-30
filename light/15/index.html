@@ -414,21 +414,21 @@
             <form action="https://formspree.io/f/your-form-id" method="POST" class="form">
               <div class="form-row">
                 <div class="form-group">
-                  <label>お名前 <span class="required">必須</span></label>
-                  <input type="text" name="name" required placeholder="山田 太郎">
+                  <label for="form-name">お名前 <span class="required">必須</span></label>
+                  <input type="text" id="form-name" name="name" required placeholder="山田 太郎">
                 </div>
                 <div class="form-group">
-                  <label>電話番号 <span class="required">必須</span></label>
-                  <input type="tel" name="tel" required placeholder="090-XXXX-XXXX">
+                  <label for="form-tel">電話番号 <span class="required">必須</span></label>
+                  <input type="tel" id="form-tel" name="tel" required placeholder="090-XXXX-XXXX">
                 </div>
               </div>
               <div class="form-group">
-                <label>メールアドレス</label>
-                <input type="email" name="email" placeholder="example@email.com">
+                <label for="form-email">メールアドレス</label>
+                <input type="email" id="form-email" name="email" placeholder="example@email.com">
               </div>
               <div class="form-group">
-                <label>ご希望の工事内容</label>
-                <select name="service">
+                <label for="form-service">ご希望の工事内容</label>
+                <select id="form-service" name="service">
                   <option value="">-- 選択してください --</option>
                   <option>外壁塗装</option>
                   <option>屋根工事・葺き替え</option>
@@ -440,8 +440,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label>ご相談内容</label>
-                <textarea name="message" rows="4" placeholder="建物の状況や気になる点などをご記入ください。"></textarea>
+                <label for="form-message">ご相談内容</label>
+                <textarea id="form-message" name="message" rows="4" placeholder="建物の状況や気になる点などをご記入ください。"></textarea>
               </div>
               <button type="submit" class="btn btn-accent btn-block">無料見積もりを依頼する <i class="fa-solid fa-paper-plane"></i></button>
               <p class="form-note">送信いただいた情報はお見積もりのご連絡にのみ使用します。</p>
