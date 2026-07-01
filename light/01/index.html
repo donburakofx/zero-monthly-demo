@@ -412,5 +412,124 @@
       document.querySelectorAll('.scroll-trigger').forEach(el => observer.observe(el));
     });
   </script>
+
+  <!-- ========================================================
+       DEMO ONLY: Color Theme Switcher
+       このブロックは配布テンプレートには含まれません
+       ======================================================== -->
+  <style>
+    .demo-switcher {
+      position: fixed; right: 16px; top: 50%; transform: translateY(-50%);
+      z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .demo-switcher-toggle {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: #1a1a1a; color: #fff; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+      transition: transform 0.2s;
+    }
+    .demo-switcher-toggle:hover { transform: scale(1.1); }
+    .demo-switcher-panel {
+      display: none; flex-direction: column; gap: 6px;
+      background: rgba(255,255,255,0.95); border-radius: 12px;
+      padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .demo-switcher-panel.is-open { display: flex; }
+    .demo-swatch {
+      width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
+      border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s;
+      position: relative;
+    }
+    .demo-swatch:hover { transform: scale(1.15); }
+    .demo-swatch.is-active { border-color: #1a1a1a; }
+    .demo-swatch-label {
+      position: absolute; inset: 0; display: flex; align-items: center;
+      justify-content: center; font-size: 10px; font-weight: 700;
+      color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+      font-family: sans-serif;
+    }
+    .demo-badge {
+      font-size: 9px; color: #888; font-family: sans-serif;
+      letter-spacing: 0.05em; text-align: center; line-height: 1;
+    }
+  </style>
+  <div class="demo-switcher">
+    <div class="demo-switcher-panel" id="demoPanel">
+      <span class="demo-badge">COLOR</span>
+    </div>
+    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">🎨</button>
+  </div>
+  <script>
+    (function() {
+      var themes = [
+        { label:'A', color:'#A68E68', name:'Luxury Gold', vars:{
+          '--text-main':'#333','--text-serif':'#1A1A1A',
+          '--primary':'#A68E68','--primary-light':'#E8E0D5',
+          '--accent':'#B76E79','--cta-color':'#d10000',
+          '--bg-body':'#FDFDFD','--bg-cta-tint':'#fff0f5'
+        }},
+        { label:'B', color:'#008080', name:'Medical Blue', vars:{
+          '--text-main':'#2C3E50','--text-serif':'#1A252F',
+          '--primary':'#008080','--primary-light':'#E0F2F1',
+          '--accent':'#20B2AA','--cta-color':'#F39C12',
+          '--bg-body':'#F5FAFA','--bg-cta-tint':'#fff8e1'
+        }},
+        { label:'C', color:'#6B8E23', name:'Organic Green', vars:{
+          '--text-main':'#4A4A4A','--text-serif':'#2E3B28',
+          '--primary':'#6B8E23','--primary-light':'#F0F5E5',
+          '--accent':'#DAA520','--cta-color':'#D35400',
+          '--bg-body':'#FFFEF5','--bg-cta-tint':'#fbe9e7'
+        }},
+        { label:'D', color:'#1e293b', name:'Deep Navy', vars:{
+          '--text-main':'#333','--text-serif':'#0F172A',
+          '--primary':'#1e293b','--primary-light':'#E2E8F0',
+          '--accent':'#D4AF37','--cta-color':'#C59D5F',
+          '--bg-body':'#F8FAFC','--bg-cta-tint':'#fffde7'
+        }},
+        { label:'E', color:'#9E9E9E', name:'Greige Minimal', vars:{
+          '--text-main':'#444','--text-serif':'#333',
+          '--primary':'#9E9E9E','--primary-light':'#F5F5F5',
+          '--accent':'#C0A080','--cta-color':'#333333',
+          '--bg-body':'#FFFAF0','--bg-cta-tint':'#f5f5f5'
+        }}
+      ];
+      var panel = document.getElementById('demoPanel');
+      var toggle = document.getElementById('demoToggle');
+      var current = 0;
+      var swatches = [];
+
+      themes.forEach(function(t, i) {
+        var sw = document.createElement('div');
+        sw.className = 'demo-swatch' + (i === 0 ? ' is-active' : '');
+        sw.style.background = t.color;
+        sw.title = t.name;
+        sw.innerHTML = '<span class="demo-swatch-label">' + t.label + '</span>';
+        sw.addEventListener('click', function() {
+          applyTheme(i);
+        });
+        panel.appendChild(sw);
+        swatches.push(sw);
+      });
+
+      function applyTheme(idx) {
+        var el = document.getElementById('demo-theme-override');
+        if (!el) { el = document.createElement('style'); el.id = 'demo-theme-override'; document.head.appendChild(el); }
+        var css = ':root{';
+        Object.keys(themes[idx].vars).forEach(function(k){ css += k+':'+themes[idx].vars[k]+';'; });
+        css += '}';
+        el.textContent = css;
+        swatches.forEach(function(s,i){ s.classList.toggle('is-active', i===idx); });
+        current = idx;
+      }
+
+      toggle.addEventListener('click', function() {
+        panel.classList.toggle('is-open');
+      });
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.demo-switcher')) panel.classList.remove('is-open');
+      });
+    })();
+  </script>
 </body>
 </html>
