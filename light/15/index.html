@@ -504,10 +504,18 @@
     document.querySelectorAll('.faq-q').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-a');
         const isOpen = item.classList.contains('is-open');
-        document.querySelectorAll('.faq-item.is-open').forEach(el => el.classList.remove('is-open'));
-        if (!isOpen) item.classList.add('is-open');
-        btn.setAttribute('aria-expanded', String(!isOpen));
+        document.querySelectorAll('.faq-item.is-open').forEach(el => {
+          el.classList.remove('is-open');
+          el.querySelector('.faq-a').style.height = '0';
+          el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('is-open');
+          answer.style.height = answer.scrollHeight + 'px';
+          btn.setAttribute('aria-expanded', 'true');
+        }
       });
     });
 
