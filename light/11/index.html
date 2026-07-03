@@ -297,34 +297,44 @@
   </footer>
 
   <script>
-    // 1. Simple Countdown
-    // ★ カスタマイズ: カウントダウンの秒数を変更できます（現在は3時間 = 10800秒）
-    function startTimer(duration, display) {
-      let timer = duration, hours, minutes, seconds;
-      const interval = setInterval(function () {
-        if (timer <= 0) {
-          display.textContent = "00:00:00";
-          clearInterval(interval);
-          return;
-        }
-        --timer;
-        hours = parseInt(timer / 3600, 10);
-        minutes = parseInt((timer % 3600) / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+    // 1. Countdown（実際の締切までを表示する方式）
+    //
+    // ★★ 重要（景品表示法）★★
+    //   下の CAMPAIGN_END には「本当の締切日時」だけを設定してください。
+    //   ページを開くたびに時間がリセットされる擬似カウントダウン
+    //   （例：毎回3時間から開始）は、実際には締切が無いのに
+    //   「今だけ・もうすぐ終了」と誤認させるため、
+    //   景品表示法の「有利誤認表示」にあたる恐れがあります。
+    //   キャンペーンを延長・再開する場合も、必ず実際の締切に更新してください。
+    //
+    // ★ カスタマイズ：あなたの早期価格の終了日時に書き換えてください（JST）。
+    //   例：'2026-10-31T23:59:59+09:00'
+    const CAMPAIGN_END = new Date('2026-10-31T23:59:59+09:00');
 
-        hours = hours < 10 ? "0" + hours : hours;
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = hours + ":" + minutes + ":" + seconds;
-      }, 1000);
+    function renderCountdown(display) {
+      let diff = Math.floor((CAMPAIGN_END.getTime() - Date.now()) / 1000);
+      if (diff <= 0) {
+        display.textContent = "受付終了";
+        return false;
+      }
+      const pad = (n) => (n < 10 ? "0" + n : "" + n);
+      const days = Math.floor(diff / 86400);
+      const hours = Math.floor((diff % 86400) / 3600);
+      const minutes = Math.floor((diff % 3600) / 60);
+      const seconds = diff % 60;
+      display.textContent = (days > 0 ? days + "日 " : "") + pad(hours) + ":" + pad(minutes) + ":" + pad(seconds);
+      return true;
     }
 
-    window.onload = function () {
-      let threeHours = 60 * 60 * 3; // ★ ここの数値を変更してください（例：60*60*24 = 24時間）
-      let display = document.querySelector('#countdown');
-      startTimer(threeHours, display);
-    };
+    window.addEventListener('load', function () {
+      const display = document.querySelector('#countdown');
+      if (!display) return;
+      if (renderCountdown(display)) {
+        const interval = setInterval(function () {
+          if (!renderCountdown(display)) clearInterval(interval);
+        }, 1000);
+      }
+    });
 
     // 2. Scroll Animation
     const observer = new IntersectionObserver((entries) => {
