@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <!-- ★ 要変更: 医院名・診療内容を入力してください -->
+  <title>さんぷる内科クリニック | 地域のかかりつけ医</title>
+  <meta name="description" content="さんぷる内科クリニックは、内科・生活習慣病を中心に地域のみなさまの健康をサポートします。WEB予約に対応しています。" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="さんぷる内科クリニック | 地域のかかりつけ医" />
+  <meta property="og:description" content="内科・生活習慣病を中心に地域のみなさまの健康をサポートします。" />
+  <meta property="og:image" content="https://your-domain.com/assets/image/ogp.jpg" />
+  <meta property="og:url" content="https://your-domain.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body id="top">
+
+  <!-- ========== Header (全ページ共通) ========== -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-name">SAMPLE CLINIC</span>
+        <span class="brand-sub">さんぷる内科クリニック</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="is-current">ホーム</a>
+        <a href="about.html">医院紹介</a>
+        <a href="service.html">診療案内</a>
+        <a href="first-visit.html">初診の方へ</a>
+        <a href="access.html">アクセス</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary header-cta">WEB予約</a>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="drawer" id="drawer">
+      <nav class="drawer-nav">
+        <a href="index.html" class="is-current">ホーム</a>
+        <a href="about.html">医院紹介</a>
+        <a href="service.html">診療案内</a>
+        <a href="first-visit.html">初診の方へ</a>
+        <a href="access.html">アクセス</a>
+        <a href="contact.html" class="btn btn-primary">WEB予約</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== Hero ========== -->
+    <section class="hero">
+      <div class="hero-bg"><img src="assets/image/hero.jpg" alt="クリニックの診察イメージ"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-tag">内科・生活習慣病 / 地域のかかりつけ医</p>
+        <h2 class="hero-copy">あなたの健康を、<br>身近で支える。</h2>
+        <p class="hero-lead">気になる症状のご相談から、生活習慣病の管理まで。<br>患者さま一人ひとりに寄り添った診療を心がけています。</p>
+        <div class="hero-actions">
+          <a href="service.html" class="btn btn-accent btn-lg">診療案内を見る <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="contact.html" class="btn btn-outline btn-lg">WEB予約</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 診療科目 ========== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head text-center scroll-trigger">
+          <span class="section-en">DEPARTMENTS</span>
+          <h3 class="section-title">診療案内</h3>
+          <p class="section-lead">日常的な体調不良から慢性疾患の管理まで幅広く対応します</p>
+        </div>
+        <div class="card-grid">
+          <article class="card scroll-trigger">
+            <div class="card-img"><img src="assets/image/service_01.jpg" alt="一般内科"></div>
+            <div class="card-body">
+              <h4 class="card-title">一般内科</h4>
+              <p class="card-text">発熱・かぜ・腹痛など、日常的な体調不良を幅広く診療します。気になる症状はお気軽にご相談ください。</p>
+              <a href="service.html" class="card-link">詳しく見る <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </article>
+          <article class="card scroll-trigger">
+            <div class="card-img"><img src="assets/image/service_02.jpg" alt="生活習慣病"></div>
+            <div class="card-body">
+              <h4 class="card-title">生活習慣病</h4>
+              <p class="card-text">高血圧・糖尿病・脂質異常症などの継続的な管理を行います。生活面のアドバイスも大切にしています。</p>
+              <a href="service.html" class="card-link">詳しく見る <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </article>
+          <article class="card scroll-trigger">
+            <div class="card-img"><img src="assets/image/service_03.jpg" alt="健康診断・予防接種"></div>
+            <div class="card-body">
+              <h4 class="card-title">健康診断・予防接種</h4>
+              <p class="card-text">各種健康診断や予防接種に対応しています。内容や費用はお問い合わせください。</p>
+              <a href="service.html" class="card-link">詳しく見る <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 選ばれる理由 ========== -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="section-head text-center scroll-trigger">
+          <span class="section-en">OUR STRENGTHS</span>
+          <h3 class="section-title">当院の特色</h3>
+        </div>
+        <div class="card-grid">
+          <div class="card scroll-trigger"><div class="card-body">
+            <div class="feature-num">01</div>
+            <h4 class="card-title">丁寧な説明</h4>
+            <p class="card-text">検査結果や治療方針について、患者さまに分かりやすくご説明することを心がけています。</p>
+          </div></div>
+          <div class="card scroll-trigger"><div class="card-body">
+            <div class="feature-num">02</div>
+            <h4 class="card-title">WEB予約に対応</h4>
+            <p class="card-text">お待ち時間の軽減のため、WEBからのご予約に対応しています。お気軽にご利用ください。</p>
+          </div></div>
+          <div class="card scroll-trigger"><div class="card-body">
+            <div class="feature-num">03</div>
+            <h4 class="card-title">通いやすい立地</h4>
+            <p class="card-text">最寄り駅から徒歩圏内、バリアフリー設計。どなたにも通いやすい環境を目指しています。</p>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 院長挨拶 抜粋 ========== -->
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-head text-center scroll-trigger">
+          <span class="section-en">MESSAGE</span>
+          <h3 class="section-title">院長ごあいさつ</h3>
+        </div>
+        <div class="scroll-trigger" style="text-align:center;">
+          <img src="assets/image/doctor.jpg" alt="院長 さんぷる 一郎" style="width:160px;height:160px;object-fit:cover;border-radius:50%;margin:0 auto 24px;">
+          <p style="margin-bottom:20px;">地域のみなさまが、体調に不安を感じたときに気軽に立ち寄れる。そんな「かかりつけ医」でありたいと考えています。患者さまのお話にしっかりと耳を傾け、一人ひとりに合った診療を大切にしてまいります。</p>
+          <p style="font-weight:700;margin-top:20px;">院長　さんぷる 一郎</p>
+          <div style="margin-top:24px;"><a href="about.html" class="btn btn-outline-dark">医院紹介を見る <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 診療時間 抜粋 ========== -->
+    <section class="section bg-light">
+      <div class="container narrow">
+        <div class="section-head text-center scroll-trigger">
+          <span class="section-en">HOURS</span>
+          <h3 class="section-title">診療時間</h3>
+        </div>
+        <div class="scroll-trigger">
+          <!-- ★ 要変更: 実際の診療時間に書き換えてください -->
+          <table class="info-table">
+            <tr><th>診療時間</th><td>午前 9:00〜12:30 / 午後 15:00〜18:00</td></tr>
+            <tr><th>休診日</th><td class="closed">木曜・日曜・祝日</td></tr>
+            <tr><th>受付</th><td>診療終了の30分前まで</td></tr>
+          </table>
+          <div class="text-center" style="margin-top:32px;">
+            <a href="access.html" class="btn btn-outline-dark">詳しい診療時間・アクセス <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-band scroll-trigger">
+      <div class="container">
+        <h2>受診をご希望の方へ</h2>
+        <p>WEB予約またはお電話にて承っております。お気軽にご連絡ください。</p>
+        <a href="contact.html" class="btn btn-accent btn-lg">WEB予約はこちら <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== Footer (全ページ共通) ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-name">SAMPLE CLINIC</span>
+          <!-- ★ 要変更: 医院の住所・電話番号 -->
+          <p>〒100-0000<br>東京都千代田区大手町1-1-1<br>TEL: 03-0000-0000</p>
+        </div>
+        <div class="footer-nav">
+          <h4>診療について</h4>
+          <a href="service.html">診療案内</a>
+          <a href="first-visit.html">初診の方へ</a>
+          <a href="access.html">診療時間・アクセス</a>
+        </div>
+        <div class="footer-nav">
+          <h4>当院について</h4>
+          <a href="about.html">医院紹介</a>
+          <a href="contact.html">WEB予約・お問い合わせ</a>
+          <a href="../common/company.html">運営会社</a>
+        </div>
+        <div class="footer-nav">
+          <h4>その他</h4>
+          <a href="../common/privacy.html">プライバシーポリシー</a>
+          <a href="../common/law.html">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <!-- ★ 要変更: 医院名 -->
+        <p>&copy; 2026 SAMPLE CLINIC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== Script (全ページ共通) ========== -->
+  <script>
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+        drawer.classList.toggle('is-active');
+      });
+      drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        hamburger.classList.remove('is-active');
+        drawer.classList.remove('is-active');
+      }));
+    }
+    // Scroll animation
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-active'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.scroll-trigger').forEach(el => io.observe(el));
+  </script>
+
+  <!-- ========================================================
+       DEMO ONLY: Color Theme Switcher (multi / localStorage保持)
+       このブロックは配布テンプレートには含まれません
+       ======================================================== -->
+  <style>
+    .demo-switcher { position: fixed; right: 16px; bottom: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .demo-switcher-toggle { width: 44px; height: 44px; border-radius: 50%; background: #1a1a1a; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
+    .demo-switcher-toggle:hover { transform: scale(1.1); }
+    .demo-switcher-panel { display: none; flex-direction: column; gap: 6px; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+    .demo-switcher-panel.is-open { display: flex; }
+    .demo-swatch { width: 36px; height: 36px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s; position: relative; }
+    .demo-swatch:hover { transform: scale(1.15); }
+    .demo-swatch.is-active { border-color: #1a1a1a; }
+    .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
+    .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
+  </style>
+  <div class="demo-switcher">
+    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
+    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
+    </button>
+  </div>
+  <script>
+    (function() {
+      var themes = [{"label": "A", "name": "Clean Blue / クリーンブルー", "color": "#1E73BE", "vars": {"--primary": "#1E73BE", "--primary-dark": "#145490", "--primary-light": "#E7F1FA", "--accent": "#38B2AC", "--accent-hover": "#2C9A94", "--bg-body": "#FFFFFF", "--bg-light": "#F3F8FC", "--bg-dark": "#123A5C", "--text-main": "#1F2A37", "--text-muted": "#5B6B7B", "--text-white": "#FFFFFF", "--text-gray": "#9AA7B4", "--border": "#DCE7F0", "--hero-overlay": "rgba(18, 58, 92, 0.60)"}}, {"label": "B", "name": "Fresh Green / フレッシュグリーン", "color": "#3F9D6B", "vars": {"--primary": "#3F9D6B", "--primary-dark": "#2C7A50", "--primary-light": "#E7F4EC", "--accent": "#4F9AD1", "--accent-hover": "#3C83B6", "--bg-body": "#FFFFFF", "--bg-light": "#F2FAF5", "--bg-dark": "#1E4C34", "--text-main": "#1F2E25", "--text-muted": "#5A6E60", "--text-white": "#FFFFFF", "--text-gray": "#9BB0A2", "--border": "#D7EADD", "--hero-overlay": "rgba(30, 76, 52, 0.58)"}}, {"label": "C", "name": "Warm Pink / ウォームピンク", "color": "#D67091", "vars": {"--primary": "#D67091", "--primary-dark": "#B4526F", "--primary-light": "#FBEDF2", "--accent": "#E9A24B", "--accent-hover": "#D08A36", "--bg-body": "#FFFFFF", "--bg-light": "#FDF5F8", "--bg-dark": "#7A3149", "--text-main": "#33262A", "--text-muted": "#77636A", "--text-white": "#FFFFFF", "--text-gray": "#C1A9B1", "--border": "#F1DDE4", "--hero-overlay": "rgba(122, 49, 73, 0.55)"}}, {"label": "D", "name": "Cool Teal / クールティール", "color": "#128C8C", "vars": {"--primary": "#128C8C", "--primary-dark": "#0B6767", "--primary-light": "#E1F4F3", "--accent": "#5AA9E6", "--accent-hover": "#4390CB", "--bg-body": "#FFFFFF", "--bg-light": "#F0FAFA", "--bg-dark": "#0C5252", "--text-main": "#1C2E2E", "--text-muted": "#547070", "--text-white": "#FFFFFF", "--text-gray": "#93B0B0", "--border": "#D0E9E8", "--hero-overlay": "rgba(12, 82, 82, 0.58)"}}, {"label": "E", "name": "Calm Navy / カームネイビー", "color": "#2C4A70", "vars": {"--primary": "#2C4A70", "--primary-dark": "#1D3350", "--primary-light": "#E8EEF6", "--accent": "#C9A24B", "--accent-hover": "#B08D3A", "--bg-body": "#FFFFFF", "--bg-light": "#F4F7FB", "--bg-dark": "#172942", "--text-main": "#202832", "--text-muted": "#586574", "--text-white": "#FFFFFF", "--text-gray": "#9AA6B4", "--border": "#D8E1EC", "--hero-overlay": "rgba(23, 41, 66, 0.64)"}}];
+      var KEY = 'zmDemoThemeIdx';
+      var panel = document.getElementById('demoPanel');
+      var toggle = document.getElementById('demoToggle');
+      var swatches = [];
+      function applyTheme(idx, save) {
+        var t = themes[idx]; if (!t) return;
+        var el = document.getElementById('demo-theme-override');
+        if (!el) { el = document.createElement('style'); el.id = 'demo-theme-override'; document.head.appendChild(el); }
+        var css = ':root{'; var v = t.vars;
+        Object.keys(v).forEach(function(k){ css += k+':'+v[k]+';'; });
+        css += '}'; el.textContent = css;
+        swatches.forEach(function(s,i){ s.classList.toggle('is-active', i===idx); });
+        if (save) { try { localStorage.setItem(KEY, idx); } catch(e){} }
+      }
+      themes.forEach(function(t, i) {
+        var sw = document.createElement('div');
+        sw.className = 'demo-swatch'; sw.style.background = t.color; sw.title = t.name;
+        sw.innerHTML = '<span class="demo-swatch-label">' + t.label + '</span>';
+        sw.addEventListener('click', function() { applyTheme(i, true); });
+        panel.appendChild(sw); swatches.push(sw);
+      });
+      var saved = 0;
+      try { var s = localStorage.getItem(KEY); if (s !== null) saved = parseInt(s,10) || 0; } catch(e){}
+      if (saved < 0 || saved >= themes.length) saved = 0;
+      applyTheme(saved, false);
+      toggle.addEventListener('click', function() { panel.classList.toggle('is-open'); });
+      document.addEventListener('click', function(e) { if (!e.target.closest('.demo-switcher')) panel.classList.remove('is-open'); });
+    })();
+  </script>
+</body>
+
+</html>

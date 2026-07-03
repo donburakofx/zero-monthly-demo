@@ -268,6 +268,78 @@
                 </div>
             </section>
 
+            <section class="category-sec">
+                <h2 class="cat-title"><i class="fa-solid fa-layer-group"></i> Multi-page Websites <span style="font-size:0.6em;font-weight:500;opacity:0.7;">複数ページ型</span></h2>
+                <div class="grid js-scatter-grid">
+                    <div class="card" onclick="openPreview('01', 'Corporate', 'multi')">
+                        <div class="card-thumb">
+                            <img src="./multi/01/assets/image/ogp.jpg" alt="M01">
+                            <div class="overlay"><i class="fa-solid fa-play"></i> Live Demo</div>
+                        </div>
+                        <div class="card-body">
+                            <span class="id">M01</span>
+                            <h3>Corporate</h3>
+                            <p>コーポレート（会社概要・事業・お知らせ・採用）</p>
+                        </div>
+                    </div>
+                    <div class="card" onclick="openPreview('02', 'Clinic', 'multi')">
+                        <div class="card-thumb">
+                            <img src="./multi/02/assets/image/ogp.jpg" alt="M02">
+                            <div class="overlay"><i class="fa-solid fa-play"></i> Live Demo</div>
+                        </div>
+                        <div class="card-body">
+                            <span class="id">M02</span>
+                            <h3>Clinic</h3>
+                            <p>クリニック・医院（診療案内・初診の方へ）</p>
+                        </div>
+                    </div>
+                    <div class="card" onclick="openPreview('03', 'Restaurant', 'multi')">
+                        <div class="card-thumb">
+                            <img src="./multi/03/assets/image/ogp.jpg" alt="M03">
+                            <div class="overlay"><i class="fa-solid fa-play"></i> Live Demo</div>
+                        </div>
+                        <div class="card-body">
+                            <span class="id">M03</span>
+                            <h3>Restaurant</h3>
+                            <p>飲食店・レストラン（メニュー・こだわり）</p>
+                        </div>
+                    </div>
+                    <div class="card" onclick="openPreview('04', 'Construction', 'multi')">
+                        <div class="card-thumb">
+                            <img src="./multi/04/assets/image/ogp.jpg" alt="M04">
+                            <div class="overlay"><i class="fa-solid fa-play"></i> Live Demo</div>
+                        </div>
+                        <div class="card-body">
+                            <span class="id">M04</span>
+                            <h3>Construction</h3>
+                            <p>工務店・建設（施工事例 一覧＋詳細）</p>
+                        </div>
+                    </div>
+                    <div class="card" onclick="openPreview('05', 'Real Estate', 'multi')">
+                        <div class="card-thumb">
+                            <img src="./multi/05/assets/image/ogp.jpg" alt="M05">
+                            <div class="overlay"><i class="fa-solid fa-play"></i> Live Demo</div>
+                        </div>
+                        <div class="card-body">
+                            <span class="id">M05</span>
+                            <h3>Real Estate</h3>
+                            <p>不動産会社（物件情報 一覧＋詳細）</p>
+                        </div>
+                    </div>
+                    <div class="card" onclick="openPreview('06', 'Professional Office', 'multi')">
+                        <div class="card-thumb">
+                            <img src="./multi/06/assets/image/ogp.jpg" alt="M06">
+                            <div class="overlay"><i class="fa-solid fa-play"></i> Live Demo</div>
+                        </div>
+                        <div class="card-body">
+                            <span class="id">M06</span>
+                            <h3>Professional Office</h3>
+                            <p>士業事務所（業務案内・料金・FAQ）</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </div>
 
@@ -360,16 +432,18 @@
         });
 
         // --- 2. Preview Modal Logic ---
-        function openPreview(id, title) {
+        function openPreview(id, title, base) {
             const modal = document.getElementById('preview-modal');
             const frame = document.getElementById('preview-frame');
             const titleEl = document.getElementById('preview-title');
             const extLink = document.getElementById('external-link');
 
-            const url = `./light/${id}/index.html`;
+            base = base || 'light';
+            const url = `./${base}/${id}/index.html`;
+            const label = (base === 'multi' ? 'M' : '') + id;
 
             frame.src = url;
-            titleEl.textContent = `${id}. ${title}`;
+            titleEl.textContent = `${label}. ${title}`;
             extLink.href = url;
 
             modal.classList.add('is-active');

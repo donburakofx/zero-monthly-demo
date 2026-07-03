@@ -1,0 +1,381 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   06-professional (multi-page) — 共有スタイル
+   全ページ（index / about / service / fee / faq / contact）が
+   このファイル1本を読み込みます。カラー変更はこの下の5パターンを切り替えるだけ。
+   ========================================================================== */
+
+/* ==========================================================================
+   1. COLOR THEME SETTINGS (カラー設定)
+   使いたいパターンのコメントアウト /* ... *​/ を外し、他をコメントアウトしてください。
+   ========================================================================== */
+:root {
+    /* --- [Pattern A: Legal Navy / リーガルネイビー] (デフォルト) --- */
+    /* 用途: 行政書士・弁護士・司法書士・王道の士業 */
+    --primary:       #1B2D4F;
+    --primary-dark:  #0F1D34;
+    --primary-light: #EBF0F8;
+    --accent:        #C9A84C;
+    --accent-hover:  #B0913A;
+    --bg-body:       #FFFFFF;
+    --bg-light:      #F7F8FA;
+    --bg-dark:       #1B2D4F;
+    --text-main:     #1A1A2E;
+    --text-muted:    #5C6B80;
+    --text-white:    #FFFFFF;
+    --text-gray:     #9CA3AF;
+    --border:        #DDE4EE;
+    --hero-overlay:  rgba(15, 25, 45, 0.70);
+
+    /* --- [Pattern B: Accounting Blue / アカウンティングブルー] --- */
+    /* 用途: 税理士・会計士・FP */
+    /*
+    --primary:       #14508C;
+    --primary-dark:  #0C3866;
+    --primary-light: #E7F0F9;
+    --accent:        #2FA39B;
+    --accent-hover:  #248178;
+    --bg-body:       #FFFFFF;
+    --bg-light:      #F4F8FC;
+    --bg-dark:       #0C3866;
+    --text-main:     #17253A;
+    --text-muted:    #56697E;
+    --text-white:    #FFFFFF;
+    --text-gray:     #9AABBC;
+    --border:        #D5E2EF;
+    --hero-overlay:  rgba(12, 56, 102, 0.70);
+    */
+
+    /* --- [Pattern C: Consultant Charcoal / コンサルタントチャコール] --- */
+    /* 用途: 経営コンサル・中小企業診断士・社労士 */
+    /*
+    --primary:       #2E3440;
+    --primary-dark:  #1E232C;
+    --primary-light: #ECEEF2;
+    --accent:        #B08A4F;
+    --accent-hover:  #97733C;
+    --bg-body:       #FFFFFF;
+    --bg-light:      #F5F6F8;
+    --bg-dark:       #1E232C;
+    --text-main:     #23282F;
+    --text-muted:    #5E6672;
+    --text-white:    #FFFFFF;
+    --text-gray:     #9AA0AB;
+    --border:        #DCDFE5;
+    --hero-overlay:  rgba(30, 35, 44, 0.72);
+    */
+
+    /* --- [Pattern D: Trust Green / トラストグリーン] --- */
+    /* 用途: 社労士・社会福祉士・環境・安心感を重視する士業 */
+    /*
+    --primary:       #1F5C46;
+    --primary-dark:  #133F30;
+    --primary-light: #E6F1EC;
+    --accent:        #C6963C;
+    --accent-hover:  #AB7F2C;
+    --bg-body:       #FFFFFF;
+    --bg-light:      #F4F8F6;
+    --bg-dark:       #133F30;
+    --text-main:     #1B2A23;
+    --text-muted:    #556B60;
+    --text-white:    #FFFFFF;
+    --text-gray:     #97AAA0;
+    --border:        #D3E4DA;
+    --hero-overlay:  rgba(19, 63, 48, 0.72);
+    */
+
+    /* --- [Pattern E: Premium Black / プレミアムブラック] --- */
+    /* 用途: 高級感・顧問業全般・格式を重んじる事務所 */
+    /*
+    --primary:       #1C1C1E;
+    --primary-dark:  #0E0E10;
+    --primary-light: #EDEDEE;
+    --accent:        #B7924B;
+    --accent-hover:  #9E7B39;
+    --bg-body:       #FFFFFF;
+    --bg-light:      #F5F5F6;
+    --bg-dark:       #0E0E10;
+    --text-main:     #1A1A1C;
+    --text-muted:    #61636A;
+    --text-white:    #FFFFFF;
+    --text-gray:     #9C9EA6;
+    --border:        #DEDEE1;
+    --hero-overlay:  rgba(14, 14, 16, 0.74);
+    */
+
+    /* --- Common (触らなくてOK) --- */
+    /* 明るい背景に置くaccent文字用の暗色（コントラスト確保。color-mix非対応ブラウザはaccentにフォールバック） */
+    --accent-ink: color-mix(in srgb, var(--accent) 62%, #1a1a1a);
+    --font-jp:   'Noto Sans JP', sans-serif;
+    --font-en:   'Montserrat', sans-serif;
+    --radius:    4px;
+    --radius-lg: 10px;
+    --shadow:    0 2px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 40px rgba(0,0,0,0.10);
+    --max-width: 1120px;
+    --header-h:  72px;
+}
+
+/* ==========================================================================
+   2. Base
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+    margin: 0;
+    font-family: var(--font-jp);
+    color: var(--text-main);
+    background: var(--bg-body);
+    line-height: 1.85;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; transition: 0.25s; }
+ul { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, h4, p { margin: 0; }
+
+/* スクロール演出 (JS未読込でも内容は必ず表示される安全設計) */
+html.js .scroll-trigger { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+html.js .scroll-trigger.is-active { opacity: 1; transform: translateY(0); }
+
+/* キーボードフォーカス (アクセシビリティ) */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   3. Layout utilities
+   ========================================================================== */
+.container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.container.narrow { max-width: 800px; }
+.section { padding: 80px 0; }
+.section.bg-light { background: var(--bg-light); }
+.section.bg-dark { background: var(--bg-dark); color: var(--text-white); }
+.text-center { text-align: center; }
+
+.section-head { margin-bottom: 48px; }
+.section-head.text-center { text-align: center; }
+.section-en {
+    display: block; font-family: var(--font-en); font-size: 0.8rem;
+    font-weight: 600; letter-spacing: 0.18em; color: var(--accent); color: var(--accent-ink); margin-bottom: 8px;
+}
+/* 暗い背景のセクションでは明るいaccentに戻す */
+.bg-dark .section-en, .bg-dark .feature-num { color: var(--accent); }
+.section-title { font-size: 1.9rem; font-weight: 700; letter-spacing: 0.02em; line-height: 1.4; }
+.section-title.text-white { color: var(--text-white); }
+.section-lead { margin-top: 14px; color: var(--text-muted); }
+.section-lead.text-gray { color: var(--text-gray); }
+
+/* ==========================================================================
+   4. Buttons
+   ========================================================================== */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 30px; border-radius: var(--radius); font-weight: 600;
+    font-size: 0.95rem; cursor: pointer; border: 2px solid transparent; transition: 0.25s;
+}
+.btn-lg { padding: 17px 40px; font-size: 1rem; }
+.btn-block { display: flex; width: 100%; }
+.btn-primary { background: var(--primary); color: var(--text-white); }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-accent { background: var(--accent); color: var(--text-white); }
+.btn-accent:hover { background: var(--accent-hover); }
+.btn-outline { border-color: currentColor; color: var(--text-white); }
+.btn-outline:hover { background: rgba(255,255,255,0.14); }
+.btn-outline-dark { border-color: var(--primary); color: var(--primary); }
+.btn-outline-dark:hover { background: var(--primary); color: var(--text-white); }
+
+/* ==========================================================================
+   5. Header (全ページ共通・ナビは相対パス)
+   ========================================================================== */
+.header {
+    position: fixed; top: 0; left: 0; width: 100%; height: var(--header-h);
+    background: rgba(255,255,255,0.96); z-index: 100;
+    display: flex; align-items: center; box-shadow: var(--shadow); backdrop-filter: blur(6px);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.brand { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-name { font-family: var(--font-en); font-weight: 700; font-size: 1.25rem; color: var(--primary); letter-spacing: 0.04em; }
+.brand-sub { font-size: 0.65rem; color: var(--text-muted); letter-spacing: 0.1em; }
+
+.nav { display: none; }
+.nav a { font-size: 0.9rem; font-weight: 500; padding: 6px 2px; position: relative; }
+.nav a::after {
+    content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px;
+    background: var(--accent); transition: width 0.25s;
+}
+.nav a:hover::after, .nav a.is-current::after { width: 100%; }
+.nav a.is-current { color: var(--primary); font-weight: 700; }
+
+.header-cta { display: none; }
+
+.hamburger {
+    width: 30px; height: 22px; position: relative; border: none; background: none;
+    cursor: pointer; z-index: 101; padding: 0;
+}
+.hamburger span {
+    display: block; position: absolute; left: 0; width: 100%; height: 2px;
+    background: var(--primary); transition: 0.3s;
+}
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 10px; }
+.hamburger span:nth-child(3) { top: 20px; }
+.hamburger.is-active span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+.hamburger.is-active span:nth-child(2) { opacity: 0; }
+.hamburger.is-active span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+
+/* Drawer (SP) */
+.drawer {
+    position: fixed; top: var(--header-h); left: 0; width: 100%;
+    background: var(--bg-body); box-shadow: var(--shadow-lg);
+    transform: translateY(-120%); transition: transform 0.35s; z-index: 99;
+}
+.drawer.is-active { transform: translateY(0); }
+.drawer-nav { display: flex; flex-direction: column; padding: 12px 24px 28px; }
+.drawer-nav a { padding: 15px 0; border-bottom: 1px solid var(--border); font-weight: 500; }
+.drawer-nav a.is-current { color: var(--primary); font-weight: 700; }
+.drawer-nav .btn { margin-top: 20px; }
+
+/* ==========================================================================
+   6. Page top (下層ページのタイトル帯)
+   ========================================================================== */
+.page-hero {
+    margin-top: var(--header-h); padding: 64px 0; background: var(--primary);
+    color: var(--text-white); text-align: center; position: relative; overflow: hidden;
+}
+.page-hero-en { display: block; font-family: var(--font-en); font-size: 0.8rem; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 8px; }
+.page-hero h1 { font-size: 1.9rem; font-weight: 700; }
+.breadcrumb { padding: 14px 0; font-size: 0.8rem; color: var(--text-muted); }
+.breadcrumb a:hover { color: var(--primary); }
+.breadcrumb span { margin: 0 8px; color: var(--text-gray); }
+
+/* ==========================================================================
+   7. Hero (トップページ)
+   ========================================================================== */
+.hero { position: relative; min-height: 88vh; display: flex; align-items: center; margin-top: var(--header-h); }
+.hero-bg { position: absolute; inset: 0; z-index: -2; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; inset: 0; z-index: -1; background: var(--hero-overlay); }
+.hero-content { color: var(--text-white); max-width: 640px; }
+.hero-tag { display: inline-block; font-size: 0.85rem; letter-spacing: 0.08em; padding: 6px 16px; border: 1px solid rgba(255,255,255,0.5); border-radius: 40px; margin-bottom: 22px; }
+.hero-copy { font-size: 2.6rem; font-weight: 700; line-height: 1.35; margin-bottom: 20px; }
+.hero-lead { font-size: 1.05rem; line-height: 1.9; margin-bottom: 34px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* ==========================================================================
+   8. Components
+   ========================================================================== */
+/* 3-up card grid (事業概要・選ばれる理由など) */
+.card-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.card {
+    background: var(--bg-body); border: 1px solid var(--border); border-radius: var(--radius-lg);
+    overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.card-img { aspect-ratio: 16 / 10; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; }
+.card-body { padding: 26px 24px; }
+.card-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 16px; }
+.card-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
+.card-text { font-size: 0.9rem; color: var(--text-muted); }
+.card-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--primary); }
+.card-link:hover { gap: 12px; color: var(--accent); }
+
+/* Feature numbers (選ばれる理由) */
+.feature-num { font-family: var(--font-en); font-size: 2rem; font-weight: 700; color: var(--accent); color: var(--accent-ink); line-height: 1; margin-bottom: 14px; }
+
+/* Info table (会社概要・料金など) */
+.info-table { width: 100%; border-collapse: collapse; }
+.info-table th, .info-table td { text-align: left; padding: 18px 16px; border-bottom: 1px solid var(--border); font-size: 0.92rem; vertical-align: top; }
+.info-table th { width: 30%; color: var(--primary); font-weight: 700; background: var(--bg-light); white-space: nowrap; }
+
+/* News list (お知らせ一覧) */
+.news-list { display: flex; flex-direction: column; }
+.news-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 20px 4px; border-bottom: 1px solid var(--border); transition: 0.2s; }
+.news-row:hover { background: var(--bg-light); }
+.news-date { font-family: var(--font-en); font-size: 0.85rem; color: var(--text-muted); }
+.news-cat { font-size: 0.72rem; font-weight: 700; color: var(--text-white); background: var(--primary); padding: 3px 12px; border-radius: 30px; }
+.news-cat.accent { background: var(--accent); }
+.news-ttl { flex: 1 1 100%; font-size: 0.95rem; font-weight: 500; }
+@media (min-width: 768px) { .news-ttl { flex: 1; } }
+.news-row:hover .news-ttl { color: var(--primary); }
+
+/* Article body (お知らせ詳細) */
+.article { max-width: 760px; margin: 0 auto; }
+.article-head { border-bottom: 2px solid var(--border); padding-bottom: 24px; margin-bottom: 32px; }
+.article-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.article h2 { font-size: 1.6rem; font-weight: 700; line-height: 1.5; }
+.article-body h3 { font-size: 1.2rem; font-weight: 700; margin: 36px 0 14px; padding-left: 14px; border-left: 4px solid var(--accent); }
+.article-body p { margin-bottom: 20px; color: var(--text-main); }
+.article-body img { border-radius: var(--radius-lg); margin: 24px 0; }
+.article-back { text-align: center; margin-top: 48px; }
+
+/* Recruit list */
+.recruit-card { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px 28px; box-shadow: var(--shadow); }
+.recruit-card + .recruit-card { margin-top: 24px; }
+.recruit-role { font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 18px; }
+
+/* Contact form */
+.form { max-width: 720px; margin: 0 auto; }
+.form-row { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 640px) { .form-row { grid-template-columns: 1fr 1fr; } }
+.form-group { margin-bottom: 22px; }
+.form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 8px; }
+.required { font-size: 0.7rem; color: var(--text-white); background: var(--accent); padding: 2px 8px; border-radius: 3px; margin-left: 8px; }
+.form input, .form select, .form textarea {
+    width: 100%; padding: 13px 15px; border: 1px solid var(--border); border-radius: var(--radius);
+    font-family: inherit; font-size: 0.95rem; background: var(--bg-body); color: var(--text-main);
+}
+.form input:focus, .form select:focus, .form textarea:focus { border-color: var(--primary); outline: none; }
+.form-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 14px; text-align: center; }
+
+/* CTA band */
+.cta-band { background: var(--primary); color: var(--text-white); text-align: center; padding: 70px 0; }
+.cta-band h2 { font-size: 1.7rem; font-weight: 700; margin-bottom: 16px; }
+.cta-band p { color: rgba(255,255,255,0.85); margin-bottom: 30px; }
+
+/* ==========================================================================
+   9. Footer
+   ========================================================================== */
+.footer { background: var(--bg-dark); color: var(--text-gray); padding: 56px 0 24px; }
+.footer-top { display: grid; grid-template-columns: 1fr; gap: 32px; margin-bottom: 40px; }
+.footer-brand .brand-name { color: var(--text-white); }
+.footer-brand p { font-size: 0.85rem; margin-top: 14px; }
+.footer-nav h4 { font-size: 0.85rem; color: var(--text-white); margin-bottom: 14px; letter-spacing: 0.05em; }
+.footer-nav a { display: block; font-size: 0.85rem; padding: 5px 0; }
+.footer-nav a:hover { color: var(--text-white); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; text-align: center; font-size: 0.78rem; }
+
+/* ==========================================================================
+   10. Responsive (PC)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .section { padding: 100px 0; }
+    .section-title { font-size: 2.2rem; }
+    .hero-copy { font-size: 3.2rem; }
+    .page-hero h1 { font-size: 2.3rem; }
+    .nav { display: flex; align-items: center; gap: 30px; }
+    .header-cta { display: inline-flex; }
+    .hamburger, .drawer { display: none; }
+    .card-grid { grid-template-columns: repeat(3, 1fr); }
+    .card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 2fr 1fr 1fr 1fr; }
+}
+
+/* ==========================================================================
+   11. FAQ Accordion (faq.html 専用・01には無い追加コンポーネント)
+   JSはfaq.htmlの末尾スクリプト参照（scrollHeight方式で開閉）。
+   ========================================================================== */
+.faq-list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:first-child { border-top: 1px solid var(--border); }
+.faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 4px; background: none; border: none; cursor: pointer; font-size: 1rem; font-weight: 600; text-align: left; color: var(--text-main); font-family: inherit; }
+.faq-q:hover { color: var(--primary); }
+.faq-icon { font-size: 0.75rem; color: var(--accent); flex-shrink: 0; transition: transform 0.3s; }
+.faq-item.is-open .faq-icon { transform: rotate(180deg); }
+.faq-a { height: 0; overflow: hidden; transition: height 0.35s ease; }
+.faq-a p { padding: 0 0 22px; margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.9; }

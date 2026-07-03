@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <!-- ★ 要変更: 物件名に合わせてタイトル・説明を書き換えてください -->
+  <title>サンプルレジデンス青葉台 | 物件詳細 | SAMPLE ESTATE</title>
+  <meta name="description" content="サンプルレジデンス青葉台の物件詳細ページ。所在地・価格・間取り・面積などの情報をご紹介します。" />
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-name">SAMPLE ESTATE</span><span class="brand-sub">株式会社サンプル不動産</span></a>
+      <nav class="nav">
+        <a href="index.html">ホーム</a>
+        <a href="property.html" class="is-current">物件情報</a>
+        <a href="about.html">会社案内</a>
+        <a href="flow.html">ご購入の流れ</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary header-cta">お問い合わせ</a>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    </div>
+    <div class="drawer" id="drawer">
+      <nav class="drawer-nav">
+        <a href="index.html">ホーム</a>
+        <a href="property.html" class="is-current">物件情報</a>
+        <a href="about.html">会社案内</a>
+        <a href="flow.html">ご購入の流れ</a>
+        <a href="contact.html" class="btn btn-primary">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <div class="container"><span class="page-hero-en">PROPERTY DETAIL</span><h1>物件詳細</h1></div>
+    </div>
+    <div class="container"><p class="breadcrumb"><a href="index.html">ホーム</a><span>/</span><a href="property.html">物件情報</a><span>/</span>物件詳細</p></div>
+
+    <section class="section">
+      <article class="article">
+        <!-- ★ 要変更: 物件名・価格・写真・スペックはすべてサンプルです。実際の物件情報に書き換えてください -->
+        <div class="article-head scroll-trigger">
+          <div class="article-meta">
+            <span class="news-cat">売買</span>
+            <span class="news-cat accent">おすすめ</span>
+          </div>
+          <h2>サンプルレジデンス青葉台</h2>
+        </div>
+
+        <div class="article-body scroll-trigger">
+          <!-- 物件のメイン画像（大きく表示） -->
+          <div class="prop-detail-img"><img src="assets/image/property-detail-main.jpg" alt="サンプルレジデンス青葉台 外観"></div>
+
+          <!-- 価格を大きく -->
+          <p class="prop-detail-price">3,480<span> 万円（税込）</span></p>
+          <p style="color:var(--text-muted);margin-bottom:28px;">青葉台駅 徒歩8分／南向き・日当たり良好の3LDK。閑静な住宅街に位置するファミリー向けマンションです。</p>
+
+          <!-- スペック表（既存の .info-table を流用） -->
+          <h3>物件概要</h3>
+          <table class="info-table">
+            <tr><th>所在地</th><td>東京都○○区青葉台0-0-0</td></tr>
+            <tr><th>価格</th><td>3,480万円（税込）</td></tr>
+            <tr><th>間取り</th><td>3LDK</td></tr>
+            <tr><th>専有面積</th><td>72.5m&sup2;（壁芯）</td></tr>
+            <tr><th>築年数</th><td>2015年3月築（築11年）</td></tr>
+            <tr><th>構造</th><td>鉄筋コンクリート造 地上10階建て 5階部分</td></tr>
+            <tr><th>最寄駅</th><td>○○線「青葉台」駅 徒歩8分</td></tr>
+            <tr><th>取引態様</th><td>媒介</td></tr>
+          </table>
+
+          <h3>物件の特徴</h3>
+          <p>南向きのリビングは採光が良く、明るく開放的な住空間です。周辺にはスーパー・小学校・公園が揃い、子育て世代にも暮らしやすい環境。管理体制も良好で、長く安心してお住まいいただけます。</p>
+          <p>実際の内見も承っております。ご希望の日時をお問い合わせフォームまたはお電話にてお知らせください。</p>
+
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:24px;">
+            ※掲載の情報はサンプルです。最新の価格・空室状況・お取引条件については、お問い合わせ時に改めてご確認ください。
+          </p>
+        </div>
+
+        <div class="article-back" style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
+          <a href="property.html" class="btn btn-outline-dark"><i class="fa-solid fa-arrow-left"></i> 物件一覧へ戻る</a>
+          <a href="contact.html" class="btn btn-accent">この物件を問い合わせる <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-name">SAMPLE ESTATE</span>
+          <p>〒100-0000<br>東京都千代田区大手町1-1-1<br>TEL: 03-0000-0000<br>宅地建物取引業免許：東京都知事（1）第00000号</p>
+        </div>
+        <div class="footer-nav"><h4>物件情報</h4><a href="property.html">物件情報</a><a href="flow.html">ご購入の流れ</a><a href="contact.html">お問い合わせ</a></div>
+        <div class="footer-nav"><h4>会社情報</h4><a href="about.html">会社案内</a><a href="../common/company.html">運営会社</a></div>
+        <div class="footer-nav"><h4>その他</h4><a href="../common/privacy.html">プライバシーポリシー</a><a href="../common/law.html">特定商取引法に基づく表記</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 SAMPLE ESTATE All Rights Reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => { hamburger.classList.toggle('is-active'); drawer.classList.toggle('is-active'); });
+      drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('is-active'); drawer.classList.remove('is-active'); }));
+    }
+    const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-active'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.scroll-trigger').forEach(el => io.observe(el));
+  </script>
+
+  <!-- ========================================================
+       DEMO ONLY: Color Theme Switcher (multi / localStorage保持)
+       このブロックは配布テンプレートには含まれません
+       ======================================================== -->
+  <style>
+    .demo-switcher { position: fixed; right: 16px; bottom: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .demo-switcher-toggle { width: 44px; height: 44px; border-radius: 50%; background: #1a1a1a; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
+    .demo-switcher-toggle:hover { transform: scale(1.1); }
+    .demo-switcher-panel { display: none; flex-direction: column; gap: 6px; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+    .demo-switcher-panel.is-open { display: flex; }
+    .demo-swatch { width: 36px; height: 36px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s; position: relative; }
+    .demo-swatch:hover { transform: scale(1.15); }
+    .demo-swatch.is-active { border-color: #1a1a1a; }
+    .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
+    .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
+  </style>
+  <div class="demo-switcher">
+    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
+    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
+    </button>
+  </div>
+  <script>
+    (function() {
+      var themes = [{"label": "A", "name": "Trust Blue / トラストブルー", "color": "#1B5E9B", "vars": {"--primary": "#1B5E9B", "--primary-dark": "#124370", "--primary-light": "#E6F0F9", "--accent": "#E0A03A", "--accent-hover": "#C6862A", "--bg-body": "#FFFFFF", "--bg-light": "#F3F7FB", "--bg-dark": "#12314C", "--text-main": "#1F2A37", "--text-muted": "#5B6B7B", "--text-white": "#FFFFFF", "--text-gray": "#9AA7B4", "--border": "#DBE5EF", "--hero-overlay": "rgba(18, 49, 76, 0.62)"}}, {"label": "B", "name": "Deep Green / ディープグリーン", "color": "#2E6B4F", "vars": {"--primary": "#2E6B4F", "--primary-dark": "#1D4A35", "--primary-light": "#E5F1EB", "--accent": "#D99A2B", "--accent-hover": "#BE821C", "--bg-body": "#FFFFFF", "--bg-light": "#F2F8F4", "--bg-dark": "#163C2A", "--text-main": "#1E2A24", "--text-muted": "#566B60", "--text-white": "#FFFFFF", "--text-gray": "#98AC9F", "--border": "#D5E6DC", "--hero-overlay": "rgba(22, 60, 42, 0.62)"}}, {"label": "C", "name": "Elegant Navy & Gold / エレガントネイビー&ゴールド", "color": "#1C2A4A", "vars": {"--primary": "#1C2A4A", "--primary-dark": "#121D34", "--primary-light": "#E7EAF2", "--accent": "#C6A25A", "--accent-hover": "#AC8842", "--bg-body": "#FFFFFF", "--bg-light": "#F5F6FA", "--bg-dark": "#101A30", "--text-main": "#1E2333", "--text-muted": "#5C6274", "--text-white": "#FFFFFF", "--text-gray": "#9BA1B2", "--border": "#DCE0EA", "--hero-overlay": "rgba(16, 26, 48, 0.66)"}}, {"label": "D", "name": "Warm Terracotta / ウォームテラコッタ", "color": "#B0562F", "vars": {"--primary": "#B0562F", "--primary-dark": "#8A3F20", "--primary-light": "#FBEDE4", "--accent": "#3E8C8C", "--accent-hover": "#2F7070", "--bg-body": "#FFFFFF", "--bg-light": "#FBF4EF", "--bg-dark": "#6E3018", "--text-main": "#33241D", "--text-muted": "#77645A", "--text-white": "#FFFFFF", "--text-gray": "#B8A79D", "--border": "#EEDDD1", "--hero-overlay": "rgba(110, 48, 24, 0.62)"}}, {"label": "E", "name": "Modern Gray / モダングレー", "color": "#455A64", "vars": {"--primary": "#455A64", "--primary-dark": "#2F3E45", "--primary-light": "#ECEFF1", "--accent": "#E08A3C", "--accent-hover": "#C6722A", "--bg-body": "#FFFFFF", "--bg-light": "#F5F6F7", "--bg-dark": "#263238", "--text-main": "#263238", "--text-muted": "#5F6E76", "--text-white": "#FFFFFF", "--text-gray": "#9AA6AC", "--border": "#DDE3E6", "--hero-overlay": "rgba(38, 50, 56, 0.64)"}}];
+      var KEY = 'zmDemoThemeIdx';
+      var panel = document.getElementById('demoPanel');
+      var toggle = document.getElementById('demoToggle');
+      var swatches = [];
+      function applyTheme(idx, save) {
+        var t = themes[idx]; if (!t) return;
+        var el = document.getElementById('demo-theme-override');
+        if (!el) { el = document.createElement('style'); el.id = 'demo-theme-override'; document.head.appendChild(el); }
+        var css = ':root{'; var v = t.vars;
+        Object.keys(v).forEach(function(k){ css += k+':'+v[k]+';'; });
+        css += '}'; el.textContent = css;
+        swatches.forEach(function(s,i){ s.classList.toggle('is-active', i===idx); });
+        if (save) { try { localStorage.setItem(KEY, idx); } catch(e){} }
+      }
+      themes.forEach(function(t, i) {
+        var sw = document.createElement('div');
+        sw.className = 'demo-swatch'; sw.style.background = t.color; sw.title = t.name;
+        sw.innerHTML = '<span class="demo-swatch-label">' + t.label + '</span>';
+        sw.addEventListener('click', function() { applyTheme(i, true); });
+        panel.appendChild(sw); swatches.push(sw);
+      });
+      var saved = 0;
+      try { var s = localStorage.getItem(KEY); if (s !== null) saved = parseInt(s,10) || 0; } catch(e){}
+      if (saved < 0 || saved >= themes.length) saved = 0;
+      applyTheme(saved, false);
+      toggle.addEventListener('click', function() { panel.classList.toggle('is-open'); });
+      document.addEventListener('click', function(e) { if (!e.target.closest('.demo-switcher')) panel.classList.remove('is-open'); });
+    })();
+  </script>
+</body>
+
+</html>
