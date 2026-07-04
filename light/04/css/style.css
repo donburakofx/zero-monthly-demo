@@ -925,3 +925,7 @@ label:focus-visible,
     outline: 2px solid var(--c-primary);
     outline-offset: 2px;
 }
+
+/* === スマホ横スクロール防止 ===
+   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+html, body { overflow-x: clip; }
