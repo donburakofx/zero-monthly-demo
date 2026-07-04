@@ -373,8 +373,13 @@ html.js .scroll-trigger.is-active {
 
 @media (max-width: 768px) {
     .feature-grid { grid-template-columns: 1fr; gap: 16px; }
-    .feature-card { text-align: left; display: flex; flex-direction: row; align-items: flex-start; gap: 20px; padding: 24px 20px; }
-    .feature-icon { flex-shrink: 0; margin: 0; }
+    .feature-card {
+        text-align: left; display: grid; grid-template-columns: auto 1fr;
+        column-gap: 18px; align-items: center; padding: 24px 20px;
+    }
+    .feature-icon { grid-column: 1; grid-row: 1 / span 2; margin: 0; }
+    .feature-title { grid-column: 2; margin-bottom: 4px; }
+    .feature-text { grid-column: 2; }
 }
 
 /* ==========================================================================

@@ -641,6 +641,7 @@ html.js .reveal-img.in-view img {
         width: 90%;
         margin: -40px auto 0;
         padding: 30px;
+        box-sizing: border-box; /* width:90% に padding を含め、画面右への はみ出しを防ぐ */
     }
 }
 
