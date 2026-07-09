@@ -5,16 +5,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <!-- ★ 要変更: 会社名・エリア・取扱物件を入力してください -->
-  <title>SAMPLE ESTATE | あなたの住まい探しをサポートする不動産会社</title>
-  <meta name="description" content="株式会社サンプル不動産は、売買・賃貸・管理まで住まいのことをワンストップでサポート。地域に根ざした確かな情報で、理想の住まい探しをお手伝いします。" />
+  <title>HARBOR ESTATE | あなたの住まい探しをサポートする不動産会社</title>
+  <meta name="description" content="株式会社ハーバーエステートは、売買・賃貸・管理まで住まいのことをワンストップでサポート。地域に根ざした確かな情報で、理想の住まい探しをお手伝いします。" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="SAMPLE ESTATE | あなたの住まい探しをサポートする不動産会社" />
+  <meta property="og:title" content="HARBOR ESTATE | あなたの住まい探しをサポートする不動産会社" />
   <meta property="og:description" content="売買・賃貸・管理まで、住まいのことをワンストップでサポートします。" />
   <meta property="og:image" content="https://your-domain.com/assets/image/ogp.jpg" />
   <meta property="og:url" content="https://your-domain.com/" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- ★要変更: 公開する実際のURL（独自ドメイン）に変更してください -->
+  <link rel="canonical" href="https://your-domain.com/" />
+  <!-- 構造化データ（JSON-LD）★ 会社名・URL・電話・住所・画像を実際の情報に変更してください -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "株式会社ハーバーエステート",
+    "url": "https://your-domain.com/",
+    "telephone": "03-0000-0000",
+    "image": "https://your-domain.com/assets/image/ogp.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP",
+      "postalCode": "000-0000",
+      "addressRegion": "東京都",
+      "addressLocality": "○○区",
+      "streetAddress": "○○ 1-2-3"
+    },
+    "description": "株式会社ハーバーエステートは、売買・賃貸・管理まで住まいのことをワンストップでサポートします。"
+  }
+  </script>
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,8 +52,8 @@
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <span class="brand-name">SAMPLE ESTATE</span>
-        <span class="brand-sub">株式会社サンプル不動産</span>
+        <span class="brand-name">HARBOR ESTATE</span>
+        <span class="brand-sub">株式会社ハーバーエステート</span>
       </a>
       <nav class="nav">
         <a href="index.html" class="is-current">ホーム</a>
@@ -122,10 +144,10 @@
           <a href="property-detail.html" class="card scroll-trigger">
             <div class="card-img">
               <span class="prop-badge">売買</span>
-              <img src="assets/image/property_01.jpg" alt="サンプルレジデンス青葉台">
+              <img src="assets/image/property_01.jpg" alt="グランレジデンス青葉台">
             </div>
             <div class="card-body">
-              <h4 class="card-title">サンプルレジデンス青葉台</h4>
+              <h4 class="card-title">グランレジデンス青葉台</h4>
               <p class="prop-price">3,480<span> 万円</span></p>
               <p class="prop-meta"><span><i class="fa-solid fa-border-all"></i>3LDK</span><span><i class="fa-solid fa-ruler-combined"></i>72.5m&sup2;</span></p>
             </div>
@@ -133,10 +155,10 @@
           <a href="property-detail.html" class="card scroll-trigger">
             <div class="card-img">
               <span class="prop-badge">売買</span>
-              <img src="assets/image/property_02.jpg" alt="サンプルヒルズ桜並木">
+              <img src="assets/image/property_02.jpg" alt="パークヒルズ桜並木">
             </div>
             <div class="card-body">
-              <h4 class="card-title">サンプルヒルズ桜並木</h4>
+              <h4 class="card-title">パークヒルズ桜並木</h4>
               <p class="prop-price">4,980<span> 万円</span></p>
               <p class="prop-meta"><span><i class="fa-solid fa-border-all"></i>4LDK</span><span><i class="fa-solid fa-ruler-combined"></i>95.0m&sup2;</span></p>
             </div>
@@ -144,10 +166,10 @@
           <a href="property-detail.html" class="card scroll-trigger">
             <div class="card-img">
               <span class="prop-badge is-accent">賃貸</span>
-              <img src="assets/image/property_03.jpg" alt="サンプルコート中央">
+              <img src="assets/image/property_03.jpg" alt="セントラルコート中央">
             </div>
             <div class="card-body">
-              <h4 class="card-title">サンプルコート中央</h4>
+              <h4 class="card-title">セントラルコート中央</h4>
               <p class="prop-price">12.8<span> 万円 / 月</span></p>
               <p class="prop-meta"><span><i class="fa-solid fa-border-all"></i>2LDK</span><span><i class="fa-solid fa-ruler-combined"></i>58.0m&sup2;</span></p>
             </div>
@@ -202,7 +224,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <span class="brand-name">SAMPLE ESTATE</span>
+          <span class="brand-name">HARBOR ESTATE</span>
           <!-- ★ 要変更: 住所・電話番号・宅建業免許番号を自社の内容に書き換えてください -->
           <p>〒100-0000<br>東京都千代田区大手町1-1-1<br>TEL: 03-0000-0000<br>宅地建物取引業免許：東京都知事（1）第00000号</p>
         </div>
@@ -225,7 +247,7 @@
       </div>
       <div class="footer-bottom">
         <!-- ★ 要変更: 会社名 -->
-        <p>&copy; 2026 SAMPLE ESTATE All Rights Reserved.</p>
+        <p>&copy; 2026 HARBOR ESTATE All Rights Reserved.</p>
       </div>
     </div>
   </footer>

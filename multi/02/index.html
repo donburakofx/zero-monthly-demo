@@ -5,16 +5,39 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <!-- ★ 要変更: 医院名・診療内容を入力してください -->
-  <title>さんぷる内科クリニック | 地域のかかりつけ医</title>
-  <meta name="description" content="さんぷる内科クリニックは、内科・生活習慣病を中心に地域のみなさまの健康をサポートします。WEB予約に対応しています。" />
+  <title>小林内科クリニック | 地域のかかりつけ医</title>
+  <meta name="description" content="小林内科クリニックは、内科・生活習慣病を中心に地域のみなさまの健康をサポートします。WEB予約に対応しています。" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="さんぷる内科クリニック | 地域のかかりつけ医" />
+  <meta property="og:title" content="小林内科クリニック | 地域のかかりつけ医" />
   <meta property="og:description" content="内科・生活習慣病を中心に地域のみなさまの健康をサポートします。" />
   <meta property="og:image" content="https://your-domain.com/assets/image/ogp.jpg" />
   <meta property="og:url" content="https://your-domain.com/" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- ★要変更: 公開する実際のURL（独自ドメイン）に変更してください -->
+  <link rel="canonical" href="https://your-domain.com/" />
+  <!-- 構造化データ（JSON-LD）★ 医院名・URL・電話・住所・診療時間・画像を実際の情報に変更してください -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "小林内科クリニック",
+    "url": "https://your-domain.com/",
+    "telephone": "03-0000-0000",
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "image": "https://your-domain.com/assets/image/ogp.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP",
+      "postalCode": "000-0000",
+      "addressRegion": "東京都",
+      "addressLocality": "○○区",
+      "streetAddress": "○○ 1-2-3"
+    },
+    "description": "小林内科クリニックは、内科・生活習慣病を中心に地域のみなさまの健康をサポートします。"
+  }
+  </script>
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,8 +53,8 @@
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <span class="brand-name">SAMPLE CLINIC</span>
-        <span class="brand-sub">さんぷる内科クリニック</span>
+        <span class="brand-name">KOBAYASHI CLINIC</span>
+        <span class="brand-sub">小林内科クリニック</span>
       </a>
       <nav class="nav">
         <a href="index.html" class="is-current">ホーム</a>
@@ -146,9 +169,9 @@
           <h3 class="section-title">院長ごあいさつ</h3>
         </div>
         <div class="scroll-trigger" style="text-align:center;">
-          <img src="assets/image/doctor.jpg" alt="院長 さんぷる 一郎" style="width:160px;height:160px;object-fit:cover;border-radius:50%;margin:0 auto 24px;">
+          <img src="assets/image/doctor.jpg" alt="院長 小林 一郎" style="width:160px;height:160px;object-fit:cover;border-radius:50%;margin:0 auto 24px;">
           <p style="margin-bottom:20px;">地域のみなさまが、体調に不安を感じたときに気軽に立ち寄れる。そんな「かかりつけ医」でありたいと考えています。患者さまのお話にしっかりと耳を傾け、一人ひとりに合った診療を大切にしてまいります。</p>
-          <p style="font-weight:700;margin-top:20px;">院長　さんぷる 一郎</p>
+          <p style="font-weight:700;margin-top:20px;">院長　小林 一郎</p>
           <div style="margin-top:24px;"><a href="about.html" class="btn btn-outline-dark">医院紹介を見る <i class="fa-solid fa-arrow-right"></i></a></div>
         </div>
       </div>
@@ -191,7 +214,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <span class="brand-name">SAMPLE CLINIC</span>
+          <span class="brand-name">KOBAYASHI CLINIC</span>
           <!-- ★ 要変更: 医院の住所・電話番号 -->
           <p>〒100-0000<br>東京都千代田区大手町1-1-1<br>TEL: 03-0000-0000</p>
         </div>
@@ -215,7 +238,7 @@
       </div>
       <div class="footer-bottom">
         <!-- ★ 要変更: 医院名 -->
-        <p>&copy; 2026 SAMPLE CLINIC. All Rights Reserved.</p>
+        <p>&copy; 2026 KOBAYASHI CLINIC. All Rights Reserved.</p>
       </div>
     </div>
   </footer>

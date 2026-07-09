@@ -2,29 +2,54 @@
 <html lang="ja">
 
 <!-- ★★★ カスタマイズ必須 ★★★
-  このファイル全体の「株式会社サンプル」を貴社名に置き換えてください。
-  エディタで「株式会社サンプル」を一括検索・置換するのが最も確実です。
+  このファイル全体の「株式会社ネクストフィールド」を貴社名に置き換えてください。
+  エディタで「株式会社ネクストフィールド」を一括検索・置換するのが最も確実です。
   公開前に必ずご確認ください。
 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ★ 要変更: 「株式会社サンプル」を貴社名に変更してください -->
-    <title>株式会社サンプル | 信頼と実績のパートナー</title>
-    <meta name="description" content="株式会社サンプルの公式コーポレートサイトです。私たちは顧客のビジネスを加速させる最適なソリューションを提供します。">
+    <!-- ★ 要変更: 「株式会社ネクストフィールド」を貴社名に変更してください -->
+    <title>株式会社ネクストフィールド | 信頼と実績のパートナー</title>
+    <meta name="description" content="株式会社ネクストフィールドの公式コーポレートサイトです。私たちは顧客のビジネスを加速させる最適なソリューションを提供します。">
     
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="株式会社サンプル | 信頼と実績のパートナー" />
-    <meta property="og:description" content="株式会社サンプルの公式コーポレートサイトです。私たちは顧客のビジネスを加速させる最適なソリューションを提供します。" />
+    <meta property="og:title" content="株式会社ネクストフィールド | 信頼と実績のパートナー" />
+    <meta property="og:description" content="株式会社ネクストフィールドの公式コーポレートサイトです。私たちは顧客のビジネスを加速させる最適なソリューションを提供します。" />
     <meta property="og:image" content="https://your-domain.com/assets/image/ogp.jpg" />
     <meta property="og:url" content="https://your-domain.com/" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="株式会社サンプル | 信頼と実績のパートナー" />
-    <meta name="twitter:description" content="株式会社サンプルの公式コーポレートサイトです。私たちは顧客のビジネスを加速させる最適なソリューションを提供します。" />
+    <meta name="twitter:title" content="株式会社ネクストフィールド | 信頼と実績のパートナー" />
+    <meta name="twitter:description" content="株式会社ネクストフィールドの公式コーポレートサイトです。私たちは顧客のビジネスを加速させる最適なソリューションを提供します。" />
     <meta name="twitter:image" content="https://your-domain.com/assets/image/ogp.jpg" />
 
     <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+
+    <!-- ★要変更: 公開する実際のURL（独自ドメイン）に変更してください -->
+    <link rel="canonical" href="https://your-domain.com/" />
+
+    <!-- 構造化データ（JSON-LD）★ 会社名・URL・電話番号・住所を実際の情報に変更してください -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "株式会社ネクストフィールド",
+      "url": "https://your-domain.com/",
+      "logo": "https://your-domain.com/assets/image/ogp.jpg",
+      "image": "https://your-domain.com/assets/image/ogp.jpg",
+      "telephone": "+81-3-0000-0000",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "000-0000",
+        "addressRegion": "東京都",
+        "addressLocality": "（市区町村）",
+        "streetAddress": "（番地・building）",
+        "addressCountry": "JP"
+      },
+      "description": "株式会社ネクストフィールドの公式コーポレートサイトです。私たちは顧客のビジネスを加速させる最適なソリューションを提供します。"
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +65,7 @@
     <header class="header">
         <div class="header-inner">
             <a href="#top" class="logo">
-                <i class="fa-solid fa-building-columns"></i> Sample Corp.
+                <i class="fa-solid fa-building-columns"></i> NextField Inc.
             </a>
             <nav class="pc-nav">
                 <ul class="nav-list">
@@ -98,7 +123,7 @@
             </div>
             <div class="news-list">
                 <div class="news-item">
-                    <button class="news-header">
+                    <button class="news-header" aria-expanded="false">
                         <div class="news-meta">
                             <span class="news-date">2026.05.01</span>
                             <span class="news-cat">お知らせ</span>
@@ -115,7 +140,7 @@
                     </div>
                 </div>
                 <div class="news-item">
-                    <button class="news-header">
+                    <button class="news-header" aria-expanded="false">
                         <div class="news-meta">
                             <span class="news-date">2026.04.15</span>
                             <span class="news-cat">プレスリリース</span>
@@ -125,13 +150,13 @@
                     </button>
                     <div class="news-body">
                         <div class="news-content">
-                            <p>株式会社サンプルは、企業のDXを加速させる新しいクラウド統合管理プラットフォーム「Cloud Connect」をリリースいたしました。</p>
+                            <p>株式会社ネクストフィールドは、企業のDXを加速させる新しいクラウド統合管理プラットフォーム「Cloud Connect」をリリースいたしました。</p>
                             <p>本サービスにより、分散する社内データのシームレスな連携が可能となり、業務効率が平均30%向上します。無料トライアルキャンペーンも実施中ですので、ぜひ詳細ページをご覧ください。</p>
                         </div>
                     </div>
                 </div>
                 <div class="news-item">
-                    <button class="news-header">
+                    <button class="news-header" aria-expanded="false">
                         <div class="news-meta">
                             <span class="news-date">2026.04.01</span>
                             <span class="news-cat">採用情報</span>
@@ -229,7 +254,7 @@
                             <p>・経営DX戦略の策定<br>・業務プロセス改革（BPR）<br>・新規事業開発支援<br>・組織改革コンサルティング</p>
                             <p class="detail-note">貴社のフェーズに合わせたオーダーメイドの支援を行います。</p>
                         </div>
-                        <button class="service-toggle" aria-label="詳細を開く"><i class="fa-solid fa-plus"></i></button>
+                        <button class="service-toggle" aria-label="詳細を開く" aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
                     </div>
                 </div>
                 <div class="service-card js-fade-up delay-2">
@@ -243,7 +268,7 @@
                             <p>・基幹システム刷新<br>・SaaS型プロダクト開発<br>・iOS/Androidアプリ開発<br>・AI/IoTソリューション導入</p>
                             <p class="detail-note">アジャイル開発にも対応し、スピーディーな市場投入を支援します。</p>
                         </div>
-                        <button class="service-toggle" aria-label="詳細を開く"><i class="fa-solid fa-plus"></i></button>
+                        <button class="service-toggle" aria-label="詳細を開く" aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
                     </div>
                 </div>
                 <div class="service-card js-fade-up delay-3">
@@ -257,7 +282,7 @@
                             <p>・AWS/Azureクラウド構築<br>・オンプレミス移行支援<br>・ネットワークセキュリティ診断<br>・24時間365日監視・保守</p>
                             <p class="detail-note">ゼロトラストセキュリティに基づいた堅牢な環境を提供します。</p>
                         </div>
-                        <button class="service-toggle" aria-label="詳細を開く"><i class="fa-solid fa-plus"></i></button>
+                        <button class="service-toggle" aria-label="詳細を開く" aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
                     </div>
                 </div>
             </div>
@@ -275,7 +300,7 @@
                 <dl class="company-list">
                     <div class="company-row">
                         <dt>会社名</dt>
-                        <dd>株式会社サンプル (Sample Corp.)</dd>
+                        <dd>株式会社ネクストフィールド (NextField Inc.)</dd>
                     </div>
                     <div class="company-row">
                         <dt>設立</dt>
@@ -295,7 +320,7 @@
                     </div>
                     <div class="company-row">
                         <dt>所在地</dt>
-                        <dd>〒100-0005 東京都千代田区丸の内1-1-1 サンプルビル10F</dd>
+                        <dd>〒100-0005 東京都千代田区丸の内1-1-1 丸の内センタービル10F</dd>
                     </div>
                     <div class="company-row">
                         <dt>連絡先</dt>
@@ -335,7 +360,7 @@
             <div class="footer-inner">
                 <div class="footer-info">
                     <a href="#top" class="footer-logo">
-                        <i class="fa-solid fa-building-columns"></i> Sample Corp.
+                        <i class="fa-solid fa-building-columns"></i> NextField Inc.
                     </a>
                     <p class="footer-address">
                         〒100-0005 東京都千代田区丸の内1-1-1<br>
@@ -357,7 +382,7 @@
                     </ul>
                 </div>
             </div>
-            <p class="copyright"><small>© 2026 Sample Corp. All Rights Reserved.</small></p>
+            <p class="copyright"><small>© 2026 NextField Inc. All Rights Reserved.</small></p>
         </div>
     </footer>
 
@@ -388,9 +413,11 @@
                 if (item.classList.contains('active')) {
                     item.classList.remove('active');
                     body.style.height = '0px';
+                    header.setAttribute('aria-expanded', 'false');
                 } else {
                     item.classList.add('active');
                     body.style.height = body.scrollHeight + 'px';
+                    header.setAttribute('aria-expanded', 'true');
                 }
             });
         });
@@ -408,11 +435,13 @@
                     detail.style.height = '0px';
                     icon.classList.remove('fa-minus');
                     icon.classList.add('fa-plus');
+                    btn.setAttribute('aria-expanded', 'false');
                 } else {
                     card.classList.add('active');
                     detail.style.height = detail.scrollHeight + 'px';
                     icon.classList.remove('fa-plus');
                     icon.classList.add('fa-minus');
+                    btn.setAttribute('aria-expanded', 'true');
                 }
             });
         });
@@ -482,7 +511,7 @@
   </div>
   <script>
     (function() {
-      var themes = [{"label":"A","color":"#0044CC","name":"Trust Blue","vars":{"--primary":"#0044CC","--primary-dark":"#003399","--accent":"#00AEEF","--text-main":"#333333","--text-muted":"#666666","--bg-body":"#FFFFFF","--bg-light":"#F8F9FA","--bg-gray":"#F0F2F5","--bg-cta":"#003399"}},{"label":"B","color":"#1A237E","name":"Intelligent Navy","vars":{"--primary":"#1A237E","--primary-dark":"#0D1352","--accent":"#D4AF37","--text-main":"#2C3E50","--text-muted":"#7F8C8D","--bg-body":"#FFFFFF","--bg-light":"#F5F7FA","--bg-gray":"#E8ECF1","--bg-cta":"#1A237E"}},{"label":"C","color":"#2E7D32","name":"Sustainable Green","vars":{"--primary":"#2E7D32","--primary-dark":"#1B5E20","--accent":"#81C784","--text-main":"#2E3B32","--text-muted":"#6E7D73","--bg-body":"#FFFFFF","--bg-light":"#F4F9F6","--bg-gray":"#E9F0EC","--bg-cta":"#2E7D32"}},{"label":"D","color":"#8D6E63","name":"Warm Human","vars":{"--primary":"#8D6E63","--primary-dark":"#5D4037","--accent":"#FF7043","--text-main":"#4A4A4A","--text-muted":"#808080","--bg-body":"#FFFFFF","--bg-light":"#FAF9F7","--bg-gray":"#F2F0EB","--bg-cta":"#5D4037"}},{"label":"E","color":"#111111","name":"Innovation Black","vars":{"--primary":"#111111","--primary-dark":"#000000","--accent":"#2563EB","--text-main":"#111111","--text-muted":"#666666","--bg-body":"#FFFFFF","--bg-light":"#F9FAFB","--bg-gray":"#F3F4F6","--bg-cta":"#111111"}}];
+      var themes = [{"label": "A", "name": "Trust Blue", "color": "#0044CC", "vars": {"--text-main": "#333333", "--text-muted": "#666666", "--bg-body": "#FFFFFF", "--bg-light": "#F8F9FA", "--bg-gray": "#F0F2F5", "--primary": "#0044CC", "--primary-dark": "#003399", "--accent": "#00AEEF", "--border": "#E0E0E0", "--bg-cta": "#003399"}}, {"label": "B", "name": "Intelligent Navy", "color": "#1A237E", "vars": {"--text-main": "#2C3E50", "--text-muted": "#7F8C8D", "--bg-body": "#FFFFFF", "--bg-light": "#F5F7FA", "--bg-gray": "#E8ECF1", "--primary": "#1A237E", "--primary-dark": "#0D1352", "--accent": "#D4AF37", "--border": "#CFD8DC", "--bg-cta": "#1A237E"}}, {"label": "C", "name": "Sustainable Green", "color": "#2E7D32", "vars": {"--text-main": "#2E3B32", "--text-muted": "#6E7D73", "--bg-body": "#FFFFFF", "--bg-light": "#F4F9F6", "--bg-gray": "#E9F0EC", "--primary": "#2E7D32", "--primary-dark": "#1B5E20", "--accent": "#81C784", "--border": "#DCE6E0", "--bg-cta": "#2E7D32"}}, {"label": "D", "name": "Warm Human", "color": "#8D6E63", "vars": {"--text-main": "#4A4A4A", "--text-muted": "#808080", "--bg-body": "#FFFFFF", "--bg-light": "#FAF9F7", "--bg-gray": "#F2F0EB", "--primary": "#8D6E63", "--primary-dark": "#5D4037", "--accent": "#FF7043", "--border": "#E0E0E0", "--bg-cta": "#5D4037"}}, {"label": "E", "name": "Innovation Black", "color": "#111111", "vars": {"--text-main": "#111111", "--text-muted": "#666666", "--bg-body": "#FFFFFF", "--bg-light": "#F9FAFB", "--bg-gray": "#F3F4F6", "--primary": "#111111", "--primary-dark": "#000000", "--accent": "#2563EB", "--border": "#E5E7EB", "--bg-cta": "#111111"}}];
       var panel = document.getElementById('demoPanel');
       var toggle = document.getElementById('demoToggle');
       var swatches = [];
