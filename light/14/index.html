@@ -18,6 +18,25 @@
   <meta name="twitter:description" content="完全個室のプライベートジム。初回体験セッション無料受付中。" />
   <meta name="twitter:image" content="https://your-domain.com/assets/image/ogp.jpg" />
 
+  <!-- ★要変更: 公開する実際のURL（独自ドメイン）に変更してください -->
+  <link rel="canonical" href="https://your-domain.com/" />
+
+  <!-- 構造化データ（JSON-LD）★ 名称・URL・電話・住所・営業時間・料金・画像を実際の情報に変更してください -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    "name": "IRON BODY GYM",
+    "url": "https://your-domain.com/",
+    "telephone": "03-0000-0000",
+    "priceRange": "¥¥",
+    "openingHours": "Mo-Su 07:00-23:00",
+    "image": "https://your-domain.com/assets/image/ogp.jpg",
+    "address": { "@type": "PostalAddress", "addressCountry": "JP", "postalCode": "000-0000", "addressRegion": "東京都", "addressLocality": "○○区", "streetAddress": "○○ 1-2-3" },
+    "description": "完全個室のパーソナルトレーニングジムです。専属トレーナーが目標達成までサポートします。"
+  }
+  </script>
+
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,8 +92,9 @@
       <div class="hero-bg">
         <img src="assets/image/hero.jpg" alt="ジム内トレーニング" class="hero-img">
       </div>
+      <div class="hero-aurora"></div>
       <div class="hero-content">
-        <p class="hero-tag">完全個室 · 専属トレーナー · 結果にコミット</p>
+        <p class="hero-tag"><span class="hero-tag-dot"></span>完全個室 · 専属トレーナー · 結果にコミット</p>
         <h1 class="hero-title">3ヶ月で、<br>体を変える。</h1>
         <p class="hero-sub">あなただけの専属トレーナーが、<br>目標達成まで徹底的にサポートします。</p>
         <a href="#trial" class="btn-hero">無料体験を申し込む <i class="fa-solid fa-arrow-right"></i></a>
@@ -498,54 +518,32 @@
        このブロックは配布テンプレートには含まれません
        ======================================================== -->
   <style>
-    .demo-switcher {
-      position: fixed; right: 16px; bottom: 24px;
-      z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px;
-    }
-    .demo-switcher-toggle {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: #1a1a1a; color: #fff; border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s;
-    }
+    .demo-switcher { position: fixed; right: 16px; bottom: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .demo-switcher-toggle { width: 44px; height: 44px; border-radius: 50%; background: #1a1a1a; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
     .demo-switcher-toggle:hover { transform: scale(1.1); }
-    .demo-switcher-panel {
-      display: none; flex-direction: column; gap: 6px;
-      background: rgba(255,255,255,0.95); border-radius: 12px;
-      padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
+    .demo-switcher-panel { display: none; flex-direction: column; gap: 6px; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
     .demo-switcher-panel.is-open { display: flex; }
-    .demo-swatch {
-      width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
-      border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s;
-      position: relative;
-    }
+    .demo-swatch { width: 36px; height: 36px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s; position: relative; }
     .demo-swatch:hover { transform: scale(1.15); }
     .demo-swatch.is-active { border-color: #1a1a1a; }
-    .demo-swatch-label {
-      position: absolute; inset: 0; display: flex; align-items: center;
-      justify-content: center; font-size: 10px; font-weight: 700;
-      color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-      font-family: sans-serif;
-    }
-    .demo-badge {
-      font-size: 9px; color: #888; font-family: sans-serif;
-      letter-spacing: 0.05em; text-align: center; line-height: 1;
-    }
+    .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
+    .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
   </style>
   <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel">
-      <span class="demo-badge">COLOR</span>
-    </div>
+    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
     <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/>
-      </svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
+    </button>
+  </div>
+  <div class="demo-switcher">
+    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
+    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
     </button>
   </div>
   <script>
     (function() {
-      var themes = [{"label":"A","color":"#E86500","name":"Dark Steel + Orange","vars":{"--bg-body":"#FFFFFF","--bg-dark":"#111820","--bg-dark-card":"#1A2230","--text-main":"#1A1A2E","--text-muted":"#6B7280","--text-on-dark":"#FFFFFF","--text-muted-on-dark":"rgba(255,255,255,0.6)","--bg-light":"#F8F9FA","--primary":"#E86500","--primary-hover":"#CC5700","--primary-light":"#FFF3E8","--border":"#E5E7EB","--border-dark":"rgba(255,255,255,0.12)","--cta-bg":"linear-gradient(135deg, #E86500 0%, #FF8C2A 100%)"}},{"label":"B","color":"#1A56DB","name":"Clean White + Royal Blue","vars":{"--bg-body":"#FFFFFF","--bg-dark":"#1A237E","--bg-dark-card":"#283593","--text-main":"#1A237E","--text-muted":"#5C6BC0","--text-on-dark":"#FFFFFF","--text-muted-on-dark":"rgba(255,255,255,0.7)","--bg-light":"#F3F4FC","--primary":"#1A56DB","--primary-hover":"#1240AB","--primary-light":"#EBF0FF","--border":"#C5CAE9","--border-dark":"rgba(255,255,255,0.15)","--cta-bg":"linear-gradient(135deg, #1A56DB 0%, #3B82F6 100%)"}},{"label":"C","color":"#C5A059","name":"Deep Black + Gold","vars":{"--bg-body":"#FFFFFF","--bg-dark":"#0D0D0D","--bg-dark-card":"#1A1A1A","--text-main":"#111111","--text-muted":"#777777","--text-on-dark":"#FFFFFF","--text-muted-on-dark":"rgba(255,255,255,0.55)","--bg-light":"#F9F9F7","--primary":"#C5A059","--primary-hover":"#A8843D","--primary-light":"#FDF6E8","--border":"#E8E0D5","--border-dark":"rgba(255,255,255,0.1)","--cta-bg":"linear-gradient(135deg, #C5A059 0%, #E5C56C 100%)"}},{"label":"D","color":"#FF6B6B","name":"Navy + Coral","vars":{"--bg-body":"#FFFFFF","--bg-dark":"#2C3E6E","--bg-dark-card":"#364882","--text-main":"#2C3E6E","--text-muted":"#7B88AA","--text-on-dark":"#FFFFFF","--text-muted-on-dark":"rgba(255,255,255,0.65)","--bg-light":"#F5F7FF","--primary":"#FF6B6B","--primary-hover":"#E55555","--primary-light":"#FFF0F0","--border":"#DCE4F5","--border-dark":"rgba(255,255,255,0.15)","--cta-bg":"linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)"}},{"label":"E","color":"#3A7D44","name":"Forest Dark + Green","vars":{"--bg-body":"#FFFFFF","--bg-dark":"#1B2E1B","--bg-dark-card":"#243024","--text-main":"#1B2E1B","--text-muted":"#5A7A5A","--text-on-dark":"#FFFFFF","--text-muted-on-dark":"rgba(255,255,255,0.6)","--bg-light":"#F2F7F2","--primary":"#3A7D44","--primary-hover":"#2D6335","--primary-light":"#E8F5E9","--border":"#C8DFC8","--border-dark":"rgba(255,255,255,0.12)","--cta-bg":"linear-gradient(135deg, #3A7D44 0%, #5CB85C 100%)"}}];
+      var themes = [{"label": "A", "name": "Dark Steel + Orange / ダークスチール", "color": "#E86500", "vars": {"--bg-body": "#FFFFFF", "--bg-dark": "#111820", "--bg-dark-card": "#1A2230", "--text-main": "#1A1A2E", "--text-muted": "#6B7280", "--text-on-dark": "#FFFFFF", "--text-muted-on-dark": "rgba(255,255,255,0.6)", "--bg-light": "#F8F9FA", "--primary": "#E86500", "--primary-hover": "#CC5700", "--primary-light": "#FFF3E8", "--border": "#E5E7EB", "--border-dark": "rgba(255,255,255,0.12)", "--cta-bg": "linear-gradient(135deg, #E86500 0%, #FF8C2A 100%)"}}, {"label": "B", "name": "Clean White + Royal Blue / スポーツクラブ", "color": "#1A56DB", "vars": {"--bg-body": "#FFFFFF", "--bg-dark": "#1A237E", "--bg-dark-card": "#283593", "--text-main": "#1A237E", "--text-muted": "#5C6BC0", "--text-on-dark": "#FFFFFF", "--text-muted-on-dark": "rgba(255,255,255,0.7)", "--bg-light": "#F3F4FC", "--primary": "#1A56DB", "--primary-hover": "#1240AB", "--primary-light": "#EBF0FF", "--border": "#C5CAE9", "--border-dark": "rgba(255,255,255,0.15)", "--cta-bg": "linear-gradient(135deg, #1A56DB 0%, #3B82F6 100%)"}}, {"label": "C", "name": "Deep Black + Gold / ラグジュアリー", "color": "#C5A059", "vars": {"--bg-body": "#FFFFFF", "--bg-dark": "#0D0D0D", "--bg-dark-card": "#1A1A1A", "--text-main": "#111111", "--text-muted": "#777777", "--text-on-dark": "#FFFFFF", "--text-muted-on-dark": "rgba(255,255,255,0.55)", "--bg-light": "#F9F9F7", "--primary": "#C5A059", "--primary-hover": "#A8843D", "--primary-light": "#FDF6E8", "--border": "#E8E0D5", "--border-dark": "rgba(255,255,255,0.1)", "--cta-bg": "linear-gradient(135deg, #C5A059 0%, #E5C56C 100%)"}}, {"label": "D", "name": "Navy + Coral / 女性向けフィットネス", "color": "#FF6B6B", "vars": {"--bg-body": "#FFFFFF", "--bg-dark": "#2C3E6E", "--bg-dark-card": "#364882", "--text-main": "#2C3E6E", "--text-muted": "#7B88AA", "--text-on-dark": "#FFFFFF", "--text-muted-on-dark": "rgba(255,255,255,0.65)", "--bg-light": "#F5F7FF", "--primary": "#FF6B6B", "--primary-hover": "#E55555", "--primary-light": "#FFF0F0", "--border": "#DCE4F5", "--border-dark": "rgba(255,255,255,0.15)", "--cta-bg": "linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)"}}, {"label": "E", "name": "Forest Dark + Green / ナチュラル系", "color": "#3A7D44", "vars": {"--bg-body": "#FFFFFF", "--bg-dark": "#1B2E1B", "--bg-dark-card": "#243024", "--text-main": "#1B2E1B", "--text-muted": "#5A7A5A", "--text-on-dark": "#FFFFFF", "--text-muted-on-dark": "rgba(255,255,255,0.6)", "--bg-light": "#F2F7F2", "--primary": "#3A7D44", "--primary-hover": "#2D6335", "--primary-light": "#E8F5E9", "--border": "#C8DFC8", "--border-dark": "rgba(255,255,255,0.12)", "--cta-bg": "linear-gradient(135deg, #3A7D44 0%, #5CB85C 100%)"}}];
       var panel = document.getElementById('demoPanel');
       var toggle = document.getElementById('demoToggle');
       var swatches = [];

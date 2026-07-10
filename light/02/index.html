@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NEXT CODE | 未経験からエンジニアへ。マンツーマンプログラミングスクール</title>
   <meta name="description" content="挫折させないプログラミングスクール。現役エンジニアによる徹底したマンツーマン指導で、あなたのキャリアを変えます。" />
 
@@ -25,6 +25,29 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet">
+
+  <!-- ★要変更: 公開する実際のURL（独自ドメイン）に変更してください -->
+  <link rel="canonical" href="https://your-domain.com/" />
+
+  <!-- 構造化データ（JSON-LD）★ 名称・URL・電話・住所・説明を実際の情報に変更してください -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "NEXT CODE",
+    "url": "https://your-domain.com/",
+    "telephone": "03-0000-0000",
+    "description": "挫折させないプログラミングスクール。現役エンジニアによる徹底したマンツーマン指導で、あなたのキャリアを変えます。",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP",
+      "postalCode": "000-0000",
+      "addressRegion": "東京都",
+      "addressLocality": "○○区",
+      "streetAddress": "○○ 1-2-3"
+    }
+  }
+  </script>
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -59,8 +82,12 @@
 
     <section class="hero" style="background-image: url('assets/image/hero_bg.jpg');">
       <div class="hero-overlay"></div>
+      <div class="hero-aurora hero-aurora-1" aria-hidden="true"></div>
+      <div class="hero-aurora hero-aurora-2" aria-hidden="true"></div>
+      <div class="hero-noise" aria-hidden="true"></div>
       <div class="container hero-container fade-up">
         <p class="hero-tag">オンライン・マンツーマン指導</p>
+        <span class="hero-divider" aria-hidden="true"></span>
         <h1 class="hero-title">
           「作れる」楽しさが、<br>
           <span class="highlight">未来</span>を変える。
@@ -508,59 +535,38 @@
     });
   </script>
 
+
   <!-- ========================================================
        DEMO ONLY: Color Theme Switcher
        このブロックは配布テンプレートには含まれません
        ======================================================== -->
   <style>
-    .demo-switcher {
-      position: fixed; right: 16px; bottom: 24px;
-      z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px;
-    }
-    .demo-switcher-toggle {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: #1a1a1a; color: #fff; border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s;
-    }
+    .demo-switcher { position: fixed; right: 16px; bottom: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .demo-switcher-toggle { width: 44px; height: 44px; border-radius: 50%; background: #1a1a1a; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
     .demo-switcher-toggle:hover { transform: scale(1.1); }
-    .demo-switcher-panel {
-      display: none; flex-direction: column; gap: 6px;
-      background: rgba(255,255,255,0.95); border-radius: 12px;
-      padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
+    .demo-switcher-panel { display: none; flex-direction: column; gap: 6px; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
     .demo-switcher-panel.is-open { display: flex; }
-    .demo-swatch {
-      width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
-      border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s;
-      position: relative;
-    }
+    .demo-swatch { width: 36px; height: 36px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s; position: relative; }
     .demo-swatch:hover { transform: scale(1.15); }
     .demo-swatch.is-active { border-color: #1a1a1a; }
-    .demo-swatch-label {
-      position: absolute; inset: 0; display: flex; align-items: center;
-      justify-content: center; font-size: 10px; font-weight: 700;
-      color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-      font-family: sans-serif;
-    }
-    .demo-badge {
-      font-size: 9px; color: #888; font-family: sans-serif;
-      letter-spacing: 0.05em; text-align: center; line-height: 1;
-    }
+    .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
+    .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
   </style>
   <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel">
-      <span class="demo-badge">COLOR</span>
-    </div>
+    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
     <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/>
-      </svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
+    </button>
+  </div>
+  <div class="demo-switcher">
+    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
+    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
     </button>
   </div>
   <script>
     (function() {
-      var themes = [{"label":"A","color":"rgb(10,189,227)","name":"Trust Blue","vars":{"--primary-rgb":"10,189,227","--accent-rgb":"30,144,255","--primary":"rgb(10,189,227)","--accent":"rgb(30,144,255)","--primary-light":"rgba(10,189,227,0.08)"}},{"label":"B","color":"rgb(239,87,119)","name":"Sakura Forest","vars":{"--primary-rgb":"239,87,119","--accent-rgb":"220,20,60","--primary":"rgb(239,87,119)","--accent":"rgb(220,20,60)","--primary-light":"rgba(239,87,119,0.08)"}},{"label":"C","color":"rgb(32,191,107)","name":"Fresh Nature","vars":{"--primary-rgb":"32,191,107","--accent-rgb":"0,128,0","--primary":"rgb(32,191,107)","--accent":"rgb(0,128,0)","--primary-light":"rgba(32,191,107,0.08)"}},{"label":"D","color":"rgb(250,130,49)","name":"Active Yellow","vars":{"--primary-rgb":"250,130,49","--accent-rgb":"56,103,214","--primary":"rgb(250,130,49)","--accent":"rgb(56,103,214)","--primary-light":"rgba(250,130,49,0.08)"}},{"label":"E","color":"rgb(105,105,105)","name":"Modern Enji","vars":{"--primary-rgb":"105,105,105","--accent-rgb":"184,134,11","--primary":"rgb(105,105,105)","--accent":"rgb(184,134,11)","--primary-light":"rgba(105,105,105,0.08)"}}];
+      var themes = [{"label": "1", "name": "Trust Blue", "color": "rgb(10, 189, 227)", "vars": {"--primary-rgb": "10, 189, 227", "--accent-rgb": "30, 144, 255"}}, {"label": "2", "name": "Sakura Forest", "color": "rgb(239, 87, 119)", "vars": {"--primary-rgb": "239, 87, 119", "--accent-rgb": "220, 20, 60"}}, {"label": "3", "name": "Fresh Nature", "color": "rgb(32, 191, 107)", "vars": {"--primary-rgb": "32, 191, 107", "--accent-rgb": "0, 128, 0"}}, {"label": "4", "name": "Active Yellow", "color": "rgb(250, 130, 49)", "vars": {"--primary-rgb": "250, 130, 49", "--accent-rgb": "56, 103, 214"}}, {"label": "5", "name": "Modern Enji", "color": "rgb(105, 105, 105)", "vars": {"--primary-rgb": "105, 105, 105", "--accent-rgb": "184, 134, 11"}}];
       var panel = document.getElementById('demoPanel');
       var toggle = document.getElementById('demoToggle');
       var swatches = [];
@@ -589,7 +595,6 @@
       });
     })();
   </script>
-
 </body>
 
 </html>

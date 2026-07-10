@@ -72,6 +72,7 @@
     --banner-text: #FFFFFF; */
 
     /* --- Common Settings (共通設定) --- */
+    --accent-ink: color-mix(in srgb, var(--primary) 62%, #1a1a1a);
     --font-jp: 'Noto Sans JP', sans-serif;
     --font-en: 'Montserrat', sans-serif;
     --radius-s: 4px;
@@ -141,6 +142,7 @@ html.js .scroll-trigger.is-active {
     font-weight: 600;
     letter-spacing: 0.2em;
     color: var(--primary);
+    color: var(--accent-ink);
     text-transform: uppercase;
     margin: 0 0 10px;
 }
@@ -281,6 +283,24 @@ html.js .scroll-trigger.is-active {
     background: linear-gradient(to bottom, rgba(20,40,80,0.45) 0%, rgba(10,25,60,0.55) 100%);
     z-index: 1;
 }
+.hero::before {
+    content: '';
+    position: absolute; inset: 0; z-index: 1;
+    opacity: 0.5; pointer-events: none; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.hero-aurora {
+    position: absolute; z-index: 1; pointer-events: none;
+    top: -10%; left: 50%; transform: translateX(-50%);
+    width: min(70vw, 820px); height: min(70vw, 820px);
+    background: radial-gradient(circle, color-mix(in srgb, var(--primary) 42%, transparent) 0%, transparent 70%);
+    filter: blur(60px);
+    animation: heroAuroraDrift 14s ease-in-out infinite alternate;
+}
+@keyframes heroAuroraDrift {
+    from { transform: translateX(-54%) translateY(0) scale(1); }
+    to   { transform: translateX(-46%) translateY(3%) scale(1.08); }
+}
 .hero-content {
     position: relative; z-index: 2; color: #fff; padding: 0 20px;
     opacity: 0; animation: slideUp 0.9s ease-out 0.8s forwards;
@@ -291,13 +311,24 @@ html.js .scroll-trigger.is-active {
 }
 .hero-tag {
     font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase;
-    background: rgba(255,255,255,0.15); display: inline-block;
+    background: rgba(255,255,255,0.15); display: inline-flex; align-items: center; gap: 8px;
     padding: 5px 14px; border-radius: 20px; margin-bottom: 20px;
     font-family: var(--font-en);
 }
+.hero-tag-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #fff; flex-shrink: 0;
+    animation: heroTagPulse 2.2s ease-out infinite;
+}
+@keyframes heroTagPulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.55); }
+    70% { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
 .hero-title {
-    font-size: 46px; font-weight: 700; line-height: 1.25;
+    font-size: clamp(30px, 6vw, 46px); font-weight: 700; line-height: 1.25;
     margin-bottom: 18px; text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    text-wrap: balance;
 }
 .hero-sub { font-size: 16px; margin-bottom: 30px; opacity: 0.9; }
 .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
@@ -319,7 +350,6 @@ html.js .scroll-trigger.is-active {
 .btn-tel:hover { background: rgba(255,255,255,0.25); opacity: 1; }
 
 @media (max-width: 768px) {
-    .hero-title { font-size: 30px; }
     .hero-sub { font-size: 14px; }
 }
 
@@ -373,9 +403,14 @@ html.js .scroll-trigger.is-active {
 
 @media (max-width: 768px) {
     .feature-grid { grid-template-columns: 1fr; gap: 16px; }
+    /* アイコンを左・見出し＋本文を右に縦積み（横3列で見出しが潰れるのを防ぐ） */
     .feature-card {
-        text-align: left; display: grid; grid-template-columns: auto 1fr;
-        column-gap: 18px; align-items: center; padding: 24px 20px;
+        text-align: left;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 18px;
+        align-items: center;
+        padding: 24px 20px;
     }
     .feature-icon { grid-column: 1; grid-row: 1 / span 2; margin: 0; }
     .feature-title { grid-column: 2; margin-bottom: 4px; }
@@ -395,7 +430,7 @@ html.js .scroll-trigger.is-active {
 .doctor-img img { width: 100%; display: block; aspect-ratio: 3/4; object-fit: cover; }
 .doctor-role {
     display: inline-block; font-size: 12px; font-weight: 600;
-    color: var(--primary); background: var(--primary-light);
+    color: var(--primary); color: var(--accent-ink); background: var(--primary-light);
     padding: 4px 12px; border-radius: 20px; margin-bottom: 12px;
     font-family: var(--font-en); letter-spacing: 0.1em; text-transform: uppercase;
 }
@@ -502,7 +537,7 @@ html.js .scroll-trigger.is-active {
 .voice-info { display: flex; flex-direction: column; gap: 4px; }
 .voice-name { font-size: 14px; font-weight: 700; }
 .voice-tag {
-    display: inline-block; font-size: 12px; color: var(--primary);
+    display: inline-block; font-size: 12px; color: var(--primary); color: var(--accent-ink);
     background: var(--primary-light); padding: 3px 10px; border-radius: 20px;
     align-self: flex-start;
 }
@@ -524,10 +559,10 @@ html.js .scroll-trigger.is-active {
 }
 .list-row dt {
     width: 110px; flex-shrink: 0;
-    font-weight: 600; color: var(--primary); font-family: var(--font-en); font-size: 13px;
+    font-weight: 600; color: var(--primary); color: var(--accent-ink); font-family: var(--font-en); font-size: 13px;
 }
 .list-row dd { margin: 0; flex: 1; }
-.list-row a { color: var(--primary); font-family: var(--font-en); font-weight: 600; font-size: 16px; }
+.list-row a { color: var(--primary); color: var(--accent-ink); font-family: var(--font-en); font-weight: 600; font-size: 16px; }
 
 /* Hours Table */
 .hours-table {
@@ -546,7 +581,7 @@ html.js .scroll-trigger.is-active {
     padding-left: 10px; white-space: nowrap; font-weight: 600;
 }
 .hours-table .time-label small { display: block; font-weight: 400; color: var(--text-muted); }
-.hours-table .open { color: var(--primary); font-weight: 700; }
+.hours-table .open { color: var(--primary); color: var(--accent-ink); font-weight: 700; }
 .hours-table .closed { color: #ccc; }
 .hours-note { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
 
@@ -600,5 +635,14 @@ label:focus-visible,
 }
 
 /* === スマホ横スクロール防止 ===
-   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
 html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg img { animation: none; opacity: 1; transform: none; }
+    .hero-content { animation: none; opacity: 1; transform: none; }
+    .hero-aurora { animation: none; }
+    .hero-tag-dot { animation: none; }
+}

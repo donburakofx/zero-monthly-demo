@@ -98,6 +98,7 @@
     */
 
     /* --- Common --- */
+    --accent-ink: color-mix(in srgb, var(--accent) 62%, #1a1a1a);
     --font-jp:      'Noto Sans JP', sans-serif;
     --font-serif:   'Noto Serif JP', serif;
     --font-en:      'EB Garamond', serif;
@@ -258,6 +259,24 @@ address { font-style: normal; }
     position: absolute; inset: 0; z-index: 1;
     background: var(--hero-overlay);
 }
+.hero::after {
+    content: '';
+    position: absolute; inset: 0; z-index: 1;
+    opacity: 0.35; pointer-events: none; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.hero-aurora {
+    position: absolute; z-index: 1; pointer-events: none;
+    top: -15%; right: -10%;
+    width: min(50vw, 600px); height: min(50vw, 600px);
+    background: radial-gradient(circle, color-mix(in srgb, var(--accent) 40%, transparent) 0%, transparent 70%);
+    filter: blur(65px);
+    animation: heroAuroraDrift 16s ease-in-out infinite alternate;
+}
+@keyframes heroAuroraDrift {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(-3%, 4%) scale(1.08); }
+}
 .hero-content {
     position: relative; z-index: 2; flex: 1;
     display: flex; align-items: center;
@@ -265,14 +284,25 @@ address { font-style: normal; }
 }
 .hero-text { color: #fff; max-width: 640px; }
 .hero-tag {
-    display: inline-block; font-family: var(--font-en);
+    display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-en);
     font-size: 0.85rem; letter-spacing: 0.12em;
     color: var(--accent); border-bottom: 1px solid var(--accent);
     padding-bottom: 4px; margin-bottom: 22px;
 }
+.hero-tag-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent); flex-shrink: 0;
+    animation: heroTagPulse 2.2s ease-out infinite;
+}
+@keyframes heroTagPulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
+    70% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 0%, transparent); }
+    100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent); }
+}
 .hero-copy {
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 700; line-height: 1.35; margin: 0 0 20px;
+    text-wrap: balance;
 }
 .hero-serif { font-family: var(--font-serif); }
 .hero-lead {
@@ -298,7 +328,7 @@ address { font-style: normal; }
 .section-en {
     display: block; font-family: var(--font-en);
     font-size: 0.8rem; letter-spacing: 0.25em;
-    color: var(--accent); text-transform: uppercase; margin-bottom: 10px;
+    color: var(--accent); color: var(--accent-ink); text-transform: uppercase; margin-bottom: 10px;
 }
 .section-title {
     font-family: var(--font-serif);
@@ -347,7 +377,7 @@ address { font-style: normal; }
 }
 .feature-num {
     font-family: var(--font-en); font-size: 2.5rem; font-weight: 400;
-    color: var(--accent); line-height: 1; margin-bottom: 14px;
+    color: var(--accent); color: var(--accent-ink); line-height: 1; margin-bottom: 14px;
     letter-spacing: -0.02em;
 }
 .feature-card h4 { font-family: var(--font-serif); font-size: 1rem; font-weight: 700; margin: 0 0 12px; }
@@ -369,7 +399,7 @@ address { font-style: normal; }
 }
 .profile-role {
     font-family: var(--font-en); font-size: 0.85rem;
-    color: var(--accent); letter-spacing: 0.12em;
+    color: var(--accent); color: var(--accent-ink); letter-spacing: 0.12em;
     text-transform: uppercase; margin: 0 0 6px;
 }
 .profile-name {
@@ -390,7 +420,7 @@ address { font-style: normal; }
     border-left: 3px solid var(--accent);
 }
 .profile-career { display: grid; grid-template-columns: 80px 1fr; gap: 6px 16px; margin: 0; }
-.profile-career dt { font-size: 0.78rem; color: var(--accent); font-weight: 700; padding-top: 2px; }
+.profile-career dt { font-size: 0.78rem; color: var(--accent); color: var(--accent-ink); font-weight: 700; padding-top: 2px; }
 .profile-career dd { font-size: 0.82rem; color: var(--text-muted); margin: 0; line-height: 1.8; }
 
 @media (max-width: 768px) {
@@ -588,5 +618,12 @@ label:focus-visible,
 }
 
 /* === スマホ横スクロール防止 ===
-   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
 html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .hero-aurora { animation: none; }
+    .hero-tag-dot { animation: none; }
+}

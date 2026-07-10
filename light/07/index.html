@@ -18,6 +18,32 @@
   <meta name="twitter:description" content="表参道の完全予約制プライベートサロン" />
   <meta name="twitter:image" content="https://your-domain.com/assets/image/ogp.jpg" />
 
+  <!-- ★要変更: 公開する実際のURL（独自ドメイン）に変更してください -->
+  <link rel="canonical" href="https://your-domain.com/" />
+
+  <!-- 構造化データ（JSON-LD）★ 名称・URL・電話・住所・営業時間・画像を実際の情報に変更してください -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Salon Name.",
+    "url": "https://your-domain.com/",
+    "telephone": "03-0000-0000",
+    "priceRange": "¥¥¥",
+    "openingHours": "Tu-Su 10:00-20:00",
+    "image": "https://your-domain.com/assets/image/ogp.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP",
+      "postalCode": "000-0000",
+      "addressRegion": "東京都",
+      "addressLocality": "港区",
+      "streetAddress": "南青山 1-2-3"
+    },
+    "description": "表参道の完全予約制プライベートサロン。"
+  }
+  </script>
+
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -397,59 +423,38 @@
       scrollObs.observe(el);
     });
   </script>
+
   <!-- ========================================================
        DEMO ONLY: Color Theme Switcher
        このブロックは配布テンプレートには含まれません
        ======================================================== -->
   <style>
-    .demo-switcher {
-      position: fixed; right: 16px; bottom: 24px;
-      z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px;
-    }
-    .demo-switcher-toggle {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: #1a1a1a; color: #fff; border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s;
-    }
+    .demo-switcher { position: fixed; right: 16px; bottom: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .demo-switcher-toggle { width: 44px; height: 44px; border-radius: 50%; background: #1a1a1a; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
     .demo-switcher-toggle:hover { transform: scale(1.1); }
-    .demo-switcher-panel {
-      display: none; flex-direction: column; gap: 6px;
-      background: rgba(255,255,255,0.95); border-radius: 12px;
-      padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
+    .demo-switcher-panel { display: none; flex-direction: column; gap: 6px; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
     .demo-switcher-panel.is-open { display: flex; }
-    .demo-swatch {
-      width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
-      border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s;
-      position: relative;
-    }
+    .demo-swatch { width: 36px; height: 36px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s; position: relative; }
     .demo-swatch:hover { transform: scale(1.15); }
     .demo-swatch.is-active { border-color: #1a1a1a; }
-    .demo-swatch-label {
-      position: absolute; inset: 0; display: flex; align-items: center;
-      justify-content: center; font-size: 10px; font-weight: 700;
-      color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-      font-family: sans-serif;
-    }
-    .demo-badge {
-      font-size: 9px; color: #888; font-family: sans-serif;
-      letter-spacing: 0.05em; text-align: center; line-height: 1;
-    }
+    .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
+    .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
   </style>
   <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel">
-      <span class="demo-badge">COLOR</span>
-    </div>
+    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
     <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/>
-      </svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
+    </button>
+  </div>
+  <div class="demo-switcher">
+    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
+    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
     </button>
   </div>
   <script>
     (function() {
-      var themes = [{"label":"A","color":"#8D8078","name":"Greige","vars":{"--bg-body":"#FFFFFF","--text-main":"#4A4A4A","--text-muted":"#9E9E9E","--bg-light":"#F9F8F7","--primary":"#8D8078","--primary-hover":"#6D6058","--border":"#EAE6E3"}},{"label":"B","color":"#111111","name":"Monotone","vars":{"--bg-body":"#FFFFFF","--text-main":"#222222","--text-muted":"#777777","--bg-light":"#F4F4F4","--primary":"#111111","--primary-hover":"#333333","--border":"#DDDDDD"}},{"label":"C","color":"#556B2F","name":"Botanical","vars":{"--bg-body":"#FFFCF7","--text-main":"#3E423A","--text-muted":"#849686","--bg-light":"#F0F4F0","--primary":"#556B2F","--primary-hover":"#3E4F22","--border":"#E0E6DA"}},{"label":"D","color":"#C07B88","name":"Dusty Pink","vars":{"--bg-body":"#FFFFFF","--text-main":"#5D4D50","--text-muted":"#A89096","--bg-light":"#FFF0F5","--primary":"#C07B88","--primary-hover":"#A05D69","--border":"#F8DADD"}},{"label":"E","color":"#34495E","name":"Clean Navy","vars":{"--bg-body":"#FFFFFF","--text-main":"#2C3E50","--text-muted":"#7F8C8D","--bg-light":"#F0F6FA","--primary":"#34495E","--primary-hover":"#2C3E50","--border":"#DDE6F0"}}];
+      var themes = [{"label": "A", "name": "Greige / グレージュ", "color": "#8D8078", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#4A4A4A", "--text-muted": "#9E9E9E", "--bg-light": "#F9F8F7", "--primary": "#8D8078", "--primary-hover": "#6D6058", "--border": "#EAE6E3"}}, {"label": "B", "name": "Monotone / モノトーン", "color": "#111111", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#222222", "--text-muted": "#777777", "--bg-light": "#F4F4F4", "--primary": "#111111", "--primary-hover": "#333333", "--border": "#DDDDDD"}}, {"label": "C", "name": "Botanical / ボタニカル", "color": "#556B2F", "vars": {"--bg-body": "#FFFCF7", "--text-main": "#3E423A", "--text-muted": "#849686", "--bg-light": "#F0F4F0", "--primary": "#556B2F", "--primary-hover": "#3E4F22", "--border": "#E0E6DA"}}, {"label": "D", "name": "Dusty Pink / ピンク", "color": "#C07B88", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#5D4D50", "--text-muted": "#A89096", "--bg-light": "#FFF0F5", "--primary": "#C07B88", "--primary-hover": "#A05D69", "--border": "#F8DADD"}}, {"label": "E", "name": "Clean Navy / ネイビー", "color": "#34495E", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#2C3E50", "--text-muted": "#7F8C8D", "--bg-light": "#F0F6FA", "--primary": "#34495E", "--primary-hover": "#2C3E50", "--border": "#DDE6F0"}}];
       var panel = document.getElementById('demoPanel');
       var toggle = document.getElementById('demoToggle');
       var swatches = [];

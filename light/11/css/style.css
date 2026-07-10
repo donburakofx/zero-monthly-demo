@@ -79,6 +79,7 @@
     --text-white: #F9F9F9; */
 
     /* --- Common Settings --- */
+    --accent-ink: color-mix(in srgb, var(--c-accent) 62%, #1a1a1a);
     --font-sans: 'Noto Sans JP', sans-serif;
     --font-mincho: 'Shippori Mincho', serif;
     --width-wide: 1000px;
@@ -255,6 +256,7 @@ html.js .fade-in-up.is-show {
 
 .logo-sub {
     color: var(--c-accent);
+    color: var(--accent-ink);
     font-weight: 400;
 }
 
@@ -301,13 +303,54 @@ html.js .fade-in-up.is-show {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, var(--c-dark) 100%);
 }
 
+/* 奥行きのあるゴールドの光彩：控えめに一つだけ */
+.hero::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+    height: 50vw;
+    max-width: 640px;
+    max-height: 640px;
+    min-width: 320px;
+    min-height: 320px;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+    will-change: transform;
+    background: radial-gradient(circle, rgba(var(--c-accent-rgb), 0.22), transparent 70%);
+    animation: heroAuroraDrift 24s ease-in-out infinite alternate;
+}
+@keyframes heroAuroraDrift {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-46%) scale(1.1); }
+    100% { transform: translateX(-54%) scale(0.94); }
+}
+
+/* 極薄いグレインテクスチャ：エディトリアルな質感 */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
 }
 
 .hero-tag {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 14px;
     letter-spacing: 0.2em;
     color: var(--c-accent-light);
@@ -316,6 +359,17 @@ html.js .fade-in-up.is-show {
     border-bottom: 1px solid var(--c-accent);
     padding-bottom: 5px;
 }
+.hero-tag::before {
+    content: "";
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--c-accent);
+    animation: heroTagPulse 2.2s ease-out infinite;
+}
+@keyframes heroTagPulse {
+    0% { box-shadow: 0 0 0 0 rgba(var(--c-accent-rgb), 0.55); }
+    70% { box-shadow: 0 0 0 7px rgba(var(--c-accent-rgb), 0); }
+    100% { box-shadow: 0 0 0 0 rgba(var(--c-accent-rgb), 0); }
+}
 
 .hero-copy {
     margin-bottom: 40px;
@@ -323,16 +377,18 @@ html.js .fade-in-up.is-show {
 }
 
 .hero-copy .mincho {
-    font-size: 24px;
+    font-size: clamp(20px, 3.2vw, 32px);
     display: block;
     margin-bottom: 15px;
     font-weight: 400;
 }
 
 .hero-main {
-    font-size: 36px;
+    font-size: clamp(32px, 7vw, 72px);
     font-weight: 700;
     letter-spacing: 0.05em;
+    line-height: 1.25;
+    text-wrap: balance;
     background: var(--grad-gold);
     -webkit-background-clip: text;
     background-clip: text;
@@ -395,6 +451,7 @@ html.js .fade-in-up.is-show {
     font-size: 14px;
     letter-spacing: 0.2em;
     color: var(--c-accent);
+    color: var(--accent-ink);
     margin-bottom: 15px;
     text-transform: uppercase;
     font-family: sans-serif;
@@ -458,6 +515,11 @@ html.js .fade-in-up.is-show {
 .bg-dark {
     background: var(--c-black);
     color: var(--text-white);
+}
+
+/* 暗背景セクションのeyebrowは明るいaccentのまま維持 */
+.bg-dark .section-title .en {
+    color: var(--c-accent);
 }
 
 .text-white {
@@ -701,6 +763,7 @@ html.js .fade-in-up.is-show {
     font-size: 32px;
     font-weight: 700;
     color: var(--c-accent);
+    color: var(--accent-ink);
     letter-spacing: 0.1em;
     margin-top: 5px;
 }
@@ -761,14 +824,6 @@ html.js .fade-in-up.is-show {
         padding: 140px 0 160px;
     }
 
-    .hero-copy .mincho {
-        font-size: 32px;
-    }
-
-    .hero-main {
-        font-size: 64px;
-    }
-
     .method-steps {
         flex-direction: row;
         gap: 40px;
@@ -796,14 +851,6 @@ html.js .fade-in-up.is-show {
         font-size: 16px;
     }
 
-    .hero-main {
-        font-size: 32px;
-    }
-
-    .hero-copy .mincho {
-        font-size: 20px;
-    }
-
     .section-title .ja {
         font-size: 24px;
     }
@@ -828,5 +875,11 @@ label:focus-visible,
     outline-offset: 2px;
 }
 /* === スマホ横スクロール防止 ===
-   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
 html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .hero::before, .hero-tag::before { animation: none; }
+}

@@ -256,13 +256,41 @@ select:focus-visible, textarea:focus-visible, summary:focus-visible, [tabindex]:
 /* ==========================================================================
    7. Hero (トップページ)
    ========================================================================== */
-.hero { position: relative; min-height: 88vh; display: flex; align-items: center; margin-top: var(--header-h); }
+.hero { position: relative; min-height: 88vh; display: flex; align-items: center; margin-top: var(--header-h); overflow: hidden; }
 .hero-bg { position: absolute; inset: 0; z-index: -2; }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
 .hero-overlay { position: absolute; inset: 0; z-index: -1; background: var(--hero-overlay); }
-.hero-content { color: var(--text-white); max-width: 640px; }
-.hero-tag { display: inline-block; font-size: 0.85rem; letter-spacing: 0.08em; padding: 6px 16px; border: 1px solid rgba(255,255,255,0.5); border-radius: 40px; margin-bottom: 22px; }
-.hero-copy { font-size: 2.6rem; font-weight: 700; line-height: 1.35; margin-bottom: 20px; }
+.hero::before {
+    content: '';
+    position: absolute; inset: 0; z-index: -1;
+    opacity: 0.4; pointer-events: none; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.hero-aurora {
+    position: absolute; z-index: -1; pointer-events: none;
+    top: -20%; right: -10%;
+    width: min(55vw, 640px); height: min(55vw, 640px);
+    background: radial-gradient(circle, color-mix(in srgb, var(--accent) 45%, transparent) 0%, transparent 70%);
+    filter: blur(65px);
+    animation: heroAuroraDrift 15s ease-in-out infinite alternate;
+}
+@keyframes heroAuroraDrift {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(-4%, 4%) scale(1.1); }
+}
+.hero-content { color: var(--text-white); max-width: 640px; min-width: 0; }
+.hero-tag { display: inline-flex; align-items: center; gap: 9px; font-size: 0.85rem; letter-spacing: 0.08em; padding: 6px 16px; border: 1px solid rgba(255,255,255,0.5); border-radius: 40px; margin-bottom: 22px; }
+.hero-tag-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent); flex-shrink: 0;
+    animation: heroTagPulse 2.2s ease-out infinite;
+}
+@keyframes heroTagPulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
+    70% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 0%, transparent); }
+    100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent); }
+}
+.hero-copy { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 700; line-height: 1.35; margin-bottom: 20px; text-wrap: balance; }
 .hero-lead { font-size: 1.05rem; line-height: 1.9; margin-bottom: 34px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
@@ -356,7 +384,6 @@ select:focus-visible, textarea:focus-visible, summary:focus-visible, [tabindex]:
 @media (min-width: 768px) {
     .section { padding: 100px 0; }
     .section-title { font-size: 2.2rem; }
-    .hero-copy { font-size: 3.2rem; }
     .page-hero h1 { font-size: 2.3rem; }
     .nav { display: flex; align-items: center; gap: 30px; }
     .header-cta { display: inline-flex; }
@@ -382,4 +409,15 @@ select:focus-visible, textarea:focus-visible, summary:focus-visible, [tabindex]:
 .menu-item-price {
     font-family: var(--font-en); font-size: 1.05rem; font-weight: 600;
     color: var(--primary); white-space: nowrap; text-align: right;
+}
+
+/* === スマホ横スクロール防止 ===
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
+html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .hero-aurora { animation: none; }
+    .hero-tag-dot { animation: none; }
 }

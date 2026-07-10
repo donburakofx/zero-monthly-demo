@@ -61,6 +61,8 @@
     */
 
     /* --- Common Settings (共通設定) --- */
+    /* accent(primary)を白/淡色背景の小さな文字に使う際のWCAG AA用の暗色 */
+    --accent-ink: color-mix(in srgb, var(--primary) 62%, #1a1a1a);
     --font-jp: 'Zen Old Mincho', serif;
     --font-en: 'Cormorant Garamond', serif;
     --radius: 4px;
@@ -107,7 +109,7 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
     letter-spacing: 0.1em; margin: 0; color: var(--text-main);
 }
 .section-desc {
-    font-size: 13px; color: var(--primary); margin-top: 10px; margin-bottom: 50px;
+    font-size: 13px; color: var(--primary); color: var(--accent-ink); margin-top: 10px; margin-bottom: 50px;
 }
 
 /* ==========================================================================
@@ -129,7 +131,7 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 /* PC Nav */
 .nav { display: none; gap: 30px; }
 .nav a { font-family: var(--font-en); font-size: 15px; color: var(--text-main); }
-.nav a:hover { color: var(--primary); }
+.nav a:hover { color: var(--primary); color: var(--accent-ink); }
 
 .btn-header-resv {
     display: none; padding: 8px 20px; border: 1px solid var(--text-main);
@@ -171,7 +173,7 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 .drawer-link { font-family: var(--font-en); font-size: 24px; color: var(--text-main); }
 .btn-drawer-resv {
     margin-top: 20px; padding: 12px 30px; border: 1px solid var(--primary);
-    color: var(--primary); font-family: var(--font-en); text-transform: uppercase;
+    color: var(--primary); color: var(--accent-ink); font-family: var(--font-en); text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -195,6 +197,15 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
     content: ''; position: absolute; inset: 0;
     background: rgba(0,0,0,0.15); z-index: 1;
 }
+/* 極薄いグレインテクスチャ：上質なエディトリアル質感 */
+.hero::before {
+    content: '';
+    position: absolute; inset: 0; z-index: 1;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
 .hero-content {
     position: relative; z-index: 2; padding: 0 20px;
     opacity: 0; animation: contentFadeIn 1s ease-out 1s forwards;
@@ -202,14 +213,22 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 @keyframes contentFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 .hero-title {
-    font-family: var(--font-en); font-size: 48px; font-weight: 500;
-    margin-bottom: 20px; letter-spacing: 0.05em; text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-family: var(--font-en); font-size: clamp(34px, 6vw, 58px); font-weight: 500;
+    margin-bottom: 20px; letter-spacing: 0.06em; text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    text-wrap: balance;
+    position: relative; display: inline-block; padding-bottom: 18px;
 }
+.hero-title::after {
+    content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+    width: 0; height: 1px; background: rgba(255,255,255,0.85);
+    animation: heroTitleUnderline 1s 1.3s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+@keyframes heroTitleUnderline { to { width: 56px; } }
 .hero-sub {
     font-size: 16px; line-height: 2; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 @media (max-width: 768px) {
-    .hero-title { font-size: 32px; } .hero-sub { font-size: 14px; }
+    .hero-sub { font-size: 14px; }
 }
 
 /* ==========================================================================
@@ -231,7 +250,7 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 .news-header time { font-family: var(--font-en); color: var(--text-muted); font-size: 14px; }
 .news-label {
     font-size: 11px; padding: 4px 10px; border: 1px solid var(--primary);
-    color: var(--primary); border-radius: 20px; text-transform: uppercase;
+    color: var(--primary); color: var(--accent-ink); border-radius: 20px; text-transform: uppercase;
 }
 .news-title { flex: 1; font-size: 15px; font-weight: 500; margin: 0; line-height: 1.6; }
 .news-icon {
@@ -255,7 +274,7 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 .menu-group:last-child { margin-bottom: 0; }
 .menu-cat {
     font-family: var(--font-en); font-size: 20px; text-align: center;
-    margin-bottom: 30px; color: var(--primary);
+    margin-bottom: 30px; color: var(--primary); color: var(--accent-ink);
 }
 .menu-list { max-width: 600px; margin: 0 auto; }
 .menu-item {
@@ -280,7 +299,7 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 
 .style-content { padding: 20px; text-align: left; }
 .style-content h3 {
-    font-family: var(--font-en); font-size: 18px; margin-bottom: 10px; color: var(--primary);
+    font-family: var(--font-en); font-size: 18px; margin-bottom: 10px; color: var(--primary); color: var(--accent-ink);
 }
 .style-content p { font-size: 13px; color: var(--text-muted); margin: 0; }
 
@@ -294,13 +313,13 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 .staff-item:hover .staff-img img { transform: scale(1.05); }
 
 .staff-role {
-    font-family: var(--font-en); font-size: 12px; color: var(--primary);
+    font-family: var(--font-en); font-size: 12px; color: var(--primary); color: var(--accent-ink);
     text-transform: uppercase; letter-spacing: 0.1em;
 }
 .staff-name { font-family: var(--font-en); font-size: 20px; margin: 5px 0 15px; }
 .staff-bio { font-size: 13px; line-height: 1.8; color: var(--text-main); margin-bottom: 15px; text-align: justify; }
 .staff-sns a { font-family: var(--font-en); font-size: 14px; color: var(--text-muted); }
-.staff-sns a:hover { color: var(--primary); }
+.staff-sns a:hover { color: var(--primary); color: var(--accent-ink); }
 
 /* ==========================================================================
    9. Mobile Horizontal Scroll
@@ -363,7 +382,7 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 
 @media (max-width: 480px) {
     .list-row { flex-direction: column; gap: 5px; }
-    .list-row dt { width: 100%; font-size: 12px; color: var(--primary); }
+    .list-row dt { width: 100%; font-size: 12px; color: var(--primary); color: var(--accent-ink); }
 }
 
 /* Footer */
@@ -398,5 +417,12 @@ label:focus-visible,
     outline-offset: 2px;
 }
 /* === スマホ横スクロール防止 ===
-   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
 html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg img, .hero-content { animation: none; opacity: 1; transform: none; }
+    .hero-title::after { animation: none; width: 56px; }
+}

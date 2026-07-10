@@ -92,6 +92,7 @@
     --cta-bg: linear-gradient(135deg, #3A7D44 0%, #5CB85C 100%); */
 
     /* --- Common Settings (共通設定) --- */
+    --accent-ink: color-mix(in srgb, var(--primary) 62%, #1a1a1a);
     --font-jp: 'Noto Sans JP', sans-serif;
     --font-display: 'Oswald', sans-serif;
     --radius-s: 4px;
@@ -166,6 +167,7 @@ html.js .scroll-trigger.is-active {
     font-weight: 400;
     letter-spacing: 0.3em;
     color: var(--primary);
+    color: var(--accent-ink);
     text-transform: uppercase;
     margin: 0 0 8px;
 }
@@ -286,6 +288,24 @@ html.js .scroll-trigger.is-active {
     content: ''; position: absolute; inset: 0; z-index: 1;
     background: linear-gradient(90deg, rgba(10,14,24,0.85) 0%, rgba(10,14,24,0.4) 60%, transparent 100%);
 }
+.hero::before {
+    content: '';
+    position: absolute; inset: 0; z-index: 1;
+    opacity: 0.45; pointer-events: none; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.hero-aurora {
+    position: absolute; z-index: 1; pointer-events: none;
+    bottom: -25%; left: -10%;
+    width: min(60vw, 720px); height: min(60vw, 720px);
+    background: radial-gradient(circle, color-mix(in srgb, var(--primary) 50%, transparent) 0%, transparent 70%);
+    filter: blur(70px);
+    animation: heroAuroraDrift 15s ease-in-out infinite alternate;
+}
+@keyframes heroAuroraDrift {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(4%, -4%) scale(1.1); }
+}
 .hero-content {
     position: relative; z-index: 2; color: #fff;
     padding: 0 40px 0 max(40px, calc((100% - 1100px) / 2 + 40px));
@@ -299,12 +319,23 @@ html.js .scroll-trigger.is-active {
 .hero-tag {
     font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase;
     color: var(--primary); font-family: var(--font-display); font-weight: 400;
-    display: block; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+}
+.hero-tag-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--primary); flex-shrink: 0;
+    animation: heroTagPulse 2.2s ease-out infinite;
+}
+@keyframes heroTagPulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 55%, transparent); }
+    70% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--primary) 0%, transparent); }
+    100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 0%, transparent); }
 }
 .hero-title {
     font-family: var(--font-display);
-    font-size: 72px; font-weight: 700; line-height: 1.05;
+    font-size: clamp(40px, 6.5vw, 72px); font-weight: 700; line-height: 1.05;
     letter-spacing: 0.02em; margin-bottom: 20px;
+    text-wrap: balance;
 }
 .hero-sub { font-size: 16px; opacity: 0.85; margin-bottom: 32px; }
 .btn-hero {
@@ -317,7 +348,6 @@ html.js .scroll-trigger.is-active {
 .btn-hero:hover { background: var(--primary-hover); opacity: 1; }
 
 @media (max-width: 768px) {
-    .hero-title { font-size: 48px; }
     .hero-content { padding: 0 24px; max-width: 100%; }
     .hero::after {
         background: rgba(10,14,24,0.65);
@@ -375,7 +405,7 @@ html.js .scroll-trigger.is-active {
     font-size: 20px; font-weight: 700;
     color: var(--text-main);
 }
-.problem-cta-text strong { color: var(--primary); }
+.problem-cta-text strong { color: var(--primary); color: var(--accent-ink); }
 
 @media (max-width: 600px) {
     .problem-grid { grid-template-columns: 1fr; }
@@ -428,7 +458,7 @@ html.js .scroll-trigger.is-active {
 .trainer-role {
     display: inline-block; font-family: var(--font-display);
     font-size: 12px; font-weight: 400; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--primary); margin-bottom: 8px;
+    color: var(--primary); color: var(--accent-ink); margin-bottom: 8px;
 }
 .trainer-name {
     font-family: var(--font-display);
@@ -492,7 +522,7 @@ html.js .scroll-trigger.is-active {
     font-family: var(--font-display); font-size: 40px; font-weight: 700;
     color: var(--text-main); line-height: 1;
 }
-.price-card--featured .price-num { color: var(--primary); }
+.price-card--featured .price-num { color: var(--primary); color: var(--accent-ink); }
 .price-tax { font-size: 13px; color: var(--text-muted); }
 .price-freq { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
 
@@ -530,7 +560,7 @@ html.js .scroll-trigger.is-active {
 .voice-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.09); transform: translateY(-3px); opacity: 1; }
 .voice-result {
     display: inline-block; font-family: var(--font-display);
-    font-size: 20px; font-weight: 700; color: var(--primary);
+    font-size: 20px; font-weight: 700; color: var(--primary); color: var(--accent-ink);
     border-bottom: 2px solid var(--primary); padding-bottom: 6px;
     margin-bottom: 16px; letter-spacing: 0.04em;
 }
@@ -538,7 +568,7 @@ html.js .scroll-trigger.is-active {
 .voice-info { display: flex; flex-direction: column; gap: 4px; }
 .voice-name { font-size: 13px; font-weight: 700; color: var(--text-muted); }
 .voice-tag {
-    display: inline-block; font-size: 11px; color: var(--primary);
+    display: inline-block; font-size: 11px; color: var(--primary); color: var(--accent-ink);
     background: var(--primary-light); padding: 3px 10px; border-radius: 20px;
     align-self: flex-start;
 }
@@ -627,10 +657,10 @@ html.js .scroll-trigger.is-active {
 .list-row dt {
     width: 100px; flex-shrink: 0;
     font-family: var(--font-display); font-size: 13px; font-weight: 600;
-    color: var(--primary); letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--primary); color: var(--accent-ink); letter-spacing: 0.05em; text-transform: uppercase;
 }
 .list-row dd { margin: 0; flex: 1; }
-.list-row a { color: var(--primary); font-weight: 700; font-size: 15px; }
+.list-row a { color: var(--primary); color: var(--accent-ink); font-weight: 700; font-size: 15px; }
 
 .map-container {
     position: relative; width: 100%; padding-bottom: 65%; height: 0;
@@ -684,5 +714,14 @@ label:focus-visible,
 }
 
 /* === スマホ横スクロール防止 ===
-   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
 html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg img { animation: none; opacity: 0.85; transform: none; }
+    .hero-content { animation: none; opacity: 1; transform: none; }
+    .hero-aurora { animation: none; }
+    .hero-tag-dot { animation: none; }
+}

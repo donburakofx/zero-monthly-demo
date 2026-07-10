@@ -360,6 +360,33 @@ html.js .hero.loaded .hero-bg img {
     /* 強めの黒オーバーレイ */
 }
 
+/* 奥行きのあるオーロラ光彩：カンファレンス感を強める青紫の光 */
+.hero-aurora {
+    position: absolute;
+    z-index: 1;
+    top: -18%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: 60vw;
+    max-width: 780px;
+    max-height: 780px;
+    min-width: 380px;
+    min-height: 380px;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+    will-change: transform;
+    background: var(--primary-grad);
+    opacity: 0.28;
+    animation: heroAuroraDrift 22s ease-in-out infinite alternate;
+}
+@keyframes heroAuroraDrift {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-46%) scale(1.12); }
+    100% { transform: translateX(-54%) scale(0.94); }
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -384,19 +411,34 @@ html.js .hero-meta { opacity: 0; transform: translateY(20px); }
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 5px 15px;
     border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.14);
 }
+
+/* 見出し下のアニメーションディバイダー */
+.hero-divider {
+    display: block;
+    width: 0;
+    height: 2px;
+    margin: 8px auto 30px;
+    background: var(--primary-grad);
+    border-radius: 2px;
+    animation: heroDividerGrow 1s 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+@keyframes heroDividerGrow { to { width: 72px; } }
 
 .hero-title {
     font-family: var(--font-en);
-    font-size: 48px;
-    line-height: 1.1;
+    font-size: 54px;
+    line-height: 1.12;
     font-weight: 700;
     margin-bottom: 30px;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-wrap: balance;
 }
 
 .split-text {
@@ -406,7 +448,7 @@ html.js .hero-meta { opacity: 0; transform: translateY(20px); }
 html.js .split-text { opacity: 0; transform: translateY(20px); }
 
 .highlight-text {
-    font-size: 64px;
+    font-size: 72px;
     background: var(--primary-grad);
     -webkit-background-clip: text;
     background-clip: text;
@@ -420,6 +462,7 @@ html.js .split-text { opacity: 0; transform: translateY(20px); }
     font-size: 16px;
     margin-bottom: 50px;
     transition: 0.8s ease;
+    text-wrap: balance;
 }
 html.js .hero-lead { opacity: 0; transform: translateY(20px); }
 
@@ -1024,5 +1067,12 @@ label:focus-visible,
     outline-offset: 2px;
 }
 /* === スマホ横スクロール防止 ===
-   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
 html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .hero-aurora, .hero-divider { animation: none; }
+    .hero-divider { width: 72px; }
+}

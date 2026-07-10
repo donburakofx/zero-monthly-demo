@@ -176,8 +176,19 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.4; }
 /* ==========================================================================
    4. Hero
    ========================================================================== */
-.hero { padding: 60px 0; }
-.hero-grid { display: grid; gap: 40px; }
+.hero { padding: 60px 0; position: relative; overflow: hidden; }
+.hero-grid { display: grid; gap: 40px; position: relative; z-index: 1; }
+
+/* 極薄いグレインテクスチャ：紙のようなあたたかい質感 */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
 
 @media (min-width: 768px) {
     .hero { padding: 100px 0; }
@@ -193,14 +204,29 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.4; }
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.eyebrow::before {
+    content: "";
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--primary);
+    animation: eyebrowPulse 2.2s ease-out infinite;
+}
+@keyframes eyebrowPulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 55%, transparent); }
+    70% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--primary) 0%, transparent); }
+    100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 0%, transparent); }
 }
 
 .title {
-    font-size: 32px;
+    font-size: clamp(30px, 5.5vw, 48px);
     margin-bottom: 20px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+    text-wrap: balance;
 }
-@media (min-width: 768px) { .title { font-size: 42px; } }
 
 .lead {
     font-size: 15px;
@@ -722,5 +748,14 @@ label:focus-visible,
     outline-offset: 2px;
 }
 /* === スマホ横スクロール防止 ===
-   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
 html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .eyebrow::before { animation: none; }
+    .anim-up { opacity: 1; transform: none; animation: none; }
+    .visual-deco { animation: none; opacity: 0.15; }
+    .reveal-wrap img { animation: none; opacity: 1; transform: none; filter: none; }
+}

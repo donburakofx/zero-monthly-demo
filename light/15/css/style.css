@@ -93,6 +93,7 @@
     */
 
     /* --- Common --- */
+    --accent-ink: color-mix(in srgb, var(--accent) 62%, #1a1a1a);
     --font-jp:    'Noto Sans JP', sans-serif;
     --font-en:    'Montserrat', sans-serif;
     --radius:     4px;
@@ -281,6 +282,24 @@ address { font-style: normal; }
     position: absolute; inset: 0; z-index: 1;
     background: var(--hero-overlay);
 }
+.hero::after {
+    content: '';
+    position: absolute; inset: 0; z-index: 1;
+    opacity: 0.4; pointer-events: none; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.hero-aurora {
+    position: absolute; z-index: 1; pointer-events: none;
+    top: -20%; right: -10%;
+    width: min(55vw, 640px); height: min(55vw, 640px);
+    background: radial-gradient(circle, color-mix(in srgb, var(--accent) 45%, transparent) 0%, transparent 70%);
+    filter: blur(65px);
+    animation: heroAuroraDrift 15s ease-in-out infinite alternate;
+}
+@keyframes heroAuroraDrift {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(-4%, 4%) scale(1.1); }
+}
 .hero-content {
     position: relative; z-index: 2;
     flex: 1; display: flex; align-items: center;
@@ -288,16 +307,27 @@ address { font-style: normal; }
 }
 .hero-text { color: #fff; max-width: 620px; }
 .hero-tag {
-    display: inline-block; font-family: var(--font-en);
+    display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-en);
     font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
     text-transform: uppercase; padding: 6px 14px;
     border: 1px solid var(--accent); color: var(--accent);
     margin-bottom: 20px;
 }
+.hero-tag-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent); flex-shrink: 0;
+    animation: heroTagPulse 2.2s ease-out infinite;
+}
+@keyframes heroTagPulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
+    70% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 0%, transparent); }
+    100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent); }
+}
 .hero-copy {
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 700; line-height: 1.3;
     margin: 0 0 20px;
+    text-wrap: balance;
 }
 .hero-lead {
     font-size: 1rem; line-height: 1.9;
@@ -332,9 +362,10 @@ address { font-style: normal; }
 .section-en {
     display: block; font-family: var(--font-en);
     font-size: 0.75rem; letter-spacing: 0.2em;
-    color: var(--accent); text-transform: uppercase;
+    color: var(--accent); color: var(--accent-ink); text-transform: uppercase;
     margin-bottom: 10px;
 }
+.bg-dark .section-en { color: var(--accent); }
 .section-title {
     font-size: clamp(1.4rem, 3vw, 1.9rem);
     font-weight: 700; margin: 0 0 10px;
@@ -593,5 +624,12 @@ label:focus-visible,
 }
 
 /* === スマホ横スクロール防止 ===
-   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
 html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .hero-aurora { animation: none; }
+    .hero-tag-dot { animation: none; }
+}

@@ -178,16 +178,38 @@ ul { list-style: none; padding: 0; margin: 0; }
     display: flex; flex-direction: column;
     justify-content: center; align-items: center; text-align: center;
     overflow: hidden;
+    position: relative;
 }
 @media (max-width: 600px) { .profile-box { grid-column: span 1; } }
+
+/* 奥行きのある光彩：メインカードの背後にゆっくりドリフトする光 */
+.profile-box::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: -30%; left: -20%;
+    width: 70%; height: 70%;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    background: radial-gradient(circle, color-mix(in srgb, var(--accent) 35%, transparent), transparent 70%);
+    animation: profileAuroraDrift 20s ease-in-out infinite alternate;
+}
+@keyframes profileAuroraDrift {
+    0% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(8%,10%) scale(1.15); }
+    100% { transform: translate(-5%,4%) scale(0.95); }
+}
+.profile-img, .profile-info { position: relative; z-index: 1; }
 
 .profile-img {
     width: 90px; height: 90px;
     border-radius: 50%;
     overflow: hidden; border: 3px solid rgba(255,255,255,0.2);
     margin-bottom: 12px;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
 }
-.name { font-size: 1.6rem; margin: 0 0 5px; font-weight: 800; line-height: 1.2; }
+.name { font-size: clamp(1.6rem, 2.6vw, 2rem); margin: 0 0 5px; font-weight: 800; line-height: 1.2; letter-spacing: 0.01em; }
 .job { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
 .bio { font-size: 0.85rem; line-height: 1.6; color: var(--text-sub); margin-bottom: 15px; }
 .status-badge {
@@ -195,7 +217,15 @@ ul { list-style: none; padding: 0; margin: 0; }
     background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 20px;
     font-size: 0.7rem; font-weight: 500;
 }
-.dot { width: 6px; height: 6px; background: #2ecc71; border-radius: 50%; box-shadow: 0 0 8px #2ecc71; }
+.dot {
+    width: 6px; height: 6px; background: #2ecc71; border-radius: 50%;
+    animation: dotPulse 2.2s ease-out infinite;
+}
+@keyframes dotPulse {
+    0% { box-shadow: 0 0 0 0 rgba(46,204,113,0.6); }
+    70% { box-shadow: 0 0 0 7px rgba(46,204,113,0); }
+    100% { box-shadow: 0 0 0 0 rgba(46,204,113,0); }
+}
 
 /* --- Box 2: Map (Span 2 cols) --- */
 .map-box {
@@ -362,6 +392,12 @@ html.js #loading-screen { display: flex; }
 .loader-text { font-size: 1.2rem; font-weight: 600; letter-spacing: 0.1em; animation: pulseText 1.5s infinite alternate; }
 .loader-bar { width: 0%; height: 2px; background: var(--accent); margin-top: 10px; animation: loadBar 2s ease-in-out infinite; }
 html.js body.loaded #loading-screen { opacity: 0; visibility: hidden; pointer-events: none; }
+/* フェイルセーフ: 万一JSが途中で止まっても、5秒後にローダーを隠しコンテンツを表示する。
+   JSが正常なときは .loaded 付与で先に処理されるため通常は発火しない。 */
+html.js #loading-screen { animation: loadingFailsafe 0.6s ease 5s forwards; }
+@keyframes loadingFailsafe { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+html.js body:not(.loaded) .bento-box { animation: bentoFailsafe 0.01s linear 5s forwards; }
+@keyframes bentoFailsafe { to { opacity: 1; transform: none; } }
 @keyframes pulseText { 0% { opacity: 0.5; } 100% { opacity: 1; } }
 @keyframes loadBar { 0% { width: 0%; margin-left: 0; } 50% { width: 100%; margin-left: 0; } 100% { width: 0%; margin-left: 100%; } }
 
@@ -393,5 +429,11 @@ label:focus-visible,
     outline-offset: 2px;
 }
 /* === スマホ横スクロール防止 ===
-   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
 html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .profile-box::before, .dot { animation: none; }
+}

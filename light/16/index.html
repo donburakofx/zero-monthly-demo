@@ -19,6 +19,24 @@
   <meta name="twitter:description" content="初回相談無料。会社設立・相続手続き・建設業許可・在留資格など幅広い業務に対応。" />
   <meta name="twitter:image" content="https://your-domain.com/assets/image/ogp.jpg" />
 
+  <!-- ★要変更: 公開する実際のURL（独自ドメイン）に変更してください -->
+  <link rel="canonical" href="https://your-domain.com/" />
+
+  <!-- 構造化データ（JSON-LD）★ 事務所名・URL・電話・住所・料金・画像を実際の情報に変更してください -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "田中行政書士事務所",
+    "url": "https://your-domain.com/",
+    "telephone": "03-0000-0000",
+    "priceRange": "¥¥",
+    "image": "https://your-domain.com/assets/image/ogp.jpg",
+    "address": { "@type": "PostalAddress", "addressCountry": "JP", "postalCode": "000-0000", "addressRegion": "東京都", "addressLocality": "○○区", "streetAddress": "○○ 1-2-3" },
+    "description": "会社設立・相続手続き・各種許認可に対応する行政書士事務所です。初回相談は無料です。"
+  }
+  </script>
+
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,9 +97,10 @@
         <img src="assets/image/hero.jpg" alt="事務所イメージ">
       </div>
       <div class="hero-overlay"></div>
+      <div class="hero-aurora"></div>
       <div class="container hero-content">
         <div class="hero-text scroll-trigger">
-          <p class="hero-tag">行政書士 / 初回無料相談 / 土日対応</p>
+          <p class="hero-tag"><span class="hero-tag-dot"></span>行政書士 / 初回無料相談 / 土日対応</p>
           <h2 class="hero-copy">
             <span class="hero-serif">あなたのビジネスと生活を、</span><br>
             専門知識で守ります。
@@ -493,88 +512,6 @@
     </div>
   </footer>
 
-  <!-- ========================================================
-       DEMO ONLY: Color Theme Switcher
-       このブロックは配布テンプレートには含まれません
-       ======================================================== -->
-  <style>
-    .demo-switcher {
-      position: fixed; right: 16px; bottom: 24px;
-      z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px;
-    }
-    .demo-switcher-toggle {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: #1a1a1a; color: #fff; border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s;
-    }
-    .demo-switcher-toggle:hover { transform: scale(1.1); }
-    .demo-switcher-panel {
-      display: none; flex-direction: column; gap: 6px;
-      background: rgba(255,255,255,0.95); border-radius: 12px;
-      padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-    .demo-switcher-panel.is-open { display: flex; }
-    .demo-swatch {
-      width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
-      border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s;
-      position: relative;
-    }
-    .demo-swatch:hover { transform: scale(1.15); }
-    .demo-swatch.is-active { border-color: #1a1a1a; }
-    .demo-swatch-label {
-      position: absolute; inset: 0; display: flex; align-items: center;
-      justify-content: center; font-size: 10px; font-weight: 700;
-      color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-      font-family: sans-serif;
-    }
-    .demo-badge {
-      font-size: 9px; color: #888; font-family: sans-serif;
-      letter-spacing: 0.05em; text-align: center; line-height: 1;
-    }
-  </style>
-  <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel">
-      <span class="demo-badge">COLOR</span>
-    </div>
-    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/>
-      </svg>
-    </button>
-  </div>
-  <script>
-    (function() {
-      var themes = [{ label:'A', color:'#1B2D4F', name:'Legal Navy', vars:{'--primary':'#1B2D4F','--primary-dark':'#0F1D34','--primary-light':'#EBF0F8','--accent':'#C9A84C','--accent-hover':'#B0913A','--bg-body':'#FFFFFF','--bg-light':'#F7F8FA','--bg-dark':'#1B2D4F','--text-main':'#1A1A2E','--text-muted':'#5C6B80','--text-white':'#FFFFFF','--text-gray':'#9CA3AF','--border':'#DDE4EE','--hero-overlay':'rgba(15, 25, 45, 0.75)'} }, { label:'B', color:'#1A4080', name:'Accounting Blue', vars:{'--primary':'#1A4080','--primary-dark':'#0F2A5C','--primary-light':'#E8F0FC','--accent':'#4A90D9','--accent-hover':'#3374C0','--bg-body':'#FFFFFF','--bg-light':'#F0F5FD','--bg-dark':'#1A4080','--text-main':'#1A2A40','--text-muted':'#5C7080','--text-white':'#FFFFFF','--text-gray':'#9DB3C8','--border':'#CCDCF0','--hero-overlay':'rgba(20, 40, 80, 0.75)'} }, { label:'C', color:'#2C3E50', name:'Consultant Charcoal', vars:{'--primary':'#2C3E50','--primary-dark':'#1A2530','--primary-light':'#EEF2F6','--accent':'#3498DB','--accent-hover':'#2180C0','--bg-body':'#FFFFFF','--bg-light':'#F4F6F8','--bg-dark':'#2C3E50','--text-main':'#2C3E50','--text-muted':'#7F8C8D','--text-white':'#FFFFFF','--text-gray':'#9CA3AF','--border':'#E2E8F0','--hero-overlay':'rgba(30, 40, 55, 0.75)'} }, { label:'D', color:'#1B4332', name:'Trust Green', vars:{'--primary':'#1B4332','--primary-dark':'#0F2B20','--primary-light':'#E8F5EE','--accent':'#40916C','--accent-hover':'#2D7255','--bg-body':'#FFFFFF','--bg-light':'#F0F7F3','--bg-dark':'#1B4332','--text-main':'#1A2E25','--text-muted':'#5A7A6A','--text-white':'#FFFFFF','--text-gray':'#8AA898','--border':'#C8E0D4','--hero-overlay':'rgba(15, 40, 28, 0.75)'} }, { label:'E', color:'#111827', name:'Premium Black', vars:{'--primary':'#111827','--primary-dark':'#000000','--primary-light':'#F3F4F6','--accent':'#D4AF37','--accent-hover':'#B8960F','--bg-body':'#FFFFFF','--bg-light':'#F9FAFB','--bg-dark':'#111827','--text-main':'#111827','--text-muted':'#6B7280','--text-white':'#FFFFFF','--text-gray':'#9CA3AF','--border':'#E5E7EB','--hero-overlay':'rgba(5, 5, 5, 0.80)'} }];
-      var panel = document.getElementById('demoPanel');
-      var toggle = document.getElementById('demoToggle');
-      var swatches = [];
-      themes.forEach(function(t, i) {
-        var sw = document.createElement('div');
-        sw.className = 'demo-swatch' + (i === 0 ? ' is-active' : '');
-        sw.style.background = t.color;
-        sw.title = t.name;
-        sw.innerHTML = '<span class="demo-swatch-label">' + t.label + '</span>';
-        sw.addEventListener('click', function() { applyTheme(i); });
-        panel.appendChild(sw);
-        swatches.push(sw);
-      });
-      function applyTheme(idx) {
-        var el = document.getElementById('demo-theme-override');
-        if (!el) { el = document.createElement('style'); el.id = 'demo-theme-override'; document.head.appendChild(el); }
-        var css = ':root{';
-        Object.keys(themes[idx].vars).forEach(function(k){ css += k+':'+themes[idx].vars[k]+';'; });
-        css += '}';
-        el.textContent = css;
-        swatches.forEach(function(s, i){ s.classList.toggle('is-active', i === idx); });
-      }
-      toggle.addEventListener('click', function() { panel.classList.toggle('is-open'); });
-      document.addEventListener('click', function(e) {
-        if (!e.target.closest('.demo-switcher')) panel.classList.remove('is-open');
-      });
-    })();
-  </script>
-
   <script>
     // Hamburger Menu
     const hamburger = document.getElementById('hamburger');
@@ -631,5 +568,65 @@
     document.querySelectorAll('.scroll-trigger').forEach(el => observer.observe(el));
   </script>
 
+
+  <!-- ========================================================
+       DEMO ONLY: Color Theme Switcher
+       このブロックは配布テンプレートには含まれません
+       ======================================================== -->
+  <style>
+    .demo-switcher { position: fixed; right: 16px; bottom: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .demo-switcher-toggle { width: 44px; height: 44px; border-radius: 50%; background: #1a1a1a; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
+    .demo-switcher-toggle:hover { transform: scale(1.1); }
+    .demo-switcher-panel { display: none; flex-direction: column; gap: 6px; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+    .demo-switcher-panel.is-open { display: flex; }
+    .demo-swatch { width: 36px; height: 36px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s; position: relative; }
+    .demo-swatch:hover { transform: scale(1.15); }
+    .demo-swatch.is-active { border-color: #1a1a1a; }
+    .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
+    .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
+  </style>
+  <div class="demo-switcher">
+    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
+    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
+    </button>
+  </div>
+  <div class="demo-switcher">
+    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
+    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
+    </button>
+  </div>
+  <script>
+    (function() {
+      var themes = [{"label": "1", "name": "Legal Navy / リーガルネイビー", "color": "#1B2D4F", "vars": {"--primary": "#1B2D4F", "--primary-dark": "#0F1D34", "--primary-light": "#EBF0F8", "--accent": "#C9A84C", "--accent-hover": "#B0913A", "--bg-body": "#FFFFFF", "--bg-light": "#F7F8FA", "--bg-dark": "#1B2D4F", "--text-main": "#1A1A2E", "--text-muted": "#5C6B80", "--text-white": "#FFFFFF", "--text-gray": "#9CA3AF", "--border": "#DDE4EE", "--hero-overlay": "rgba(15, 25, 45, 0.75)"}}, {"label": "2", "name": "Accounting Blue / アカウンティングブルー", "color": "#1A4080", "vars": {"--primary": "#1A4080", "--primary-dark": "#0F2A5C", "--primary-light": "#E8F0FC", "--accent": "#4A90D9", "--accent-hover": "#3374C0", "--bg-body": "#FFFFFF", "--bg-light": "#F0F5FD", "--bg-dark": "#1A4080", "--text-main": "#1A2A40", "--text-muted": "#5C7080", "--text-white": "#FFFFFF", "--text-gray": "#9DB3C8", "--border": "#CCDCF0", "--hero-overlay": "rgba(20, 40, 80, 0.75)"}}, {"label": "3", "name": "Consultant Charcoal / コンサルタントチャコール", "color": "#2C3E50", "vars": {"--primary": "#2C3E50", "--primary-dark": "#1A2530", "--primary-light": "#EEF2F6", "--accent": "#3498DB", "--accent-hover": "#2180C0", "--bg-body": "#FFFFFF", "--bg-light": "#F4F6F8", "--bg-dark": "#2C3E50", "--text-main": "#2C3E50", "--text-muted": "#7F8C8D", "--text-white": "#FFFFFF", "--text-gray": "#9CA3AF", "--border": "#E2E8F0", "--hero-overlay": "rgba(30, 40, 55, 0.75)"}}, {"label": "4", "name": "Trust Green / トラストグリーン", "color": "#1B4332", "vars": {"--primary": "#1B4332", "--primary-dark": "#0F2B20", "--primary-light": "#E8F5EE", "--accent": "#40916C", "--accent-hover": "#2D7255", "--bg-body": "#FFFFFF", "--bg-light": "#F0F7F3", "--bg-dark": "#1B4332", "--text-main": "#1A2E25", "--text-muted": "#5A7A6A", "--text-white": "#FFFFFF", "--text-gray": "#8AA898", "--border": "#C8E0D4", "--hero-overlay": "rgba(15, 40, 28, 0.75)"}}, {"label": "5", "name": "Premium Black / プレミアムブラック", "color": "#111827", "vars": {"--primary": "#111827", "--primary-dark": "#000000", "--primary-light": "#F3F4F6", "--accent": "#D4AF37", "--accent-hover": "#B8960F", "--bg-body": "#FFFFFF", "--bg-light": "#F9FAFB", "--bg-dark": "#111827", "--text-main": "#111827", "--text-muted": "#6B7280", "--text-white": "#FFFFFF", "--text-gray": "#9CA3AF", "--border": "#E5E7EB", "--hero-overlay": "rgba(5, 5, 5, 0.80)"}}];
+      var panel = document.getElementById('demoPanel');
+      var toggle = document.getElementById('demoToggle');
+      var swatches = [];
+      themes.forEach(function(t, i) {
+        var sw = document.createElement('div');
+        sw.className = 'demo-swatch' + (i === 0 ? ' is-active' : '');
+        sw.style.background = t.color;
+        sw.title = t.name;
+        sw.innerHTML = '<span class="demo-swatch-label">' + t.label + '</span>';
+        sw.addEventListener('click', function() { applyTheme(i); });
+        panel.appendChild(sw);
+        swatches.push(sw);
+      });
+      function applyTheme(idx) {
+        var el = document.getElementById('demo-theme-override');
+        if (!el) { el = document.createElement('style'); el.id = 'demo-theme-override'; document.head.appendChild(el); }
+        var css = ':root{';
+        Object.keys(themes[idx].vars).forEach(function(k){ css += k+':'+themes[idx].vars[k]+';'; });
+        css += '}';
+        el.textContent = css;
+        swatches.forEach(function(s, i){ s.classList.toggle('is-active', i === idx); });
+      }
+      toggle.addEventListener('click', function() { panel.classList.toggle('is-open'); });
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.demo-switcher')) panel.classList.remove('is-open');
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -24,6 +24,9 @@
     --c-text: #2d3436;
     --c-text-light: #636e72;
     --c-bg: #ffffff;
+
+    /* WCAG: 明るい背景に乗る小さな装飾文字用の暗めトーン（ボタン枠線/アイコン/暗背景の文字には未使用） */
+    --accent-ink: color-mix(in srgb, var(--c-primary) 62%, #1a1a1a);
     --f-jp: "Shippori Mincho", serif;
     --f-en: "Cormorant Garamond", serif;
     --header-h: 80px;
@@ -149,6 +152,11 @@ html.js .loaded .loader {
     opacity: 0;
     visibility: hidden;
 }
+
+/* フェイルセーフ: 万一JSが途中で止まっても、5秒後にローダーを自動的に隠す。
+   JSが正常なときは上の .loaded ルールで先に消えるため通常は発火しない。 */
+html.js .loader { animation: loaderFailsafe 0.6s ease 5s forwards; }
+@keyframes loaderFailsafe { to { opacity: 0; visibility: hidden; } }
 
 .loader-logo {
     font-family: var(--f-en);
@@ -476,6 +484,31 @@ html.js .reveal-img.in-view img {
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* 奥行きのある光彩：控えめに一つだけ、ゆっくりドリフト（既存の演出を邪魔しない） */
+.hero-aurora {
+    position: absolute;
+    z-index: 1;
+    top: -14%;
+    right: -10%;
+    width: 42vw;
+    height: 42vw;
+    max-width: 520px;
+    max-height: 520px;
+    min-width: 260px;
+    min-height: 260px;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    will-change: transform;
+    background: radial-gradient(circle, color-mix(in srgb, var(--c-primary) 38%, transparent), transparent 72%);
+    animation: heroAuroraDrift 24s ease-in-out infinite alternate;
+}
+@keyframes heroAuroraDrift {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-5%, 5%) scale(1.1); }
+    100% { transform: translate(3%, -3%) scale(0.94); }
+}
+
 .hero-sub {
     font-family: var(--f-en);
     font-size: 1.2rem;
@@ -484,11 +517,26 @@ html.js .reveal-img.in-view img {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
     font-weight: 500;
     letter-spacing: 0.1em;
     line-height: 1.4;
     margin-bottom: 40px;
+    text-wrap: balance;
+}
+
+/* スクロール誘導：伸縮する縦の細い線 */
+.scroll-line {
+    width: 1px;
+    height: 50px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9), transparent);
+    animation: heroScrollLine 2.4s ease-in-out infinite;
+}
+@keyframes heroScrollLine {
+    0% { transform: scaleY(0.3); transform-origin: top; opacity: 0.4; }
+    50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+    100% { transform: scaleY(0.3); transform-origin: bottom; opacity: 0.4; }
 }
 
 /* Concept */
@@ -545,6 +593,7 @@ html.js .reveal-img.in-view img {
     display: block;
     font-family: var(--f-en);
     color: var(--c-primary);
+    color: var(--accent-ink);
     letter-spacing: 0.1em;
     margin-bottom: 10px;
 }
@@ -616,6 +665,7 @@ html.js .reveal-img.in-view img {
     margin-bottom: 30px;
     font-family: var(--f-en);
     color: var(--c-primary);
+    color: var(--accent-ink);
     font-size: 0.9rem;
 }
 
@@ -928,5 +978,11 @@ label:focus-visible,
 }
 
 /* === スマホ横スクロール防止 ===
-   フルブリード要素の横はみ出しをクリップ。clip は position:sticky を壊さない。 */
+   フルブリード要素（全幅スライダー・装飾・負マージン等）の横はみ出しをクリップ。
+   overflow-x: hidden と違い clip は position:sticky を壊さない。 */
 html, body { overflow-x: clip; }
+
+/* === Hero演出のモーション低減対応 === */
+@media (prefers-reduced-motion: reduce) {
+    .hero-aurora, .scroll-line { animation: none; }
+}
