@@ -1,5 +1,27 @@
 @charset "UTF-8";
 
+/* インラインSVGアイコン（FontAwesome CDN代替・自己完結） */
+.icon {
+    width: 1em; height: 1em; display: inline-block;
+    fill: currentColor; vertical-align: -0.125em;
+}
+
+/* 自己ホストWebフォント（Google Fonts CDN代替・表示速度対策） */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/lato-400-normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../assets/fonts/lato-700-normal.woff2') format('woff2');
+}
+
 /* ==========================================================================
    1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
@@ -58,7 +80,7 @@
     */
 
     /* Common Settings */
-    --font-ja: 'Shippori Mincho', serif;
+    --font-ja: "Hiragino Mincho ProN", "YuMincho", "Yu Mincho", serif;
     --font-en: 'Lato', sans-serif;
     --radius: 8px;
     --width-wide: 1100px;
@@ -273,6 +295,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.4; }
    6. About
    ========================================================================== */
 .about-grid { display: grid; gap: 40px; }
+.about-img img { width: 100%; height: auto; object-fit: cover; }
 @media (min-width: 768px) {
     .about-grid { grid-template-columns: 1fr 1fr; align-items: center; }
 }

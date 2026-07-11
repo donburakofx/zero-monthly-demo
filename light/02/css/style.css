@@ -1,6 +1,36 @@
 @charset "UTF-8";
 
 /* ==========================================================================
+   0. Self-hosted Fonts & Inline Icon Utility
+   ========================================================================== */
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/poppins-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../assets/fonts/poppins-600.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../assets/fonts/poppins-700.woff2') format('woff2');
+}
+
+.svg-icon {
+    width: 1em; height: 1em; display: inline-block;
+    fill: currentColor; vertical-align: -0.125em;
+}
+
+/* ==========================================================================
    1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
@@ -47,7 +77,7 @@
     --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
     --border-light: 1px solid rgba(0,0,0,0.08);
     
-    --font-base: "Noto Sans JP", sans-serif;
+    --font-base: "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", sans-serif;
     --font-en: "Poppins", sans-serif;
     --max-width: 1000px;
     --header-height: 70px;
@@ -118,7 +148,7 @@ html.js .scroll-trigger.is-active { opacity: 1; transform: translateY(0); }
     padding: 12px 30px; border-radius: 50px; font-weight: 700;
     transition: 0.3s; cursor: pointer; white-space: nowrap; position: relative; overflow: hidden;
 }
-.btn i { margin-left: 8px; }
+.btn i, .btn .svg-icon { margin-left: 8px; }
 .btn-sm { padding: 8px 20px; font-size: 0.9rem; }
 .btn-lg { padding: 18px 50px; font-size: 1.1rem; width: 100%; max-width: 350px; }
 .btn-xl { padding: 20px 60px; font-size: 1.2rem; width: 100%; max-width: 400px; }
@@ -523,7 +553,7 @@ html.js .scroll-trigger.is-active { opacity: 1; transform: translateY(0); }
 
 .pc-list { list-style: none; padding: 0; margin: 0 0 30px; text-align: left; }
 .pc-list li { padding: 12px 0; border-bottom: 1px dashed #eee; font-size: 0.9rem; display: flex; align-items: center; }
-.pc-list i { color: var(--accent); margin-right: 10px; min-width: 20px; text-align: center; }
+.pc-list i, .pc-list .svg-icon { color: var(--accent); margin-right: 10px; min-width: 20px; text-align: center; }
 
 /* ==========================================================================
    Voice

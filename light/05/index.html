@@ -42,13 +42,6 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css" />
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -66,7 +59,7 @@
 
       <div class="bento-box profile-box">
         <div class="profile-img">
-          <img src="assets/image/profile.jpg" alt="Profile Picture">
+          <picture><source srcset="assets/image/profile.webp" type="image/webp"><img src="assets/image/profile.jpg" alt="Profile Picture" width="180" height="180" fetchpriority="high" decoding="async"></picture>
         </div>
         <div class="profile-info">
           <h1 class="name">KENTO SUZUKI</h1>
@@ -83,20 +76,20 @@
       </div>
 
       <div class="bento-box map-box">
-        <div class="map-bg" style="background-image: url('assets/image/map_bg.jpg');"></div>
+        <div class="map-bg" style="background-image: url('assets/image/map_bg.jpg'); background-image: image-set(url('assets/image/map_bg.webp') type('image/webp'), url('assets/image/map_bg.jpg') type('image/jpeg'));"></div>
         <div class="map-content">
-          <i class="fa-solid fa-location-dot"></i>
+          <svg class="icon icon-location-dot" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
           <h3>Tokyo, Shibuya</h3>
           <p>Based in Japan</p>
         </div>
       </div>
 
       <a href="#" class="bento-box social-box twitter">
-        <i class="fa-brands fa-x-twitter"></i>
+        <svg class="icon icon-x-twitter" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
         <span>X (Twitter)</span>
       </a>
       <a href="#" class="bento-box social-box instagram">
-        <i class="fa-brands fa-instagram"></i>
+        <svg class="icon icon-instagram" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
         <span>Instagram</span>
       </a>
 
@@ -107,30 +100,30 @@
         </div>
         <div class="work-grid">
           <a href="#" class="work-item" target="_blank">
-            <img src="assets/image/work_01.jpg" alt="Work 1">
+            <picture><source srcset="assets/image/work_01.webp" type="image/webp"><img src="assets/image/work_01.jpg" alt="Work 1" width="100" height="100" loading="lazy" decoding="async"></picture>
             <span class="work-title">E-Commerce UI</span>
-            <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+            <svg class="icon icon-arrow-up-right-from-square link-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
           </a>
           <a href="#" class="work-item" target="_blank">
-            <img src="assets/image/work_02.jpg" alt="Work 2">
+            <picture><source srcset="assets/image/work_02.webp" type="image/webp"><img src="assets/image/work_02.jpg" alt="Work 2" width="100" height="100" loading="lazy" decoding="async"></picture>
             <span class="work-title">Travel App</span>
-            <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+            <svg class="icon icon-arrow-up-right-from-square link-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
           </a>
           <a href="#" class="work-item" target="_blank">
-            <img src="assets/image/work_03.jpg" alt="Work 3">
+            <picture><source srcset="assets/image/work_03.webp" type="image/webp"><img src="assets/image/work_03.jpg" alt="Work 3" width="100" height="100" loading="lazy" decoding="async"></picture>
             <span class="work-title">Corporate Site</span>
-            <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+            <svg class="icon icon-arrow-up-right-from-square link-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
           </a>
 
         </div>
       </div>
 
       <a href="#" class="bento-box social-box threads">
-        <i class="fa-brands fa-threads"></i>
+        <svg class="icon icon-threads" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2c-32.3-41-48.9-98.1-49.5-169.6V256v-.2C17 184.3 33.6 127.2 65.9 86.2C102.2 40.1 156.2 16.5 226.4 16h.3c70.3 .5 124.9 24 162.3 69.9c18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4c-29.2-35.8-73-54.2-130.5-54.6c-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3c28 35.6 71.2 53.9 128.2 54.4c51.4-.4 85.4-12.6 113.7-40.9c32.3-32.2 31.7-71.8 21.4-95.9c-6.1-14.2-17.1-26-31.9-34.9c-3.7 26.9-11.8 48.3-24.7 64.8c-17.1 21.8-41.4 33.6-72.7 35.3c-23.6 1.3-46.3-4.4-63.9-16c-20.8-13.8-33-34.8-34.3-59.3c-2.5-48.3 35.7-83 95.2-86.4c21.1-1.2 40.9-.3 59.2 2.8c-2.4-14.8-7.3-26.6-14.6-35.2c-10-11.7-25.6-17.7-46.2-17.8H227c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6 .4 99.9 39.5 103.7 107.7l-.2 .2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3c25.6-1.4 54.6-11.4 59.5-73.2c-13.2-2.9-27.8-4.4-43.4-4.4c-4.8 0-9.6 .1-14.4 .4c-42.9 2.4-57.2 23.2-56.2 41.8l-.1 .1z"/></svg>
         <span>Threads</span>
       </a>
       <a href="#" class="bento-box social-box note">
-        <i class="fa-solid fa-pen-nib"></i>
+        <svg class="icon icon-pen-nib" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M368.4 18.3L312.7 74.1 437.9 199.3l55.7-55.7c21.9-21.9 21.9-57.3 0-79.2L447.6 18.3c-21.9-21.9-57.3-21.9-79.2 0zM288 94.6l-9.2 2.8L134.7 140.6c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-3.8 11.3-1 23.9 7.3 32.4L164.7 324.7c-3-6.3-4.7-13.3-4.7-20.7c0-26.5 21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48c-7.4 0-14.4-1.7-20.7-4.7L33.7 500.9c8.6 8.3 21.1 11.2 32.4 7.3l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 2.8-9.2L288 94.6z"/></svg>
         <span>note</span>
       </a>
 
@@ -138,21 +131,21 @@
         <h2>Skills & Tools</h2>
         <ul class="service-list">
           <li>
-            <i class="fa-solid fa-laptop-code"></i>
+            <svg class="icon icon-laptop-code" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
             <div>
               <strong>Web Design</strong>
               <span>Figma / HTML / CSS</span>
             </div>
           </li>
           <li>
-            <i class="fa-solid fa-video"></i>
+            <svg class="icon icon-video" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
             <div>
               <strong>Video Edit</strong>
               <span>Premiere / AfterEffects</span>
             </div>
           </li>
           <li>
-            <i class="fa-solid fa-camera"></i>
+            <svg class="icon icon-camera" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
             <div>
               <strong>Photography</strong>
               <span>Portrait / Landscape</span>
@@ -163,7 +156,7 @@
 
       <a href="common/contact.html" class="bento-box contact-box">
         <div class="contact-content">
-          <i class="fa-regular fa-paper-plane"></i>
+          <svg class="icon icon-paper-plane" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/></svg>
           <h2>Get in Touch</h2>
           <p>お仕事のご相談はこちら</p>
         </div>
@@ -200,12 +193,6 @@
     .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
     .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
   </style>
-  <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
-    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
-    </button>
-  </div>
   <div class="demo-switcher">
     <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
     <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">

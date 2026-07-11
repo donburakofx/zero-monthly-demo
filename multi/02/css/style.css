@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+/* インラインSVGアイコン（FontAwesome CDN代替・自己完結） */
+.icon {
+    width: 1em; height: 1em; display: inline-block;
+    fill: currentColor; vertical-align: -0.125em;
+}
+
+/* 自己ホストWebフォント（Google Fonts CDN代替・表示速度対策） */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500 700;
+    font-display: swap;
+    src: url('../assets/fonts/montserrat-variable.woff2') format('woff2');
+}
+
 /* ==========================================================================
    02-clinic (multi-page) — 共有スタイル
    全ページ（index / about / service / first-visit / access / contact）が
@@ -107,7 +122,7 @@
     /* --- Common (触らなくてOK) --- */
     /* 明るい背景に置くaccent文字用の暗色（コントラスト確保。color-mix非対応ブラウザはaccentにフォールバック） */
     --accent-ink: color-mix(in srgb, var(--accent) 62%, #1a1a1a);
-    --font-jp:   'Noto Sans JP', sans-serif;
+    --font-jp:   "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", sans-serif;
     --font-en:   'Montserrat', sans-serif;
     --radius:    4px;
     --radius-lg: 10px;

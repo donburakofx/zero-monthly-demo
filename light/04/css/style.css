@@ -1,5 +1,28 @@
 @charset "UTF-8";
 
+/* 自己ホストWebフォント（Google Fonts CDN代替・表示速度対策） */
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/cormorant-garamond-400-italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/cormorant-garamond-400-normal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../assets/fonts/cormorant-garamond-600-normal.woff2') format('woff2');
+}
+
 /* ==========================================================================
    1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
@@ -27,7 +50,7 @@
 
     /* WCAG: 明るい背景に乗る小さな装飾文字用の暗めトーン（ボタン枠線/アイコン/暗背景の文字には未使用） */
     --accent-ink: color-mix(in srgb, var(--c-primary) 62%, #1a1a1a);
-    --f-jp: "Shippori Mincho", serif;
+    --f-jp: "Hiragino Mincho ProN", "YuMincho", "Yu Mincho", serif;
     --f-en: "Cormorant Garamond", serif;
     --header-h: 80px;
     --max-w: 1100px;
@@ -144,7 +167,7 @@ html.js body.loading {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: opacity 1s, visibility 1s;
+    transition: opacity 0.4s, visibility 0.4s;
 }
 html.js .loader { display: flex; }
 
@@ -295,6 +318,16 @@ html.js .fade-up { opacity: 0; }
 html.js .fade-up.in-view {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ヒーロー内のfade-upは常時ファーストビューに表示されるため、
+   IntersectionObserver待ちにせず表示時に即アニメーションさせる（LCP対策・JS非依存化） */
+.hero-content.fade-up {
+    animation: heroFadeUp 1s cubic-bezier(0.2, 1, 0.3, 1) 0.2s both;
+}
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 .reveal-img {
@@ -985,4 +1018,10 @@ html, body { overflow-x: clip; }
 /* === Hero演出のモーション低減対応 === */
 @media (prefers-reduced-motion: reduce) {
     .hero-aurora, .scroll-line { animation: none; }
+}
+
+/* インラインSVGアイコン（FontAwesome CDN代替・自己完結） */
+.icon {
+    width: 1em; height: 1em; display: inline-block;
+    fill: currentColor; vertical-align: -0.125em;
 }

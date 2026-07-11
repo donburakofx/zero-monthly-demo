@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+/* インラインSVGアイコン（FontAwesome CDN代替・自己完結） */
+.icon {
+    width: 1em; height: 1em; display: inline-block;
+    fill: currentColor; vertical-align: -0.125em;
+}
+
+/* 自己ホストWebフォント（Google Fonts CDN代替・表示速度対策） */
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500 700;
+    font-display: swap;
+    src: url('../assets/fonts/oswald-latin.woff2') format('woff2');
+}
+
 /* ==========================================================================
    1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
@@ -67,7 +82,7 @@
 
     /* --- Common Settings --- */
     --font-en: 'Oswald', sans-serif;
-    --font-jp: 'Noto Sans JP', sans-serif;
+    --font-jp: "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", sans-serif;
     --radius: 8px;
     --width-wide: 1000px;
     --width-narrow: 800px;

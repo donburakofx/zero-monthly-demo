@@ -1,6 +1,39 @@
 @charset "UTF-8";
 
 /* ==========================================================================
+   0. ICON / WEBFONT (自己ホスト設定)
+   ========================================================================== */
+/* インラインSVGアイコン共通スタイル
+   注意: 既存の .icon クラス（機能カードのアイコン枠・FAQの+記号）と名前が衝突しないよう、
+   SVGアイコン自体には .svg-icon クラスを使用しています。 */
+.svg-icon {
+    width: 1em; height: 1em; display: inline-block;
+    fill: currentColor; vertical-align: -0.125em;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/montserrat-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../assets/fonts/montserrat-700.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../assets/fonts/montserrat-900.woff2') format('woff2');
+}
+
+/* ==========================================================================
    1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
 :root {
@@ -60,7 +93,7 @@
     
     /* Font */
     --font-en: "Montserrat", sans-serif;
-    --font-jp: "Noto Sans JP", sans-serif;
+    --font-jp: "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", sans-serif;
     
     /* Layout */
     --status-bar-height: 80px;

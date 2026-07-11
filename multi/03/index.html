@@ -41,11 +41,7 @@
   }
   </script>
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
@@ -84,7 +80,7 @@
 
     <!-- ========== Hero ========== -->
     <section class="hero">
-      <div class="hero-bg"><img src="assets/image/hero.jpg" alt="店内料理のイメージ"></div>
+      <div class="hero-bg"><picture><source srcset="assets/image/hero.webp" type="image/webp"><img src="assets/image/hero.jpg" alt="店内料理のイメージ" width="1024" height="572" fetchpriority="high" decoding="async"></picture></div>
       <div class="hero-overlay"></div>
       <div class="hero-aurora"></div>
       <div class="container hero-content">
@@ -92,7 +88,7 @@
         <h2 class="hero-copy">素材を活かす、<br>心あたたまる食卓。</h2>
         <p class="hero-lead">産地から届く旬の食材を、シンプルな調理で。<br>ゆったりとした時間とともにお愉しみください。</p>
         <div class="hero-actions">
-          <a href="menu.html" class="btn btn-accent btn-lg">メニューを見る <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="menu.html" class="btn btn-accent btn-lg">メニューを見る <svg class="icon icon-arrow-right" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
           <a href="contact.html" class="btn btn-outline btn-lg">ご予約はこちら</a>
         </div>
       </div>
@@ -102,7 +98,7 @@
     <section class="section">
       <div class="container">
         <div class="card-grid cols-2 scroll-trigger" style="align-items:center;">
-          <div class="card-img" style="border-radius:var(--radius-lg);overflow:hidden;"><img src="assets/image/concept.jpg" alt="お店のコンセプトイメージ"></div>
+          <div class="card-img" style="border-radius:var(--radius-lg);overflow:hidden;"><picture><source srcset="assets/image/concept.webp" type="image/webp"><img src="assets/image/concept.jpg" alt="お店のコンセプトイメージ" width="1024" height="765" loading="lazy" decoding="async"></picture></div>
           <div>
             <span class="section-en">CONCEPT</span>
             <h3 class="section-title" style="margin-bottom:16px;">日々の食事を、少しだけ特別に。</h3>
@@ -123,27 +119,27 @@
         </div>
         <div class="card-grid">
           <article class="card scroll-trigger">
-            <div class="card-img"><img src="assets/image/dish_01.jpg" alt="前菜の盛り合わせ"></div>
+            <div class="card-img"><picture><source srcset="assets/image/dish_01.webp" type="image/webp"><img src="assets/image/dish_01.jpg" alt="前菜の盛り合わせ" width="1024" height="687" loading="lazy" decoding="async"></picture></div>
             <div class="card-body">
               <h4 class="card-title">季節野菜の前菜盛り合わせ</h4>
               <p class="card-text">その日仕入れた旬の野菜を、彩りよく一皿に。素材の甘みと香りをお愉しみください。</p>
-              <a href="menu.html" class="card-link">メニューを見る <i class="fa-solid fa-chevron-right"></i></a>
+              <a href="menu.html" class="card-link">メニューを見る <svg class="icon icon-chevron-right" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
             </div>
           </article>
           <article class="card scroll-trigger">
-            <div class="card-img"><img src="assets/image/dish_02.jpg" alt="自家製生パスタ"></div>
+            <div class="card-img"><picture><source srcset="assets/image/dish_02.webp" type="image/webp"><img src="assets/image/dish_02.jpg" alt="自家製生パスタ" width="1024" height="687" loading="lazy" decoding="async"></picture></div>
             <div class="card-body">
               <h4 class="card-title">自家製生パスタ</h4>
               <p class="card-text">毎朝手打ちする生パスタは、もちもちとした食感が自慢。ソースは日替わりでご用意します。</p>
-              <a href="menu.html" class="card-link">メニューを見る <i class="fa-solid fa-chevron-right"></i></a>
+              <a href="menu.html" class="card-link">メニューを見る <svg class="icon icon-chevron-right" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
             </div>
           </article>
           <article class="card scroll-trigger">
-            <div class="card-img"><img src="assets/image/dish_03.jpg" alt="本日の肉料理"></div>
+            <div class="card-img"><picture><source srcset="assets/image/dish_03.webp" type="image/webp"><img src="assets/image/dish_03.jpg" alt="本日の肉料理" width="1024" height="687" loading="lazy" decoding="async"></picture></div>
             <div class="card-body">
               <h4 class="card-title">本日の肉料理</h4>
               <p class="card-text">じっくり火を入れたメイン料理。付け合わせの野菜とともに、満足感のある一皿に仕上げます。</p>
-              <a href="menu.html" class="card-link">メニューを見る <i class="fa-solid fa-chevron-right"></i></a>
+              <a href="menu.html" class="card-link">メニューを見る <svg class="icon icon-chevron-right" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
             </div>
           </article>
         </div>
@@ -160,21 +156,21 @@
         </div>
         <div class="card-grid">
           <article class="card scroll-trigger">
-            <div class="card-img"><img src="assets/image/interior_01.jpg" alt="店内テーブル席"></div>
+            <div class="card-img"><picture><source srcset="assets/image/interior_01.webp" type="image/webp"><img src="assets/image/interior_01.jpg" alt="店内テーブル席" width="1024" height="687" loading="lazy" decoding="async"></picture></div>
             <div class="card-body">
               <h4 class="card-title">ゆったりテーブル席</h4>
               <p class="card-text">間隔をとったテーブル席で、会話を愉しみながらお食事いただけます。</p>
             </div>
           </article>
           <article class="card scroll-trigger">
-            <div class="card-img"><img src="assets/image/interior_02.jpg" alt="カウンター席"></div>
+            <div class="card-img"><picture><source srcset="assets/image/interior_02.webp" type="image/webp"><img src="assets/image/interior_02.jpg" alt="カウンター席" width="1024" height="687" loading="lazy" decoding="async"></picture></div>
             <div class="card-body">
               <h4 class="card-title">おひとりでも安心のカウンター</h4>
               <p class="card-text">調理の様子を眺めながら、気軽にお過ごしいただけるカウンター席もございます。</p>
             </div>
           </article>
           <article class="card scroll-trigger">
-            <div class="card-img"><img src="assets/image/interior_03.jpg" alt="窓際の席"></div>
+            <div class="card-img"><picture><source srcset="assets/image/interior_03.webp" type="image/webp"><img src="assets/image/interior_03.jpg" alt="窓際の席" width="1024" height="687" loading="lazy" decoding="async"></picture></div>
             <div class="card-body">
               <h4 class="card-title">やわらかな光の窓際席</h4>
               <p class="card-text">自然光が差し込む窓際は、ランチタイムにも人気の席です。</p>
@@ -200,7 +196,7 @@
             <tr><th>定休日</th><td>火曜日</td></tr>
           </table>
           <div class="text-center" style="margin-top:36px;">
-            <a href="access.html" class="btn btn-outline-dark">アクセス詳細を見る <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="access.html" class="btn btn-outline-dark">アクセス詳細を見る <svg class="icon icon-arrow-right" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
           </div>
         </div>
       </div>
@@ -211,7 +207,7 @@
       <div class="container">
         <h2>ご予約を承っております</h2>
         <p>お席のご予約・お問い合わせは、お電話またはフォームからお気軽にどうぞ。</p>
-        <a href="contact.html" class="btn btn-accent btn-lg">ご予約・お問い合わせ <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="btn btn-accent btn-lg">ご予約・お問い合わせ <svg class="icon icon-arrow-right" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
       </div>
     </section>
 
@@ -288,12 +284,6 @@
     .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
     .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
   </style>
-  <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
-    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
-    </button>
-  </div>
   <div class="demo-switcher">
     <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
     <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">

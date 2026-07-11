@@ -39,12 +39,7 @@
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
@@ -52,8 +47,8 @@
 
   <div class="top-bar">
     <div class="container top-bar-inner">
-      <span><i class="fa-solid fa-phone"></i> <!-- ★ --> 03-XXXX-XXXX</span>
-      <span class="top-bar-right"><i class="fa-regular fa-calendar-check"></i> 初回相談無料 ・ 土日対応可</span>
+      <span><svg class="icon icon-phone" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> <!-- ★ --> 03-XXXX-XXXX</span>
+      <span class="top-bar-right"><svg class="icon icon-calendar-check" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M128 0c13.3 0 24 10.7 24 24V64H296V24c0-13.3 10.7-24 24-24s24 10.7 24 24V64h40c35.3 0 64 28.7 64 64v16 48V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192 144 128C0 92.7 28.7 64 64 64h40V24c0-13.3 10.7-24 24-24zM400 192H48V448c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V192zM329 297L217 409c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47 95-95c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> 初回相談無料 ・ 土日対応可</span>
     </div>
   </div>
 
@@ -79,7 +74,7 @@
   </header>
 
   <div class="drawer" id="drawer">
-    <button class="drawer-close" id="drawer-close" aria-label="閉じる"><i class="fa-solid fa-xmark"></i></button>
+    <button class="drawer-close" id="drawer-close" aria-label="閉じる"><svg class="icon icon-xmark" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
     <nav class="drawer-nav">
       <a href="#services" class="drawer-link">業務内容</a>
       <a href="#features" class="drawer-link">選ばれる理由</a>
@@ -94,7 +89,7 @@
     <!-- ========== Hero ========== -->
     <section class="hero">
       <div class="hero-bg">
-        <img src="assets/image/hero.jpg" alt="事務所イメージ">
+        <picture><source srcset="assets/image/hero.webp" type="image/webp"><img src="assets/image/hero.jpg" alt="事務所イメージ" width="1024" height="572" fetchpriority="high" decoding="async"></picture>
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-aurora"></div>
@@ -111,7 +106,7 @@
             複雑な手続きをワンストップで解決します。
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary btn-lg">初回無料相談を予約する <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-primary btn-lg">初回無料相談を予約する <svg class="icon icon-arrow-right" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
             <a href="#services" class="btn btn-outline btn-lg">業務内容を見る</a>
           </div>
         </div>
@@ -150,37 +145,37 @@
         </div>
         <div class="services-grid">
           <div class="service-card scroll-trigger">
-            <div class="service-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="service-icon"><svg class="icon icon-building-columns" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></div>
             <h4>会社設立・法人化</h4>
             <p>株式会社・合同会社の設立手続きを全面サポート。定款作成から登記申請まで一括代行。節税・補助金申請の観点からも最適な法人形態をご提案します。</p>
             <span class="service-price">¥55,000〜（税込）</span>
           </div>
           <div class="service-card scroll-trigger">
-            <div class="service-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <div class="service-icon"><svg class="icon icon-scale-balanced" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><path d="M384 32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H320 128c-17.7 0-32-14.3-32-32s14.3-32 32-32H288V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32H256c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288H584.4L512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C627.2 382 574.9 416 512 416zM126.8 195.8L54.4 320H199.3L126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C242 382 189.7 416 126.8 416S11.7 382 .9 337.1z"/></svg></div>
             <h4>相続手続き・遺言書作成</h4>
             <p>相続人調査・財産目録作成・遺産分割協議書の作成まで対応。遺言書（自筆・公正証書）の作成サポートも承ります。家族への想いを確実な形に残します。</p>
             <span class="service-price">¥110,000〜（税込）</span>
           </div>
           <div class="service-card scroll-trigger">
-            <div class="service-icon"><i class="fa-solid fa-hard-hat"></i></div>
+            <div class="service-icon"><svg class="icon icon-hard-hat" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M256 32c-17.7 0-32 14.3-32 32v2.3 99.6c0 5.6-4.5 10.1-10.1 10.1c-3.6 0-7-1.9-8.8-5.1L157.1 87C83 123.5 32 199.8 32 288v64H544l0-66.4c-.9-87.2-51.7-162.4-125.1-198.6l-48 83.9c-1.8 3.2-5.2 5.1-8.8 5.1c-5.6 0-10.1-4.5-10.1-10.1V66.3 64c0-17.7-14.3-32-32-32H256zM16.6 384C7.4 384 0 391.4 0 400.6c0 4.7 2 9.2 5.8 11.9C27.5 428.4 111.8 480 288 480s260.5-51.6 282.2-67.5c3.8-2.8 5.8-7.2 5.8-11.9c0-9.2-7.4-16.6-16.6-16.6H16.6z"/></svg></div>
             <h4>建設業許可申請</h4>
             <p>新規取得・更新・業種追加に対応。許可要件の確認から申請書類の作成・提出まで代行します。一人親方の許可取得実績も多数あり、丁寧にサポートします。</p>
             <span class="service-price">¥88,000〜（税込）</span>
           </div>
           <div class="service-card scroll-trigger">
-            <div class="service-icon"><i class="fa-solid fa-passport"></i></div>
+            <div class="service-icon"><svg class="icon icon-passport" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M0 64C0 28.7 28.7 0 64 0H384c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zM183 278.8c-27.9-13.2-48.4-39.4-53.7-70.8h39.1c1.6 30.4 7.7 53.8 14.6 70.8zm41.3 9.2l-.3 0-.3 0c-2.4-3.5-5.7-8.9-9.1-16.5c-6-13.6-12.4-34.3-14.2-63.5h47.1c-1.8 29.2-8.1 49.9-14.2 63.5c-3.4 7.6-6.7 13-9.1 16.5zm40.7-9.2c6.8-17.1 12.9-40.4 14.6-70.8h39.1c-5.3 31.4-25.8 57.6-53.7 70.8zM279.6 176c-1.6-30.4-7.7-53.8-14.6-70.8c27.9 13.2 48.4 39.4 53.7 70.8H279.6zM223.7 96l.3 0 .3 0c2.4 3.5 5.7 8.9 9.1 16.5c6 13.6 12.4 34.3 14.2 63.5H200.5c1.8-29.2 8.1-49.9 14.2-63.5c3.4-7.6 6.7-13 9.1-16.5zM183 105.2c-6.8 17.1-12.9 40.4-14.6 70.8H129.3c5.3-31.4 25.8-57.6 53.7-70.8zM352 192A128 128 0 1 0 96 192a128 128 0 1 0 256 0zM112 384c-8.8 0-16 7.2-16 16s7.2 16 16 16H336c8.8 0 16-7.2 16-16s-7.2-16-16-16H112z"/></svg></div>
             <h4>在留資格・ビザ申請</h4>
             <p>就労ビザ・経営管理ビザ・配偶者ビザ・帰化申請など幅広く対応。複雑な要件整理から申請書類の作成・入国管理局への申請代行まで一貫して承ります。</p>
             <span class="service-price">¥55,000〜（税込）</span>
           </div>
           <div class="service-card scroll-trigger">
-            <div class="service-icon"><i class="fa-solid fa-file-contract"></i></div>
+            <div class="service-icon"><svg class="icon icon-file-contract" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM80 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm54.2 253.8c-6.1 20.3-24.8 34.2-46 34.2H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h8.2c7.1 0 13.3-4.6 15.3-11.4l14.9-49.5c3.4-11.3 13.8-19.1 25.6-19.1s22.2 7.7 25.6 19.1l11.6 38.6c7.4-6.2 16.8-9.7 26.8-9.7c15.9 0 30.4 9 37.5 23.2l4.4 8.8H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-6.1 0-11.6-3.4-14.3-8.8l-8.8-17.7c-1.7-3.4-5.1-5.5-8.8-5.5s-7.2 2.1-8.8 5.5l-8.8 17.7c-2.9 5.9-9.2 9.4-15.7 8.8s-12.1-5.1-13.9-11.3L144 349l-9.8 32.8z"/></svg></div>
             <h4>各種契約書・内容証明</h4>
             <p>売買契約書・業務委託契約書・賃貸借契約書など各種契約書の作成・チェックを行います。内容証明郵便の作成も対応。トラブルを未然に防ぐ文書作成をサポート。</p>
             <span class="service-price">¥33,000〜（税込）</span>
           </div>
           <div class="service-card scroll-trigger">
-            <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+            <div class="service-icon"><svg class="icon icon-store" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z"/></svg></div>
             <h4>飲食店・古物商・各種許認可</h4>
             <p>飲食店営業許可・古物商許可・酒類販売業免許・産業廃棄物収集運搬業許可など。開業・事業拡大に必要な許認可申請を幅広くサポートします。</p>
             <span class="service-price">¥44,000〜（税込）</span>
@@ -225,7 +220,7 @@
         </div>
         <div class="profile-wrap">
           <div class="profile-img scroll-trigger">
-            <img src="assets/image/profile.jpg" alt="代表 田中 誠">
+            <picture><source srcset="assets/image/profile.webp" type="image/webp"><img src="assets/image/profile.jpg" alt="代表 田中 誠" width="765" height="1024" loading="lazy" decoding="async"></picture>
           </div>
           <div class="profile-body scroll-trigger">
             <!-- ★ 要変更: 代表者情報・経歴を入力してください -->
@@ -267,21 +262,21 @@
         </div>
         <div class="voice-grid">
           <div class="voice-card scroll-trigger">
-            <div class="voice-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="voice-icon"><svg class="icon icon-quote-left" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg></div>
             <p class="voice-text">「会社設立を考えているが何から始めればよいかわからず相談しました。定款の作り方から登記完了まですべて丁寧に説明・対応していただき、不安なく手続きが完了できました。節税の観点からのアドバイスも助かりました。」</p>
             <div class="voice-info">
               <span class="voice-name">K.S 様（30代・会社設立）</span>
             </div>
           </div>
           <div class="voice-card scroll-trigger">
-            <div class="voice-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="voice-icon"><svg class="icon icon-quote-left" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg></div>
             <p class="voice-text">「父が亡くなり相続の手続きが必要になりましたが、何が必要かも全くわかりませんでした。一から丁寧に教えていただき、複雑な書類作成もすべて対応してもらえました。迅速な対応で精神的にも助かりました。」</p>
             <div class="voice-info">
               <span class="voice-name">M.T 様（50代・相続手続き）</span>
             </div>
           </div>
           <div class="voice-card scroll-trigger">
-            <div class="voice-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="voice-icon"><svg class="icon icon-quote-left" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg></div>
             <p class="voice-text">「建設業許可の取得を目指していましたが要件が複雑で困っていました。必要書類の準備から申請まで全面サポートしてもらい、無事に許可を取得できました。一人親方でも丁寧に対応してくれる事務所です。」</p>
             <div class="voice-info">
               <span class="voice-name">H.N 様（40代・建設業許可）</span>
@@ -354,7 +349,7 @@
           </table>
         </div>
         <p class="fee-note scroll-trigger">
-          <i class="fa-solid fa-circle-info"></i>
+          <svg class="icon icon-circle-info" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
           上記は標準的な目安価格です。案件の複雑さ・書類量により変動する場合があります。
           正確なお見積もりは初回相談時に提示します。まずはお気軽にご相談ください。
         </p>
@@ -372,7 +367,7 @@
           <div class="faq-item scroll-trigger">
             <button class="faq-q" aria-expanded="false">
               <span>初回相談は本当に無料ですか？</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
+              <svg class="icon faq-icon icon-chevron-down" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
             </button>
             <div class="faq-a">
               <p>はい、初回のご相談（対面・電話・オンライン）は完全無料です。相談後にご依頼いただかなくても一切費用は発生しません。まずはお気軽にお問い合わせください。</p>
@@ -381,7 +376,7 @@
           <div class="faq-item scroll-trigger">
             <button class="faq-q" aria-expanded="false">
               <span>土日・夜間の相談は可能ですか？</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
+              <svg class="icon faq-icon icon-chevron-down" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
             </button>
             <div class="faq-a">
               <p>土日・祝日の相談にも対応しています。また平日は20時まで対応可能です（要予約）。お仕事でお忙しい方も、ご都合に合わせてご予約ください。</p>
@@ -390,7 +385,7 @@
           <div class="faq-item scroll-trigger">
             <button class="faq-q" aria-expanded="false">
               <span>遠方でも対応してもらえますか？</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
+              <svg class="icon faq-icon icon-chevron-down" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
             </button>
             <div class="faq-a">
               <p>オンライン（Zoom・Google Meet）でのご相談・ご契約に対応しています。書類のやり取りは郵送・メールで行いますので、全国どこからでもご依頼いただけます。</p>
@@ -399,7 +394,7 @@
           <div class="faq-item scroll-trigger">
             <button class="faq-q" aria-expanded="false">
               <span>行政書士と司法書士・弁護士の違いは何ですか？</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
+              <svg class="icon faq-icon icon-chevron-down" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
             </button>
             <div class="faq-a">
               <p>行政書士は主に行政機関への許認可申請や権利義務・事実証明に関する書類作成を行います。登記申請は司法書士、訴訟代理は弁護士の専門分野です。案件によって最適な専門家をご紹介することも可能です。</p>
@@ -408,7 +403,7 @@
           <div class="faq-item scroll-trigger">
             <button class="faq-q" aria-expanded="false">
               <span>費用の支払いはいつですか？</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
+              <svg class="icon faq-icon icon-chevron-down" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
             </button>
             <div class="faq-a">
               <p>ご依頼確定後に着手金（報酬の50%程度）をお支払いいただき、手続き完了後に残額をお支払いいただく形が標準的です。お振込み・クレジットカードに対応しています。</p>
@@ -428,16 +423,16 @@
         </div>
         <div class="contact-wrap">
           <div class="contact-tel scroll-trigger">
-            <p class="tel-label"><i class="fa-solid fa-phone"></i> お電話でのご予約</p>
+            <p class="tel-label"><svg class="icon icon-phone" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> お電話でのご予約</p>
             <!-- ★ 要変更: 電話番号 -->
             <a href="tel:03XXXXXXXX" class="tel-number">03-XXXX-XXXX</a>
             <p class="tel-hours">平日 9:00〜20:00 / 土日祝 10:00〜18:00</p>
             <div class="contact-tel-note">
-              <p><i class="fa-brands fa-line"></i> LINEでのご相談も受付中</p>
+              <p><svg class="icon icon-line" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M311 196.8v81.3c0 2.1-1.6 3.7-3.7 3.7h-13c-1.3 0-2.4-.7-3-1.5l-37.3-50.3v48.2c0 2.1-1.6 3.7-3.7 3.7h-13c-2.1 0-3.7-1.6-3.7-3.7V196.9c0-2.1 1.6-3.7 3.7-3.7h12.9c1.1 0 2.4 .6 3 1.6l37.3 50.3V196.9c0-2.1 1.6-3.7 3.7-3.7h13c2.1-.1 3.8 1.6 3.8 3.5zm-93.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 2.1 1.6 3.7 3.7 3.7h13c2.1 0 3.7-1.6 3.7-3.7V196.8c0-1.9-1.6-3.7-3.7-3.7zm-31.4 68.1H150.3V196.8c0-2.1-1.6-3.7-3.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 1 .3 1.8 1 2.5c.7 .6 1.5 1 2.5 1h52.2c2.1 0 3.7-1.6 3.7-3.7v-13c0-1.9-1.6-3.7-3.5-3.7zm193.7-68.1H327.3c-1.9 0-3.7 1.6-3.7 3.7v81.3c0 1.9 1.6 3.7 3.7 3.7h52.2c2.1 0 3.7-1.6 3.7-3.7V265c0-2.1-1.6-3.7-3.7-3.7H344V247.7h35.5c2.1 0 3.7-1.6 3.7-3.7V230.9c0-2.1-1.6-3.7-3.7-3.7H344V213.5h35.5c2.1 0 3.7-1.6 3.7-3.7v-13c-.1-1.9-1.7-3.7-3.7-3.7zM512 93.4V419.4c-.1 51.2-42.1 92.7-93.4 92.6H92.6C41.4 511.9-.1 469.8 0 418.6V92.6C.1 41.4 42.2-.1 93.4 0H419.4c51.2 .1 92.7 42.1 92.6 93.4zM441.6 233.5c0-83.4-83.7-151.3-186.4-151.3s-186.4 67.9-186.4 151.3c0 74.7 66.3 137.4 155.9 149.3c21.8 4.7 19.3 12.7 14.4 42.1c-.8 4.7-3.8 18.4 16.1 10.1s107.3-63.2 146.5-108.2c27-29.7 39.9-59.8 39.9-93.1z"/></svg> LINEでのご相談も受付中</p>
             </div>
           </div>
           <div class="contact-form scroll-trigger">
-            <p class="form-label"><i class="fa-regular fa-envelope"></i> フォームからのご予約（24時間受付）</p>
+            <p class="form-label"><svg class="icon icon-envelope" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg> フォームからのご予約（24時間受付）</p>
             <!-- ★ 要変更: FormspreeまたはNetlify FormsのURLに変更してください -->
             <form action="https://formspree.io/f/your-form-id" method="POST" class="form">
               <div class="form-row">
@@ -477,7 +472,7 @@
                   <a href="common/privacy.html" target="_blank">プライバシーポリシー</a>に同意する
                 </label>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">送信して相談を予約する <i class="fa-solid fa-paper-plane"></i></button>
+              <button type="submit" class="btn btn-primary btn-block">送信して相談を予約する <svg class="icon icon-paper-plane" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg></button>
               <p class="form-note">送信後、通常1営業日以内にご連絡します。</p>
             </form>
           </div>
@@ -585,12 +580,6 @@
     .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
     .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
   </style>
-  <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
-    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
-    </button>
-  </div>
   <div class="demo-switcher">
     <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
     <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">

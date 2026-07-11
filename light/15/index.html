@@ -39,12 +39,7 @@
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
@@ -52,8 +47,8 @@
 
   <div class="top-bar">
     <div class="container top-bar-inner">
-      <span><i class="fa-solid fa-phone"></i> <!-- ★ --> 0120-XXX-XXX（平日 8:00〜18:00）</span>
-      <span class="top-bar-right"><i class="fa-regular fa-clock"></i> 無料見積もり受付中</span>
+      <span><svg class="icon icon-phone" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> <!-- ★ --> 0120-XXX-XXX（平日 8:00〜18:00）</span>
+      <span class="top-bar-right"><svg class="icon icon-clock" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg> 無料見積もり受付中</span>
     </div>
   </div>
 
@@ -78,7 +73,7 @@
   </header>
 
   <div class="drawer" id="drawer">
-    <button class="drawer-close" id="drawer-close" aria-label="閉じる"><i class="fa-solid fa-xmark"></i></button>
+    <button class="drawer-close" id="drawer-close" aria-label="閉じる"><svg class="icon icon-xmark" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
     <nav class="drawer-nav">
       <a href="#services" class="drawer-link">施工内容</a>
       <a href="#works" class="drawer-link">施工事例</a>
@@ -93,7 +88,7 @@
     <!-- ========== Hero ========== -->
     <section class="hero">
       <div class="hero-bg">
-        <img src="assets/image/hero.jpg" alt="建設・リフォーム施工イメージ">
+        <picture><source srcset="assets/image/hero.webp" type="image/webp"><img src="assets/image/hero.jpg" alt="建設・リフォーム施工イメージ" width="1024" height="572" fetchpriority="high" decoding="async"></picture>
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-aurora"></div>
@@ -103,7 +98,7 @@
           <h2 class="hero-copy">確かな技術と、<br>誠実な仕事。</h2>
           <p class="hero-lead">外壁塗装・屋根工事・リフォームを<br>自社施工で品質と価格を両立します。</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-accent btn-lg">無料見積もりを依頼する <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-accent btn-lg">無料見積もりを依頼する <svg class="icon icon-arrow-right" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
             <a href="#works" class="btn btn-outline btn-lg">施工事例を見る</a>
           </div>
         </div>
@@ -142,17 +137,17 @@
         </div>
         <div class="features-grid">
           <div class="feature-card scroll-trigger">
-            <div class="feature-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div class="feature-icon"><svg class="icon icon-map-location-dot" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg></div>
             <h4>地域密着20年の信頼</h4>
             <p>地元で20年間、500件以上の施工実績を積み重ねてきました。近隣の気候・建材の特性を熟知しており、長持ちする施工をご提案します。施工後も気軽にご相談いただける距離感を大切にしています。</p>
           </div>
           <div class="feature-card scroll-trigger">
-            <div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <div class="feature-icon"><svg class="icon icon-screwdriver-wrench" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg></div>
             <h4>自社施工で中間マージンゼロ</h4>
             <p>職人が直接施工するため下請けへの外注費が発生しません。その分をそのまま工事品質と適正価格に反映。大手リフォーム会社と同等かそれ以上の仕上がりを、納得できる価格でご提供します。</p>
           </div>
           <div class="feature-card scroll-trigger">
-            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="feature-icon"><svg class="icon icon-shield-halved" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"/></svg></div>
             <h4>10年保証・充実のアフターサポート</h4>
             <p>外壁塗装は最長10年の品質保証付き。塗膜の剥がれや色落ちが発生した場合は無償で補修対応します。施工完了後も定期点検を実施し、お客様の大切な住まいを長期的にお守りします。</p>
           </div>
@@ -171,61 +166,61 @@
         <div class="services-grid">
           <div class="service-card scroll-trigger">
             <div class="service-img">
-              <img src="assets/image/service01.jpg" alt="外壁塗装">
+              <picture><source srcset="assets/image/service01.webp" type="image/webp"><img src="assets/image/service01.jpg" alt="外壁塗装" width="1024" height="765" loading="lazy" decoding="async"></picture>
               <span class="service-badge">人気No.1</span>
             </div>
             <div class="service-body">
-              <h4><i class="fa-solid fa-house"></i> 外壁塗装</h4>
+              <h4><svg class="icon icon-house" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg> 外壁塗装</h4>
               <p>防水・遮熱・防汚性能を持つ各種塗料に対応。現地調査・色見本提案・施工・保証まで一貫対応します。</p>
               <p class="service-price">¥45万〜（30坪目安）</p>
             </div>
           </div>
           <div class="service-card scroll-trigger">
             <div class="service-img">
-              <img src="assets/image/service02.jpg" alt="屋根工事">
+              <picture><source srcset="assets/image/service02.webp" type="image/webp"><img src="assets/image/service02.jpg" alt="屋根工事" width="1024" height="765" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-body">
-              <h4><i class="fa-solid fa-house-chimney"></i> 屋根工事・葺き替え</h4>
+              <h4><svg class="icon icon-house-chimney" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z"/></svg> 屋根工事・葺き替え</h4>
               <p>スレート・瓦・ガルバリウム鋼板など素材ごとの工法に対応。雨漏り診断も無料で実施します。</p>
               <p class="service-price">¥35万〜（30坪目安）</p>
             </div>
           </div>
           <div class="service-card scroll-trigger">
             <div class="service-img">
-              <img src="assets/image/service03.jpg" alt="内装リフォーム">
+              <picture><source srcset="assets/image/service03.webp" type="image/webp"><img src="assets/image/service03.jpg" alt="内装リフォーム" width="1024" height="765" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-body">
-              <h4><i class="fa-solid fa-couch"></i> 内装リフォーム</h4>
+              <h4><svg class="icon icon-couch" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><path d="M64 160C64 89.3 121.3 32 192 32H448c70.7 0 128 57.3 128 128v33.6c-36.5 7.4-64 39.7-64 78.4v48H128V272c0-38.7-27.5-71-64-78.4V160zM544 272c0-20.9 13.4-38.7 32-45.3c5-1.8 10.4-2.7 16-2.7c26.5 0 48 21.5 48 48V448c0 17.7-14.3 32-32 32H576c-17.7 0-32-14.3-32-32H96c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V272c0-26.5 21.5-48 48-48c5.6 0 11 1 16 2.7c18.6 6.6 32 24.4 32 45.3v48 32h32H512h32V320 272z"/></svg> 内装リフォーム</h4>
               <p>床・壁・天井のリフォームから間取り変更まで。古い和室を洋室に変更するプランも人気です。</p>
               <p class="service-price">¥20万〜</p>
             </div>
           </div>
           <div class="service-card scroll-trigger">
             <div class="service-img">
-              <img src="assets/image/service04.jpg" alt="水回りリフォーム">
+              <picture><source srcset="assets/image/service04.webp" type="image/webp"><img src="assets/image/service04.jpg" alt="水回りリフォーム" width="1024" height="765" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-body">
-              <h4><i class="fa-solid fa-faucet"></i> 水回りリフォーム</h4>
+              <h4><svg class="icon icon-faucet" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M192 96v12L96 96c-17.7 0-32 14.3-32 32s14.3 32 32 32l96-12 31-3.9 1-.1 1 .1 31 3.9 96 12c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 12V96c0-17.7-14.3-32-32-32s-32 14.3-32 32zM32 256c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H132.1c20.2 29 53.9 48 91.9 48s71.7-19 91.9-48H352c17.7 0 32 14.3 32 32s14.3 32 32 32h64c17.7 0 32-14.3 32-32c0-88.4-71.6-160-160-160H320l-22.6-22.6c-6-6-14.1-9.4-22.6-9.4H256V180.2l-32-4-32 4V224H173.3c-8.5 0-16.6 3.4-22.6 9.4L128 256H32z"/></svg> 水回りリフォーム</h4>
               <p>キッチン・浴室・洗面台・トイレの交換・リフォーム。各メーカーの正規代理店として適正価格で提供。</p>
               <p class="service-price">¥15万〜</p>
             </div>
           </div>
           <div class="service-card scroll-trigger">
             <div class="service-img">
-              <img src="assets/image/service05.jpg" alt="外構工事">
+              <picture><source srcset="assets/image/service05.webp" type="image/webp"><img src="assets/image/service05.jpg" alt="外構工事" width="1024" height="765" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-body">
-              <h4><i class="fa-solid fa-fence"></i> 外構・エクステリア</h4>
+              <h4><svg class="icon icon-fence" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M210.6 5.9L62 169.4c-3.9 4.2-6 9.8-6 15.5C56 197.7 66.3 208 79.1 208H104L30.6 281.4c-4.2 4.2-6.6 10-6.6 16C24 309.9 34.1 320 46.6 320H80L5.4 409.5C1.9 413.7 0 419 0 424.5c0 13 10.5 23.5 23.5 23.5H192v32c0 17.7 14.3 32 32 32s32-14.3 32-32V448H424.5c13 0 23.5-10.5 23.5-23.5c0-5.5-1.9-10.8-5.4-15L368 320h33.4c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L344 208h24.9c12.7 0 23.1-10.3 23.1-23.1c0-5.7-2.1-11.3-6-15.5L237.4 5.9C234 2.1 229.1 0 224 0s-10 2.1-13.4 5.9z"/></svg> 外構・エクステリア</h4>
               <p>門扉・フェンス・カーポート・駐車場コンクリート打設。庭の造成・整地も対応可能です。</p>
               <p class="service-price">¥20万〜</p>
             </div>
           </div>
           <div class="service-card scroll-trigger">
             <div class="service-img">
-              <img src="assets/image/service06.jpg" alt="増改築・新築">
+              <picture><source srcset="assets/image/service06.webp" type="image/webp"><img src="assets/image/service06.jpg" alt="増改築・新築" width="1024" height="765" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-body">
-              <h4><i class="fa-solid fa-building"></i> 増改築・新築</h4>
+              <h4><svg class="icon icon-building" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"/></svg> 増改築・新築</h4>
               <p>二世帯住宅への増築や小屋・ガレージの新築にも対応。建築確認申請のサポートも行います。</p>
               <p class="service-price">お見積もりにて</p>
             </div>
@@ -247,12 +242,12 @@
             <div class="work-imgs">
               <div class="work-img-wrap">
                 <span class="work-badge">Before</span>
-                <img src="assets/image/work01_before.jpg" alt="外壁塗装 施工前">
+                <picture><source srcset="assets/image/work01_before.webp" type="image/webp"><img src="assets/image/work01_before.jpg" alt="外壁塗装 施工前" width="1024" height="765" loading="lazy" decoding="async"></picture>
               </div>
-              <span class="work-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+              <span class="work-arrow"><svg class="icon icon-arrow-right-long" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg></span>
               <div class="work-img-wrap">
                 <span class="work-badge after">After</span>
-                <img src="assets/image/work01_after.jpg" alt="外壁塗装 施工後">
+                <picture><source srcset="assets/image/work01_after.webp" type="image/webp"><img src="assets/image/work01_after.jpg" alt="外壁塗装 施工後" width="1024" height="765" loading="lazy" decoding="async"></picture>
               </div>
             </div>
             <div class="work-body">
@@ -269,12 +264,12 @@
             <div class="work-imgs">
               <div class="work-img-wrap">
                 <span class="work-badge">Before</span>
-                <img src="assets/image/work02_before.jpg" alt="水回りリフォーム 施工前">
+                <picture><source srcset="assets/image/work02_before.webp" type="image/webp"><img src="assets/image/work02_before.jpg" alt="水回りリフォーム 施工前" width="1024" height="765" loading="lazy" decoding="async"></picture>
               </div>
-              <span class="work-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+              <span class="work-arrow"><svg class="icon icon-arrow-right-long" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg></span>
               <div class="work-img-wrap">
                 <span class="work-badge after">After</span>
-                <img src="assets/image/work02_after.jpg" alt="水回りリフォーム 施工後">
+                <picture><source srcset="assets/image/work02_after.webp" type="image/webp"><img src="assets/image/work02_after.jpg" alt="水回りリフォーム 施工後" width="1024" height="765" loading="lazy" decoding="async"></picture>
               </div>
             </div>
             <div class="work-body">
@@ -291,12 +286,12 @@
             <div class="work-imgs">
               <div class="work-img-wrap">
                 <span class="work-badge">Before</span>
-                <img src="assets/image/work03_before.jpg" alt="内装リフォーム 施工前">
+                <picture><source srcset="assets/image/work03_before.webp" type="image/webp"><img src="assets/image/work03_before.jpg" alt="内装リフォーム 施工前" width="1024" height="765" loading="lazy" decoding="async"></picture>
               </div>
-              <span class="work-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+              <span class="work-arrow"><svg class="icon icon-arrow-right-long" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg></span>
               <div class="work-img-wrap">
                 <span class="work-badge after">After</span>
-                <img src="assets/image/work03_after.jpg" alt="内装リフォーム 施工後">
+                <picture><source srcset="assets/image/work03_after.webp" type="image/webp"><img src="assets/image/work03_after.jpg" alt="内装リフォーム 施工後" width="1024" height="765" loading="lazy" decoding="async"></picture>
               </div>
             </div>
             <div class="work-body">
@@ -323,7 +318,7 @@
         <div class="voice-grid">
           <div class="voice-card scroll-trigger">
             <div class="voice-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
             </div>
             <p class="voice-text">「他社に比べて価格が明確で、追加費用も一切ありませんでした。職人さんも礼儀正しく、近所への挨拶回りもしっかりしてくれて安心して任せられました。仕上がりも大変満足しています。」</p>
             <div class="voice-info">
@@ -333,7 +328,7 @@
           </div>
           <div class="voice-card scroll-trigger">
             <div class="voice-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
             </div>
             <p class="voice-text">「水回りのリフォームで悩んでいたところ、見積もりからアドバイスまで丁寧に対応してもらいました。工事中も丁寧な養生と清掃で近隣からのクレームもゼロ。信頼できる会社です。」</p>
             <div class="voice-info">
@@ -343,7 +338,7 @@
           </div>
           <div class="voice-card scroll-trigger">
             <div class="voice-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+              <svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg><svg class="icon icon-star" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.6 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg>
             </div>
             <p class="voice-text">「屋根の雨漏りで困っていたときに即日対応してくれました。修理範囲も正直に説明してくれて、必要最低限の工事で済ませてくれた誠実さが印象的でした。次のリフォームもお願いします。」</p>
             <div class="voice-info">
@@ -366,7 +361,7 @@
           <div class="faq-item scroll-trigger">
             <button class="faq-q" aria-expanded="false">
               <span>見積もりは本当に無料ですか？</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
+              <svg class="icon faq-icon icon-chevron-down" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
             </button>
             <div class="faq-a">
               <p>はい、現地調査から見積もりの作成まで完全無料です。お断りいただいても一切費用は発生しません。「他社と比較したい」「とりあえず費用感を知りたい」というお客様も大歓迎です。</p>
@@ -375,7 +370,7 @@
           <div class="faq-item scroll-trigger">
             <button class="faq-q" aria-expanded="false">
               <span>工事中の生活はどうなりますか？</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
+              <svg class="icon faq-icon icon-chevron-down" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
             </button>
             <div class="faq-a">
               <p>外壁塗装・屋根工事の場合、基本的に工事中もご自宅での生活が可能です。ただし塗料の臭いが気になる日もありますため、換気についてご案内します。内装リフォームの場合は工事内容に応じてご相談ください。</p>
@@ -384,7 +379,7 @@
           <div class="faq-item scroll-trigger">
             <button class="faq-q" aria-expanded="false">
               <span>工事後の保証・アフターサービスはありますか？</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
+              <svg class="icon faq-icon icon-chevron-down" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
             </button>
             <div class="faq-a">
               <p>外壁塗装は最長10年の塗膜保証をお付けしています。保証期間内に塗膜の剥がれや著しい変色が生じた場合は無償で補修します。また施工後1年・3年・5年に定期点検をご案内しています。</p>
@@ -393,7 +388,7 @@
           <div class="faq-item scroll-trigger">
             <button class="faq-q" aria-expanded="false">
               <span>小規模な修理・部分補修だけでも対応できますか？</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
+              <svg class="icon faq-icon icon-chevron-down" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
             </button>
             <div class="faq-a">
               <p>もちろんです。「フェンスの塗り替えだけ」「雨樋の一部修理だけ」といった小規模な工事にも喜んで対応します。「こんな小さな工事を頼んでいいのか？」とご遠慮なくお気軽にご相談ください。</p>
@@ -402,7 +397,7 @@
           <div class="faq-item scroll-trigger">
             <button class="faq-q" aria-expanded="false">
               <span>支払い方法・分割払いはできますか？</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
+              <svg class="icon faq-icon icon-chevron-down" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
             </button>
             <div class="faq-a">
               <p>現金・銀行振込のほか、クレジットカード（一括・分割）に対応しています。また提携ローンをご利用いただくことで月々の支払いを抑えることも可能です。詳しくはお気軽にご相談ください。</p>
@@ -422,13 +417,13 @@
         </div>
         <div class="contact-wrap">
           <div class="contact-tel scroll-trigger">
-            <p class="tel-label"><i class="fa-solid fa-phone"></i> お電話でのご相談</p>
+            <p class="tel-label"><svg class="icon icon-phone" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> お電話でのご相談</p>
             <!-- ★ 要変更: 電話番号 -->
             <a href="tel:0120XXXXXXX" class="tel-number">0120-XXX-XXX</a>
             <p class="tel-hours">平日 8:00〜18:00 / 土日祝 9:00〜17:00</p>
           </div>
           <div class="contact-form scroll-trigger">
-            <p class="form-label"><i class="fa-regular fa-envelope"></i> フォームからのご相談（24時間受付）</p>
+            <p class="form-label"><svg class="icon icon-envelope" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg> フォームからのご相談（24時間受付）</p>
             <!-- ★ 要変更: FormspreeまたはNetlify FormsのURLに変更してください -->
             <form action="https://formspree.io/f/your-form-id" method="POST" class="form">
               <div class="form-row">
@@ -462,7 +457,7 @@
                 <label for="form-message">ご相談内容</label>
                 <textarea id="form-message" name="message" rows="4" placeholder="建物の状況や気になる点などをご記入ください。"></textarea>
               </div>
-              <button type="submit" class="btn btn-accent btn-block">無料見積もりを依頼する <i class="fa-solid fa-paper-plane"></i></button>
+              <button type="submit" class="btn btn-accent btn-block">無料見積もりを依頼する <svg class="icon icon-paper-plane" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg></button>
               <p class="form-note">送信いただいた情報はお見積もりのご連絡にのみ使用します。</p>
             </form>
           </div>
@@ -567,12 +562,6 @@
     .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
     .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
   </style>
-  <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
-    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
-    </button>
-  </div>
   <div class="demo-switcher">
     <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
     <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">

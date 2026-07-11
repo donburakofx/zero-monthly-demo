@@ -209,6 +209,7 @@ ul { list-style: none; padding: 0; margin: 0; }
     margin-bottom: 12px;
     box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
 }
+.profile-img img { width: 100%; height: 100%; object-fit: cover; }
 .name { font-size: clamp(1.6rem, 2.6vw, 2rem); margin: 0 0 5px; font-weight: 800; line-height: 1.2; letter-spacing: 0.01em; }
 .job { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
 .bio { font-size: 0.85rem; line-height: 1.6; color: var(--text-sub); margin-bottom: 15px; }
@@ -436,4 +437,10 @@ html, body { overflow-x: clip; }
 /* === Hero演出のモーション低減対応 === */
 @media (prefers-reduced-motion: reduce) {
     .profile-box::before, .dot { animation: none; }
+}
+
+/* インラインSVGアイコン（FontAwesome CDN代替・自己完結） */
+.icon {
+    width: 1em; height: 1em; display: inline-block;
+    fill: currentColor; vertical-align: -0.125em;
 }

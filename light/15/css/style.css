@@ -1,5 +1,32 @@
 @charset "UTF-8";
 
+.icon {
+    width: 1em; height: 1em; display: inline-block;
+    fill: currentColor; vertical-align: -0.125em;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../assets/fonts/montserrat-var.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../assets/fonts/montserrat-var.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../assets/fonts/montserrat-var.woff2') format('woff2');
+}
+
 /* ==========================================================================
    1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
@@ -94,7 +121,7 @@
 
     /* --- Common --- */
     --accent-ink: color-mix(in srgb, var(--accent) 62%, #1a1a1a);
-    --font-jp:    'Noto Sans JP', sans-serif;
+    --font-jp:    "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", sans-serif;
     --font-en:    'Montserrat', sans-serif;
     --radius:     4px;
     --radius-lg:  8px;
@@ -186,7 +213,7 @@ address { font-style: normal; }
     align-items: center;
     gap: 10px;
 }
-.top-bar i { margin-right: 5px; color: var(--accent); }
+.top-bar .icon { margin-right: 5px; color: var(--accent); }
 @media (max-width: 600px) { .top-bar-right { display: none; } }
 
 /* ==========================================================================
@@ -415,7 +442,7 @@ address { font-style: normal; }
 }
 .service-body { padding: 20px; }
 .service-body h4 { font-size: 0.95rem; font-weight: 700; margin: 0 0 10px; display: flex; align-items: center; gap: 8px; }
-.service-body h4 i { color: var(--primary); }
+.service-body h4 .icon { color: var(--primary); }
 .service-body p { font-size: 0.82rem; color: var(--text-muted); margin: 0 0 12px; line-height: 1.7; }
 .service-price {
     display: inline-block; font-family: var(--font-en);
@@ -521,7 +548,7 @@ address { font-style: normal; }
     padding: 36px 28px; border-radius: var(--radius-lg); text-align: center;
 }
 .tel-label { font-size: 0.85rem; margin-bottom: 12px; color: rgba(255,255,255,0.8); }
-.tel-label i { margin-right: 6px; color: var(--accent); }
+.tel-label .icon { margin-right: 6px; color: var(--accent); }
 .tel-number {
     display: block; font-family: var(--font-en);
     font-size: 1.9rem; font-weight: 700; color: #fff;
@@ -531,7 +558,7 @@ address { font-style: normal; }
 .tel-hours { font-size: 0.78rem; color: rgba(255,255,255,0.7); }
 
 .form-label { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; }
-.form-label i { margin-right: 6px; }
+.form-label .icon { margin-right: 6px; }
 .form { display: flex; flex-direction: column; gap: 18px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .form-group { display: flex; flex-direction: column; gap: 6px; }

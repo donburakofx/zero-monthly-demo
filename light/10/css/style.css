@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+/* インラインSVGアイコン（FontAwesome CDN代替・自己完結） */
+.icon {
+    width: 1em; height: 1em; display: inline-block;
+    fill: currentColor; vertical-align: -0.125em;
+}
+
 /* ==========================================================================
    1. COLOR THEME SETTINGS (カラー設定)
    ========================================================================== */
@@ -901,6 +907,14 @@ html.js .js-fade-up.is-show {
 .service-toggle:hover {
     background: var(--primary);
     color: #fff;
+}
+
+.service-toggle .icon-plus {
+    transition: transform 0.3s;
+}
+
+.service-card.active .service-toggle .icon-plus {
+    transform: rotate(45deg);
 }
 
 /* ==========================================================================

@@ -20,12 +20,6 @@
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
-    rel="stylesheet">
-
   <!-- ★要変更: 公開する実際のURL（独自ドメイン）に変更してください -->
   <link rel="canonical" href="https://your-domain.com/" />
 
@@ -50,7 +44,6 @@
   </script>
 
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
@@ -80,7 +73,7 @@
 
   <main>
 
-    <section class="hero" style="background-image: url('assets/image/hero_bg.jpg');">
+    <section class="hero" style="background-image: url('assets/image/hero_bg.jpg'); background-image: image-set(url('assets/image/hero_bg.webp') type('image/webp'), url('assets/image/hero_bg.jpg') type('image/jpeg'));">
       <div class="hero-overlay"></div>
       <div class="hero-aurora hero-aurora-1" aria-hidden="true"></div>
       <div class="hero-aurora hero-aurora-2" aria-hidden="true"></div>
@@ -98,8 +91,10 @@
           一生モノの技術を、ここから始めよう。
         </p>
         <div class="hero-btns">
-          <a href="common/contact.html" class="btn btn-lg btn-accent shadow-pulse">無料体験レッスンを予約 <i
-              class="fa-solid fa-angle-right"></i></a>
+          <a href="common/contact.html" class="btn btn-lg btn-accent shadow-pulse">無料体験レッスンを予約 <svg
+              class="svg-icon icon-angle-right" viewBox="0 0 320 512" aria-hidden="true" focusable="false">
+              <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+            </svg></a>
         </div>
 
         <div class="hero-badges">
@@ -131,21 +126,21 @@
 
         <div class="problem-grid">
           <div class="problem-card scroll-trigger">
-            <div class="p-img" style="background-image: url('assets/image/problem_01.jpg');"></div>
+            <div class="p-img" style="background-image: url('assets/image/problem_01.jpg'); background-image: image-set(url('assets/image/problem_01.webp') type('image/webp'), url('assets/image/problem_01.jpg') type('image/jpeg'));"></div>
             <div class="p-content">
               <h3>挫折</h3>
               <p>エラーが解決できず、<br>何時間も無駄にしてしまう</p>
             </div>
           </div>
           <div class="problem-card scroll-trigger delay-1">
-            <div class="p-img" style="background-image: url('assets/image/problem_02.jpg');"></div>
+            <div class="p-img" style="background-image: url('assets/image/problem_02.jpg'); background-image: image-set(url('assets/image/problem_02.webp') type('image/webp'), url('assets/image/problem_02.jpg') type('image/jpeg'));"></div>
             <div class="p-content">
               <h3>迷子</h3>
               <p>教材が多すぎて、<br>何から学ぶべきかわからない</p>
             </div>
           </div>
           <div class="problem-card scroll-trigger delay-2">
-            <div class="p-img" style="background-image: url('assets/image/problem_03.jpg');"></div>
+            <div class="p-img" style="background-image: url('assets/image/problem_03.jpg'); background-image: image-set(url('assets/image/problem_03.webp') type('image/webp'), url('assets/image/problem_03.jpg') type('image/jpeg'));"></div>
             <div class="p-content">
               <h3>多忙</h3>
               <p>仕事が忙しくて、<br>決まった時間に通えない</p>
@@ -171,7 +166,7 @@
         <div class="feature-list">
           <div class="feature-item scroll-trigger">
             <div class="f-visual">
-              <img src="assets/image/feature_01.jpg" alt="マンツーマン指導">
+              <picture><source srcset="assets/image/feature_01.webp" type="image/webp"><img src="assets/image/feature_01.jpg" alt="マンツーマン指導" width="1200" height="896" loading="lazy" decoding="async"></picture>
             </div>
             <div class="f-content">
               <span class="f-num">01</span>
@@ -182,7 +177,7 @@
 
           <div class="feature-item reverse scroll-trigger">
             <div class="f-visual">
-              <img src="assets/image/feature_02.jpg" alt="オリジナルアプリ開発">
+              <picture><source srcset="assets/image/feature_02.webp" type="image/webp"><img src="assets/image/feature_02.jpg" alt="オリジナルアプリ開発" width="1200" height="896" loading="lazy" decoding="async"></picture>
             </div>
             <div class="f-content">
               <span class="f-num">02</span>
@@ -193,7 +188,7 @@
 
           <div class="feature-item scroll-trigger">
             <div class="f-visual">
-              <img src="assets/image/feature_03.jpg" alt="サポート体制">
+              <picture><source srcset="assets/image/feature_03.webp" type="image/webp"><img src="assets/image/feature_03.jpg" alt="サポート体制" width="1200" height="896" loading="lazy" decoding="async"></picture>
             </div>
             <div class="f-content">
               <span class="f-num">03</span>
@@ -264,13 +259,15 @@
 
         <div class="carousel-wrapper">
           <button class="nav-arrow prev"
-            onclick="document.getElementById('price-grid').scrollBy({left:-300, behavior:'smooth'})"><i
-              class="fa-solid fa-chevron-left"></i></button>
+            onclick="document.getElementById('price-grid').scrollBy({left:-300, behavior:'smooth'})"><svg
+              class="svg-icon icon-chevron-left" viewBox="0 0 320 512" aria-hidden="true" focusable="false">
+              <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+            </svg></button>
 
           <div class="carousel-container price-grid" id="price-grid">
             <div class="price-card scroll-trigger">
               <div class="pc-visual">
-                <img src="assets/image/plan_01.jpg" alt="Lite Plan">
+                <picture><source srcset="assets/image/plan_01.webp" type="image/webp"><img src="assets/image/plan_01.jpg" alt="Lite Plan" width="640" height="280" loading="lazy" decoding="async"></picture>
               </div>
               <div class="pc-content">
                 <h3>ライトプラン</h3>
@@ -279,8 +276,12 @@
                   <span class="yen">¥</span>19,800<span class="per">/月</span>
                 </div>
                 <ul class="pc-list">
-                  <li><i class="fa-solid fa-check"></i> 週1回 マンツーマン(50分)</li>
-                  <li><i class="fa-solid fa-check"></i> チャット質問 (月10回まで)</li>
+                  <li><svg class="svg-icon icon-check" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                    <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg> 週1回 マンツーマン(50分)</li>
+                  <li><svg class="svg-icon icon-check" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                    <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg> チャット質問 (月10回まで)</li>
                 </ul>
                 <a href="common/contact.html" class="btn btn-block btn-outline">申し込む</a>
               </div>
@@ -289,7 +290,7 @@
             <div class="price-card recommended scroll-trigger delay-1">
               <div class="reco-badge">人気 No.1</div>
               <div class="pc-visual">
-                <img src="assets/image/plan_02.jpg" alt="Standard Plan">
+                <picture><source srcset="assets/image/plan_02.webp" type="image/webp"><img src="assets/image/plan_02.jpg" alt="Standard Plan" width="640" height="280" loading="lazy" decoding="async"></picture>
               </div>
               <div class="pc-content">
                 <h3>スタンダード</h3>
@@ -298,9 +299,15 @@
                   <span class="yen">¥</span>39,800<span class="per">/月</span>
                 </div>
                 <ul class="pc-list">
-                  <li><i class="fa-solid fa-check"></i> 週1回 マンツーマン(50分)</li>
-                  <li><i class="fa-solid fa-check"></i> <strong>チャット質問 無制限</strong></li>
-                  <li><i class="fa-solid fa-check"></i> <strong>全カリキュラム閲覧</strong></li>
+                  <li><svg class="svg-icon icon-check" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                    <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg> 週1回 マンツーマン(50分)</li>
+                  <li><svg class="svg-icon icon-check" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                    <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg> <strong>チャット質問 無制限</strong></li>
+                  <li><svg class="svg-icon icon-check" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                    <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg> <strong>全カリキュラム閲覧</strong></li>
                 </ul>
                 <a href="common/contact.html" class="btn btn-block btn-accent btn-shiny">無料体験で相談する</a>
               </div>
@@ -308,7 +315,7 @@
 
             <div class="price-card scroll-trigger delay-2">
               <div class="pc-visual">
-                <img src="assets/image/plan_03.jpg" alt="Pro Plan">
+                <picture><source srcset="assets/image/plan_03.webp" type="image/webp"><img src="assets/image/plan_03.jpg" alt="Pro Plan" width="640" height="280" loading="lazy" decoding="async"></picture>
               </div>
               <div class="pc-content">
                 <h3>短期集中コース</h3>
@@ -318,9 +325,15 @@
                   <span class="yen">¥</span>198,000
                 </div>
                 <ul class="pc-list">
-                  <li><i class="fa-solid fa-check"></i> 全12回 マンツーマン</li>
-                  <li><i class="fa-solid fa-check"></i> チャット質問 無制限</li>
-                  <li><i class="fa-solid fa-check"></i> 就職・転職サポート付き</li>
+                  <li><svg class="svg-icon icon-check" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                    <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg> 全12回 マンツーマン</li>
+                  <li><svg class="svg-icon icon-check" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                    <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg> チャット質問 無制限</li>
+                  <li><svg class="svg-icon icon-check" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                    <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg> 就職・転職サポート付き</li>
                 </ul>
                 <a href="common/contact.html" class="btn btn-block btn-outline">申し込む</a>
               </div>
@@ -328,8 +341,10 @@
           </div>
 
           <button class="nav-arrow next"
-            onclick="document.getElementById('price-grid').scrollBy({left:300, behavior:'smooth'})"><i
-              class="fa-solid fa-chevron-right"></i></button>
+            onclick="document.getElementById('price-grid').scrollBy({left:300, behavior:'smooth'})"><svg
+              class="svg-icon icon-chevron-right" viewBox="0 0 320 512" aria-hidden="true" focusable="false">
+              <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+            </svg></button>
         </div>
       </div>
     </section>
@@ -344,13 +359,18 @@
 
         <div class="carousel-wrapper">
           <button class="nav-arrow prev"
-            onclick="document.getElementById('voice-grid').scrollBy({left:-300, behavior:'smooth'})"><i
-              class="fa-solid fa-chevron-left"></i></button>
+            onclick="document.getElementById('voice-grid').scrollBy({left:-300, behavior:'smooth'})"><svg
+              class="svg-icon icon-chevron-left" viewBox="0 0 320 512" aria-hidden="true" focusable="false">
+              <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+            </svg></button>
 
           <div class="carousel-container voice-grid" id="voice-grid">
             <div class="voice-card scroll-trigger">
               <div class="v-head">
-                <div class="v-icon"><i class="fa-solid fa-user"></i></div>
+                <div class="v-icon"><svg class="svg-icon icon-user" viewBox="0 0 448 512" aria-hidden="true"
+                    focusable="false">
+                    <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                  </svg></div>
                 <div>
                   <p class="v-meta">20代 男性 / 営業職</p>
                   <h4>エンジニア転職に成功！</h4>
@@ -362,7 +382,10 @@
 
             <div class="voice-card scroll-trigger delay-1">
               <div class="v-head">
-                <div class="v-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                <div class="v-icon"><svg class="svg-icon icon-user-graduate" viewBox="0 0 448 512" aria-hidden="true"
+                    focusable="false">
+                    <path d="M219.3 .5c3.1-.6 6.3-.6 9.4 0l200 40C439.9 42.7 448 52.6 448 64s-8.1 21.3-19.3 23.5L352 102.9V160c0 70.7-57.3 128-128 128s-128-57.3-128-128V102.9L48 93.3v65.1l15.7 78.4c.9 4.7-.3 9.6-3.3 13.3s-7.6 5.9-12.4 5.9H16c-4.8 0-9.3-2.1-12.4-5.9s-4.3-8.6-3.3-13.3L16 158.4V86.6C6.5 83.3 0 74.3 0 64C0 52.6 8.1 42.7 19.3 40.5l200-40zM111.9 327.7c10.5-3.4 21.8 .4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5C401 348.6 448 409.4 448 481.3c0 17-13.8 30.7-30.7 30.7H30.7C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6z" />
+                  </svg></div>
                 <div>
                   <p class="v-meta">10代 女性 / 大学生</p>
                   <h4>自分のアプリが作れた！</h4>
@@ -374,7 +397,10 @@
 
             <div class="voice-card scroll-trigger delay-2">
               <div class="v-head">
-                <div class="v-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="v-icon"><svg class="svg-icon icon-briefcase" viewBox="0 0 512 512" aria-hidden="true"
+                    focusable="false">
+                    <path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
+                  </svg></div>
                 <div>
                   <p class="v-meta">30代 女性 / 事務職</p>
                   <h4>副業で月5万稼げるように</h4>
@@ -386,8 +412,10 @@
           </div>
 
           <button class="nav-arrow next"
-            onclick="document.getElementById('voice-grid').scrollBy({left:300, behavior:'smooth'})"><i
-              class="fa-solid fa-chevron-right"></i></button>
+            onclick="document.getElementById('voice-grid').scrollBy({left:300, behavior:'smooth'})"><svg
+              class="svg-icon icon-chevron-right" viewBox="0 0 320 512" aria-hidden="true" focusable="false">
+              <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+            </svg></button>
         </div>
       </div>
     </section>
@@ -405,7 +433,9 @@
               <div class="faq-q-text">
                 <span class="q-mark">Q.</span> パソコン初心者ですが大丈夫ですか？
               </div>
-              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+              <span class="icon"><svg class="svg-icon icon-plus" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+              </svg></span>
             </summary>
             <div class="faq-body">
               <div class="faq-content">
@@ -420,7 +450,9 @@
               <div class="faq-q-text">
                 <span class="q-mark">Q.</span> 仕事をしながらでも通えますか？
               </div>
-              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+              <span class="icon"><svg class="svg-icon icon-plus" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+              </svg></span>
             </summary>
             <div class="faq-body">
               <div class="faq-content">
@@ -434,7 +466,9 @@
               <div class="faq-q-text">
                 <span class="q-mark">Q.</span> 無料体験では何をするのですか？
               </div>
-              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+              <span class="icon"><svg class="svg-icon icon-plus" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+              </svg></span>
             </summary>
             <div class="faq-body">
               <div class="faq-content">
@@ -448,7 +482,9 @@
               <div class="faq-q-text">
                 <span class="q-mark">Q.</span> 途中でプラン変更は可能ですか？
               </div>
-              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+              <span class="icon"><svg class="svg-icon icon-plus" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+                <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+              </svg></span>
             </summary>
             <div class="faq-body">
               <div class="faq-content">
@@ -552,12 +588,6 @@
     .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
     .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
   </style>
-  <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
-    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
-    </button>
-  </div>
   <div class="demo-switcher">
     <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
     <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
