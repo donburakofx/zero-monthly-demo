@@ -208,7 +208,6 @@ html.js .scroll-trigger.is-active {
     background-color: rgba(17, 24, 32, 0.96);
     z-index: 100;
     display: flex; align-items: center;
-    backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-dark);
 }
 .header-inner {

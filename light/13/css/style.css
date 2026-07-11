@@ -187,7 +187,6 @@ html.js .scroll-trigger.is-active {
     z-index: 100;
     display: flex; align-items: center;
     border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(8px);
 }
 .header-inner {
     display: flex; align-items: center; justify-content: space-between;
