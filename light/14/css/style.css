@@ -308,7 +308,7 @@ html.js .scroll-trigger.is-active {
 }
 .hero-content {
     position: relative; z-index: 2; color: #fff;
-    padding: 0 40px 0 max(40px, calc((100% - 1100px) / 2 + 40px));
+    padding: 0 40px 0 clamp(40px, calc((100% - 1100px) / 2 + 40px), 220px);
     max-width: 680px;
     opacity: 0; animation: slideUp 0.9s ease-out 0.8s forwards;
 }
