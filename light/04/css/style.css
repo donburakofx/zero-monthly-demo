@@ -757,7 +757,7 @@ html.js .reveal-img.in-view img {
     transform: scale(1.1);
 }
 
-.card-body h4 {
+.card-body h3 {
     font-size: 1.1rem;
     margin-bottom: 10px;
     font-weight: 500;
