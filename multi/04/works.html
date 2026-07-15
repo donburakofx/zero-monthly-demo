@@ -165,9 +165,9 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand"><span class="brand-name">AOBA KENSETSU</span><p>〒100-0000<br>東京都○○市○○町1-1-1<br>TEL: 00-0000-0000</p></div>
-        <div class="footer-nav"><h4>施工案内</h4><a href="service.html">施工内容</a><a href="works.html">施工事例</a><a href="about.html">会社案内</a></div>
-        <div class="footer-nav"><h4>会社情報</h4><a href="about.html">会社案内</a><a href="contact.html">無料見積もり</a><a href="../common/company.html">運営会社</a></div>
-        <div class="footer-nav"><h4>その他</h4><a href="../common/privacy.html">プライバシーポリシー</a><a href="../common/law.html">特定商取引法に基づく表記</a></div>
+        <div class="footer-nav"><h3>施工案内</h3><a href="service.html">施工内容</a><a href="works.html">施工事例</a><a href="about.html">会社案内</a></div>
+        <div class="footer-nav"><h3>会社情報</h3><a href="about.html">会社案内</a><a href="contact.html">無料見積もり</a><a href="../common/company.html">運営会社</a></div>
+        <div class="footer-nav"><h3>その他</h3><a href="../common/privacy.html">プライバシーポリシー</a><a href="../common/law.html">特定商取引法に基づく表記</a></div>
       </div>
       <div class="footer-bottom"><p>&copy; 2026 AOBA KENSETSU Co., Ltd. All Rights Reserved.</p></div>
     </div>
@@ -182,61 +182,6 @@
     }
     const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-active'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('.scroll-trigger').forEach(el => io.observe(el));
-  </script>
-
-  <!-- ========================================================
-       DEMO ONLY: Color Theme Switcher (multi / localStorage保持)
-       このブロックは配布テンプレートには含まれません
-       ======================================================== -->
-  <style>
-    .demo-switcher { position: fixed; right: 16px; bottom: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px; }
-    .demo-switcher-toggle { width: 44px; height: 44px; border-radius: 50%; background: #1a1a1a; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
-    .demo-switcher-toggle:hover { transform: scale(1.1); }
-    .demo-switcher-panel { display: none; flex-direction: column; gap: 6px; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
-    .demo-switcher-panel.is-open { display: flex; }
-    .demo-swatch { width: 36px; height: 36px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s; position: relative; }
-    .demo-swatch:hover { transform: scale(1.15); }
-    .demo-swatch.is-active { border-color: #1a1a1a; }
-    .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
-    .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
-  </style>
-  <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
-    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
-    </button>
-  </div>
-  <script>
-    (function() {
-      var themes = [{"label": "A", "name": "Steel Navy / スチールネイビー", "color": "#1C3A5E", "vars": {"--primary": "#1C3A5E", "--primary-dark": "#0F2540", "--primary-light": "#E8EEF5", "--accent": "#E8891A", "--accent-hover": "#CF7512", "--bg-body": "#FFFFFF", "--bg-light": "#F4F6F8", "--bg-dark": "#1A2332", "--text-main": "#1F2937", "--text-muted": "#5B6B7B", "--text-white": "#FFFFFF", "--text-gray": "#9CA3AF", "--border": "#DDE5EE", "--hero-overlay": "rgba(15, 37, 64, 0.66)"}}, {"label": "B", "name": "Earth Brown / アースブラウン", "color": "#5A4632", "vars": {"--primary": "#5A4632", "--primary-dark": "#3E2F20", "--primary-light": "#F0EAE1", "--accent": "#C88A3C", "--accent-hover": "#AE7328", "--bg-body": "#FFFFFF", "--bg-light": "#F7F4EF", "--bg-dark": "#2E251A", "--text-main": "#2A2119", "--text-muted": "#6E6154", "--text-white": "#FFFFFF", "--text-gray": "#ABA093", "--border": "#E6DDD0", "--hero-overlay": "rgba(46, 37, 26, 0.66)"}}, {"label": "C", "name": "Forest Green / フォレストグリーン", "color": "#2C5A3E", "vars": {"--primary": "#2C5A3E", "--primary-dark": "#1B3D28", "--primary-light": "#E7F1EA", "--accent": "#D98C2B", "--accent-hover": "#BE761B", "--bg-body": "#FFFFFF", "--bg-light": "#F2F7F3", "--bg-dark": "#17301F", "--text-main": "#1E2B22", "--text-muted": "#5B6E60", "--text-white": "#FFFFFF", "--text-gray": "#9AA99F", "--border": "#D6E4DB", "--hero-overlay": "rgba(23, 48, 31, 0.66)"}}, {"label": "D", "name": "Slate Gray / スレートグレー", "color": "#3A4650", "vars": {"--primary": "#3A4650", "--primary-dark": "#262F37", "--primary-light": "#ECEFF2", "--accent": "#3E8ED0", "--accent-hover": "#2E77B4", "--bg-body": "#FFFFFF", "--bg-light": "#F4F6F8", "--bg-dark": "#212930", "--text-main": "#232B32", "--text-muted": "#5E6B76", "--text-white": "#FFFFFF", "--text-gray": "#9BA6AF", "--border": "#DCE2E7", "--hero-overlay": "rgba(33, 41, 48, 0.66)"}}, {"label": "E", "name": "Industrial Orange / インダストリアルオレンジ", "color": "#2B2E34", "vars": {"--primary": "#2B2E34", "--primary-dark": "#1A1C21", "--primary-light": "#EDEEF0", "--accent": "#F26522", "--accent-hover": "#D55114", "--bg-body": "#FFFFFF", "--bg-light": "#F5F5F6", "--bg-dark": "#17181C", "--text-main": "#23262B", "--text-muted": "#62666E", "--text-white": "#FFFFFF", "--text-gray": "#9DA1A8", "--border": "#DEDFE3", "--hero-overlay": "rgba(26, 28, 33, 0.66)"}}];
-      var KEY = 'zmDemoThemeIdx';
-      var panel = document.getElementById('demoPanel');
-      var toggle = document.getElementById('demoToggle');
-      var swatches = [];
-      function applyTheme(idx, save) {
-        var t = themes[idx]; if (!t) return;
-        var el = document.getElementById('demo-theme-override');
-        if (!el) { el = document.createElement('style'); el.id = 'demo-theme-override'; document.head.appendChild(el); }
-        var css = ':root{'; var v = t.vars;
-        Object.keys(v).forEach(function(k){ css += k+':'+v[k]+';'; });
-        css += '}'; el.textContent = css;
-        swatches.forEach(function(s,i){ s.classList.toggle('is-active', i===idx); });
-        if (save) { try { localStorage.setItem(KEY, idx); } catch(e){} }
-      }
-      themes.forEach(function(t, i) {
-        var sw = document.createElement('div');
-        sw.className = 'demo-swatch'; sw.style.background = t.color; sw.title = t.name;
-        sw.innerHTML = '<span class="demo-swatch-label">' + t.label + '</span>';
-        sw.addEventListener('click', function() { applyTheme(i, true); });
-        panel.appendChild(sw); swatches.push(sw);
-      });
-      var saved = 0;
-      try { var s = localStorage.getItem(KEY); if (s !== null) saved = parseInt(s,10) || 0; } catch(e){}
-      if (saved < 0 || saved >= themes.length) saved = 0;
-      applyTheme(saved, false);
-      toggle.addEventListener('click', function() { panel.classList.toggle('is-open'); });
-      document.addEventListener('click', function(e) { if (!e.target.closest('.demo-switcher')) panel.classList.remove('is-open'); });
-    })();
   </script>
 </body>
 

@@ -120,9 +120,9 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand"><span class="brand-name">REALIZE Inc.</span><p>〒100-0000<br>東京都千代田区大手町1-1-1<br>TEL: 03-0000-0000</p></div>
-        <div class="footer-nav"><h4>事業案内</h4><a href="service.html">事業内容</a><a href="about.html">会社概要</a><a href="news.html">お知らせ</a></div>
-        <div class="footer-nav"><h4>企業情報</h4><a href="recruit.html">採用情報</a><a href="contact.html">お問い合わせ</a><a href="../common/company.html">運営会社</a></div>
-        <div class="footer-nav"><h4>その他</h4><a href="../common/privacy.html">プライバシーポリシー</a><a href="../common/law.html">特定商取引法に基づく表記</a></div>
+        <div class="footer-nav"><h3>事業案内</h3><a href="service.html">事業内容</a><a href="about.html">会社概要</a><a href="news.html">お知らせ</a></div>
+        <div class="footer-nav"><h3>企業情報</h3><a href="recruit.html">採用情報</a><a href="contact.html">お問い合わせ</a><a href="../common/company.html">運営会社</a></div>
+        <div class="footer-nav"><h3>その他</h3><a href="../common/privacy.html">プライバシーポリシー</a><a href="../common/law.html">特定商取引法に基づく表記</a></div>
       </div>
       <div class="footer-bottom"><p>&copy; 2026 REALIZE Inc. All Rights Reserved.</p></div>
     </div>
@@ -137,61 +137,6 @@
     }
     const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-active'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('.scroll-trigger').forEach(el => io.observe(el));
-  </script>
-
-  <!-- ========================================================
-       DEMO ONLY: Color Theme Switcher (multi / localStorage保持)
-       このブロックは配布テンプレートには含まれません
-       ======================================================== -->
-  <style>
-    .demo-switcher { position: fixed; right: 16px; bottom: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 8px; }
-    .demo-switcher-toggle { width: 44px; height: 44px; border-radius: 50%; background: #1a1a1a; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
-    .demo-switcher-toggle:hover { transform: scale(1.1); }
-    .demo-switcher-panel { display: none; flex-direction: column; gap: 6px; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 10px 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
-    .demo-switcher-panel.is-open { display: flex; }
-    .demo-swatch { width: 36px; height: 36px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s; position: relative; }
-    .demo-swatch:hover { transform: scale(1.15); }
-    .demo-swatch.is-active { border-color: #1a1a1a; }
-    .demo-swatch-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.4); font-family: sans-serif; }
-    .demo-badge { font-size: 9px; color: #888; font-family: sans-serif; letter-spacing: 0.05em; text-align: center; line-height: 1; }
-  </style>
-  <div class="demo-switcher">
-    <div class="demo-switcher-panel" id="demoPanel"><span class="demo-badge">COLOR</span></div>
-    <button class="demo-switcher-toggle" id="demoToggle" title="カラーテーマ切替">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-.98-.5-1.34-.27-.33-.5-.74-.5-1.16 0-1.1.9-2 2-2h2.4c3.1 0 5.6-2.5 5.6-5.6C22.4 6.1 17.7 2 12 2zM6.5 13c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 10 17.5 10s1.5.67 1.5 1.5S18.33 13 17.5 13z" fill="white"/></svg>
-    </button>
-  </div>
-  <script>
-    (function() {
-      var themes = [{"label": "A", "name": "Corporate Navy / コーポレートネイビー", "color": "#1B3A5C", "vars": {"--primary": "#1B3A5C", "--primary-dark": "#102A45", "--primary-light": "#EAF1F8", "--accent": "#C9A24B", "--accent-hover": "#B08D3A", "--bg-body": "#FFFFFF", "--bg-light": "#F5F8FB", "--bg-dark": "#14293F", "--text-main": "#1F2A37", "--text-muted": "#5B6B7B", "--text-white": "#FFFFFF", "--text-gray": "#9AA7B4", "--border": "#DDE5EE", "--hero-overlay": "rgba(16, 42, 69, 0.72)"}}, {"label": "B", "name": "Business Teal / ビジネスティール", "color": "#0F6E6E", "vars": {"--primary": "#0F6E6E", "--primary-dark": "#084F4F", "--primary-light": "#E3F2F1", "--accent": "#E8883A", "--accent-hover": "#CF7126", "--bg-body": "#FFFFFF", "--bg-light": "#F1F8F7", "--bg-dark": "#0B4A4A", "--text-main": "#1C2E2E", "--text-muted": "#567070", "--text-white": "#FFFFFF", "--text-gray": "#97ACAC", "--border": "#D2E6E4", "--hero-overlay": "rgba(11, 74, 74, 0.72)"}}, {"label": "C", "name": "Slate Gray / スレートグレー", "color": "#37474F", "vars": {"--primary": "#37474F", "--primary-dark": "#263238", "--primary-light": "#ECEFF1", "--accent": "#E05A47", "--accent-hover": "#C74634", "--bg-body": "#FFFFFF", "--bg-light": "#F4F6F7", "--bg-dark": "#212A2F", "--text-main": "#263238", "--text-muted": "#5F6E76", "--text-white": "#FFFFFF", "--text-gray": "#9AA6AC", "--border": "#DDE3E6", "--hero-overlay": "rgba(33, 42, 47, 0.72)"}}, {"label": "D", "name": "Forest Green / フォレストグリーン", "color": "#1E5631", "vars": {"--primary": "#1E5631", "--primary-dark": "#123B21", "--primary-light": "#E6F1E9", "--accent": "#D9A521", "--accent-hover": "#BE8E14", "--bg-body": "#FFFFFF", "--bg-light": "#F2F8F3", "--bg-dark": "#123B21", "--text-main": "#1C2E22", "--text-muted": "#56705F", "--text-white": "#FFFFFF", "--text-gray": "#97AC9E", "--border": "#D2E6D8", "--hero-overlay": "rgba(18, 59, 33, 0.72)"}}, {"label": "E", "name": "Deep Crimson / ディープクリムゾン", "color": "#8B2635", "vars": {"--primary": "#8B2635", "--primary-dark": "#661A26", "--primary-light": "#F7E9EB", "--accent": "#C89B3C", "--accent-hover": "#AD842C", "--bg-body": "#FFFFFF", "--bg-light": "#FAF4F5", "--bg-dark": "#5E1822", "--text-main": "#2E1E20", "--text-muted": "#70585B", "--text-white": "#FFFFFF", "--text-gray": "#B29A9D", "--border": "#ECD8DB", "--hero-overlay": "rgba(94, 24, 34, 0.74)"}}];
-      var KEY = 'zmDemoThemeIdx';
-      var panel = document.getElementById('demoPanel');
-      var toggle = document.getElementById('demoToggle');
-      var swatches = [];
-      function applyTheme(idx, save) {
-        var t = themes[idx]; if (!t) return;
-        var el = document.getElementById('demo-theme-override');
-        if (!el) { el = document.createElement('style'); el.id = 'demo-theme-override'; document.head.appendChild(el); }
-        var css = ':root{'; var v = t.vars;
-        Object.keys(v).forEach(function(k){ css += k+':'+v[k]+';'; });
-        css += '}'; el.textContent = css;
-        swatches.forEach(function(s,i){ s.classList.toggle('is-active', i===idx); });
-        if (save) { try { localStorage.setItem(KEY, idx); } catch(e){} }
-      }
-      themes.forEach(function(t, i) {
-        var sw = document.createElement('div');
-        sw.className = 'demo-swatch'; sw.style.background = t.color; sw.title = t.name;
-        sw.innerHTML = '<span class="demo-swatch-label">' + t.label + '</span>';
-        sw.addEventListener('click', function() { applyTheme(i, true); });
-        panel.appendChild(sw); swatches.push(sw);
-      });
-      var saved = 0;
-      try { var s = localStorage.getItem(KEY); if (s !== null) saved = parseInt(s,10) || 0; } catch(e){}
-      if (saved < 0 || saved >= themes.length) saved = 0;
-      applyTheme(saved, false);
-      toggle.addEventListener('click', function() { panel.classList.toggle('is-open'); });
-      document.addEventListener('click', function(e) { if (!e.target.closest('.demo-switcher')) panel.classList.remove('is-open'); });
-    })();
   </script>
 </body>
 

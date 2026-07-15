@@ -1011,7 +1011,7 @@ details[open] .read-more i {
     display: inline-block;
     background: transparent;
     border: 1px solid var(--primary);
-    color: var(--primary);
+    color: color-mix(in srgb, var(--primary) 75%, #000);
     padding: 12px 40px;
     border-radius: 30px;
     font-weight: bold;

@@ -155,7 +155,7 @@ html.js .scroll-trigger.is-active { opacity: 1; transform: translateY(0); }
 .btn-block { width: 100%; }
 
 .btn-accent {
-    background: var(--accent); color: #fff;
+    background: color-mix(in srgb, var(--accent) 78%, #000); color: #fff;
     /* 影色もアクセントカラーのRGBを使って半透明にする */
     box-shadow: 0 4px 10px rgba(var(--accent-rgb), 0.4);
 }
@@ -575,7 +575,7 @@ html.js .scroll-trigger.is-active { opacity: 1; transform: translateY(0); }
     border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;
 }
 .v-meta { font-size: 0.8rem; color: #888; margin-bottom: 5px; }
-.v-head h4 { font-size: 1.1rem; margin: 0; color: var(--primary); color: var(--primary-ink); }
+.v-head h3 { font-size: 1.1rem; margin: 0; color: var(--primary); color: var(--primary-ink); }
 .v-text { font-size: 0.95rem; line-height: 1.7; color: #555; }
 
 /* ==========================================================================

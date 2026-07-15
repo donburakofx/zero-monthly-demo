@@ -373,11 +373,11 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="time-label">午前<br><small>9:00–12:30</small></td>
+                  <th scope="row" class="time-label">午前<br><small>9:00–12:30</small></th>
                   <td class="open">◯</td><td class="open">◯</td><td class="open">◯</td><td class="open">◯</td><td class="open">◯</td><td class="open">◯</td><td class="closed">×</td>
                 </tr>
                 <tr>
-                  <td class="time-label">午後<br><small>15:00–18:30</small></td>
+                  <th scope="row" class="time-label">午後<br><small>15:00–18:30</small></th>
                   <td class="open">◯</td><td class="open">◯</td><td class="open">◯</td><td class="closed">×</td><td class="open">◯</td><td class="closed">×</td><td class="closed">×</td>
                 </tr>
               </tbody>
@@ -471,7 +471,7 @@
   </div>
   <script>
     (function() {
-      var themes = [{"label": "A", "name": "Medical Blue / メディカルブルー", "color": "#1A6EBD", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#2D3748", "--text-muted": "#718096", "--bg-light": "#F0F6FC", "--primary": "#1A6EBD", "--primary-hover": "#1358A0", "--primary-light": "#EBF4FF", "--border": "#D9E8F5", "--banner-bg": "#1A6EBD", "--banner-text": "#FFFFFF"}}, {"label": "B", "name": "Healing Green / ヒーリンググリーン", "color": "#3A7D44", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#2D3A2D", "--text-muted": "#6E8A6E", "--bg-light": "#F0F7F0", "--primary": "#3A7D44", "--primary-hover": "#2D6335", "--primary-light": "#E8F5E9", "--border": "#C8E6C9", "--banner-bg": "#3A7D44", "--banner-text": "#FFFFFF"}}, {"label": "C", "name": "Skin Beige / スキンベージュ", "color": "#C07B88", "vars": {"--bg-body": "#FFFDF9", "--text-main": "#5D4D50", "--text-muted": "#A08088", "--bg-light": "#FFF5F0", "--primary": "#C07B88", "--primary-hover": "#A05D69", "--primary-light": "#FDE8EC", "--border": "#F5D0D5", "--banner-bg": "#C07B88", "--banner-text": "#FFFFFF"}}, {"label": "D", "name": "Fresh Teal / フレッシュティール", "color": "#2B8080", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#2D4040", "--text-muted": "#5C8080", "--bg-light": "#F0F9FA", "--primary": "#2B8080", "--primary-hover": "#1F6060", "--primary-light": "#E0F5F5", "--border": "#B2DFDF", "--banner-bg": "#2B8080", "--banner-text": "#FFFFFF"}}, {"label": "E", "name": "Professional Navy / プロフェッショナルネイビー", "color": "#1B3A7A", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#1B2A4A", "--text-muted": "#5A6A8A", "--bg-light": "#F0F3FA", "--primary": "#1B3A7A", "--primary-hover": "#122A5E", "--primary-light": "#E8EEFF", "--border": "#C5D0E8", "--banner-bg": "#1B3A7A", "--banner-text": "#FFFFFF"}}];
+      var themes = [{"label": "A", "name": "Medical Blue / メディカルブルー", "color": "#1A6EBD", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#2D3748", "--text-muted": "#616F84", "--bg-light": "#F0F6FC", "--primary": "#1A6EBD", "--primary-hover": "#1358A0", "--primary-light": "#EBF4FF", "--border": "#D9E8F5", "--banner-bg": "#1A6EBD", "--banner-text": "#FFFFFF"}}, {"label": "B", "name": "Healing Green / ヒーリンググリーン", "color": "#3A7D44", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#2D3A2D", "--text-muted": "#6E8A6E", "--bg-light": "#F0F7F0", "--primary": "#3A7D44", "--primary-hover": "#2D6335", "--primary-light": "#E8F5E9", "--border": "#C8E6C9", "--banner-bg": "#3A7D44", "--banner-text": "#FFFFFF"}}, {"label": "C", "name": "Skin Beige / スキンベージュ", "color": "#C07B88", "vars": {"--bg-body": "#FFFDF9", "--text-main": "#5D4D50", "--text-muted": "#A08088", "--bg-light": "#FFF5F0", "--primary": "#C07B88", "--primary-hover": "#A05D69", "--primary-light": "#FDE8EC", "--border": "#F5D0D5", "--banner-bg": "#C07B88", "--banner-text": "#FFFFFF"}}, {"label": "D", "name": "Fresh Teal / フレッシュティール", "color": "#2B8080", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#2D4040", "--text-muted": "#5C8080", "--bg-light": "#F0F9FA", "--primary": "#2B8080", "--primary-hover": "#1F6060", "--primary-light": "#E0F5F5", "--border": "#B2DFDF", "--banner-bg": "#2B8080", "--banner-text": "#FFFFFF"}}, {"label": "E", "name": "Professional Navy / プロフェッショナルネイビー", "color": "#1B3A7A", "vars": {"--bg-body": "#FFFFFF", "--text-main": "#1B2A4A", "--text-muted": "#5A6A8A", "--bg-light": "#F0F3FA", "--primary": "#1B3A7A", "--primary-hover": "#122A5E", "--primary-light": "#E8EEFF", "--border": "#C5D0E8", "--banner-bg": "#1B3A7A", "--banner-text": "#FFFFFF"}}];
       var panel = document.getElementById('demoPanel');
       var toggle = document.getElementById('demoToggle');
       var swatches = [];

@@ -25,7 +25,7 @@
     /* 信頼感・清潔感のある内科・一般クリニック向けデフォルトカラー */
     --bg-body: #FFFFFF;
     --text-main: #2D3748;
-    --text-muted: #718096;
+    --text-muted: #616F84;
     --bg-light: #F0F6FC;
     --primary: #1A6EBD;
     --primary-hover: #1358A0;
@@ -384,7 +384,7 @@ html.js .scroll-trigger.is-active {
 .hours-col > i { font-size: 22px; opacity: 0.85; }
 .hours-label {
     display: block; font-family: var(--font-en); font-size: 11px;
-    letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.75;
+    letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.93;
 }
 .hours-val { display: block; font-size: 14px; font-weight: 700; }
 
@@ -593,6 +593,7 @@ html.js .scroll-trigger.is-active {
 .hours-table .time-label {
     text-align: left; font-size: 12px; line-height: 1.5;
     padding-left: 10px; white-space: nowrap; font-weight: 600;
+    background: transparent; color: var(--text-main);
 }
 .hours-table .time-label small { display: block; font-weight: 400; color: var(--text-muted); }
 .hours-table .open { color: var(--primary); color: var(--accent-ink); font-weight: 700; }
@@ -624,11 +625,11 @@ html.js .scroll-trigger.is-active {
     gap: 30px; flex-wrap: wrap; margin-bottom: 28px;
 }
 .footer-brand { display: block; color: #fff; font-weight: 700; font-size: 17px; margin-bottom: 8px; }
-.footer-address { font-size: 13px; opacity: 0.6; margin: 0; }
+.footer-address { font-size: 13px; opacity: 0.7; margin: 0; }
 .footer-nav { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
 .footer-nav a { font-size: 13px; color: rgba(255,255,255,0.7); }
 .footer-nav a:hover { color: #fff; opacity: 1; }
-.copyright { font-family: var(--font-en); font-size: 12px; color: rgba(255,255,255,0.4); text-align: center; margin: 0; }
+.copyright { font-family: var(--font-en); font-size: 12px; color: rgba(255,255,255,0.58); text-align: center; margin: 0; }
 
 @media (max-width: 600px) {
     .footer-inner { flex-direction: column; }

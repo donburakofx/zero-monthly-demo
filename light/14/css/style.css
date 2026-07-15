@@ -704,7 +704,7 @@ html.js .scroll-trigger.is-active {
 .footer-nav a:hover { color: #fff; opacity: 1; }
 .copyright {
     font-family: var(--font-display); font-size: 12px;
-    color: rgba(255,255,255,0.3); text-align: center; margin: 0;
+    color: rgba(255,255,255,0.5); text-align: center; margin: 0;
     letter-spacing: 0.05em;
 }
 

@@ -590,7 +590,7 @@ address { font-style: normal; }
     border-top: 1px solid rgba(255,255,255,0.1);
     padding: 16px 0; text-align: center;
 }
-.copyright { font-size: 0.72rem; color: rgba(255,255,255,0.45); margin: 0; }
+.copyright { font-size: 0.72rem; color: rgba(255,255,255,0.55); margin: 0; }
 
 /* ==========================================================================
    17. Scroll Animation
