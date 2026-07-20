@@ -17,20 +17,21 @@
 
     <main class="container py-5">
         <div class="form-box">
-            <form action="#" method="post">
+            <!-- ★ 要変更: action を FormspreeやGoogleフォーム等のURLに変更してください -->
+            <form action="https://formspree.io/f/your-form-id" method="POST">
                 <div class="form-group">
-                    <label class="form-label">お名前<span class="required-badge">必須</span></label>
-                    <input type="text" class="form-control" placeholder="例：山田 太郎" required>
+                    <label class="form-label" for="name">お名前<span class="required-badge">必須</span></label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="例：山田 太郎" required>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">メールアドレス<span class="required-badge">必須</span></label>
-                    <input type="email" class="form-control" placeholder="例：info@example.com" required>
+                    <label class="form-label" for="email">メールアドレス<span class="required-badge">必須</span></label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="例：info@example.com" required>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">お問い合わせ種別</label>
-                    <select class="form-control">
+                    <label class="form-label" for="subject">お問い合わせ種別</label>
+                    <select id="subject" name="subject" class="form-control">
                         <option>サービスに関するお問い合わせ</option>
                         <option>料金・お支払いについて</option>
                         <option>その他</option>
@@ -38,8 +39,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">お問い合わせ内容<span class="required-badge">必須</span></label>
-                    <textarea class="form-control" placeholder="ご質問内容をご記入ください" required></textarea>
+                    <label class="form-label" for="message">お問い合わせ内容<span class="required-badge">必須</span></label>
+                    <textarea id="message" name="message" class="form-control" placeholder="ご質問内容をご記入ください" required></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit">送信する</button>
